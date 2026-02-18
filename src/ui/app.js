@@ -704,6 +704,60 @@ const App = {
           </div>
         </div>
       </div>
+
+      <!-- Preguntas tipo ICFES -->
+      ${this.renderPreguntasICFES(area, pruebaICFES.id, componenteFiltro)}
+    `;
+  },
+
+  // === PREGUNTAS TIPO ICFES (offline) ===
+  renderPreguntasICFES(area, pruebaId, componenteFiltro) {
+    if (typeof PREGUNTAS_ICFES === 'undefined') return '';
+    const preguntas = PREGUNTAS_ICFES[area]?.[pruebaId];
+    if (!preguntas || !preguntas.length) return '';
+
+    const filtradas = componenteFiltro
+      ? preguntas.filter(p => p.componente === componenteFiltro)
+      : preguntas;
+
+    if (!filtradas.length) return '';
+
+    return `
+      <div class="card mt-4">
+        <div class="card-header">
+          <span class="card-title">Preguntas Tipo ICFES</span>
+          <span class="badge badge-muted">${filtradas.length} preguntas · offline</span>
+        </div>
+        <div class="card-body">
+          <p class="text-sm text-muted mb-3">Ejemplos para práctica en el aula. Formato Saber con 4 opciones de respuesta única.</p>
+          ${filtradas.map((p, i) => `
+            <details class="icfes-pregunta">
+              <summary class="icfes-pregunta-header">
+                <div class="flex items-center gap-2" style="flex-wrap:wrap">
+                  <span class="badge badge-accent" style="font-size:0.65rem">${p.competencia}</span>
+                  <span class="badge badge-muted" style="font-size:0.6rem">${p.componente}</span>
+                  <span class="text-sm"><strong>${i + 1}.</strong> ${p.enunciado.length > 120 ? p.enunciado.substring(0, 120) + '...' : p.enunciado}</span>
+                </div>
+              </summary>
+              <div class="icfes-pregunta-body">
+                <div class="icfes-pregunta-enunciado">${p.enunciado}</div>
+                <div class="icfes-opciones">
+                  ${p.opciones.map(o => `
+                    <div class="icfes-opcion ${o.letra === p.clave ? 'icfes-opcion-correcta' : ''}">
+                      <span class="icfes-opcion-letra">${o.letra}</span>
+                      <span>${o.texto}</span>
+                    </div>
+                  `).join('')}
+                </div>
+                <details class="icfes-justificacion">
+                  <summary class="text-sm text-accent" style="cursor:pointer">Ver justificación</summary>
+                  <p class="text-sm text-secondary mt-2" style="line-height:var(--leading-loose)">${p.justificacion}</p>
+                </details>
+              </div>
+            </details>
+          `).join('')}
+        </div>
+      </div>
     `;
   },
 

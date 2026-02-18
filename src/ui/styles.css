@@ -1822,3 +1822,54 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
   display: inline-block;
   flex-shrink: 0;
 }
+
+/* ─── PREGUNTAS TIPO ICFES ─── */
+.icfes-pregunta { border-bottom: 1px solid var(--border); }
+.icfes-pregunta:last-child { border-bottom: none; }
+.icfes-pregunta-header {
+  padding: var(--sp-3) 0;
+  cursor: pointer;
+  list-style: none;
+}
+.icfes-pregunta-header::-webkit-details-marker { display: none; }
+.icfes-pregunta-body {
+  padding: 0 0 var(--sp-4) 0;
+}
+.icfes-pregunta-enunciado {
+  font-size: var(--text-sm);
+  line-height: var(--leading-loose);
+  color: var(--text-secondary);
+  margin-bottom: var(--sp-3);
+  white-space: pre-line;
+}
+.icfes-opciones {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-3);
+}
+.icfes-opcion {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--radius-sm);
+  background: var(--surface-1);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+}
+.icfes-opcion-letra {
+  font-weight: 700;
+  min-width: 1.2em;
+  color: var(--text-muted);
+}
+.icfes-opcion-correcta {
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+}
+.icfes-opcion-correcta .icfes-opcion-letra {
+  color: var(--accent);
+}
+.icfes-justificacion summary {
+  font-weight: 500;
+}
