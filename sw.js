@@ -1,7 +1,7 @@
 // sw.js — Service Worker para Articulador Curricular
-// Estrategia: Cache-first con fallback a network
+// Estrategia: Network-first con fallback a cache (siempre sirve la versión más reciente)
 
-const CACHE_NAME = 'articulador-curricular-v1';
+const CACHE_NAME = 'articulador-curricular-v2';
 
 const ASSETS = [
   './',
@@ -66,6 +66,12 @@ self.addEventListener('activate', (e) => {
 
 self.addEventListener('fetch', (e) => {
   e.respondWith(
-    caches.match(e.request).then(cached => cached || fetch(e.request))
+    fetch(e.request)
+      .then(response => {
+        const clone = response.clone();
+        caches.open(CACHE_NAME).then(cache => cache.put(e.request, clone));
+        return response;
+      })
+      .catch(() => caches.match(e.request))
   );
 });
