@@ -424,7 +424,7 @@ const App = {
     return `
       <div class="print-header">
         <div class="print-header-title">Articulador Curricular</div>
-        <div class="print-header-subtitle">${inst.nombre || 'Cognitivo Continuo'} · ${new Date().getFullYear()}</div>
+        <div class="print-header-subtitle">${inst.nombre || 'Continuo Cognitivo'} · ${new Date().getFullYear()}</div>
       </div>
 
       <h1 class="section-title">Diseño Curricular Saber ICFES</h1>
@@ -537,7 +537,7 @@ const App = {
     return `
       <div class="print-header">
         <div class="print-header-title">${info?.nombre || area} — Grupo ${grupo}</div>
-        <div class="print-header-subtitle">Articulador Curricular · Cognitivo Continuo</div>
+        <div class="print-header-subtitle">Articulador Curricular · Continuo Cognitivo</div>
       </div>
 
       <div class="flex items-center justify-between" style="flex-wrap:wrap; gap:var(--sp-3)">

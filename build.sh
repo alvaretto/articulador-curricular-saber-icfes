@@ -49,7 +49,7 @@ cat > dist/articulador-curricular.html << 'HTMLEOF'
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Articulador Curricular — Cognitivo Continuo</title>
+  <title>Articulador Curricular — Continuo Cognitivo</title>
   <meta name="description" content="Articulador curricular alineado a pruebas Saber ICFES. EBC, DBA e ICFES articulados. Funciona 100% offline.">
   <meta name="theme-color" content="#0e1018">
   <style>
@@ -73,7 +73,7 @@ cat >> dist/articulador-curricular.html << 'HTMLEOF'
         </div>
       </div>
       <div class="header-actions">
-        <span class="header-badge-men"><strong>Cognitivo Continuo</strong><small>Formaci&oacute;n y Evaluaci&oacute;n</small></span>
+        <span class="header-badge-men"><strong>Continuo Cognitivo</strong><small>Formaci&oacute;n y Evaluaci&oacute;n</small></span>
         <button class="theme-toggle" id="theme-toggle" data-action="toggle-theme" title="Cambiar tema" aria-label="Cambiar tema">◐</button>
       </div>
     </header>

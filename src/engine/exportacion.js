@@ -210,7 +210,7 @@ function exportarPlanInstitucional(grado, periodo) {
 </table>
 
 <div class="footer">
-  Generado por Articulador Curricular · Cognitivo Continuo · ${year}
+  Generado por Articulador Curricular · Continuo Cognitivo · ${year}
 </div>
 
 <script>window.print();</script>
