@@ -1,4 +1,4 @@
-// app.js — Articulador Curricular Saber ICFES - Main Application
+// app.js — Articulador Curricular - Main Application
 // Router hash + rendering + event handlers
 
 const EJE_SHORT_LABELS = {
@@ -28,7 +28,9 @@ const App = {
     eje: null,
     grado: null,
     periodo: null,
-    vista: 'home', // home | area | plan | busqueda | config | simulacro | simulacro-activo
+    vista: 'home', // home | area | plan | busqueda | config | simulacro | simulacro-activo | cobertura
+    coberturaArea: null,  // área seleccionada en vista cobertura
+    coberturaGrupo: null, // grupo seleccionado en vista cobertura
     sidebarOpen: false,
     iaPanelOpen: false,
     searchQuery: '',
@@ -83,11 +85,20 @@ const App = {
       this.state.grado = parts[1];
       this.state.periodo = parseInt(parts[2]) || 1;
       this.state.area = 'matematicas';
+    } else if (parts[0] === 'plan-lenguaje' && parts[1]) {
+      this.state.vista = 'plan';
+      this.state.grado = parts[1];
+      this.state.periodo = parseInt(parts[2]) || 1;
+      this.state.area = 'lenguaje';
     } else if (parts[0] === 'busqueda') {
       this.state.vista = 'busqueda';
       this.state.searchQuery = decodeURIComponent(parts[1] || '');
     } else if (parts[0] === 'config') {
       this.state.vista = 'config';
+    } else if (parts[0] === 'cobertura') {
+      this.state.vista = 'cobertura';
+      this.state.coberturaArea = parts[1] || null;
+      this.state.coberturaGrupo = parts[2] || null;
     } else if (parts[0] === 'simulacro' && parts[1] && parts[2]) {
       // Simulacro activo: #/simulacro/{area}/{pruebaId}
       // Solo iniciar si no hay simulacro activo ya para ese area+prueba
@@ -194,6 +205,28 @@ const App = {
             this.finalizarSimulacro(true);
           }
           break;
+        case 'toggle-estandar': {
+          const area = target.dataset.area;
+          const grupo = target.dataset.grupo;
+          const idx = parseInt(target.dataset.idx, 10);
+          Storage.toggleEstandarTrabajado(area, grupo, idx);
+          // Toggle visual inmediato en el checkbox
+          const wrap = target.closest('.cobertura-check-wrap');
+          if (wrap) wrap.classList.toggle('checked');
+          target.classList.toggle('checked');
+          // Actualizar barra de progreso del eje/área si existe
+          this._updateProgressBars(area, grupo);
+          break;
+        }
+        case 'reset-progreso': {
+          const area = target.dataset.area;
+          const grupo = target.dataset.grupo;
+          if (confirm('Reiniciar progreso de Grados ' + grupo + ' en ' + (AREAS_EBC[area]?.nombre || area) + '. Esta accion no se puede deshacer.')) {
+            Storage.resetProgreso(area, grupo);
+            this.render();
+          }
+          break;
+        }
       }
     });
 
@@ -353,6 +386,7 @@ const App = {
       case 'busqueda': main.innerHTML = this.renderBusqueda(); break;
       case 'config': main.innerHTML = this.renderConfig(); break;
       case 'simulacro': main.innerHTML = this.renderSimulacro(); break;
+      case 'cobertura': main.innerHTML = this.renderCobertura(); break;
       case 'simulacro-activo':
         if (this.state.simulacro && this.state.simulacro.finalizado) {
           main.innerHTML = this.renderSimulacroResultados();
@@ -371,7 +405,7 @@ const App = {
     const inst = Storage.getInstitucion();
     return `
       <div class="print-header">
-        <div class="print-header-title">Articulador Curricular Saber ICFES</div>
+        <div class="print-header-title">Articulador Curricular</div>
         <div class="print-header-subtitle">${inst.nombre || 'MEN Colombia'} · ${new Date().getFullYear()}</div>
       </div>
 
@@ -386,6 +420,8 @@ const App = {
       </div>
 
       ${this.renderQuickFilters()}
+
+      ${this.renderCoberturaResumen()}
 
       <div class="ia-panel" id="ia-panel-home">
         <div class="ia-panel-header" data-action="toggle-ia">
@@ -459,6 +495,13 @@ const App = {
               </button>
             `).join('')}
           </div>
+          <div class="flex gap-2 mt-2" style="flex-wrap:wrap">
+            ${['8','9','10','11'].map(g => `
+              <button class="btn btn-secondary btn-sm" data-action="navigate" data-value="#/plan-lenguaje/${g}/1">
+                Plan Lenguaje ${g}°
+              </button>
+            `).join('')}
+          </div>
         </div>
       </div>
     `;
@@ -476,7 +519,7 @@ const App = {
     return `
       <div class="print-header">
         <div class="print-header-title">${info?.nombre || area} — Grupo ${grupo}</div>
-        <div class="print-header-subtitle">Articulador Curricular Saber ICFES · MEN Colombia</div>
+        <div class="print-header-subtitle">Articulador Curricular · MEN Colombia</div>
       </div>
 
       <div class="flex items-center justify-between" style="flex-wrap:wrap; gap:var(--sp-3)">
@@ -486,6 +529,8 @@ const App = {
           <button class="btn btn-secondary btn-sm" data-action="export-json">Exportar JSON</button>
         </div>
       </div>
+
+      ${this.renderCoberturaBarraArea(area, grupo)}
 
       <!-- Filtros -->
       <div class="filter-bar">
@@ -536,20 +581,52 @@ const App = {
   renderEstandaresPorEje(area, grupo, ejeFiltro, ejes) {
     const ejesToRender = ejeFiltro ? ejes.filter(e => e.id === ejeFiltro) : ejes;
 
+    // Calcular offset global de índice para cada eje (para que el índice sea único por área+grupo)
+    let offsetIdx = 0;
+    // Construir mapa eje->offset usando el orden de todos los ejes
+    const ejeOffset = {};
+    for (const eje of ejes) {
+      ejeOffset[eje.id] = offsetIdx;
+      const count = getEstandares(area, grupo, eje.id).length;
+      offsetIdx += count;
+    }
+
+    const trabajados = Storage.getEstandaresTrabajados(area, grupo);
+
     return ejesToRender.map(eje => {
       const ests = getEstandares(area, grupo, eje.id);
       if (!ests.length) return '';
+      const base = ejeOffset[eje.id];
+      const trabajadosEje = ests.filter((_, i) => trabajados.has(base + i)).length;
       return `
         <div class="card card-accent mt-4" style="border-left-color: ${eje.color}">
           <div class="card-header">
             <div>
               <span class="card-title">${eje.nombre}</span>
               <span class="badge badge-muted ml-2">${ests.length} estándares</span>
+              ${trabajadosEje > 0 ? `<span class="badge ml-1" style="background:var(--success);color:white;font-size:0.65rem">${trabajadosEje}/${ests.length} trabajados</span>` : ''}
             </div>
             <span class="chip-dot" style="background:${eje.color}; width:10px; height:10px; border-radius:50%; display:inline-block;"></span>
           </div>
           <div class="card-body">
-            ${ests.map(e => `<div class="estandar-item">${e}</div>`).join('')}
+            ${ests.map((e, i) => {
+              const globalIdx = base + i;
+              const checked = trabajados.has(globalIdx);
+              return `
+                <div class="cobertura-check-wrap ${checked ? 'checked' : ''}"
+                     data-action="toggle-estandar"
+                     data-area="${area}"
+                     data-grupo="${grupo}"
+                     data-idx="${globalIdx}">
+                  <div class="cobertura-check ${checked ? 'checked' : ''}"
+                       data-action="toggle-estandar"
+                       data-area="${area}"
+                       data-grupo="${grupo}"
+                       data-idx="${globalIdx}"></div>
+                  <span class="cobertura-estandar-texto">${e}</span>
+                </div>
+              `;
+            }).join('')}
           </div>
         </div>
       `;
@@ -838,29 +915,68 @@ const App = {
   renderPlan() {
     const grado = this.state.grado || '8';
     const periodo = this.state.periodo || 1;
-    const planGrado = getPlanGrado(grado);
-    const plan = getPlanPeriodo(grado, periodo);
+    const area = this.state.area || 'matematicas';
+
+    // Seleccionar el objeto de planes según el área
+    const planesObj = area === 'lenguaje'
+      ? (typeof PLANES_LENGUAJE !== 'undefined' ? PLANES_LENGUAJE : null)
+      : (typeof PLANES_MATEMATICAS !== 'undefined' ? PLANES_MATEMATICAS : null);
+
+    const planGrado = planesObj ? planesObj[grado] : null;
+    const plan = planGrado ? (planGrado.periodos.find(p => p.periodo === periodo) || null) : null;
+
+    const areaNombre = area === 'lenguaje' ? 'Lenguaje' : 'Matemáticas';
+    const planBase = area === 'lenguaje' ? 'plan-lenguaje' : 'plan';
 
     if (!planGrado || !plan) {
       return `
         <div class="empty-state">
           <div class="empty-state-icon">📋</div>
           <div class="empty-state-title">Plan no disponible</div>
-          <p class="empty-state-text">Los planes de periodo detallados están disponibles para Matemáticas grados 8° a 11°.</p>
+          <p class="empty-state-text">Los planes de periodo detallados están disponibles para ${areaNombre} grados 8° a 11°.</p>
           <button class="btn btn-primary mt-4" data-action="navigate" data-value="#/">Volver al inicio</button>
         </div>
       `;
     }
 
+    // Renderizar competencias ICFES según el área
+    const competenciasICFESHtml = area === 'lenguaje'
+      ? `
+        <div class="icfes-item">
+          <div class="icfes-item-label">Identificar</div>
+          <div class="icfes-item-text">${plan.competenciasICFES.identificar || ''}</div>
+        </div>
+        <div class="icfes-item">
+          <div class="icfes-item-label">Comprender</div>
+          <div class="icfes-item-text">${plan.competenciasICFES.comprender || ''}</div>
+        </div>
+        <div class="icfes-item">
+          <div class="icfes-item-label">Reflexionar</div>
+          <div class="icfes-item-text">${plan.competenciasICFES.reflexionar || ''}</div>
+        </div>`
+      : `
+        <div class="icfes-item">
+          <div class="icfes-item-label">Razonamiento</div>
+          <div class="icfes-item-text">${plan.competenciasICFES.razonamiento || ''}</div>
+        </div>
+        <div class="icfes-item">
+          <div class="icfes-item-label">Comunicación</div>
+          <div class="icfes-item-text">${plan.competenciasICFES.comunicacion || ''}</div>
+        </div>
+        <div class="icfes-item">
+          <div class="icfes-item-label">Resolución de Problemas</div>
+          <div class="icfes-item-text">${plan.competenciasICFES.resolucionProblemas || ''}</div>
+        </div>`;
+
     return `
       <div class="print-header">
-        <div class="print-header-title">Plan de Periodo — Matemáticas ${grado}° · Periodo ${periodo}</div>
-        <div class="print-header-subtitle">${Storage.getInstitucion().nombre || 'Articulador Curricular Saber ICFES'}</div>
+        <div class="print-header-title">Plan de Periodo — ${areaNombre} ${grado}° · Periodo ${periodo}</div>
+        <div class="print-header-subtitle">${Storage.getInstitucion().nombre || 'Articulador Curricular'}</div>
       </div>
 
       <div class="flex items-center justify-between" style="flex-wrap:wrap; gap:var(--sp-3)">
         <div>
-          <h1 class="section-title">Matemáticas ${grado}° — Periodo ${periodo}</h1>
+          <h1 class="section-title">${areaNombre} ${grado}° — Periodo ${periodo}</h1>
           <p class="text-sm text-secondary">${planGrado.objetivo}</p>
         </div>
         <div class="flex gap-2">
@@ -873,7 +989,7 @@ const App = {
       <!-- Tabs de periodos -->
       <div class="tabs">
         ${[1,2,3,4].map(p => `
-          <button class="tab ${p === periodo ? 'active' : ''}" data-action="navigate" data-value="#/plan/${grado}/${p}">
+          <button class="tab ${p === periodo ? 'active' : ''}" data-action="navigate" data-value="#/${planBase}/${grado}/${p}">
             Periodo ${p}
           </button>
         `).join('')}
@@ -927,18 +1043,7 @@ const App = {
         <div class="plan-section plan-section-full">
           <div class="plan-section-title">Competencias ICFES</div>
           <div class="icfes-grid">
-            <div class="icfes-item">
-              <div class="icfes-item-label">Razonamiento</div>
-              <div class="icfes-item-text">${plan.competenciasICFES.razonamiento}</div>
-            </div>
-            <div class="icfes-item">
-              <div class="icfes-item-label">Comunicación</div>
-              <div class="icfes-item-text">${plan.competenciasICFES.comunicacion}</div>
-            </div>
-            <div class="icfes-item">
-              <div class="icfes-item-label">Resolución de Problemas</div>
-              <div class="icfes-item-text">${plan.competenciasICFES.resolucionProblemas}</div>
-            </div>
+            ${competenciasICFESHtml}
           </div>
         </div>
 
@@ -1031,8 +1136,8 @@ const App = {
 
       <!-- Nav entre grados -->
       <div class="flex justify-between mt-4">
-        ${parseInt(grado) > 8 ? `<button class="btn btn-ghost" data-action="navigate" data-value="#/plan/${parseInt(grado)-1}/${periodo}">← Grado ${parseInt(grado)-1}°</button>` : '<span></span>'}
-        ${parseInt(grado) < 11 ? `<button class="btn btn-ghost" data-action="navigate" data-value="#/plan/${parseInt(grado)+1}/${periodo}">Grado ${parseInt(grado)+1}° →</button>` : '<span></span>'}
+        ${parseInt(grado) > 8 ? `<button class="btn btn-ghost" data-action="navigate" data-value="#/${planBase}/${parseInt(grado)-1}/${periodo}">← Grado ${parseInt(grado)-1}°</button>` : '<span></span>'}
+        ${parseInt(grado) < 11 ? `<button class="btn btn-ghost" data-action="navigate" data-value="#/${planBase}/${parseInt(grado)+1}/${periodo}">Grado ${parseInt(grado)+1}° →</button>` : '<span></span>'}
       </div>
     `;
   },
@@ -1045,7 +1150,8 @@ const App = {
     const pruebaId = getPruebaParaGrado(grado);
     if (!pruebaId) return '';
 
-    const todosAprendizajes = getAprendizajesICFES('matematicas', pruebaId);
+    const areaICFES = this.state.area || 'matematicas';
+    const todosAprendizajes = getAprendizajesICFES(areaICFES, pruebaId);
     const aprendizajesResueltos = plan.aprendizajesICFES
       .map(id => todosAprendizajes.find(a => a.id === id))
       .filter(Boolean);
@@ -1053,7 +1159,7 @@ const App = {
     if (!aprendizajesResueltos.length) return '';
 
     // Nivel de desempeño
-    const niveles = getNivelesDesempeno('matematicas', pruebaId);
+    const niveles = getNivelesDesempeno(areaICFES, pruebaId);
     const nivelActivo = niveles.find(n => n.nombre === plan.nivelEsperado);
 
     return `
@@ -1363,11 +1469,20 @@ const App = {
         `).join('')}
       </ul>
 
-      <div class="sidebar-label">Planes de Periodo</div>
+      <div class="sidebar-label">Planes de Periodo — Matemáticas</div>
       <ul class="sidebar-nav">
         ${['8','9','10','11'].map(g => `
-          <li class="sidebar-item ${this.state.grado === g && this.state.vista === 'plan' ? 'active' : ''}" data-action="navigate" data-value="#/plan/${g}/1">
+          <li class="sidebar-item ${this.state.grado === g && this.state.area === 'matematicas' && this.state.vista === 'plan' ? 'active' : ''}" data-action="navigate" data-value="#/plan/${g}/1">
             <span class="sidebar-item-icon">📋</span> Matemáticas ${g}°
+          </li>
+        `).join('')}
+      </ul>
+
+      <div class="sidebar-label">Planes de Periodo — Lenguaje</div>
+      <ul class="sidebar-nav">
+        ${['8','9','10','11'].map(g => `
+          <li class="sidebar-item ${this.state.grado === g && this.state.area === 'lenguaje' && this.state.vista === 'plan' ? 'active' : ''}" data-action="navigate" data-value="#/plan-lenguaje/${g}/1">
+            <span class="sidebar-item-icon">📖</span> Lenguaje ${g}°
           </li>
         `).join('')}
       </ul>
@@ -1376,6 +1491,10 @@ const App = {
       <ul class="sidebar-nav">
         <li class="sidebar-item ${this.state.vista === 'simulacro' || this.state.vista === 'simulacro-activo' ? 'active' : ''}" data-action="navigate" data-value="#/simulacro">
           <span class="sidebar-item-icon">📝</span> Simulacro ICFES
+        </li>
+        <li class="sidebar-item ${this.state.vista === 'cobertura' ? 'active' : ''}" data-action="navigate" data-value="#/cobertura">
+          <span class="sidebar-item-icon">📊</span> Cobertura
+          ${this._sidebarCoberturaBadge()}
         </li>
       </ul>
 
@@ -1788,6 +1907,366 @@ const App = {
           </div>
         </div>
       </div>
+    `;
+  },
+
+  // === COBERTURA: HELPERS ===
+
+  // Calcula total de estándares de un área+grupo sumando todos los ejes
+  _totalEstandaresGrupo(area, grupo) {
+    const ejes = getEjesDeArea(area);
+    return ejes.reduce((sum, eje) => sum + getEstandares(area, grupo, eje.id).length, 0);
+  },
+
+  // Nivel visual según porcentaje
+  _progressLevel(pct) {
+    if (pct >= 70) return 'high';
+    if (pct >= 30) return 'mid';
+    return 'low';
+  },
+
+  // HTML de una barra de progreso
+  _renderProgressBar(progreso) {
+    const level = this._progressLevel(progreso.porcentaje);
+    return `
+      <div class="cobertura-progress" id="cob-bar-${progreso._id || ''}">
+        <div class="cobertura-progress-track">
+          <div class="cobertura-progress-bar" data-level="${level}" style="width:${progreso.porcentaje}%"></div>
+        </div>
+        <span class="cobertura-progress-label">${progreso.trabajados}/${progreso.total}</span>
+        <span class="cobertura-progress-pct" data-level="${level}">${progreso.porcentaje}%</span>
+      </div>
+    `;
+  },
+
+  // Actualizar barras de progreso en DOM sin re-render completo
+  _updateProgressBars(area, grupo) {
+    const total = this._totalEstandaresGrupo(area, grupo);
+    const progreso = Storage.getProgreso(area, grupo, total);
+    const level = this._progressLevel(progreso.porcentaje);
+
+    // Barra del grupo en vista área
+    const barEl = document.getElementById('cob-area-bar');
+    if (barEl) {
+      barEl.querySelector('.cobertura-progress-bar').style.width = progreso.porcentaje + '%';
+      barEl.querySelector('.cobertura-progress-bar').dataset.level = level;
+      barEl.querySelector('.cobertura-progress-label').textContent = progreso.trabajados + '/' + total;
+      const pctEl = barEl.querySelector('.cobertura-progress-pct');
+      pctEl.textContent = progreso.porcentaje + '%';
+      pctEl.dataset.level = level;
+    }
+
+    // Badge en sidebar
+    const badge = document.getElementById('cob-sidebar-badge');
+    if (badge) {
+      const textoNuevo = this._calcProgresoGeneral();
+      badge.textContent = textoNuevo;
+      badge.style.display = textoNuevo ? '' : 'none';
+    }
+  },
+
+  // Calcular progreso general de todas las áreas (para sidebar badge)
+  _calcProgresoGeneral() {
+    let sumaTrabajados = 0;
+    let sumaTotal = 0;
+    for (const areaId of Object.keys(AREAS_EBC)) {
+      for (const grupo of GRUPOS_EBC_ORDEN) {
+        const total = this._totalEstandaresGrupo(areaId, grupo);
+        if (total > 0) {
+          sumaTrabajados += Storage.getEstandaresTrabajados(areaId, grupo).size;
+          sumaTotal += total;
+        }
+      }
+    }
+    if (sumaTotal === 0) return '';
+    const pct = Math.round((sumaTrabajados / sumaTotal) * 100);
+    return pct + '%';
+  },
+
+  // Badge para sidebar
+  _sidebarCoberturaBadge() {
+    const texto = this._calcProgresoGeneral();
+    if (!texto) return '';
+    return `<span id="cob-sidebar-badge" class="badge badge-muted ml-auto" style="font-size:0.65rem">${texto}</span>`;
+  },
+
+  // Barra de progreso del grupo actual en vista área
+  renderCoberturaBarraArea(area, grupo) {
+    const total = this._totalEstandaresGrupo(area, grupo);
+    if (total === 0) return '';
+    const progreso = Storage.getProgreso(area, grupo, total);
+    const level = this._progressLevel(progreso.porcentaje);
+    return `
+      <div id="cob-area-bar" style="margin-bottom:var(--sp-2)">
+        <div class="flex items-center justify-between" style="margin-bottom:2px">
+          <span class="text-xs text-muted">Cobertura Grados ${grupo}</span>
+          <a href="#/cobertura/${area}/${grupo}" class="text-xs" style="color:var(--accent)">Ver detalle →</a>
+        </div>
+        <div class="cobertura-progress" style="padding:0">
+          <div class="cobertura-progress-track">
+            <div class="cobertura-progress-bar" data-level="${level}" style="width:${progreso.porcentaje}%"></div>
+          </div>
+          <span class="cobertura-progress-label">${progreso.trabajados}/${progreso.total} estándares</span>
+          <span class="cobertura-progress-pct" data-level="${level}">${progreso.porcentaje}%</span>
+        </div>
+      </div>
+    `;
+  },
+
+  // Card de resumen de cobertura en home
+  renderCoberturaResumen() {
+    // Verificar si hay algún progreso
+    let hayProgreso = false;
+    for (const areaId of Object.keys(AREAS_EBC)) {
+      for (const grupo of GRUPOS_EBC_ORDEN) {
+        if (Storage.getEstandaresTrabajados(areaId, grupo).size > 0) {
+          hayProgreso = true;
+          break;
+        }
+      }
+      if (hayProgreso) break;
+    }
+
+    return `
+      <div class="card cobertura-summary mt-4">
+        <div class="card-header">
+          <span class="card-title">📊 Progreso de Cobertura</span>
+          <a href="#/cobertura" class="btn btn-ghost btn-sm">Ver todo</a>
+        </div>
+        <div class="card-body">
+          ${hayProgreso ? `
+            <div class="cobertura-summary-grid">
+              ${Object.entries(AREAS_EBC).map(([id, info]) => {
+                const gruposConTotales = GRUPOS_EBC_ORDEN.map(g => ({ grupo: g, total: this._totalEstandaresGrupo(id, g) }));
+                const prog = Storage.getProgresoGeneral(id, gruposConTotales);
+                if (prog.total === 0) return '';
+                const level = this._progressLevel(prog.porcentaje);
+                return `
+                  <div class="cobertura-summary-item" data-action="navigate" data-value="#/cobertura/${id}">
+                    <div class="cobertura-summary-item-name">${info.nombre}</div>
+                    <div class="cobertura-progress" style="padding:0; margin-top:var(--sp-2)">
+                      <div class="cobertura-progress-track">
+                        <div class="cobertura-progress-bar" data-level="${level}" style="width:${prog.porcentaje}%"></div>
+                      </div>
+                      <span class="cobertura-progress-pct" data-level="${level}">${prog.porcentaje}%</span>
+                    </div>
+                    <div style="font-size:var(--text-xs); color:var(--text-muted); margin-top:var(--sp-1)">${prog.trabajados}/${prog.total}</div>
+                  </div>
+                `;
+              }).filter(Boolean).join('')}
+            </div>
+          ` : `
+            <p class="text-sm text-secondary">
+              Aun no has marcado ningún estándar como trabajado. Navega a un área y marca los estándares que ya has trabajado en clase.
+            </p>
+            <a href="#/cobertura" class="btn btn-secondary btn-sm mt-3">Ir a Cobertura</a>
+          `}
+        </div>
+      </div>
+    `;
+  },
+
+  // === VISTA: COBERTURA ===
+  renderCobertura() {
+    const area = this.state.coberturaArea;
+    const grupo = this.state.coberturaGrupo;
+
+    // Detalle de grupo específico
+    if (area && grupo) {
+      return this.renderCoberturaDetalleGrupo(area, grupo);
+    }
+
+    // Detalle de área (todos sus grupos)
+    if (area) {
+      return this.renderCoberturaDetalleArea(area);
+    }
+
+    // Vista general: todas las áreas
+    return this.renderCoberturaGeneral();
+  },
+
+  renderCoberturaGeneral() {
+    return `
+      <h1 class="section-title">Cobertura de Estándares</h1>
+      <p class="section-description">
+        Seguimiento del avance en la enseñanza de los Estándares Básicos de Competencias.
+        Marque los estándares trabajados en clase desde la vista de cada área.
+      </p>
+
+      <div class="cobertura-grid">
+        ${Object.entries(AREAS_EBC).map(([id, info]) => {
+          const gruposConTotales = GRUPOS_EBC_ORDEN.map(g => ({ grupo: g, total: this._totalEstandaresGrupo(id, g) }));
+          const prog = Storage.getProgresoGeneral(id, gruposConTotales);
+          const level = this._progressLevel(prog.porcentaje);
+          const colorVar = id === 'matematicas' ? '--mat' : id === 'lenguaje' ? '--len' : id === 'ciencias-naturales' ? '--nat' : '--soc';
+          return `
+            <div class="cobertura-area-card" data-action="navigate" data-value="#/cobertura/${id}"
+                 style="--accent:var(${colorVar})">
+              <div class="cobertura-area-card-icon">${info.icon}</div>
+              <div class="cobertura-area-card-name">${info.nombre}</div>
+              <div class="cobertura-area-card-meta">${prog.total} estándares · 5 grupos</div>
+              <div class="cobertura-progress" style="padding:0">
+                <div class="cobertura-progress-track">
+                  <div class="cobertura-progress-bar" data-level="${level}" style="width:${prog.porcentaje}%"></div>
+                </div>
+                <span class="cobertura-progress-pct" data-level="${level}">${prog.porcentaje}%</span>
+              </div>
+              <div style="font-size:var(--text-xs); color:var(--text-muted); margin-top:var(--sp-1)">${prog.trabajados}/${prog.total} trabajados</div>
+            </div>
+          `;
+        }).join('')}
+      </div>
+    `;
+  },
+
+  renderCoberturaDetalleArea(area) {
+    const info = AREAS_EBC[area];
+    const gruposConTotales = GRUPOS_EBC_ORDEN.map(g => ({ grupo: g, total: this._totalEstandaresGrupo(area, g) }));
+    const progGeneral = Storage.getProgresoGeneral(area, gruposConTotales);
+    const levelGeneral = this._progressLevel(progGeneral.porcentaje);
+
+    return `
+      <div class="flex items-center gap-3 mb-2">
+        <button class="btn btn-ghost btn-sm" data-action="navigate" data-value="#/cobertura">← Todas las áreas</button>
+      </div>
+
+      <h1 class="section-title">${info?.icon || ''} ${info?.nombre || area} — Cobertura</h1>
+
+      <div class="cobertura-progress" style="padding:0; margin-bottom:var(--sp-4)">
+        <div class="cobertura-progress-track">
+          <div class="cobertura-progress-bar" data-level="${levelGeneral}" style="width:${progGeneral.porcentaje}%"></div>
+        </div>
+        <span class="cobertura-progress-label">${progGeneral.trabajados}/${progGeneral.total} totales</span>
+        <span class="cobertura-progress-pct" data-level="${levelGeneral}">${progGeneral.porcentaje}%</span>
+      </div>
+
+      <!-- Tabs de grupos -->
+      <div class="cobertura-grupos-tabs">
+        ${GRUPOS_EBC_ORDEN.map(g => {
+          const total = this._totalEstandaresGrupo(area, g);
+          if (total === 0) return '';
+          const prog = Storage.getProgreso(area, g, total);
+          const level = this._progressLevel(prog.porcentaje);
+          return `
+            <button class="tab" data-action="navigate" data-value="#/cobertura/${area}/${g}"
+                    style="${prog.trabajados > 0 ? 'border-color:var(--' + (level === 'high' ? 'success' : level === 'mid' ? 'warning' : 'danger') + ')' : ''}">
+              Grados ${g}
+              ${prog.trabajados > 0 ? `<span class="badge ml-1" style="font-size:0.6rem;background:var(--${level === 'high' ? 'success' : level === 'mid' ? 'warning' : 'danger'});color:white">${prog.porcentaje}%</span>` : ''}
+            </button>
+          `;
+        }).filter(Boolean).join('')}
+      </div>
+
+      <!-- Cards de grupos -->
+      ${GRUPOS_EBC_ORDEN.map(g => {
+        const total = this._totalEstandaresGrupo(area, g);
+        if (total === 0) return '';
+        const prog = Storage.getProgreso(area, g, total);
+        const level = this._progressLevel(prog.porcentaje);
+        return `
+          <div class="cobertura-grupo-card">
+            <div class="cobertura-grupo-header">
+              <span class="cobertura-grupo-title">Grados ${g}</span>
+              <div class="flex items-center gap-3" style="flex:1; margin-left:var(--sp-4)">
+                <div class="cobertura-progress" style="padding:0; flex:1">
+                  <div class="cobertura-progress-track">
+                    <div class="cobertura-progress-bar" data-level="${level}" style="width:${prog.porcentaje}%"></div>
+                  </div>
+                  <span class="cobertura-progress-label">${prog.trabajados}/${prog.total}</span>
+                  <span class="cobertura-progress-pct" data-level="${level}">${prog.porcentaje}%</span>
+                </div>
+              </div>
+              <div class="flex gap-2">
+                <button class="btn btn-ghost btn-sm" data-action="navigate" data-value="#/cobertura/${area}/${g}">
+                  Ver detalle
+                </button>
+                ${prog.trabajados > 0 ? `
+                  <button class="btn-reset-progreso" data-action="reset-progreso" data-area="${area}" data-grupo="${g}">
+                    Reiniciar
+                  </button>
+                ` : ''}
+              </div>
+            </div>
+          </div>
+        `;
+      }).filter(Boolean).join('')}
+    `;
+  },
+
+  renderCoberturaDetalleGrupo(area, grupo) {
+    const info = AREAS_EBC[area];
+    const ejes = getEjesDeArea(area);
+    const total = this._totalEstandaresGrupo(area, grupo);
+    const prog = Storage.getProgreso(area, grupo, total);
+    const level = this._progressLevel(prog.porcentaje);
+    const trabajados = Storage.getEstandaresTrabajados(area, grupo);
+
+    // Calcular offset global por eje
+    let offsetIdx = 0;
+    const ejeOffset = {};
+    for (const eje of ejes) {
+      ejeOffset[eje.id] = offsetIdx;
+      offsetIdx += getEstandares(area, grupo, eje.id).length;
+    }
+
+    return `
+      <div class="flex items-center gap-3 mb-2" style="flex-wrap:wrap">
+        <button class="btn btn-ghost btn-sm" data-action="navigate" data-value="#/cobertura/${area}">← ${info?.nombre || area}</button>
+        <button class="btn btn-ghost btn-sm" data-action="navigate" data-value="#/area/${area}/${grupo}">Ver estándares completos</button>
+      </div>
+
+      <h1 class="section-title">${info?.icon || ''} ${info?.nombre || area} — Grados ${grupo}</h1>
+
+      <div id="cob-area-bar">
+        <div class="cobertura-progress" style="padding:0; margin-bottom:var(--sp-4)">
+          <div class="cobertura-progress-track">
+            <div class="cobertura-progress-bar" data-level="${level}" style="width:${prog.porcentaje}%"></div>
+          </div>
+          <span class="cobertura-progress-label">${prog.trabajados}/${prog.total} trabajados</span>
+          <span class="cobertura-progress-pct" data-level="${level}">${prog.porcentaje}%</span>
+          ${prog.trabajados > 0 ? `
+            <button class="btn-reset-progreso" data-action="reset-progreso" data-area="${area}" data-grupo="${grupo}" style="margin-left:var(--sp-2)">
+              Reiniciar
+            </button>
+          ` : ''}
+        </div>
+      </div>
+
+      <!-- Estándares por eje con checkboxes -->
+      ${ejes.map(eje => {
+        const ests = getEstandares(area, grupo, eje.id);
+        if (!ests.length) return '';
+        const base = ejeOffset[eje.id];
+        const trabajadosEje = ests.filter((_, i) => trabajados.has(base + i)).length;
+        return `
+          <div class="cobertura-grupo-card">
+            <div class="cobertura-grupo-header">
+              <span class="cobertura-grupo-title">${eje.nombre}</span>
+              <span class="badge badge-muted">${trabajadosEje}/${ests.length}</span>
+            </div>
+            <div class="cobertura-grupo-body">
+              ${ests.map((e, i) => {
+                const globalIdx = base + i;
+                const checked = trabajados.has(globalIdx);
+                return `
+                  <div class="cobertura-check-wrap ${checked ? 'checked' : ''}"
+                       data-action="toggle-estandar"
+                       data-area="${area}"
+                       data-grupo="${grupo}"
+                       data-idx="${globalIdx}">
+                    <div class="cobertura-check ${checked ? 'checked' : ''}"
+                         data-action="toggle-estandar"
+                         data-area="${area}"
+                         data-grupo="${grupo}"
+                         data-idx="${globalIdx}"></div>
+                    <span class="cobertura-estandar-texto">${e}</span>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+        `;
+      }).join('')}
     `;
   },
 

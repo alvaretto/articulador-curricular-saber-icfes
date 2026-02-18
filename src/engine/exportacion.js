@@ -210,7 +210,7 @@ function exportarPlanInstitucional(grado, periodo) {
 </table>
 
 <div class="footer">
-  Generado por Articulador Curricular Saber ICFES · MEN Colombia · ${year}
+  Generado por Articulador Curricular · MEN Colombia · ${year}
 </div>
 
 <script>window.print();</script>

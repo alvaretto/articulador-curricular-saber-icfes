@@ -169,5 +169,57 @@ const Storage = {
       if (key.startsWith(STORAGE_PREFIX)) keys.push(key);
     }
     keys.forEach(k => localStorage.removeItem(k));
+  },
+
+  // === COBERTURA DE ESTÁNDARES ===
+
+  // Key para un área+grupo específico
+  _coberturaKey(area, grupo) {
+    return 'cobertura_' + area + '_' + grupo.replace('-', '_');
+  },
+
+  // Retorna Set de índices trabajados para un área+grupo
+  getEstandaresTrabajados(area, grupo) {
+    const arr = this.get(this._coberturaKey(area, grupo), []);
+    return new Set(arr);
+  },
+
+  // Toggle: marca o desmarca un estándar por índice
+  toggleEstandarTrabajado(area, grupo, estandarIndex) {
+    const trabajados = this.getEstandaresTrabajados(area, grupo);
+    if (trabajados.has(estandarIndex)) {
+      trabajados.delete(estandarIndex);
+    } else {
+      trabajados.add(estandarIndex);
+    }
+    this.set(this._coberturaKey(area, grupo), Array.from(trabajados));
+  },
+
+  // Progreso para un área+grupo: { trabajados, total, porcentaje }
+  getProgreso(area, grupo, total) {
+    const trabajados = this.getEstandaresTrabajados(area, grupo).size;
+    const porcentaje = total > 0 ? Math.round((trabajados / total) * 100) : 0;
+    return { trabajados, total, porcentaje };
+  },
+
+  // Progreso general de un área: promedia todos los grupos con al menos 1 estándar
+  // grupos: array de { grupo, total } con el total de estándares por grupo
+  getProgresoGeneral(area, gruposConTotales) {
+    if (!gruposConTotales || !gruposConTotales.length) return { trabajados: 0, total: 0, porcentaje: 0 };
+    let sumaTrabajados = 0;
+    let sumaTotal = 0;
+    for (const { grupo, total } of gruposConTotales) {
+      if (total > 0) {
+        sumaTrabajados += this.getEstandaresTrabajados(area, grupo).size;
+        sumaTotal += total;
+      }
+    }
+    const porcentaje = sumaTotal > 0 ? Math.round((sumaTrabajados / sumaTotal) * 100) : 0;
+    return { trabajados: sumaTrabajados, total: sumaTotal, porcentaje };
+  },
+
+  // Reiniciar progreso de un área+grupo
+  resetProgreso(area, grupo) {
+    this.remove(this._coberturaKey(area, grupo));
   }
 };

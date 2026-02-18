@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Articulador Curricular Saber ICFES — MEN Colombia</title>
+  <title>Articulador Curricular — MEN Colombia</title>
   <meta name="description" content="Articulador curricular alineado a pruebas Saber ICFES. Navegue EBC, DBA, ICFES y genere mallas curriculares articuladas.">
   <meta name="theme-color" content="#0e1018">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon-192.png">
   <link rel="stylesheet" href="src/ui/styles.css">
 </head>
 <body data-area="matematicas">
@@ -18,7 +20,7 @@
         <button class="btn btn-icon btn-ghost hidden" id="menu-btn" data-action="toggle-sidebar" style="display:none" aria-label="Menú">☰</button>
         <div class="header-logo">ICFES</div>
         <div>
-          <div class="header-title">Articulador Curricular Saber ICFES</div>
+          <div class="header-title">Articulador Curricular</div>
           <div class="header-subtitle">Asistente Pedagógico para el Docente Colombiano</div>
         </div>
       </div>
@@ -51,6 +53,7 @@
   <script src="src/data/ebc-ingles.js"></script>
   <script src="src/data/dba.js"></script>
   <script src="src/data/planes-matematicas.js"></script>
+  <script src="src/data/planes-lenguaje.js"></script>
   <script src="src/data/progresion-vertical.js"></script>
   <script src="src/data/icfes-matematicas.js"></script>
   <script src="src/data/icfes-lectura-critica.js"></script>
@@ -73,6 +76,13 @@
 
   <!-- UI -->
   <script src="src/ui/app.js"></script>
+
+  <!-- PWA: Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js').catch(() => {});
+    }
+  </script>
 
   <!-- Mobile menu button visibility -->
   <script>

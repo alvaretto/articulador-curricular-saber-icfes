@@ -1,18 +1,23 @@
 #!/bin/bash
-# build.sh — Genera articulador-saber-icfes.html autocontenido (standalone)
+# build.sh — Genera articulador-curricular.html autocontenido (standalone)
 # Uso: bash build.sh
+#
+# NOTA PWA: El Service Worker y el manifest.json NO se incluyen en el build standalone
+# porque el SW no puede registrarse desde file://, solo desde un servidor HTTP/HTTPS.
+# Para usar la PWA completa (instalable, offline via SW), servir index.html con sus
+# archivos fuente directamente desde GitHub Pages o cualquier servidor HTTP.
 
 set -e
 cd "$(dirname "$0")"
 
-echo "🔨 Construyendo Articulador Curricular Saber ICFES (standalone)..."
+echo "🔨 Construyendo Articulador Curricular (standalone)..."
 
 # Leer CSS
 CSS=$(cat src/ui/styles.css)
 
 # Leer todos los JS de datos
 DATA_JS=""
-for f in src/data/ebc-matematicas.js src/data/ebc-lenguaje.js src/data/ebc-naturales.js src/data/ebc-sociales.js src/data/ebc-ingles.js src/data/dba.js src/data/planes-matematicas.js src/data/progresion-vertical.js src/data/icfes-matematicas.js src/data/icfes-lectura-critica.js src/data/icfes-naturales.js src/data/icfes-sociales.js src/data/icfes-ingles.js src/data/preguntas-icfes.js; do
+for f in src/data/ebc-matematicas.js src/data/ebc-lenguaje.js src/data/ebc-naturales.js src/data/ebc-sociales.js src/data/ebc-ingles.js src/data/dba.js src/data/planes-matematicas.js src/data/planes-lenguaje.js src/data/progresion-vertical.js src/data/icfes-matematicas.js src/data/icfes-lectura-critica.js src/data/icfes-naturales.js src/data/icfes-sociales.js src/data/icfes-ingles.js src/data/preguntas-icfes.js; do
   DATA_JS+="$(cat "$f")"$'\n'
 done
 
@@ -30,21 +35,21 @@ UI_JS=$(cat src/ui/app.js)
 
 # Generar HTML standalone
 mkdir -p dist
-cat > dist/articulador-saber-icfes.html << 'HTMLEOF'
+cat > dist/articulador-curricular.html << 'HTMLEOF'
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Articulador Curricular Saber ICFES — MEN Colombia</title>
+  <title>Articulador Curricular — MEN Colombia</title>
   <meta name="description" content="Articulador curricular alineado a pruebas Saber ICFES. EBC, DBA e ICFES articulados. Funciona 100% offline.">
   <meta name="theme-color" content="#0e1018">
   <style>
 HTMLEOF
 
-echo "$CSS" >> dist/articulador-saber-icfes.html
+echo "$CSS" >> dist/articulador-curricular.html
 
-cat >> dist/articulador-saber-icfes.html << 'HTMLEOF'
+cat >> dist/articulador-curricular.html << 'HTMLEOF'
   </style>
 </head>
 <body data-area="matematicas">
@@ -55,7 +60,7 @@ cat >> dist/articulador-saber-icfes.html << 'HTMLEOF'
         <button class="btn btn-icon btn-ghost" id="menu-btn" data-action="toggle-sidebar" style="display:none" aria-label="Menú">☰</button>
         <div class="header-logo">ICFES</div>
         <div>
-          <div class="header-title">Articulador Curricular Saber ICFES</div>
+          <div class="header-title">Articulador Curricular</div>
           <div class="header-subtitle">Asistente Pedagógico para el Docente Colombiano</div>
         </div>
       </div>
@@ -72,12 +77,12 @@ cat >> dist/articulador-saber-icfes.html << 'HTMLEOF'
   <script>
 HTMLEOF
 
-echo "$DATA_JS" >> dist/articulador-saber-icfes.html
-echo "$ENGINE_JS" >> dist/articulador-saber-icfes.html
-echo "$IA_JS" >> dist/articulador-saber-icfes.html
-echo "$UI_JS" >> dist/articulador-saber-icfes.html
+echo "$DATA_JS" >> dist/articulador-curricular.html
+echo "$ENGINE_JS" >> dist/articulador-curricular.html
+echo "$IA_JS" >> dist/articulador-curricular.html
+echo "$UI_JS" >> dist/articulador-curricular.html
 
-cat >> dist/articulador-saber-icfes.html << 'HTMLEOF'
+cat >> dist/articulador-curricular.html << 'HTMLEOF'
 
   // Mobile menu
   (function() {
@@ -92,7 +97,7 @@ cat >> dist/articulador-saber-icfes.html << 'HTMLEOF'
 </html>
 HTMLEOF
 
-SIZE=$(wc -c < dist/articulador-saber-icfes.html)
+SIZE=$(wc -c < dist/articulador-curricular.html)
 SIZE_KB=$((SIZE / 1024))
-echo "✅ Generado: dist/articulador-saber-icfes.html (${SIZE_KB} KB)"
-echo "   Abrir en navegador: file://$(pwd)/dist/articulador-saber-icfes.html"
+echo "✅ Generado: dist/articulador-curricular.html (${SIZE_KB} KB)"
+echo "   Abrir en navegador: file://$(pwd)/dist/articulador-curricular.html"
