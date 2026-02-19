@@ -1,5 +1,5 @@
 /**
- * Planes de aula de Ciencias Sociales - Grados 8° a 11°
+ * Planes de aula de Ciencias Sociales - Grados 6° a 11°
  * Estructura: 4 periodos x 10 semanas x 3 horas/semana = 120 horas/año
  * Basado en Estándares Básicos de Competencias (EBC) del MEN - Colombia
  * Competencias ICFES: Pensamiento social, Interpretación y análisis de perspectivas,
@@ -7,6 +7,802 @@
  */
 
 const PLANES_SOCIALES = {
+
+  // ============================================================
+  // GRADO 6
+  // ============================================================
+  '6': {
+    grado: '6°',
+    intensidadHoraria: 3,
+    totalSemanas: 40,
+    totalHorasAnuales: 120,
+    objetivo: 'Desarrollar el pensamiento social básico mediante el estudio de las civilizaciones antiguas, la geografía física de Colombia, la organización política del Estado y los pueblos prehispánicos colombianos, fortaleciendo la identidad cultural y el sentido de pertenencia territorial',
+
+    periodos: {
+
+      // ----------------------------------------------------------
+      // GRADO 6 - PERIODO 1
+      // ----------------------------------------------------------
+      1: {
+        periodo: 1,
+        semanas: 10,
+        horasSemana: 3,
+        horasTotales: 30,
+
+        estandares: [
+          'Reconozco y describo las características de las principales civilizaciones antiguas (Mesopotamia, Egipto, Grecia y Roma) y sus aportes a la humanidad.',
+          'Establezco relaciones entre las condiciones geográficas y el desarrollo de las civilizaciones antiguas.',
+          'Identifico los aportes culturales, científicos y políticos de las civilizaciones antiguas a la sociedad occidental.'
+        ],
+
+        dba: 'Comprende las características de las civilizaciones antiguas de Mesopotamia, Egipto, Grecia y Roma, identificando sus aportes culturales, políticos y científicos, y establece relaciones entre el contexto geográfico y el desarrollo de cada civilización.',
+
+        ejesTematicos: [
+          'Mesopotamia: las primeras civilizaciones entre el Tigris y el Éufrates',
+          'El Antiguo Egipto: geografía del Nilo, faraones y pirámides',
+          'La antigua Grecia: polis, democracia y legado cultural',
+          'El Imperio Romano: organización, expansión y caída',
+          'Aportes de las civilizaciones antiguas a la humanidad'
+        ],
+
+        tiposPensamiento: ['Historia', 'Territorio'],
+
+        preguntaProblema: '¿Por qué las civilizaciones antiguas de Mesopotamia, Egipto, Grecia y Roma siguen siendo referentes fundamentales para comprender la organización política, cultural y científica del mundo de hoy?',
+
+        diagnostico: 'El 60% de los estudiantes no identifica las características básicas de las civilizaciones antiguas ni establece relaciones entre el contexto geográfico y el desarrollo civilizatorio.',
+
+        competenciasICFES: {
+          pensamientoSocial: 'Identifica las principales características de las civilizaciones antiguas y sus aportes al desarrollo político, cultural y científico de la humanidad.',
+          interpretacion: 'Reconoce y compara las formas de organización social, política y cultural de las civilizaciones de Mesopotamia, Egipto, Grecia y Roma.',
+          pensamientoSistemico: 'Establece relaciones entre el contexto geográfico (ríos, valles, costas) y el surgimiento y desarrollo de las civilizaciones antiguas.'
+        },
+
+        matrizReferencia: {
+          componente: 'historia',
+          competencia: 'Pensamiento social',
+          afirmaciones: [
+            'Comprende las dimensiones temporales y espaciales de las civilizaciones antiguas como fundamento de la cultura occidental.',
+            'Identifica los aportes culturales, políticos y científicos de las civilizaciones antiguas para explicar continuidades en el presente.'
+          ]
+        },
+
+        aprendizajesICFES: ['soc-s9-01', 'soc-s9-03'],
+        nivelEsperado: 'Mínimo',
+
+        evidenciasAprendizaje: [
+          'Describe la ubicación geográfica y las condiciones naturales que favorecieron el surgimiento de Mesopotamia y Egipto.',
+          'Identifica los principales aportes de la civilización griega: democracia, filosofía, teatro y ciencias.',
+          'Explica la organización del Imperio Romano: república, república tardía e Imperio.',
+          'Establece semejanzas y diferencias entre las civilizaciones antiguas estudiadas.',
+          'Interpreta líneas de tiempo y mapas históricos de las civilizaciones antiguas.'
+        ],
+
+        estrategiasMetodologicas: [
+          'Construcción colectiva de línea de tiempo: desde Mesopotamia hasta la caída de Roma.',
+          'Trabajo con mapas históricos: ubicar las civilizaciones en el espacio geográfico.',
+          'Análisis de imágenes: monumentos, construcciones y objetos de las civilizaciones antiguas.',
+          'Comparación en cuadro: formas de gobierno, religión, aportes culturales de cada civilización.',
+          'Lectura guiada de mitos y leyendas fundacionales (Gilgamesh, mitos griegos).'
+        ],
+
+        materialesEducativos: [
+          'Texto escolar de Ciencias Sociales 6° (editorial Norma o Santillana)',
+          'Mapas históricos de las civilizaciones antiguas',
+          'Imágenes y fotografías de monumentos (pirámides, Partenón, Coliseo)',
+          'Líneas de tiempo en formato mural para el aula',
+          'Videos documentales cortos sobre cada civilización (YouTube educativo)'
+        ],
+
+        criteriosEvaluacion: {
+          porcentajes: { saber: 30, hacer: 50, ser: 20 },
+          saber: [
+            'Describe las características geográficas y organizativas de las civilizaciones antiguas.',
+            'Identifica los principales aportes culturales, políticos y científicos de Grecia y Roma.',
+            'Explica la importancia de los ríos en el surgimiento de Mesopotamia y Egipto.'
+          ],
+          hacer: [
+            'Elabora una línea de tiempo ilustrada de las civilizaciones antiguas.',
+            'Completa mapas históricos ubicando las civilizaciones en su contexto geográfico.',
+            'Construye un cuadro comparativo entre las civilizaciones estudiadas.',
+            'Interpreta imágenes y fuentes visuales de la Antigüedad.'
+          ],
+          ser: [
+            'Valora los aportes de las civilizaciones antiguas como patrimonio de la humanidad.',
+            'Muestra curiosidad e interés por el estudio de culturas diferentes a la propia.',
+            'Participa con respeto en las actividades grupales de análisis histórico.'
+          ]
+        },
+
+        competenciaCiudadana: 'Reconoce que la democracia, la justicia y los derechos son conceptos que tienen raíces en las civilizaciones antiguas y reflexiona sobre la importancia de preservar y valorar el patrimonio cultural de la humanidad.'
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 6 - PERIODO 2
+      // ----------------------------------------------------------
+      2: {
+        periodo: 2,
+        semanas: 10,
+        horasSemana: 3,
+        horasTotales: 30,
+
+        estandares: [
+          'Describo y explico las regiones naturales de Colombia, sus características físicas, climáticas e hidrográficas.',
+          'Identifico la diversidad geográfica de Colombia como factor de riqueza natural y cultural.',
+          'Establezco relaciones entre las condiciones geográficas de las regiones colombianas y las formas de vida de sus habitantes.'
+        ],
+
+        dba: 'Comprende las características físicas, climáticas e hidrográficas de las regiones naturales de Colombia, estableciendo relaciones entre la geografía y las formas de vida de sus habitantes.',
+
+        ejesTematicos: [
+          'Las regiones naturales de Colombia: Andina, Caribe, Pacífica, Orinoquía, Amazonia e Insular',
+          'Hidrografía de Colombia: principales ríos y cuencas hidrográficas',
+          'Clima y pisos térmicos en Colombia',
+          'Biodiversidad y recursos naturales por región',
+          'Relación entre geografía y formas de vida de las comunidades'
+        ],
+
+        tiposPensamiento: ['Territorio'],
+
+        preguntaProblema: '¿Cómo la diversidad geográfica de Colombia (regiones, ríos, climas) determina las formas de vida, la cultura y la economía de sus habitantes?',
+
+        diagnostico: 'El 58% de los estudiantes no identifica las regiones naturales de Colombia ni establece relaciones entre la geografía y las condiciones de vida de las comunidades.',
+
+        competenciasICFES: {
+          pensamientoSocial: 'Describe las características geográficas de las regiones naturales de Colombia, relacionando condiciones físicas con las formas de vida de sus pobladores.',
+          interpretacion: 'Reconoce la diversidad geográfica de Colombia como un recurso de riqueza natural y cultural que debe ser valorado y protegido.',
+          pensamientoSistemico: 'Establece relaciones entre las condiciones climáticas, hidrográficas y el uso del suelo en las diferentes regiones de Colombia.'
+        },
+
+        matrizReferencia: {
+          componente: 'relaciones-espaciales-ambientales',
+          competencia: 'Pensamiento reflexivo y sistémico',
+          afirmaciones: [
+            'Identifica y describe las características físicas, climáticas e hidrográficas de las regiones naturales de Colombia.',
+            'Establece relaciones entre las condiciones geográficas y las formas de vida, actividades económicas y manifestaciones culturales de las comunidades.'
+          ]
+        },
+
+        aprendizajesICFES: ['soc-s9-06', 'soc-s9-07'],
+        nivelEsperado: 'Mínimo',
+
+        evidenciasAprendizaje: [
+          'Ubica en el mapa las seis regiones naturales de Colombia e identifica sus características físicas.',
+          'Nombra y localiza los principales ríos y cuencas hidrográficas de Colombia.',
+          'Describe los pisos térmicos y relaciona el clima con la vegetación y la actividad económica.',
+          'Explica por qué Colombia es uno de los países más biodiversos del mundo.',
+          'Relaciona la región geográfica con las formas de vida y la cultura de sus habitantes.'
+        ],
+
+        estrategiasMetodologicas: [
+          'Elaboración de mapas de Colombia identificando regiones y principales accidentes geográficos.',
+          'Trabajo con fotografías: identificar a qué región pertenecen distintos paisajes colombianos.',
+          'Análisis de infografías sobre biodiversidad y recursos naturales por región.',
+          'Salida virtual o recorrido fotográfico por las regiones de Colombia.',
+          'Proyecto: "Mi región colombiana" – descripción geográfica con mapas e imágenes.'
+        ],
+
+        materialesEducativos: [
+          'Texto escolar de Ciencias Sociales 6°',
+          'Atlas geográfico de Colombia',
+          'Mapas mudos de Colombia para colorear y señalar',
+          'Fotografías representativas de cada región natural',
+          'Infografías de biodiversidad y recursos naturales de Colombia'
+        ],
+
+        criteriosEvaluacion: {
+          porcentajes: { saber: 30, hacer: 50, ser: 20 },
+          saber: [
+            'Nombra y describe las seis regiones naturales de Colombia.',
+            'Identifica los principales ríos y cuencas hidrográficas.',
+            'Explica qué son los pisos térmicos y cómo influyen en el clima.'
+          ],
+          hacer: [
+            'Elabora mapas de Colombia señalando regiones, ríos y relieves.',
+            'Construye una infografía sobre una región natural de Colombia.',
+            'Interpreta mapas físicos y climáticos de Colombia.',
+            'Relaciona datos geográficos con formas de vida y economía regional.'
+          ],
+          ser: [
+            'Valora la diversidad geográfica de Colombia como riqueza natural y cultural.',
+            'Muestra actitud de cuidado y respeto hacia el medio ambiente.',
+            'Participa con entusiasmo en actividades de exploración geográfica.'
+          ]
+        },
+
+        competenciaCiudadana: 'Reconoce la diversidad geográfica de Colombia como un bien colectivo que debe ser protegido, y asume actitudes de cuidado ambiental y valoración del territorio desde su cotidianidad.'
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 6 - PERIODO 3
+      // ----------------------------------------------------------
+      3: {
+        periodo: 3,
+        semanas: 10,
+        horasSemana: 3,
+        horasTotales: 30,
+
+        estandares: [
+          'Identifico y explico los conceptos básicos de Estado, gobierno y democracia, y los relaciono con la organización política de Colombia.',
+          'Describo la estructura del Estado colombiano y las funciones de sus ramas del poder público.',
+          'Reconozco la importancia de la participación ciudadana en la vida democrática y los mecanismos que la hacen posible.'
+        ],
+
+        dba: 'Comprende los conceptos básicos de Estado, gobierno y democracia, identificando la estructura del Estado colombiano, las funciones de las ramas del poder público y los mecanismos de participación ciudadana.',
+
+        ejesTematicos: [
+          'El Estado: concepto, elementos y tipos de Estado',
+          'El gobierno: formas de gobierno y sistemas políticos',
+          'La democracia: principios, tipos y condiciones',
+          'La organización política de Colombia: ramas del poder público',
+          'Participación ciudadana: mecanismos y formas de participación'
+        ],
+
+        tiposPensamiento: ['Ético-Político'],
+
+        preguntaProblema: '¿Por qué es importante conocer la organización política del Estado colombiano y participar activamente en los mecanismos democráticos para construir una sociedad más justa?',
+
+        diagnostico: 'El 62% de los estudiantes no distingue entre Estado y gobierno, ni identifica las ramas del poder público ni los mecanismos de participación ciudadana.',
+
+        competenciasICFES: {
+          pensamientoSocial: 'Describe los elementos del Estado, las formas de gobierno y los principios de la democracia, relacionándolos con la organización política de Colombia.',
+          interpretacion: 'Reconoce las funciones de las ramas del poder público y evalúa la importancia de la separación de poderes para la democracia.',
+          pensamientoSistemico: 'Establece relaciones entre los principios democráticos, la organización del Estado colombiano y las posibilidades de participación ciudadana.'
+        },
+
+        matrizReferencia: {
+          componente: 'etico-politico',
+          competencia: 'Interpretación y análisis de perspectivas',
+          afirmaciones: [
+            'Identifica la estructura del Estado colombiano, las funciones de las ramas del poder público y los mecanismos de participación ciudadana.',
+            'Comprende los principios de la democracia y evalúa su importancia para la convivencia y la garantía de derechos.'
+          ]
+        },
+
+        aprendizajesICFES: ['soc-s9-02', 'soc-s9-05'],
+        nivelEsperado: 'Mínimo',
+
+        evidenciasAprendizaje: [
+          'Define los conceptos de Estado, nación, gobierno y democracia.',
+          'Identifica los elementos del Estado colombiano: territorio, población, soberanía y gobierno.',
+          'Describe las funciones de las tres ramas del poder público en Colombia.',
+          'Explica qué es la democracia y cuáles son sus principios fundamentales.',
+          'Identifica los mecanismos de participación ciudadana: voto, referendo, consulta popular, cabildo abierto.'
+        ],
+
+        estrategiasMetodologicas: [
+          'Construcción de organigrama del Estado colombiano y las ramas del poder público.',
+          'Simulacro de elecciones estudiantiles: vivencia de los mecanismos democráticos.',
+          'Análisis de noticias sobre el funcionamiento del Estado y la participación ciudadana.',
+          'Comparación de formas de gobierno: democracia, monarquía, dictadura.',
+          'Debate: ¿por qué es importante separar los poderes del Estado?'
+        ],
+
+        materialesEducativos: [
+          'Texto escolar de Ciencias Sociales 6°',
+          'Constitución Política de Colombia 1991 (versión pedagógica para estudiantes)',
+          'Infografías sobre las ramas del poder público',
+          'Noticias actuales sobre participación ciudadana y democracia',
+          'Videos cortos sobre mecanismos de participación (Registraduría Nacional)'
+        ],
+
+        criteriosEvaluacion: {
+          porcentajes: { saber: 30, hacer: 50, ser: 20 },
+          saber: [
+            'Define los conceptos de Estado, gobierno y democracia.',
+            'Describe las funciones de las tres ramas del poder público.',
+            'Identifica los mecanismos de participación ciudadana.'
+          ],
+          hacer: [
+            'Elabora un organigrama de las ramas del poder público.',
+            'Participa en el simulacro de elecciones estudiantiles.',
+            'Analiza noticias relacionadas con el funcionamiento del Estado.',
+            'Argumenta sobre la importancia de la participación ciudadana.'
+          ],
+          ser: [
+            'Valora la democracia como sistema de gobierno que garantiza derechos.',
+            'Muestra disposición para participar en los mecanismos democráticos del colegio.',
+            'Asume actitudes de respeto frente a la diferencia de opiniones políticas.'
+          ]
+        },
+
+        competenciaCiudadana: 'Comprende la importancia de la organización política del Estado y la democracia, y asume compromisos de participación activa en los mecanismos democráticos disponibles en su entorno escolar y comunitario.'
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 6 - PERIODO 4
+      // ----------------------------------------------------------
+      4: {
+        periodo: 4,
+        semanas: 10,
+        horasSemana: 3,
+        horasTotales: 30,
+
+        estandares: [
+          'Reconozco y describo las principales culturas prehispánicas de Colombia (muiscas, taironas, quimbayas, zenúes) y sus aportes a la identidad nacional.',
+          'Identifico las formas de organización social, política, económica y cultural de los pueblos prehispánicos colombianos.',
+          'Valoro la herencia cultural prehispánica como parte fundamental de la identidad colombiana y latinoamericana.'
+        ],
+
+        dba: 'Comprende las características de las principales culturas prehispánicas de Colombia, identificando sus formas de organización, sus aportes culturales y su legado en la identidad colombiana.',
+
+        ejesTematicos: [
+          'Los muiscas: organización política, economía y cosmogonía',
+          'Los taironas: ciudad, arquitectura y relación con la naturaleza',
+          'Los quimbayas: orfebrería y expresión cultural',
+          'Los zenúes: manejo del agua y territorio',
+          'Legado prehispánico en la identidad cultural colombiana'
+        ],
+
+        tiposPensamiento: ['Historia'],
+
+        preguntaProblema: '¿Qué nos enseñan las culturas prehispánicas colombianas (muiscas, taironas, quimbayas y zenúes) sobre formas de organización social, política y ambiental que podrían inspirar soluciones a problemas actuales?',
+
+        diagnostico: 'El 65% de los estudiantes desconoce las características de las principales culturas prehispánicas colombianas y no reconoce su legado en la identidad y el patrimonio cultural del país.',
+
+        competenciasICFES: {
+          pensamientoSocial: 'Describe las características culturales, políticas y económicas de las principales culturas prehispánicas colombianas, identificando sus formas de organización y sus aportes al patrimonio cultural.',
+          interpretacion: 'Reconoce y compara las formas de organización y los aportes culturales de los muiscas, taironas, quimbayas y zenúes, valorando su diversidad.',
+          pensamientoSistemico: 'Establece relaciones entre las condiciones geográficas, la organización social y los desarrollos culturales de los pueblos prehispánicos colombianos.'
+        },
+
+        matrizReferencia: {
+          componente: 'historia',
+          competencia: 'Pensamiento social',
+          afirmaciones: [
+            'Comprende las formas de organización social, política y económica de los pueblos prehispánicos colombianos en su contexto histórico y geográfico.',
+            'Reconoce el legado cultural de los pueblos prehispánicos como parte constitutiva del patrimonio e identidad de Colombia.'
+          ]
+        },
+
+        aprendizajesICFES: ['soc-s9-01', 'soc-s9-04'],
+        nivelEsperado: 'Mínimo',
+
+        evidenciasAprendizaje: [
+          'Describe la organización política y social de los muiscas: zipazgo, cacicazgo, zaque.',
+          'Explica la importancia de Ciudad Perdida (Teyuna) como centro cultural y político de los taironas.',
+          'Identifica los aportes artísticos y culturales de los quimbayas, especialmente en orfebrería.',
+          'Describe el ingenio hidráulico de los zenúes y su relación con el territorio.',
+          'Establece el legado de las culturas prehispánicas en la identidad cultural colombiana actual.'
+        ],
+
+        estrategiasMetodologicas: [
+          'Análisis de piezas de orfebrería prehispánica: imágenes del Museo del Oro.',
+          'Elaboración de mapa de Colombia ubicando las culturas prehispánicas por región.',
+          'Proyecto: álbum o mural "Culturas prehispánicas de Colombia".',
+          'Lectura de leyendas y mitos prehispánicos colombianos (El Dorado, la Laguna de Guatavita).',
+          'Comparación de las culturas prehispánicas con las civilizaciones antiguas estudiadas en el periodo 1.'
+        ],
+
+        materialesEducativos: [
+          'Texto escolar de Ciencias Sociales 6°',
+          'Imágenes de piezas del Museo del Oro (catálogo pedagógico)',
+          'Mapas de Colombia con distribución de culturas prehispánicas',
+          'Leyendas y mitos colombianos prehispánicos (selección docente)',
+          'Documental: "Pueblos indígenas prehispánicos de Colombia" (YouTube educativo)'
+        ],
+
+        criteriosEvaluacion: {
+          porcentajes: { saber: 30, hacer: 50, ser: 20 },
+          saber: [
+            'Describe las características organizativas de los muiscas, taironas, quimbayas y zenúes.',
+            'Identifica los principales aportes culturales de cada civilización prehispánica.',
+            'Explica la relación entre las culturas prehispánicas y el territorio colombiano.'
+          ],
+          hacer: [
+            'Elabora un mapa de Colombia con la distribución de las culturas prehispánicas.',
+            'Construye un cuadro comparativo de las características de cada cultura.',
+            'Analiza imágenes de orfebrería y arquitectura prehispánica.',
+            'Relaciona el legado prehispánico con manifestaciones culturales actuales.'
+          ],
+          ser: [
+            'Valora el legado cultural de los pueblos prehispánicos como patrimonio de la humanidad.',
+            'Muestra actitud de respeto y valoración hacia la diversidad cultural colombiana.',
+            'Reconoce la importancia de preservar el patrimonio arqueológico y cultural del país.'
+          ]
+        },
+
+        competenciaCiudadana: 'Reconoce el legado de los pueblos prehispánicos como parte de su identidad cultural colombiana y asume compromisos de valoración y protección del patrimonio arqueológico e histórico del país.'
+      }
+    }
+  },
+
+  // ============================================================
+  // GRADO 7
+  // ============================================================
+  '7': {
+    grado: '7°',
+    intensidadHoraria: 3,
+    totalSemanas: 40,
+    totalHorasAnuales: 120,
+    objetivo: 'Desarrollar el pensamiento histórico y social mediante el estudio de la Edad Media, el Renacimiento, la conquista y colonia de América, la geografía humana colombiana y los derechos humanos, articulando los procesos mundiales con la realidad histórica y social de Colombia',
+
+    periodos: {
+
+      // ----------------------------------------------------------
+      // GRADO 7 - PERIODO 1
+      // ----------------------------------------------------------
+      1: {
+        periodo: 1,
+        semanas: 10,
+        horasSemana: 3,
+        horasTotales: 30,
+
+        estandares: [
+          'Describo y analizo las características de la Edad Media europea y los cambios que trajo el Renacimiento en la ciencia, el arte y el pensamiento.',
+          'Establezco relaciones entre el feudalismo, la iglesia y la organización social medieval.',
+          'Identifico los principales cambios culturales, científicos y artísticos del Renacimiento y su impacto en la historia de Occidente.'
+        ],
+
+        dba: 'Comprende las características de la Edad Media y el Renacimiento, identificando las transformaciones sociales, culturales, científicas y artísticas que marcaron el tránsito hacia la modernidad.',
+
+        ejesTematicos: [
+          'La caída de Roma y el inicio de la Edad Media',
+          'El feudalismo: estructura social, política y económica',
+          'La Iglesia Católica en la Edad Media: poder e influencia',
+          'El Renacimiento: humanismo, ciencia y arte',
+          'Los grandes descubrimientos y la visión del mundo en el siglo XV'
+        ],
+
+        tiposPensamiento: ['Historia'],
+
+        preguntaProblema: '¿Qué transformaciones culturales, científicas y artísticas trajo el Renacimiento frente a la Edad Media, y cómo estos cambios sentaron las bases del mundo moderno?',
+
+        diagnostico: 'El 57% de los estudiantes no identifica las características del feudalismo ni comprende los cambios que representó el Renacimiento frente a la cosmovisión medieval.',
+
+        competenciasICFES: {
+          pensamientoSocial: 'Describe las características de la Edad Media (feudalismo, iglesia, cruzadas) y del Renacimiento (humanismo, ciencias, artes), identificando cambios y continuidades históricas.',
+          interpretacion: 'Reconoce y compara las visiones del mundo medieval y renacentista, analizando las perspectivas de diferentes actores históricos.',
+          pensamientoSistemico: 'Establece relaciones entre la crisis del feudalismo, el renacimiento del comercio y el surgimiento del humanismo como contexto del Renacimiento.'
+        },
+
+        matrizReferencia: {
+          componente: 'historia',
+          competencia: 'Pensamiento social',
+          afirmaciones: [
+            'Comprende las dimensiones temporales y espaciales de la Edad Media y el Renacimiento como procesos históricos interconectados.',
+            'Identifica los cambios culturales, científicos y artísticos del Renacimiento como punto de quiebre en la historia de Occidente.'
+          ]
+        },
+
+        aprendizajesICFES: ['soc-s9-01', 'soc-s9-03'],
+        nivelEsperado: 'Satisfactorio',
+
+        evidenciasAprendizaje: [
+          'Describe la estructura social del feudalismo: señor feudal, vasallos y siervos.',
+          'Explica el papel de la Iglesia Católica en la sociedad medieval: poder temporal y espiritual.',
+          'Identifica los principales artistas y científicos del Renacimiento: Leonardo da Vinci, Galileo, Copérnico.',
+          'Describe las características del humanismo y su diferencia con la cosmovisión medieval.',
+          'Establece relaciones entre el Renacimiento, los grandes descubrimientos y el inicio de la modernidad.'
+        ],
+
+        estrategiasMetodologicas: [
+          'Análisis de obras de arte medievales y renacentistas: comparación de estilos y mensajes.',
+          'Línea de tiempo: de la caída de Roma al Renacimiento.',
+          'Lectura y análisis de fragmentos de textos medievales y humanistas.',
+          'Proyecto: "El mundo en el Renacimiento" – análisis de inventos, descubrimientos y obras de arte.',
+          'Debate: ¿El Renacimiento representó una ruptura total con la Edad Media?'
+        ],
+
+        materialesEducativos: [
+          'Texto escolar de Ciencias Sociales 7° (editorial Norma o Santillana)',
+          'Imágenes de arte medieval (mosaicos, catedrales góticas) y renacentista (La Gioconda, El Vitruvio)',
+          'Líneas de tiempo ilustradas de la Edad Media al Renacimiento',
+          'Fragmentos de textos humanistas (Erasmo, Pico della Mirandola)',
+          'Documental: "El Renacimiento: el arte y las ideas" (YouTube educativo)'
+        ],
+
+        criteriosEvaluacion: {
+          porcentajes: { saber: 30, hacer: 50, ser: 20 },
+          saber: [
+            'Describe las características del feudalismo y la sociedad medieval.',
+            'Identifica los principales cambios del Renacimiento en ciencia, arte y pensamiento.',
+            'Explica el concepto de humanismo y su importancia histórica.'
+          ],
+          hacer: [
+            'Elabora una línea de tiempo de la Edad Media al Renacimiento.',
+            'Compara obras de arte medievales y renacentistas identificando sus diferencias.',
+            'Analiza fuentes históricas medievales y renacentistas.',
+            'Argumenta sobre los cambios que trajo el Renacimiento para el mundo occidental.'
+          ],
+          ser: [
+            'Valora el patrimonio artístico y cultural de la Edad Media y el Renacimiento.',
+            'Muestra actitud de respeto y curiosidad hacia culturas y épocas históricas diferentes.',
+            'Participa con responsabilidad en las actividades grupales de análisis histórico.'
+          ]
+        },
+
+        competenciaCiudadana: 'Reconoce que los cambios históricos son producto del pensamiento crítico, la creatividad y el cuestionamiento de las ideas establecidas, y reflexiona sobre la importancia del conocimiento y la cultura para transformar la sociedad.'
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 7 - PERIODO 2
+      // ----------------------------------------------------------
+      2: {
+        periodo: 2,
+        semanas: 10,
+        horasSemana: 3,
+        horasTotales: 30,
+
+        estandares: [
+          'Explico el proceso de conquista y colonización de América por parte de las potencias europeas y sus consecuencias para los pueblos indígenas.',
+          'Describo el sistema de la encomienda y la mita como formas de explotación colonial, y analizo sus consecuencias sociales.',
+          'Identifico el proceso de mestizaje cultural, étnico y social que resultó del encuentro de culturas en América durante la colonia.'
+        ],
+
+        dba: 'Comprende el proceso de conquista y colonia en América, identificando las causas del encuentro cultural, los mecanismos de explotación (encomienda, mita) y las consecuencias del mestizaje para la conformación de las sociedades latinoamericanas.',
+
+        ejesTematicos: [
+          'Los viajes de exploración y el "descubrimiento" de América (1492)',
+          'La conquista de América: procesos, actores y resistencias indígenas',
+          'El sistema colonial: encomienda, mita y organización de la colonia',
+          'El mestizaje: mezcla étnica, cultural y religiosa',
+          'La Nueva Granada: organización colonial del territorio colombiano'
+        ],
+
+        tiposPensamiento: ['Historia'],
+
+        preguntaProblema: '¿Cómo el proceso de conquista y colonización de América, con sus mecanismos de explotación y su encuentro de culturas, configuró la sociedad latinoamericana que conocemos hoy?',
+
+        diagnostico: 'El 53% de los estudiantes no comprende el sistema colonial ni las consecuencias del encuentro de culturas, y no reconoce la resistencia indígena ante la conquista.',
+
+        competenciasICFES: {
+          pensamientoSocial: 'Analiza el proceso de conquista y colonización de América, identificando los mecanismos de explotación colonial y las consecuencias del encuentro de culturas para las sociedades americanas.',
+          interpretacion: 'Reconoce y compara las perspectivas de los conquistadores europeos, los pueblos indígenas y los africanos esclavizados frente al proceso de conquista y colonia.',
+          pensamientoSistemico: 'Establece relaciones entre el sistema colonial (encomienda, mita, esclavitud), el mestizaje y la conformación de las sociedades latinoamericanas actuales.'
+        },
+
+        matrizReferencia: {
+          componente: 'historia',
+          competencia: 'Interpretación y análisis de perspectivas',
+          afirmaciones: [
+            'Reconoce y compara las perspectivas de los diferentes actores del proceso de conquista y colonización de América.',
+            'Comprende el proceso de mestizaje como resultado del encuentro forzado de culturas europeas, indígenas y africanas en América.'
+          ]
+        },
+
+        aprendizajesICFES: ['soc-s9-01', 'soc-s9-05'],
+        nivelEsperado: 'Satisfactorio',
+
+        evidenciasAprendizaje: [
+          'Describe los motivos de los viajes de exploración europeos y el contexto del "descubrimiento" de América.',
+          'Explica el proceso de conquista de América, identificando actores, mecanismos y resistencias indígenas.',
+          'Describe el sistema colonial: encomienda, mita, esclavitud y organización administrativa.',
+          'Explica el proceso de mestizaje étnico, cultural y religioso en América colonial.',
+          'Identifica las características de la Nueva Granada como parte del sistema colonial español.'
+        ],
+
+        estrategiasMetodologicas: [
+          'Análisis de fuentes primarias: fragmentos de crónicas de conquista desde la perspectiva indígena y española.',
+          'Debate: ¿"Descubrimiento", "encuentro" o "invasión"? Perspectivas sobre 1492.',
+          'Mapa histórico: rutas de exploración y conquista en América.',
+          'Análisis de la película o documental sobre la conquista desde la perspectiva de los pueblos indígenas.',
+          'Construcción de cuadro comparativo: vida antes y después de la conquista para indígenas, europeos y africanos.'
+        ],
+
+        materialesEducativos: [
+          'Texto escolar de Ciencias Sociales 7°',
+          'Crónicas de Indias (fragmentos seleccionados, perspectivas indígena y española)',
+          'Mapas históricos de las rutas de conquista y la organización colonial',
+          'Fragmentos de "Visión de los vencidos" (León Portilla) adaptados para estudiantes',
+          'Documental o video sobre la conquista de América y la resistencia indígena'
+        ],
+
+        criteriosEvaluacion: {
+          porcentajes: { saber: 30, hacer: 50, ser: 20 },
+          saber: [
+            'Describe el proceso de conquista y colonización de América.',
+            'Explica los mecanismos de explotación colonial: encomienda y mita.',
+            'Define el concepto de mestizaje y sus dimensiones étnica, cultural y religiosa.'
+          ],
+          hacer: [
+            'Elabora un mapa histórico de las rutas de exploración y conquista.',
+            'Compara las perspectivas de los distintos actores de la conquista.',
+            'Analiza fuentes primarias sobre el proceso colonial.',
+            'Relaciona el sistema colonial con la conformación de la sociedad latinoamericana actual.'
+          ],
+          ser: [
+            'Reconoce y rechaza las formas de explotación y dominación que caracterizaron la colonia.',
+            'Valora la resistencia de los pueblos indígenas y africanos como expresión de dignidad.',
+            'Muestra disposición para analizar los hechos históricos desde múltiples perspectivas.'
+          ]
+        },
+
+        competenciaCiudadana: 'Comprende que la diversidad étnica y cultural de Colombia es resultado del encuentro y choque de culturas durante la conquista y la colonia, y asume una postura crítica frente a toda forma de discriminación, explotación o negación de la dignidad humana.'
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 7 - PERIODO 3
+      // ----------------------------------------------------------
+      3: {
+        periodo: 3,
+        semanas: 10,
+        horasSemana: 3,
+        horasTotales: 30,
+
+        estandares: [
+          'Describo y analizo las características de la geografía humana de Colombia: distribución de la población, procesos migratorios y urbanización.',
+          'Identifico los factores que determinan la distribución de la población en el territorio colombiano.',
+          'Establezco relaciones entre los procesos de migración y urbanización y los problemas sociales y ambientales de las ciudades colombianas.'
+        ],
+
+        dba: 'Comprende los conceptos de geografía humana aplicados a Colombia, analizando la distribución de la población, los procesos migratorios internos y externos, y los fenómenos de urbanización y sus consecuencias sociales y ambientales.',
+
+        ejesTematicos: [
+          'Geografía humana: concepto, ramas y herramientas',
+          'La población colombiana: distribución, densidad y crecimiento',
+          'Migraciones internas en Colombia: causas y consecuencias',
+          'La urbanización en Colombia: ciudades, problemas y oportunidades',
+          'Problemas sociales y ambientales de las grandes ciudades colombianas'
+        ],
+
+        tiposPensamiento: ['Territorio'],
+
+        preguntaProblema: '¿Cómo los procesos de migración y urbanización en Colombia han transformado el territorio, la población y las condiciones de vida, generando tanto oportunidades como nuevos problemas sociales y ambientales?',
+
+        diagnostico: 'El 56% de los estudiantes no comprende los conceptos de densidad poblacional, migración y urbanización, ni establece relaciones entre estos procesos y los problemas sociales colombianos.',
+
+        competenciasICFES: {
+          pensamientoSocial: 'Describe la distribución de la población colombiana, los procesos de migración interna y la urbanización, relacionándolos con las condiciones sociales y ambientales del territorio.',
+          interpretacion: 'Reconoce las perspectivas de los migrantes y las comunidades receptoras frente a los procesos migratorios y de urbanización en Colombia.',
+          pensamientoSistemico: 'Establece relaciones entre los procesos de desplazamiento forzado, la migración interna, la urbanización y los problemas sociales y ambientales de las ciudades colombianas.'
+        },
+
+        matrizReferencia: {
+          componente: 'relaciones-espaciales-ambientales',
+          competencia: 'Pensamiento reflexivo y sistémico',
+          afirmaciones: [
+            'Identifica y analiza los factores que determinan la distribución de la población en el territorio colombiano y los procesos migratorios.',
+            'Establece relaciones entre la urbanización, el crecimiento de las ciudades colombianas y los problemas sociales y ambientales derivados.'
+          ]
+        },
+
+        aprendizajesICFES: ['soc-s9-06', 'soc-s9-07'],
+        nivelEsperado: 'Satisfactorio',
+
+        evidenciasAprendizaje: [
+          'Describe la distribución de la población colombiana e identifica las zonas de mayor y menor densidad.',
+          'Explica las causas de las migraciones internas en Colombia: conflicto armado, búsqueda de oportunidades económicas.',
+          'Describe el proceso de urbanización en Colombia y las principales ciudades receptoras de migración.',
+          'Identifica los problemas sociales y ambientales asociados al crecimiento acelerado de las ciudades.',
+          'Propone alternativas para mejorar las condiciones de vida en las ciudades colombianas.'
+        ],
+
+        estrategiasMetodologicas: [
+          'Análisis de mapas de densidad poblacional de Colombia.',
+          'Lectura y análisis de testimonios de personas desplazadas y migrantes internos.',
+          'Estudio de caso: una ciudad colombiana y sus problemas de urbanización (Bogotá, Medellín, Barranquilla).',
+          'Análisis de estadísticas del DANE sobre población, migración y urbanización.',
+          'Construcción de pirámide de población colombiana y análisis de tendencias demográficas.'
+        ],
+
+        materialesEducativos: [
+          'Texto escolar de Ciencias Sociales 7°',
+          'Atlas de Colombia con mapas de distribución poblacional',
+          'Estadísticas del DANE sobre población y ciudades (versión simplificada)',
+          'Testimonios de migrantes internos (selección docente)',
+          'Imágenes aéreas y fotografías de ciudades colombianas (crecimiento urbano)'
+        ],
+
+        criteriosEvaluacion: {
+          porcentajes: { saber: 30, hacer: 50, ser: 20 },
+          saber: [
+            'Explica los conceptos de densidad de población, migración y urbanización.',
+            'Describe la distribución de la población colombiana por regiones.',
+            'Identifica las principales causas y consecuencias de la migración interna en Colombia.'
+          ],
+          hacer: [
+            'Interpreta mapas de densidad poblacional de Colombia.',
+            'Elabora un cuadro sobre causas y consecuencias de la migración interna.',
+            'Analiza estadísticas sobre urbanización y crecimiento de ciudades.',
+            'Propone alternativas de solución a problemas urbanos concretos.'
+          ],
+          ser: [
+            'Muestra empatía hacia las personas en situación de desplazamiento y migración.',
+            'Valora la diversidad cultural que resulta de los procesos migratorios.',
+            'Asume actitudes de responsabilidad frente a los problemas ambientales urbanos.'
+          ]
+        },
+
+        competenciaCiudadana: 'Comprende los procesos de migración y urbanización como fenómenos que transforman la sociedad colombiana, y asume actitudes de empatía, solidaridad y compromiso con la construcción de ciudades más justas, inclusivas y sostenibles.'
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 7 - PERIODO 4
+      // ----------------------------------------------------------
+      4: {
+        periodo: 4,
+        semanas: 10,
+        horasSemana: 3,
+        horasTotales: 30,
+
+        estandares: [
+          'Identifico y explico los derechos humanos, su historia y las instituciones encargadas de su protección a nivel nacional e internacional.',
+          'Reconozco los mecanismos de participación ciudadana establecidos en la Constitución Política de Colombia para la protección de los derechos.',
+          'Analizo situaciones de vulneración de derechos humanos y propongo alternativas de protección y defensa desde el ámbito escolar y comunitario.'
+        ],
+
+        dba: 'Comprende el concepto de derechos humanos, su historia y sus generaciones, identifica los mecanismos de participación y protección establecidos en la Constitución colombiana, y analiza situaciones cotidianas de vulneración y defensa de derechos.',
+
+        ejesTematicos: [
+          'Los derechos humanos: historia, concepto y generaciones',
+          'La Constitución Política de Colombia y los derechos fundamentales',
+          'Mecanismos de participación ciudadana: tutela, voto, referendo, consulta popular',
+          'Instituciones de protección de derechos: Defensoría del Pueblo, Procuraduría, Personería',
+          'Participación ciudadana juvenil: derechos y formas de participación de los jóvenes'
+        ],
+
+        tiposPensamiento: ['Ético-Político'],
+
+        preguntaProblema: '¿Cómo los derechos humanos y los mecanismos de participación ciudadana establecidos en la Constitución de 1991 permiten a los colombianos defender su dignidad y construir una sociedad más justa?',
+
+        diagnostico: 'El 61% de los estudiantes no identifica los derechos humanos por generaciones ni conoce los mecanismos de participación ciudadana para su protección en el contexto colombiano.',
+
+        competenciasICFES: {
+          pensamientoSocial: 'Describe la historia y las generaciones de los derechos humanos, relacionándolos con los derechos fundamentales consagrados en la Constitución Política de Colombia.',
+          interpretacion: 'Reconoce y compara los mecanismos de participación ciudadana disponibles en Colombia para la protección de los derechos, evaluando su alcance y limitaciones.',
+          pensamientoSistemico: 'Establece relaciones entre la historia de las luchas por los derechos humanos, los mecanismos constitucionales de participación y las situaciones de vulneración de derechos en Colombia.'
+        },
+
+        matrizReferencia: {
+          componente: 'etico-politico',
+          competencia: 'Interpretación y análisis de perspectivas',
+          afirmaciones: [
+            'Reconoce y describe los derechos humanos y sus generaciones, relacionándolos con los derechos fundamentales de la Constitución colombiana.',
+            'Identifica los mecanismos de participación ciudadana para la protección de derechos y evalúa su efectividad en casos concretos.'
+          ]
+        },
+
+        aprendizajesICFES: ['soc-s9-02', 'soc-s9-05', 'soc-s9-09'],
+        nivelEsperado: 'Satisfactorio',
+
+        evidenciasAprendizaje: [
+          'Explica el concepto de derechos humanos y describe las tres generaciones de derechos.',
+          'Identifica los derechos fundamentales consagrados en la Constitución Política de Colombia.',
+          'Describe los mecanismos de participación ciudadana: tutela, habeas corpus, derecho de petición, voto.',
+          'Identifica las instituciones encargadas de la protección de derechos en Colombia.',
+          'Analiza situaciones cotidianas de vulneración de derechos y propone el mecanismo de protección adecuado.'
+        ],
+
+        estrategiasMetodologicas: [
+          'Análisis de casos reales de vulneración de derechos en Colombia e identificación del mecanismo de protección adecuado.',
+          'Simulación: ejercicio de tutela escolar para defender un derecho vulnerado en el colegio.',
+          'Lectura y análisis de la Declaración Universal de Derechos Humanos (versión adaptada).',
+          'Debate: ¿Todos los derechos se respetan por igual en Colombia? Perspectivas y evidencias.',
+          'Investigación: ¿qué hace la Defensoría del Pueblo y la Personería Municipal en tu ciudad?'
+        ],
+
+        materialesEducativos: [
+          'Texto escolar de Ciencias Sociales 7°',
+          'Constitución Política de Colombia 1991 (versión pedagógica)',
+          'Declaración Universal de Derechos Humanos (versión adaptada para jóvenes)',
+          'Casos de tutela seleccionados por el docente (lenguaje accesible)',
+          'Infografías sobre las instituciones de protección de derechos en Colombia'
+        ],
+
+        criteriosEvaluacion: {
+          porcentajes: { saber: 30, hacer: 50, ser: 20 },
+          saber: [
+            'Describe las generaciones de los derechos humanos.',
+            'Identifica los mecanismos de participación ciudadana establecidos en la Constitución.',
+            'Nombra las instituciones de protección de derechos en Colombia y sus funciones.'
+          ],
+          hacer: [
+            'Analiza casos de vulneración de derechos e identifica el mecanismo de protección adecuado.',
+            'Participa en la simulación de una tutela escolar.',
+            'Elabora una infografía sobre los derechos humanos y sus generaciones.',
+            'Argumenta sobre la importancia de los derechos humanos y la participación ciudadana.'
+          ],
+          ser: [
+            'Valora los derechos humanos como fundamento de la dignidad y la convivencia.',
+            'Muestra disposición para defender los derechos propios y ajenos.',
+            'Asume compromisos concretos de participación ciudadana en su entorno escolar y comunitario.'
+          ]
+        },
+
+        competenciaCiudadana: 'Comprende los derechos humanos como fundamento de la dignidad y la convivencia democrática, utiliza los mecanismos constitucionales de participación para defender los propios y los de los demás, y asume compromisos de ciudadanía activa y responsable.'
+      }
+    }
+  },
 
   // ============================================================
   // GRADO 8

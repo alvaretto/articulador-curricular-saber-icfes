@@ -1,11 +1,797 @@
 /**
- * Planes de aula de Ciencias Naturales - Grados 8° a 11°
+ * Planes de aula de Ciencias Naturales - Grados 6° a 11°
  * Estructura: 4 periodos x 10 semanas x 4 horas/semana = 160 horas/año
  * Basado en Estándares Básicos de Competencias (EBC) del MEN - Colombia
  * Competencias ICFES: Uso comprensivo del conocimiento, Explicación de fenómenos, Indagación
  */
 
 const PLANES_NATURALES = {
+
+  // ============================================================
+  // GRADO 6
+  // ============================================================
+  '6': {
+    grado: '6°',
+    intensidadHoraria: 4,
+    totalSemanas: 40,
+    totalHorasAnuales: 160,
+    objetivo: 'Desarrollar competencias científicas básicas a través del estudio de la célula, los ecosistemas colombianos, las propiedades de la materia y las fuerzas y movimiento, articulando entorno vivo, entorno físico y CTS',
+
+    periodos: [
+      // ----------------------------------------------------------
+      // GRADO 6 - PERIODO 1
+      // ----------------------------------------------------------
+      {
+        periodo: 1,
+        semanas: 10,
+        horasSemana: 4,
+        horasTotales: 40,
+
+        estandares: [
+          'Verifico y explico el papel de los organelos celulares en el funcionamiento de la célula como unidad de vida.',
+          'Comparo sistemas de división celular y explico cómo la célula se relaciona con los tejidos, órganos y organismos.',
+          'Relaciono la estructura de los organelos celulares con sus funciones en el mantenimiento de la vida.'
+        ],
+
+        dba: 'Comprende la célula como unidad estructural y funcional de los seres vivos, describe sus organelos principales, distingue células procariotas de eucariotas y establece relaciones entre la estructura celular y las funciones vitales.',
+
+        ejesTematicos: [
+          'La célula: historia e importancia',
+          'Estructura celular: membrana, citoplasma, núcleo y organelos',
+          'Células procariotas y eucariotas: diferencias fundamentales',
+          'Células animales y vegetales: características específicas',
+          'Organización: célula, tejido, órgano, sistema y organismo'
+        ],
+
+        tiposPensamiento: ['Entorno Vivo'],
+
+        preguntaProblema: '¿Qué es la célula, cómo está organizada y de qué manera sus estructuras internas permiten que los seres vivos realicen sus funciones vitales?',
+
+        diagnostico: 'El 58% de los estudiantes no conoce los organelos celulares ni comprende la diferencia entre células procariotas y eucariotas, limitándose a identificar la célula como "la unidad más pequeña de la vida".',
+
+        competenciasICFES: {
+          usoConocimiento: 'Identifica los organelos celulares y los relaciona con las funciones vitales que realiza la célula.',
+          explicacion: 'Explica las diferencias entre células procariotas y eucariotas, y entre células animales y vegetales, con base en su estructura.',
+          indagacion: 'Utiliza el microscopio y esquemas para observar, describir y registrar estructuras celulares en muestras biológicas sencillas.'
+        },
+
+        matrizReferencia: {
+          componente: 'entorno-vivo',
+          competencia: 'uso-conocimiento',
+          afirmaciones: [
+            'Describe las funciones de los organelos celulares y los relaciona con las funciones vitales de la célula.',
+            'Establece diferencias entre células procariotas y eucariotas, y entre células animales y vegetales.'
+          ]
+        },
+
+        aprendizajesICFES: ['nat-s9-01'],
+        nivelEsperado: 'Mínimo',
+
+        evidenciasAprendizaje: [
+          'Identifica y describe los organelos celulares principales: membrana, núcleo, mitocondria, retículo endoplásmico, ribosomas, vacuola y cloroplasto.',
+          'Distingue células procariotas de eucariotas con base en la presencia o ausencia de núcleo definido.',
+          'Diferencia células animales de células vegetales identificando estructuras exclusivas (pared celular, cloroplasto, vacuola central).',
+          'Establece la relación jerárquica célula → tejido → órgano → sistema → organismo con ejemplos del cuerpo humano.',
+          'Prepara y observa muestras sencillas al microscopio (cebolla, mejilla) y registra sus observaciones.'
+        ],
+
+        estrategiasMetodologicas: [
+          'Construcción de modelos de células en 3D con materiales reciclados (plastilina, gelatina, objetos cotidianos).',
+          'Observación al microscopio de células de epidermis de cebolla y mucosa bucal.',
+          'Comparación guiada de imágenes de células procariotas y eucariotas en fichas de trabajo.',
+          'Juego de roles: cada estudiante representa un organelo y explica su función al grupo.',
+          'Elaboración de atlas celular ilustrado con descripciones de cada organelo y su función.'
+        ],
+
+        materialesEducativos: [
+          'Texto escolar de Ciencias Naturales 6° (editorial Norma o Santillana)',
+          'Microscopio o microscopio virtual (CellsAlive.com)',
+          'Materiales para modelos 3D: plastilina, gelatina, objetos reciclados',
+          'Fichas de comparación celular elaboradas por el docente',
+          'Videos: CrashCourse Biology "Intro to Cells" (con subtítulos en español)'
+        ],
+
+        criteriosEvaluacion: {
+          porcentajes: { saber: 30, hacer: 50, ser: 20 },
+          saber: [
+            'Enumera y describe los organelos celulares principales y sus funciones.',
+            'Define célula procariota y eucariota e indica ejemplos de organismos de cada tipo.',
+            'Explica la jerarquía de organización de los seres vivos: célula, tejido, órgano, sistema, organismo.'
+          ],
+          hacer: [
+            'Construye un modelo tridimensional de la célula identificando y etiquetando sus organelos.',
+            'Observa y dibuja células al microscopio registrando sus observaciones con precisión.',
+            'Elabora cuadros comparativos entre tipos de células con criterios específicos.'
+          ],
+          ser: [
+            'Cuida los materiales del laboratorio y sigue las normas de seguridad durante las prácticas.',
+            'Participa activamente en actividades grupales con respeto y colaboración.',
+            'Demuestra curiosidad científica al formular preguntas sobre la vida a nivel celular.'
+          ]
+        },
+
+        competenciaCiudadana: 'Reflexiona sobre la importancia de la higiene y los hábitos saludables como formas de cuidar las células del propio cuerpo, estableciendo relaciones entre la salud individual y el bienestar colectivo.'
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 6 - PERIODO 2
+      // ----------------------------------------------------------
+      {
+        periodo: 2,
+        semanas: 10,
+        horasSemana: 4,
+        horasTotales: 40,
+
+        estandares: [
+          'Explico las relaciones entre los componentes bióticos y abióticos de los ecosistemas colombianos.',
+          'Analizo el ecosistema como resultado de las interacciones entre los seres vivos y los factores físicos del ambiente.',
+          'Describo y evalúo el impacto de las acciones humanas sobre los ecosistemas y propongo alternativas de conservación.'
+        ],
+
+        dba: 'Comprende los componentes bióticos y abióticos de los ecosistemas colombianos, describe las relaciones ecológicas (cadenas y redes tróficas, simbiosis, competencia) y analiza el impacto de las actividades humanas sobre estos ecosistemas.',
+
+        ejesTematicos: [
+          'Ecosistema: componentes bióticos y abióticos',
+          'Ecosistemas colombianos: características y biodiversidad',
+          'Cadenas y redes tróficas: productores, consumidores, descomponedores',
+          'Relaciones ecológicas: depredación, simbiosis, parasitismo, competencia',
+          'Impacto humano sobre los ecosistemas y conservación'
+        ],
+
+        tiposPensamiento: ['Entorno Vivo', 'CTS'],
+
+        preguntaProblema: '¿Cómo se organizan y relacionan los seres vivos en los ecosistemas colombianos y qué consecuencias tienen las acciones humanas sobre su equilibrio?',
+
+        diagnostico: 'El 55% de los estudiantes no distingue los componentes bióticos de los abióticos y no comprende cómo se transfiere la energía a través de una cadena trófica.',
+
+        competenciasICFES: {
+          usoConocimiento: 'Identifica los componentes bióticos y abióticos de un ecosistema y describe las relaciones que se establecen entre ellos.',
+          explicacion: 'Explica el flujo de energía y materia a través de cadenas y redes tróficas en ecosistemas colombianos.',
+          indagacion: 'Analiza información sobre ecosistemas amenazados en Colombia para proponer acciones concretas de conservación.'
+        },
+
+        matrizReferencia: {
+          componente: 'entorno-vivo',
+          competencia: 'explicacion',
+          afirmaciones: [
+            'Explica la fotosíntesis como proceso de captación de energía solar y producción de materia orgánica.',
+            'Describe las relaciones tróficas en un ecosistema e identifica productores, consumidores y descomponedores.'
+          ]
+        },
+
+        aprendizajesICFES: ['nat-s9-03', 'nat-s9-09'],
+        nivelEsperado: 'Mínimo',
+
+        evidenciasAprendizaje: [
+          'Clasifica los componentes de un ecosistema en bióticos (flora, fauna, microorganismos) y abióticos (temperatura, agua, suelo, luz).',
+          'Describe al menos tres ecosistemas colombianos (selva amazónica, páramo, manglar) y sus características principales.',
+          'Construye cadenas tróficas de ecosistemas locales identificando productores, consumidores primarios, secundarios y descomponedores.',
+          'Explica tipos de relaciones ecológicas: mutualismo, comensalismo, parasitismo, depredación y competencia con ejemplos colombianos.',
+          'Argumenta sobre el impacto de la deforestación, la minería y la ganadería en los ecosistemas colombianos.'
+        ],
+
+        estrategiasMetodologicas: [
+          'Salida de campo o recorrido por el entorno escolar para identificar componentes bióticos y abióticos.',
+          'Construcción de terrarios o ecosistemas en botella para observar interacciones biótico-abióticas.',
+          'Elaboración de redes tróficas en papel kraft usando imágenes de fauna y flora colombiana.',
+          'Análisis de noticias sobre deforestación y minería ilegal para identificar impactos en ecosistemas.',
+          'Proyecto de investigación: "¿Qué ecosistema hay cerca de mi municipio y cómo podemos protegerlo?"'
+        ],
+
+        materialesEducativos: [
+          'Texto escolar de Ciencias Naturales 6°',
+          'Imágenes y fichas de fauna y flora de ecosistemas colombianos',
+          'Materiales para terrario: botellas PET, tierra, plantas, agua',
+          'Mapa de ecosistemas de Colombia (IDEAM)',
+          'Recursos web: Sistema de Información sobre Biodiversidad de Colombia (SiB Colombia)'
+        ],
+
+        criteriosEvaluacion: {
+          porcentajes: { saber: 30, hacer: 50, ser: 20 },
+          saber: [
+            'Define ecosistema, cadena trófica, red trófica, nicho ecológico y las principales relaciones ecológicas.',
+            'Describe las características de tres ecosistemas colombianos y su biodiversidad.',
+            'Explica el concepto de flujo de energía en una cadena trófica.'
+          ],
+          hacer: [
+            'Construye redes tróficas de ecosistemas locales identificando niveles tróficos y relaciones.',
+            'Diseña y mantiene un ecosistema en botella registrando sus observaciones.',
+            'Presenta un informe sobre el impacto humano en un ecosistema colombiano con propuestas de solución.'
+          ],
+          ser: [
+            'Demuestra compromiso con la conservación del ambiente en sus hábitos cotidianos.',
+            'Argumenta con respeto en debates sobre problemas ambientales locales y nacionales.',
+            'Valora la biodiversidad colombiana como patrimonio que debe protegerse.'
+          ]
+        },
+
+        competenciaCiudadana: 'Asume compromisos concretos con la conservación de los ecosistemas colombianos, reconociendo su responsabilidad como ciudadano en la protección de la biodiversidad y el ambiente de su región.'
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 6 - PERIODO 3
+      // ----------------------------------------------------------
+      {
+        periodo: 3,
+        semanas: 10,
+        horasSemana: 4,
+        horasTotales: 40,
+
+        estandares: [
+          'Explico las propiedades físicas y químicas de la materia y las relaciono con los cambios que experimenta.',
+          'Identifico y describo los estados de la materia y las condiciones en que ocurren los cambios de estado.',
+          'Clasifico los cambios de la materia en físicos y químicos, e identifico sus características y evidencias.'
+        ],
+
+        dba: 'Comprende las propiedades físicas y químicas de la materia, describe los estados de agregación y los cambios de estado, y diferencia los cambios físicos de los cambios químicos con base en evidencias observables.',
+
+        ejesTematicos: [
+          'La materia: definición y propiedades físicas (masa, volumen, densidad)',
+          'Estados de la materia: sólido, líquido y gaseoso',
+          'Cambios de estado: fusión, solidificación, evaporación, condensación, sublimación',
+          'Cambios físicos de la materia: ejemplos y características',
+          'Cambios químicos de la materia: evidencias y ejemplos cotidianos'
+        ],
+
+        tiposPensamiento: ['Entorno Físico'],
+
+        preguntaProblema: '¿Cómo podemos describir y clasificar la materia que nos rodea, y cómo distinguir cuándo un cambio en la materia es físico o químico?',
+
+        diagnostico: 'El 52% de los estudiantes confunde cambios físicos con químicos y no comprende la diferencia entre propiedades físicas y químicas de la materia.',
+
+        competenciasICFES: {
+          usoConocimiento: 'Identifica las propiedades físicas de la materia (masa, volumen, densidad, punto de fusión) y las usa para caracterizar sustancias.',
+          explicacion: 'Explica los cambios de estado de la materia en términos de las fuerzas de atracción entre partículas y la transferencia de energía.',
+          indagacion: 'Diseña experimentos sencillos para distinguir cambios físicos de cambios químicos e identifica las evidencias que permiten diferenciarlos.'
+        },
+
+        matrizReferencia: {
+          componente: 'entorno-fisico',
+          competencia: 'uso-conocimiento',
+          afirmaciones: [
+            'Describe la evolución de los modelos atómicos y sus aportes al conocimiento de la materia.',
+            'Identifica reactivos y productos en ecuaciones químicas sencillas y reconoce evidencias de cambio químico.'
+          ]
+        },
+
+        aprendizajesICFES: ['nat-s9-06', 'nat-s9-07'],
+        nivelEsperado: 'Mínimo',
+
+        evidenciasAprendizaje: [
+          'Mide y calcula propiedades físicas de la materia: masa, volumen y densidad con instrumentos adecuados.',
+          'Describe los estados sólido, líquido y gaseoso en términos de la disposición y movimiento de las partículas.',
+          'Identifica y explica los cambios de estado: fusión, solidificación, evaporación, condensación y sublimación.',
+          'Diferencia cambios físicos de cambios químicos y da al menos tres ejemplos de cada tipo.',
+          'Identifica evidencias de cambio químico: color, olor, temperatura, precipitado, producción de gas.'
+        ],
+
+        estrategiasMetodologicas: [
+          'Prácticas de laboratorio: medición de masa y volumen con balanza y probeta, cálculo de densidad.',
+          'Experimentos de cambios de estado: fusión de hielo, evaporación del agua, sublimación del hielo seco (video).',
+          'Tabla comparativa: cambios físicos vs. cambios químicos con ejemplos del entorno cotidiano.',
+          'Experimentos de cambios químicos: vinagre y bicarbonato, oxidación del hierro, combustión de papel.',
+          'Mapa conceptual colaborativo sobre propiedades y cambios de la materia.'
+        ],
+
+        materialesEducativos: [
+          'Texto escolar de Ciencias Naturales 6°',
+          'Balanza de laboratorio, probetas, vasos de precipitados',
+          'Materiales para experimentos: vinagre, bicarbonato, agua, hielo, aceite',
+          'Fichas de laboratorio elaboradas por el docente',
+          'Videos de cambios de estado y reacciones químicas cotidianas'
+        ],
+
+        criteriosEvaluacion: {
+          porcentajes: { saber: 30, hacer: 50, ser: 20 },
+          saber: [
+            'Define materia, propiedad física, propiedad química, cambio físico y cambio químico.',
+            'Describe los estados de la materia y las condiciones en que ocurren los cambios de estado.',
+            'Enumera al menos tres evidencias que permiten identificar un cambio químico.'
+          ],
+          hacer: [
+            'Mide masa, volumen y calcula densidad de diferentes sustancias con precisión.',
+            'Realiza experimentos para observar cambios físicos y químicos y los registra correctamente.',
+            'Clasifica situaciones cotidianas como cambios físicos o químicos justificando su respuesta.'
+          ],
+          ser: [
+            'Sigue con cuidado las normas de seguridad en el laboratorio.',
+            'Colabora con sus compañeros en la realización de prácticas experimentales.',
+            'Reflexiona sobre el impacto ambiental de los cambios químicos (contaminación, reacciones de combustión).'
+          ]
+        },
+
+        competenciaCiudadana: 'Relaciona el conocimiento sobre los cambios químicos con problemas ambientales cotidianos (contaminación del agua, del aire), desarrollando conciencia sobre el uso responsable de productos químicos en el hogar y la comunidad.'
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 6 - PERIODO 4
+      // ----------------------------------------------------------
+      {
+        periodo: 4,
+        semanas: 10,
+        horasSemana: 4,
+        horasTotales: 40,
+
+        estandares: [
+          'Identifico y descripto los tipos de fuerza que actúan sobre los objetos y explico sus efectos sobre el movimiento.',
+          'Explico el funcionamiento de las máquinas simples y su aplicación en la vida cotidiana para facilitar el trabajo.',
+          'Relaciono el concepto de fuerza con los cambios de movimiento de los objetos en situaciones del entorno.'
+        ],
+
+        dba: 'Comprende el concepto de fuerza como interacción entre objetos, identifica los tipos de fuerza presentes en situaciones cotidianas, describe sus efectos sobre el movimiento y explica el principio de funcionamiento de las máquinas simples.',
+
+        ejesTematicos: [
+          'Fuerza: concepto, características y unidades de medida (Newton)',
+          'Tipos de fuerza: gravitacional, normal, fricción, tensión, elástica',
+          'Movimiento: posición, velocidad, aceleración y trayectoria',
+          'Las leyes del movimiento de Newton (introducción conceptual)',
+          'Máquinas simples: palanca, polea, plano inclinado, rueda, tornillo'
+        ],
+
+        tiposPensamiento: ['Entorno Físico'],
+
+        preguntaProblema: '¿Cómo actúan las fuerzas sobre los objetos y de qué manera las máquinas simples nos ayudan a realizar trabajo con menor esfuerzo?',
+
+        diagnostico: 'El 57% de los estudiantes no distingue los diferentes tipos de fuerza y no comprende cómo estas fuerzas producen o modifican el movimiento de los cuerpos.',
+
+        competenciasICFES: {
+          usoConocimiento: 'Identifica los tipos de fuerza que actúan sobre un objeto y predice cualitativamente los cambios en su movimiento.',
+          explicacion: 'Explica el funcionamiento de las máquinas simples aplicando el concepto de fuerza y relacionándolas con su uso en la vida cotidiana.',
+          indagacion: 'Diseña y realiza experimentos sencillos para medir fuerzas y analizar el efecto de diferentes tipos de máquinas simples.'
+        },
+
+        matrizReferencia: {
+          componente: 'entorno-fisico',
+          competencia: 'explicacion',
+          afirmaciones: [
+            'Aplica la ley de conservación de la energía a situaciones cotidianas.',
+            'Diferencia entre energía cinética y energía potencial e identifica conversiones entre ellas.'
+          ]
+        },
+
+        aprendizajesICFES: ['nat-s9-04', 'nat-s9-05'],
+        nivelEsperado: 'Mínimo',
+
+        evidenciasAprendizaje: [
+          'Define fuerza, describe sus características (magnitud, dirección, sentido) y reconoce el Newton como unidad de medida.',
+          'Identifica y clasifica los tipos de fuerza (gravitacional, normal, fricción, tensión, elástica) en situaciones cotidianas.',
+          'Describe el movimiento de un objeto usando los conceptos de posición, velocidad, aceleración y trayectoria.',
+          'Explica cualitativamente las tres leyes del movimiento de Newton con ejemplos de la vida diaria.',
+          'Identifica y describe el funcionamiento de las máquinas simples: palanca, polea, plano inclinado, rueda y tornillo.'
+        ],
+
+        estrategiasMetodologicas: [
+          'Experimentos con dinamómetros para medir fuerzas de fricción, tensión y peso de objetos.',
+          'Construcción de modelos de máquinas simples con materiales reciclados (palancas con reglas, poleas con carretes).',
+          'Análisis de situaciones cotidianas para identificar tipos de fuerza: empujar la puerta, deslizarse por un tobogán.',
+          'Simulaciones interactivas de fuerzas y movimiento (PhET Interactive Simulations).',
+          'Proyecto: diseñar una máquina simple para resolver un problema cotidiano y presentarlo al grupo.'
+        ],
+
+        materialesEducativos: [
+          'Texto escolar de Ciencias Naturales 6°',
+          'Dinamómetros, resortes, poleas y planos inclinados de laboratorio',
+          'Materiales para construir máquinas simples: reglas, carretes, cuerdas, tablas',
+          'Simulaciones PhET: Forces and Motion Basics (disponible en español)',
+          'Fichas de laboratorio sobre fuerzas y máquinas simples'
+        ],
+
+        criteriosEvaluacion: {
+          porcentajes: { saber: 30, hacer: 50, ser: 20 },
+          saber: [
+            'Define fuerza, describe sus características y enumera al menos cinco tipos de fuerza.',
+            'Explica los conceptos de posición, velocidad y aceleración en el contexto del movimiento.',
+            'Describe el funcionamiento de las cinco máquinas simples con un ejemplo de uso cotidiano para cada una.'
+          ],
+          hacer: [
+            'Mide fuerzas con dinamómetros y registra los datos en tablas organizadas.',
+            'Construye y demuestra el funcionamiento de al menos una máquina simple.',
+            'Resuelve problemas cualitativos sobre el efecto de fuerzas sobre el movimiento de objetos.'
+          ],
+          ser: [
+            'Demuestra creatividad e ingenio al diseñar soluciones a problemas con máquinas simples.',
+            'Trabaja en equipo respetando los aportes y roles de cada compañero.',
+            'Relaciona el conocimiento sobre fuerzas con la comprensión de fenómenos naturales como terremotos y vientos.'
+          ]
+        },
+
+        competenciaCiudadana: 'Aplica el conocimiento sobre fuerzas y máquinas simples para comprender y valorar las tecnologías presentes en su entorno cotidiano, reflexionando sobre el papel de la ingeniería en la mejora de las condiciones de vida de las comunidades.'
+      }
+    ]
+  },
+
+  // ============================================================
+  // GRADO 7
+  // ============================================================
+  '7': {
+    grado: '7°',
+    intensidadHoraria: 4,
+    totalSemanas: 40,
+    totalHorasAnuales: 160,
+    objetivo: 'Profundizar en el estudio de los sistemas del cuerpo humano, la clasificación de la materia, las formas y transformaciones de la energía y los mecanismos de reproducción y herencia biológica, articulando entorno vivo, entorno físico y CTS',
+
+    periodos: [
+      // ----------------------------------------------------------
+      // GRADO 7 - PERIODO 1
+      // ----------------------------------------------------------
+      {
+        periodo: 1,
+        semanas: 10,
+        horasSemana: 4,
+        horasTotales: 40,
+
+        estandares: [
+          'Explico la organización y el funcionamiento de los sistemas del cuerpo humano y los relaciono con las funciones vitales de nutrición, circulación y respiración.',
+          'Analizo las relaciones entre los sistemas digestivo, circulatorio y respiratorio y describo cómo su funcionamiento coordina la obtención y distribución de nutrientes y oxígeno.',
+          'Relaciono las enfermedades más frecuentes de estos sistemas con factores de riesgo y propongo medidas de prevención.'
+        ],
+
+        dba: 'Comprende la organización y función de los sistemas digestivo, circulatorio y respiratorio del cuerpo humano, establece relaciones entre su estructura y las funciones de nutrición, transporte y respiración, y reconoce hábitos saludables para su cuidado.',
+
+        ejesTematicos: [
+          'Sistema digestivo: órganos, proceso de digestión y absorción de nutrientes',
+          'Sistema circulatorio: corazón, vasos sanguíneos, sangre y circulación',
+          'Sistema respiratorio: órganos, mecánica respiratoria e intercambio gaseoso',
+          'Relaciones entre los sistemas: coordinación para el mantenimiento de la vida',
+          'Enfermedades comunes y hábitos saludables'
+        ],
+
+        tiposPensamiento: ['Entorno Vivo'],
+
+        preguntaProblema: '¿Cómo funcionan los sistemas digestivo, circulatorio y respiratorio del cuerpo humano y de qué manera se relacionan para mantener el organismo con vida?',
+
+        diagnostico: 'El 54% de los estudiantes no puede describir con precisión el recorrido de los alimentos por el sistema digestivo ni el circuito de la sangre en el cuerpo, y confunde la función del sistema respiratorio con la simple inhalación de aire.',
+
+        competenciasICFES: {
+          usoConocimiento: 'Identifica los órganos de los sistemas digestivo, circulatorio y respiratorio y los relaciona con sus funciones específicas.',
+          explicacion: 'Explica el proceso de digestión, circulación y respiración como funciones integradas que garantizan el mantenimiento de la vida.',
+          indagacion: 'Analiza casos de enfermedades relacionadas con estos sistemas para identificar factores de riesgo y proponer medidas preventivas.'
+        },
+
+        matrizReferencia: {
+          componente: 'entorno-vivo',
+          competencia: 'uso-conocimiento',
+          afirmaciones: [
+            'Describe las funciones de los organelos celulares y los relaciona con las funciones vitales de la célula.',
+            'Explica cómo se integran célula, tejido, órgano, sistema y organismo en la organización de los seres vivos.'
+          ]
+        },
+
+        aprendizajesICFES: ['nat-s9-01', 'nat-s9-02'],
+        nivelEsperado: 'Satisfactorio',
+
+        evidenciasAprendizaje: [
+          'Describe el recorrido de los alimentos por el sistema digestivo identificando los órganos que intervienen y las transformaciones que ocurren.',
+          'Explica el circuito de la sangre (circulación mayor y menor) identificando el papel del corazón, arterias, venas y capilares.',
+          'Describe el proceso de respiración: mecánica respiratoria e intercambio gaseoso en los alveolos.',
+          'Establece relaciones entre los tres sistemas: cómo los nutrientes absorbidos y el oxígeno se transportan a las células.',
+          'Identifica factores de riesgo para enfermedades cardiovasculares, digestivas y respiratorias y propone hábitos preventivos.'
+        ],
+
+        estrategiasMetodologicas: [
+          'Disección virtual del cuerpo humano usando aplicaciones 3D (Visible Body o similar).',
+          'Construcción de maquetas del sistema digestivo usando materiales reciclados.',
+          'Simulación del bombeo del corazón con globos y tubos para visualizar la circulación.',
+          'Experimento: medición de la frecuencia cardíaca y respiratoria antes y después del ejercicio.',
+          'Análisis de casos clínicos: identificar síntomas de enfermedades digestivas, circulatorias y respiratorias.'
+        ],
+
+        materialesEducativos: [
+          'Texto escolar de Ciencias Naturales 7° (editorial Norma o Santillana)',
+          'Modelos anatómicos del cuerpo humano (sistema digestivo, circulatorio)',
+          'Aplicación Visible Body o BioDigital Human (versión gratuita)',
+          'Estetoscopio y cronómetro para medición de constantes vitales',
+          'Guías de laboratorio y fichas de trabajo elaboradas por el docente'
+        ],
+
+        criteriosEvaluacion: {
+          porcentajes: { saber: 30, hacer: 50, ser: 20 },
+          saber: [
+            'Enumera los órganos de los sistemas digestivo, circulatorio y respiratorio y describe su función.',
+            'Explica el proceso de digestión mecánica y química en el sistema digestivo.',
+            'Describe la circulación mayor y menor e identifica los componentes de la sangre.'
+          ],
+          hacer: [
+            'Construye una maqueta o diagrama del sistema digestivo o circulatorio identificando sus componentes.',
+            'Mide y registra la frecuencia cardíaca y respiratoria en reposo y en actividad física.',
+            'Analiza un caso clínico e identifica el sistema afectado y los factores de riesgo asociados.'
+          ],
+          ser: [
+            'Reflexiona críticamente sobre la importancia de los hábitos saludables para el cuidado del cuerpo.',
+            'Participa con responsabilidad en actividades experimentales respetando normas de seguridad.',
+            'Valora la salud como un derecho y asume compromisos concretos de autocuidado.'
+          ]
+        },
+
+        competenciaCiudadana: 'Promueve hábitos de vida saludable en su entorno familiar y escolar, reconociendo la salud como un derecho fundamental y tomando decisiones responsables sobre alimentación, actividad física e higiene para el cuidado de sus sistemas corporales.'
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 7 - PERIODO 2
+      // ----------------------------------------------------------
+      {
+        periodo: 2,
+        semanas: 10,
+        horasSemana: 4,
+        horasTotales: 40,
+
+        estandares: [
+          'Clasifico la materia en elementos, compuestos y mezclas con base en sus propiedades y composición.',
+          'Identifico y aplico métodos de separación de mezclas apropiados según las propiedades físicas de sus componentes.',
+          'Explico la organización de los elementos en la tabla periódica y establezco relaciones entre su posición y sus propiedades.'
+        ],
+
+        dba: 'Comprende la clasificación de la materia en elementos, compuestos y mezclas, identifica las propiedades que permiten diferenciarlos, aplica métodos de separación de mezclas y reconoce la tabla periódica como herramienta de organización del conocimiento químico.',
+
+        ejesTematicos: [
+          'Clasificación de la materia: sustancias puras (elementos y compuestos) y mezclas',
+          'Diferencia entre mezclas homogéneas y heterogéneas',
+          'Métodos de separación de mezclas: filtración, decantación, destilación, cristalización, tamización',
+          'Introducción a la tabla periódica: organización y grupos principales',
+          'Símbolos y fórmulas químicas: H₂O, CO₂, NaCl, O₂'
+        ],
+
+        tiposPensamiento: ['Entorno Físico'],
+
+        preguntaProblema: '¿Cómo clasificamos la materia que nos rodea y qué métodos podemos usar para separar las mezclas que encontramos en la naturaleza y en la industria?',
+
+        diagnostico: 'El 56% de los estudiantes no distingue con claridad entre elementos, compuestos y mezclas, y no conoce los métodos adecuados para separar diferentes tipos de mezclas.',
+
+        competenciasICFES: {
+          usoConocimiento: 'Clasifica muestras de materia en elementos, compuestos, mezclas homogéneas y mezclas heterogéneas usando criterios científicos.',
+          explicacion: 'Explica el fundamento de los métodos de separación de mezclas en términos de las propiedades físicas que los hacen posibles.',
+          indagacion: 'Diseña procedimientos experimentales para separar mezclas específicas seleccionando el método más adecuado según sus componentes.'
+        },
+
+        matrizReferencia: {
+          componente: 'entorno-fisico',
+          competencia: 'uso-conocimiento',
+          afirmaciones: [
+            'Describe la evolución de los modelos atómicos y sus aportes al conocimiento de la materia.',
+            'Usa la tabla periódica para clasificar elementos y predecir propiedades de compuestos simples.'
+          ]
+        },
+
+        aprendizajesICFES: ['nat-s9-06', 'nat-s9-07'],
+        nivelEsperado: 'Satisfactorio',
+
+        evidenciasAprendizaje: [
+          'Distingue entre sustancias puras (elementos y compuestos) y mezclas (homogéneas y heterogéneas) con ejemplos cotidianos.',
+          'Identifica el método de separación adecuado para diferentes mezclas según las propiedades físicas de sus componentes.',
+          'Realiza experimentos de separación de mezclas: filtración, decantación, evaporación y tamización.',
+          'Interpreta la organización de la tabla periódica identificando grupos, periodos y familias principales.',
+          'Usa símbolos y fórmulas químicas sencillas para representar elementos y compuestos comunes.'
+        ],
+
+        estrategiasMetodologicas: [
+          'Laboratorio de clasificación: separar mezclas de arena-sal-hierro usando imanes, agua y filtración.',
+          'Preparación de soluciones y suspensiones para comparar mezclas homogéneas y heterogéneas.',
+          'Exploración interactiva de la tabla periódica (ptable.com) identificando grupos y periodos.',
+          'Experimento de cristalización: crecimiento de cristales de sal o azúcar.',
+          'Juego de tarjetas: clasificar sustancias en elementos, compuestos o mezclas justificando la decisión.'
+        ],
+
+        materialesEducativos: [
+          'Texto escolar de Ciencias Naturales 7°',
+          'Materiales de laboratorio: vasos, embudos, papel filtro, imanes, tamices',
+          'Sustancias: sal, arena, limaduras de hierro, agua, aceite, azúcar',
+          'Tabla periódica interactiva: ptable.com',
+          'Fichas de práctica de laboratorio sobre métodos de separación'
+        ],
+
+        criteriosEvaluacion: {
+          porcentajes: { saber: 30, hacer: 50, ser: 20 },
+          saber: [
+            'Define elemento, compuesto, mezcla homogénea y mezcla heterogénea con un ejemplo de cada uno.',
+            'Describe el fundamento de cinco métodos de separación de mezclas.',
+            'Explica la organización de la tabla periódica e identifica los grupos principales.'
+          ],
+          hacer: [
+            'Realiza experimentos de separación de mezclas seleccionando el método adecuado y registrando resultados.',
+            'Clasifica correctamente muestras de materia usando criterios de composición y propiedades.',
+            'Interpreta la tabla periódica para obtener información sobre elementos específicos.'
+          ],
+          ser: [
+            'Aplica normas de seguridad en el manejo de sustancias en el laboratorio.',
+            'Trabaja con orden y rigor en la realización y registro de experimentos.',
+            'Relaciona el conocimiento sobre mezclas con procesos industriales y ambientales (purificación del agua, reciclaje).'
+          ]
+        },
+
+        competenciaCiudadana: 'Aplica el conocimiento sobre mezclas y métodos de separación para comprender procesos de purificación del agua y tratamiento de residuos, promoviendo el uso responsable y sostenible del recurso hídrico en su comunidad.'
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 7 - PERIODO 3
+      // ----------------------------------------------------------
+      {
+        periodo: 3,
+        semanas: 10,
+        horasSemana: 4,
+        horasTotales: 40,
+
+        estandares: [
+          'Identifico y descripto los diferentes tipos de energía, sus fuentes y las transformaciones que ocurren en situaciones cotidianas.',
+          'Aplico el principio de conservación de la energía para analizar situaciones en las que la energía se transforma pero no se crea ni se destruye.',
+          'Evalúo las implicaciones del uso de diferentes fuentes de energía en el ambiente y en la sociedad colombiana.'
+        ],
+
+        dba: 'Comprende los tipos de energía (cinética, potencial, térmica, lumínica, eléctrica, química), describe sus transformaciones en situaciones cotidianas, aplica el principio de conservación de la energía y evalúa el impacto ambiental y social del uso de fuentes de energía renovables y no renovables.',
+
+        ejesTematicos: [
+          'Concepto de energía: características y unidades (Joule)',
+          'Tipos de energía: cinética, potencial, térmica, lumínica, eléctrica, química, nuclear',
+          'Transformaciones de la energía: cadenas y conversiones en situaciones cotidianas',
+          'Conservación de la energía: ley de conservación',
+          'Fuentes de energía renovables y no renovables: impacto ambiental y CTS'
+        ],
+
+        tiposPensamiento: ['Entorno Físico', 'CTS'],
+
+        preguntaProblema: '¿Cómo se transforma la energía en los procesos naturales y tecnológicos, y qué consecuencias tiene el uso de diferentes fuentes de energía para el ambiente y la sociedad?',
+
+        diagnostico: 'El 53% de los estudiantes no puede identificar las transformaciones de energía en situaciones cotidianas y confunde los conceptos de energía con los de fuerza y trabajo.',
+
+        competenciasICFES: {
+          usoConocimiento: 'Identifica los tipos de energía presentes en situaciones cotidianas y describe las transformaciones que ocurren entre ellos.',
+          explicacion: 'Explica el principio de conservación de la energía y lo aplica para analizar cadenas de transformación energética.',
+          indagacion: 'Analiza el impacto ambiental y social del uso de fuentes de energía renovables y no renovables en Colombia para argumentar decisiones informadas.'
+        },
+
+        matrizReferencia: {
+          componente: 'entorno-fisico',
+          competencia: 'explicacion',
+          afirmaciones: [
+            'Aplica la ley de conservación de la energía a situaciones cotidianas (caída libre, resortes, circuitos eléctricos).',
+            'Diferencia entre energía cinética y energía potencial e identifica conversiones entre ellas.'
+          ]
+        },
+
+        aprendizajesICFES: ['nat-s9-04', 'nat-s9-09'],
+        nivelEsperado: 'Satisfactorio',
+
+        evidenciasAprendizaje: [
+          'Identifica y clasifica los tipos de energía presentes en al menos diez situaciones cotidianas.',
+          'Construye cadenas de transformación de energía para situaciones concretas (bombillo, automóvil, planta fotovoltaica).',
+          'Aplica el principio de conservación de la energía para explicar que la energía total se conserva aunque cambie de forma.',
+          'Compara fuentes de energía renovables (solar, eólica, hídrica) y no renovables (carbón, petróleo, gas) en términos de disponibilidad e impacto ambiental.',
+          'Argumenta sobre la importancia de la transición energética en Colombia a partir de datos sobre recursos naturales disponibles.'
+        ],
+
+        estrategiasMetodologicas: [
+          'Experimentos de conversión de energía: péndulo (potencial → cinética), pila de limón (química → eléctrica).',
+          'Análisis de diagramas de flujo de energía en dispositivos tecnológicos del hogar.',
+          'Investigación sobre las fuentes de energía en Colombia: hidroeléctricas, termoeléctricas y energías limpias.',
+          'Debate sobre las ventajas y desventajas de la minería de carbón y el petróleo vs. energías renovables.',
+          'Proyecto: diseño de una propuesta de ahorro energético para el colegio o el hogar.'
+        ],
+
+        materialesEducativos: [
+          'Texto escolar de Ciencias Naturales 7°',
+          'Materiales para experimento de pila de limón (limones, electrodos de cobre y zinc, LED)',
+          'Materiales para péndulo simple y rampas (bolas, rieles, cinta métrica)',
+          'Infografías sobre la matriz energética de Colombia (UPME)',
+          'Recursos web: UPME Colombia, Portal de Energías Renovables'
+        ],
+
+        criteriosEvaluacion: {
+          porcentajes: { saber: 30, hacer: 50, ser: 20 },
+          saber: [
+            'Define energía, enuncia los principales tipos y explica el principio de conservación de la energía.',
+            'Distingue entre fuentes de energía renovables y no renovables con ejemplos de Colombia.',
+            'Explica al menos tres cadenas de transformación de energía en dispositivos cotidianos.'
+          ],
+          hacer: [
+            'Realiza experimentos de conversión de energía registrando los tipos de energía que intervienen.',
+            'Construye diagramas de flujo de energía para situaciones cotidianas identificando entradas y salidas.',
+            'Elabora una propuesta fundamentada de ahorro energético para un espacio de su entorno.'
+          ],
+          ser: [
+            'Reflexiona sobre sus hábitos de consumo energético y propone cambios sostenibles.',
+            'Argumenta con evidencias científicas en debates sobre el modelo energético de Colombia.',
+            'Valora las energías renovables como alternativa para un desarrollo más sostenible y equitativo.'
+          ]
+        },
+
+        competenciaCiudadana: 'Asume compromisos concretos de ahorro energético en su hogar y colegio, comprende la relación entre el modelo energético y los derechos ambientales, y participa en discusiones sobre la transición hacia fuentes de energía limpias en Colombia.'
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 7 - PERIODO 4
+      // ----------------------------------------------------------
+      {
+        periodo: 4,
+        semanas: 10,
+        horasSemana: 4,
+        horasTotales: 40,
+
+        estandares: [
+          'Explico los mecanismos de reproducción celular (mitosis y meiosis) y los relaciono con el crecimiento, la reparación y la reproducción de los organismos.',
+          'Describo los fundamentos de la herencia biológica y aplico las leyes de Mendel para predecir características en la descendencia.',
+          'Relaciono la reproducción sexual y asexual con la variabilidad genética de las poblaciones.'
+        ],
+
+        dba: 'Comprende los procesos de mitosis y meiosis como mecanismos de división celular, establece sus diferencias y funciones biológicas, describe los principios de la herencia mendeliana y aplica los conceptos de genotipo, fenotipo, dominante y recesivo para predecir características hereditarias.',
+
+        ejesTematicos: [
+          'División celular: mitosis (etapas y función biológica)',
+          'Meiosis: etapas, diferencias con la mitosis y función en la reproducción sexual',
+          'Reproducción asexual y sexual: ventajas y desventajas',
+          'Herencia biológica: ADN, genes, cromosomas y alelos',
+          'Leyes de Mendel: segregación y distribución independiente; cuadros de Punnett'
+        ],
+
+        tiposPensamiento: ['Entorno Vivo'],
+
+        preguntaProblema: '¿Cómo se dividen las células y de qué manera los genes se transmiten de padres a hijos determinando las características de los descendientes?',
+
+        diagnostico: 'El 58% de los estudiantes no comprende la diferencia entre mitosis y meiosis, y no ha sido introducido aún a los conceptos de herencia genética y leyes de Mendel.',
+
+        competenciasICFES: {
+          usoConocimiento: 'Distingue entre mitosis y meiosis identificando sus etapas, productos y funciones biológicas en el contexto de la reproducción y el crecimiento.',
+          explicacion: 'Explica los principios de la herencia mendeliana usando los conceptos de genotipo, fenotipo, dominante, recesivo, homocigoto y heterocigoto.',
+          indagacion: 'Aplica los cuadros de Punnett para predecir la probabilidad de rasgos en la descendencia e interpreta los resultados en términos de herencia.'
+        },
+
+        matrizReferencia: {
+          componente: 'entorno-vivo',
+          competencia: 'explicacion',
+          afirmaciones: [
+            'Describe el papel del ADN como portador de la información genética.',
+            'Aplica las leyes de Mendel para predecir la probabilidad de que un rasgo aparezca en la descendencia.'
+          ]
+        },
+
+        aprendizajesICFES: ['nat-s9-02', 'nat-s9-08'],
+        nivelEsperado: 'Satisfactorio',
+
+        evidenciasAprendizaje: [
+          'Describe las etapas de la mitosis (profase, metafase, anafase, telofase) y explica su función en el crecimiento y reparación de tejidos.',
+          'Compara mitosis y meiosis en términos de número de divisiones, células resultantes y función biológica.',
+          'Diferencia reproducción asexual de sexual y explica las ventajas de cada una para la variabilidad genética.',
+          'Explica la relación entre ADN, genes, cromosomas y alelos como base molecular de la herencia.',
+          'Aplica las leyes de Mendel para resolver cruces monohíbridos usando cuadros de Punnett e interpreta las proporciones genotípicas y fenotípicas.'
+        ],
+
+        estrategiasMetodologicas: [
+          'Modelado de las etapas de la mitosis y meiosis con materiales manipulativos (cordones de colores como cromosomas).',
+          'Comparación visual con diagramas: mitosis vs. meiosis en tablas de doble entrada.',
+          'Talleres de genética: resolución de cruces monohíbridos con cuadros de Punnett usando fichas de colores.',
+          'Análisis de genealogías familiares para identificar rasgos dominantes y recesivos.',
+          'Investigación sobre enfermedades hereditarias comunes en Colombia y su patrón de herencia.'
+        ],
+
+        materialesEducativos: [
+          'Texto escolar de Ciencias Naturales 7°',
+          'Cordones o cadenas de colores para modelar cromosomas y divisiones celulares',
+          'Fichas de alelos para talleres de cuadros de Punnett',
+          'Videos animados de mitosis y meiosis (Khan Academy en español)',
+          'Guías de genética mendeliana elaboradas por el docente'
+        ],
+
+        criteriosEvaluacion: {
+          porcentajes: { saber: 30, hacer: 50, ser: 20 },
+          saber: [
+            'Describe las etapas de la mitosis y explica su función biológica en el crecimiento y la reparación.',
+            'Diferencia mitosis de meiosis indicando el número de células resultantes y su función en la reproducción.',
+            'Define genotipo, fenotipo, alelo dominante, alelo recesivo, homocigoto y heterocigoto con ejemplos.'
+          ],
+          hacer: [
+            'Modela las etapas de la mitosis y la meiosis usando materiales manipulativos.',
+            'Resuelve cruces monohíbridos usando cuadros de Punnett e interpreta las proporciones resultantes.',
+            'Analiza una genealogía familiar e identifica el patrón de herencia de un rasgo determinado.'
+          ],
+          ser: [
+            'Reflexiona con respeto sobre la diversidad biológica entre personas como resultado de la herencia genética.',
+            'Participa activamente en los talleres de genética con disposición para aprender de los errores.',
+            'Reconoce las implicaciones éticas del conocimiento genético en decisiones personales y sociales.'
+          ]
+        },
+
+        competenciaCiudadana: 'Reflexiona sobre las implicaciones éticas y sociales del conocimiento genético, rechaza la discriminación basada en características heredadas y comprende la diversidad humana como riqueza biológica y cultural.'
+      }
+    ]
+  },
 
   // ============================================================
   // GRADO 8

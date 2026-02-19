@@ -1,10 +1,836 @@
 /**
- * Planes de aula de Matemáticas - Grados 8° a 11°
+ * Planes de aula de Matemáticas - Grados 6° a 11°
  * Estructura: 4 periodos x 10 semanas x 4 horas/semana = 160 horas/año
  * Basado en Estándares Básicos de Competencias (EBC) del MEN - Colombia
  */
 
 const PLANES_MATEMATICAS = {
+
+  // ============================================================
+  // GRADO 6
+  // ============================================================
+  '6': {
+    grado: '6°',
+    intensidadHoraria: 4,
+    totalSemanas: 40,
+    totalHorasAnuales: 160,
+    objetivo: 'Afianzar el pensamiento numérico con números naturales y enteros, introducir la geometría plana, desarrollar el pensamiento proporcional y la estadística descriptiva básica',
+
+    periodos: [
+      // ----------------------------------------------------------
+      // GRADO 6 - PERIODO 1
+      // ----------------------------------------------------------
+      {
+        periodo: 1,
+        semanas: 10,
+        horasSemana: 4,
+        horasTotales: 40,
+
+        estandares: [
+          'Uso números naturales y enteros en sus diferentes representaciones y en diversos contextos',
+          'Resuelvo problemas usando propiedades de las operaciones con números naturales y enteros, potenciación y radicación'
+        ],
+
+        diagnostico: 'El 60% de los estudiantes presenta dificultades en la comprensión y aplicación de las operaciones con números enteros negativos y en el manejo de la potenciación.',
+
+        competenciaCiudadana: 'Reconoce el uso de los números enteros en la vida cotidiana (temperaturas, deudas, alturas sobre el nivel del mar) y reflexiona sobre su importancia para describir el mundo.',
+
+        competenciasICFES: {
+          razonamiento: 'Justifica el resultado de operaciones con números naturales y enteros usando las propiedades de las operaciones y la jerarquía de operaciones.',
+          comunicacion: 'Representa números enteros en la recta numérica e interpreta su significado en situaciones del contexto.',
+          resolucionProblemas: 'Aplica potenciación y radicación para resolver situaciones problema en contextos reales.'
+        },
+
+        dba: 'Comprende el significado de los números enteros y opera con ellos en situaciones de la vida cotidiana.',
+
+        preguntaProblema: '¿Cómo los números enteros y las operaciones básicas nos permiten describir y resolver situaciones del mundo real que involucran cantidades positivas y negativas?',
+
+        ejesTematicos: [
+          'Números naturales: repaso y profundización',
+          'Números enteros: representación y comparación',
+          'Operaciones con enteros (suma, resta, multiplicación, división)',
+          'Potenciación: bases y exponentes',
+          'Radicación: raíz cuadrada y cúbica'
+        ],
+
+        evidenciasAprendizaje: [
+          'Ubica y compara números enteros en la recta numérica.',
+          'Realiza las cuatro operaciones con números enteros aplicando las reglas de los signos.',
+          'Calcula potencias de bases enteras con exponentes naturales.',
+          'Determina raíces cuadradas exactas de cuadrados perfectos.',
+          'Resuelve problemas que integran operaciones con números enteros en contextos reales.'
+        ],
+
+        matrizReferencia: {
+          componente: 'Numérico-Variacional',
+          competencia: 'Razonamiento y argumentación',
+          afirmaciones: [
+            'Justifica el resultado de operaciones con enteros usando propiedades y regla de signos.',
+            'Usa la potenciación y radicación para expresar y resolver situaciones numéricas.'
+          ],
+          evidenciasICFES: [
+            'Determina el resultado de operaciones combinadas con números enteros aplicando jerarquía.',
+            'Calcula potencias y raíces exactas en expresiones numéricas.'
+          ]
+        },
+
+        aprendizajesICFES: ['mat-s9-01', 'mat-s9-02'],
+        evidenciasICFES: ['mat-s9-01-e1', 'mat-s9-02-e1'],
+        nivelEsperado: 'Mínimo',
+
+        materialesEducativos: [
+          'Texto escolar de Matemáticas 6° (editorial Norma o Santillana)',
+          'Recta numérica de pared o en cartulina',
+          'Fichas de colores para representar enteros positivos y negativos',
+          'Guías de trabajo elaboradas por el docente',
+          'Calculadora básica para verificar resultados'
+        ],
+
+        estrategiasMetodologicas: [
+          'Uso de la recta numérica para introducir los números enteros negativos.',
+          'Modelado concreto con fichas de colores (rojo = negativo, azul = positivo) para operaciones con enteros.',
+          'Aprendizaje basado en problemas: situaciones de temperatura, deudas y alturas.',
+          'Trabajo colaborativo en grupos para explorar patrones en potenciación.',
+          'Prueba diagnóstica inicial para identificar saberes previos sobre números naturales.'
+        ],
+
+        criteriosEvaluacion: {
+          saber: [
+            'Reconoce los números enteros y los clasifica en positivos, negativos y cero.',
+            'Enuncia las reglas de los signos para multiplicación y división de enteros.',
+            'Define potenciación y radicación e identifica sus elementos (base, exponente, índice).'
+          ],
+          hacer: [
+            'Realiza las cuatro operaciones básicas con números enteros correctamente.',
+            'Aplica jerarquía de operaciones en expresiones combinadas con enteros.',
+            'Calcula potencias de bases enteras con exponentes naturales.',
+            'Determina raíces cuadradas de cuadrados perfectos.'
+          ],
+          ser: [
+            'Muestra disposición positiva frente a los retos que implican números negativos.',
+            'Participa activamente en actividades grupales con respeto por las ideas ajenas.',
+            'Entrega oportunamente las tareas y talleres asignados.'
+          ],
+          porcentajes: { saber: 30, hacer: 50, ser: 20 }
+        },
+
+        tiposPensamiento: ['Numérico']
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 6 - PERIODO 2
+      // ----------------------------------------------------------
+      {
+        periodo: 2,
+        semanas: 10,
+        horasSemana: 4,
+        horasTotales: 40,
+
+        estandares: [
+          'Identifico y describo figuras y cuerpos geométricos usando sus elementos y propiedades',
+          'Calculo perímetros y áreas de polígonos básicos usando las unidades adecuadas'
+        ],
+
+        diagnostico: 'El 55% de los estudiantes no distingue las propiedades de los tipos de triángulos y cuadriláteros ni aplica correctamente las fórmulas de área.',
+
+        competenciaCiudadana: 'Aprecia la geometría presente en la naturaleza, el arte y la arquitectura, y valora su importancia para el diseño y la construcción de espacios cotidianos.',
+
+        competenciasICFES: {
+          razonamiento: 'Justifica la clasificación de triángulos y cuadriláteros usando sus propiedades de lados y ángulos.',
+          comunicacion: 'Usa lenguaje geométrico preciso para describir las propiedades de polígonos básicos y calcular sus medidas.',
+          resolucionProblemas: 'Aplica fórmulas de perímetro y área de triángulos y cuadriláteros para resolver situaciones de diseño y medición.'
+        },
+
+        dba: 'Calcula perímetros y áreas de figuras planas usando las propiedades y fórmulas correspondientes.',
+
+        preguntaProblema: '¿Cómo la geometría y la medición nos permiten resolver problemas prácticos de diseño, construcción y distribución de espacios?',
+
+        ejesTematicos: [
+          'Ángulos: clasificación, medición y relaciones',
+          'Triángulos: clasificación y propiedades',
+          'Cuadriláteros: clasificación y propiedades',
+          'Perímetro de polígonos',
+          'Área de triángulos y cuadriláteros'
+        ],
+
+        evidenciasAprendizaje: [
+          'Mide y clasifica ángulos usando el transportador (agudo, recto, obtuso, llano, completo).',
+          'Clasifica triángulos según sus lados (equilátero, isósceles, escaleno) y según sus ángulos (acutángulo, rectángulo, obtusángulo).',
+          'Clasifica cuadriláteros e identifica sus propiedades (paralelogramos, trapecios, trapecios).',
+          'Calcula el perímetro de polígonos irregulares y regulares.',
+          'Aplica fórmulas para calcular el área de triángulos, rectángulos, paralelogramos y trapecios.'
+        ],
+
+        matrizReferencia: {
+          componente: 'Geométrico-Métrico',
+          competencia: 'Comunicación, representación y modelación',
+          afirmaciones: [
+            'Clasifica polígonos usando sus propiedades de lados y ángulos.',
+            'Calcula perímetro y área de figuras planas básicas en contextos de medición.'
+          ],
+          evidenciasICFES: [
+            'Identifica el tipo de triángulo o cuadrilátero según sus elementos dados.',
+            'Selecciona la fórmula correcta para calcular el área de una figura dada.'
+          ]
+        },
+
+        aprendizajesICFES: ['mat-s9-05', 'mat-s9-06'],
+        evidenciasICFES: ['mat-s9-05-e1', 'mat-s9-06-e1'],
+        nivelEsperado: 'Mínimo',
+
+        materialesEducativos: [
+          'Texto escolar de Matemáticas 6°',
+          'Transportador, regla y compás',
+          'Papel cuadriculado para construcción de figuras',
+          'Geoplano (físico o virtual) para explorar polígonos',
+          'GeoGebra (versión web gratuita) para construcciones geométricas'
+        ],
+
+        estrategiasMetodologicas: [
+          'Construcción de figuras geométricas con regla y compás para verificar propiedades.',
+          'Uso del geoplano para explorar perímetros y áreas de manera concreta.',
+          'Aprendizaje situado: calcular áreas de espacios reales del colegio (salón, patio).',
+          'Clasificación de figuras mediante juegos de tarjetas con propiedades.',
+          'Taller de ejercitación con figuras compuestas para calcular área total.'
+        ],
+
+        criteriosEvaluacion: {
+          saber: [
+            'Clasifica ángulos según su medida y describe sus relaciones (complementarios, suplementarios).',
+            'Enuncia las propiedades de los triángulos y cuadriláteros más comunes.',
+            'Identifica las fórmulas de área de triángulos, rectángulos y paralelogramos.'
+          ],
+          hacer: [
+            'Mide ángulos con transportador y los clasifica correctamente.',
+            'Clasifica triángulos y cuadriláteros a partir de sus propiedades.',
+            'Calcula el perímetro de polígonos regulares e irregulares.',
+            'Calcula áreas de triángulos y cuadriláteros en situaciones reales.'
+          ],
+          ser: [
+            'Trabaja con orden y precisión en las construcciones geométricas.',
+            'Valora la geometría como herramienta para entender el entorno.',
+            'Colabora con sus compañeros en las actividades prácticas.'
+          ],
+          porcentajes: { saber: 30, hacer: 50, ser: 20 }
+        },
+
+        tiposPensamiento: ['Espacial', 'Métrico']
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 6 - PERIODO 3
+      // ----------------------------------------------------------
+      {
+        periodo: 3,
+        semanas: 10,
+        horasSemana: 4,
+        horasTotales: 40,
+
+        estandares: [
+          'Identifico y uso razones y proporciones en situaciones de la vida cotidiana',
+          'Calculo y aplico porcentajes en situaciones de la vida cotidiana'
+        ],
+
+        diagnostico: 'El 58% de los estudiantes confunde razón con proporción y no aplica correctamente el cálculo de porcentajes en situaciones prácticas.',
+
+        competenciaCiudadana: 'Usa el pensamiento proporcional para tomar decisiones económicas cotidianas como comparar precios, calcular descuentos e interpretar incrementos porcentuales.',
+
+        competenciasICFES: {
+          razonamiento: 'Justifica si dos razones forman una proporción usando la propiedad de los productos cruzados.',
+          comunicacion: 'Representa situaciones proporcionales en tablas y gráficos, interpretando el significado de la razón constante.',
+          resolucionProblemas: 'Resuelve problemas de proporcionalidad y porcentaje en contextos de economía, nutrición y medición.'
+        },
+
+        dba: 'Usa la proporcionalidad y los porcentajes para resolver situaciones del entorno que involucran comparaciones y repartos proporcionales.',
+
+        preguntaProblema: '¿Cómo las razones, proporciones y porcentajes nos ayudan a comparar cantidades y tomar decisiones informadas en situaciones económicas y cotidianas?',
+
+        ejesTematicos: [
+          'Razones y su representación',
+          'Proporciones: propiedad fundamental',
+          'Magnitudes directamente proporcionales',
+          'Regla de tres simple directa',
+          'Porcentajes: cálculo e interpretación'
+        ],
+
+        evidenciasAprendizaje: [
+          'Escribe e interpreta razones como comparación de dos cantidades.',
+          'Verifica si dos razones forman una proporción usando productos cruzados.',
+          'Identifica situaciones de proporcionalidad directa y completa tablas de valores.',
+          'Aplica la regla de tres simple para resolver problemas de proporcionalidad directa.',
+          'Calcula porcentajes de una cantidad y resuelve problemas de descuento, aumento e IVA.'
+        ],
+
+        matrizReferencia: {
+          componente: 'Numérico-Variacional',
+          competencia: 'Resolución y planteamiento de problemas',
+          afirmaciones: [
+            'Reconoce y representa relaciones de proporcionalidad directa entre magnitudes.',
+            'Calcula porcentajes e interpreta su significado en situaciones del contexto.'
+          ],
+          evidenciasICFES: [
+            'Determina el valor desconocido en una proporción usando la propiedad fundamental.',
+            'Calcula el porcentaje de una cantidad en situaciones de descuento o aumento.'
+          ]
+        },
+
+        aprendizajesICFES: ['mat-s9-01', 'mat-s9-03'],
+        evidenciasICFES: ['mat-s9-01-e1', 'mat-s9-03-e1'],
+        nivelEsperado: 'Mínimo',
+
+        materialesEducativos: [
+          'Texto escolar de Matemáticas 6°',
+          'Catálogos de supermercado o publicidad con precios y descuentos',
+          'Calculadora básica',
+          'Guías de trabajo con situaciones de proporcionalidad cotidiana',
+          'Papel cuadriculado para graficar tablas de proporcionalidad'
+        ],
+
+        estrategiasMetodologicas: [
+          'Introducción con situaciones reales: recetas, mapas, maquetas (razones en contexto).',
+          'Uso de tablas de valores para identificar proporcionalidad directa.',
+          'Resolución de problemas de porcentaje con catálogos de supermercado.',
+          'Aprendizaje colaborativo: grupos resuelven problemas de proporcionalidad de diferentes contextos.',
+          'Corrección entre pares para fomentar la retroalimentación formativa.'
+        ],
+
+        criteriosEvaluacion: {
+          saber: [
+            'Define razón y proporción, e identifica la propiedad fundamental de las proporciones.',
+            'Describe qué es una magnitud directamente proporcional y cómo se reconoce.',
+            'Explica qué es un porcentaje y cómo se calcula.'
+          ],
+          hacer: [
+            'Escribe y simplifica razones a partir de situaciones dadas.',
+            'Resuelve proporciones usando productos cruzados.',
+            'Aplica la regla de tres simple directa para resolver problemas.',
+            'Calcula porcentajes de una cantidad y aplica a situaciones de descuento e IVA.'
+          ],
+          ser: [
+            'Relaciona el pensamiento proporcional con decisiones económicas cotidianas.',
+            'Muestra honestidad y rigor en el manejo de datos numéricos.',
+            'Trabaja en equipo respetando los aportes de sus compañeros.'
+          ],
+          porcentajes: { saber: 30, hacer: 50, ser: 20 }
+        },
+
+        tiposPensamiento: ['Numérico', 'Variacional']
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 6 - PERIODO 4
+      // ----------------------------------------------------------
+      {
+        periodo: 4,
+        semanas: 10,
+        horasSemana: 4,
+        horasTotales: 40,
+
+        estandares: [
+          'Represento datos usando tablas y gráficos estadísticos e identifico tendencias',
+          'Calculo e interpreto la moda, la mediana y la media aritmética de conjuntos de datos'
+        ],
+
+        diagnostico: 'El 52% de los estudiantes no interpreta correctamente gráficos estadísticos ni distingue cuándo aplicar cada medida de tendencia central.',
+
+        competenciaCiudadana: 'Usa la estadística para leer críticamente información presentada en medios de comunicación y toma decisiones informadas basadas en datos de su contexto escolar y comunitario.',
+
+        competenciasICFES: {
+          razonamiento: 'Justifica qué medida de tendencia central es más representativa según las características del conjunto de datos.',
+          comunicacion: 'Construye e interpreta tablas de frecuencia, diagramas de barras, histogramas y gráficos circulares para comunicar información estadística.',
+          resolucionProblemas: 'Calcula e interpreta la media, la mediana y la moda de conjuntos de datos en situaciones del contexto escolar y social.'
+        },
+
+        dba: 'Interpreta información presentada en tablas y gráficos estadísticos y calcula medidas de tendencia central para describir un conjunto de datos.',
+
+        preguntaProblema: '¿Cómo la estadística nos permite resumir, representar e interpretar información para comprender mejor nuestra realidad?',
+
+        ejesTematicos: [
+          'Datos cualitativos y cuantitativos',
+          'Tablas de frecuencia (frecuencia absoluta y relativa)',
+          'Gráficos estadísticos: barras, circular, pictograma',
+          'Medidas de tendencia central: moda, mediana y media',
+          'Interpretación y análisis de datos'
+        ],
+
+        evidenciasAprendizaje: [
+          'Clasifica datos como cualitativos o cuantitativos y los organiza en tablas de frecuencia.',
+          'Construye diagramas de barras, gráficos circulares y pictogramas a partir de tablas de datos.',
+          'Calcula la media aritmética de un conjunto de datos e interpreta su significado.',
+          'Determina la moda y la mediana de un conjunto de datos ordenado.',
+          'Selecciona la medida de tendencia central más adecuada según el tipo de datos y el contexto.'
+        ],
+
+        matrizReferencia: {
+          componente: 'Aleatorio',
+          competencia: 'Comunicación, representación y modelación',
+          afirmaciones: [
+            'Construye e interpreta representaciones estadísticas (tablas, gráficos) de conjuntos de datos.',
+            'Calcula e interpreta medidas de tendencia central en contextos reales.'
+          ],
+          evidenciasICFES: [
+            'Lee e interpreta información presentada en tablas de frecuencia y gráficos estadísticos.',
+            'Determina la media, moda o mediana de un conjunto de datos a partir de una tabla o gráfico.'
+          ]
+        },
+
+        aprendizajesICFES: ['mat-s9-08', 'mat-s9-10'],
+        evidenciasICFES: ['mat-s9-08-e1', 'mat-s9-10-e1'],
+        nivelEsperado: 'Mínimo',
+
+        materialesEducativos: [
+          'Texto escolar de Matemáticas 6°',
+          'Papel cuadriculado y colores para construir gráficos',
+          'Datos reales del contexto escolar (notas, asistencia, deportes)',
+          'Guías de trabajo elaboradas por el docente',
+          'Hojas de cálculo (LibreOffice Calc) para graficar datos'
+        ],
+
+        estrategiasMetodologicas: [
+          'Recolección de datos reales del grupo (edades, estatura, deporte favorito) para trabajar estadística contextualizada.',
+          'Construcción manual de gráficos estadísticos antes de usar software.',
+          'Discusión guiada: ¿qué medida de tendencia central describe mejor este conjunto de datos?',
+          'Análisis crítico de gráficos de medios de comunicación (noticias, publicidad).',
+          'Proyecto final: encuesta escolar con recolección, representación e interpretación de datos.'
+        ],
+
+        criteriosEvaluacion: {
+          saber: [
+            'Distingue datos cualitativos de cuantitativos y describe sus características.',
+            'Define frecuencia absoluta y relativa e interpreta tablas de frecuencia.',
+            'Enuncia las medidas de tendencia central (moda, mediana, media) y sus diferencias.'
+          ],
+          hacer: [
+            'Organiza datos en tablas de frecuencia absoluta y relativa.',
+            'Construye gráficos de barras y circulares a partir de tablas de datos.',
+            'Calcula la media, la mediana y la moda de conjuntos de datos.',
+            'Interpreta gráficos estadísticos y extrae conclusiones del análisis de datos.'
+          ],
+          ser: [
+            'Lee información estadística con espíritu crítico y no se deja engañar por gráficos manipulados.',
+            'Muestra responsabilidad en la recolección y manejo honesto de datos.',
+            'Comparte e interpreta los resultados de la encuesta con respeto por las diferencias.'
+          ],
+          porcentajes: { saber: 30, hacer: 50, ser: 20 }
+        },
+
+        tiposPensamiento: ['Aleatorio']
+      }
+    ]
+  },
+
+  // ============================================================
+  // GRADO 7
+  // ============================================================
+  '7': {
+    grado: '7°',
+    intensidadHoraria: 4,
+    totalSemanas: 40,
+    totalHorasAnuales: 160,
+    objetivo: 'Ampliar el pensamiento numérico al conjunto de los números racionales, desarrollar el pensamiento variacional con proporcionalidad, explorar transformaciones geométricas e introducir la probabilidad',
+
+    periodos: [
+      // ----------------------------------------------------------
+      // GRADO 7 - PERIODO 1
+      // ----------------------------------------------------------
+      {
+        periodo: 1,
+        semanas: 10,
+        horasSemana: 4,
+        horasTotales: 40,
+
+        estandares: [
+          'Uso fracciones y decimales en sus diferentes representaciones y en diversos contextos',
+          'Resuelvo problemas y simplifico cálculos usando propiedades de las operaciones con números racionales'
+        ],
+
+        diagnostico: 'El 57% de los estudiantes presenta dificultades en la adición y sustracción de fracciones con denominadores distintos y en la conversión entre fracciones y decimales.',
+
+        competenciaCiudadana: 'Reconoce el uso de los números racionales en situaciones cotidianas como cocinar, medir, comerciar y repartir equitativamente recursos, valorando la precisión del pensamiento fraccionario.',
+
+        competenciasICFES: {
+          razonamiento: 'Justifica la equivalencia entre fracciones, decimales y porcentajes usando representaciones gráficas y numéricas.',
+          comunicacion: 'Representa números racionales en sus diferentes formas (fracción, decimal, porcentaje) e interpreta su valor en contextos reales.',
+          resolucionProblemas: 'Aplica las cuatro operaciones con fracciones y decimales para resolver situaciones problema del entorno.'
+        },
+
+        dba: 'Opera con números racionales (fracciones y decimales) en sus diferentes representaciones y los usa para resolver situaciones de la vida cotidiana.',
+
+        preguntaProblema: '¿Cómo los números racionales (fracciones y decimales) nos permiten expresar con mayor precisión cantidades y situaciones que los números enteros no pueden describir?',
+
+        ejesTematicos: [
+          'Fracciones: tipos, representación y equivalencia',
+          'Operaciones con fracciones (suma, resta, multiplicación, división)',
+          'Números decimales: representación y valor posicional',
+          'Operaciones con decimales',
+          'Conversión entre fracciones, decimales y porcentajes'
+        ],
+
+        evidenciasAprendizaje: [
+          'Clasifica fracciones (propias, impropias, mixtas) y determina fracciones equivalentes.',
+          'Realiza las cuatro operaciones con fracciones de igual y diferente denominador.',
+          'Lee, escribe y compara números decimales hasta diezmilésimas.',
+          'Realiza operaciones con decimales (suma, resta, multiplicación, división).',
+          'Convierte entre fracciones, decimales y porcentajes equivalentes.'
+        ],
+
+        matrizReferencia: {
+          componente: 'Numérico-Variacional',
+          competencia: 'Razonamiento y argumentación',
+          afirmaciones: [
+            'Justifica la equivalencia entre fracciones y sus representaciones decimal y porcentual.',
+            'Usa las propiedades de las operaciones con racionales para simplificar cálculos.'
+          ],
+          evidenciasICFES: [
+            'Determina el resultado de operaciones con fracciones y decimales en situaciones contextualizadas.',
+            'Convierte entre fracción, decimal y porcentaje equivalentes.'
+          ]
+        },
+
+        aprendizajesICFES: ['mat-s9-01', 'mat-s9-02'],
+        evidenciasICFES: ['mat-s9-01-e1', 'mat-s9-01-e2', 'mat-s9-02-e1'],
+        nivelEsperado: 'Satisfactorio',
+
+        materialesEducativos: [
+          'Texto escolar de Matemáticas 7° (editorial Norma o Santillana)',
+          'Tiras fraccionarias de cartulina para modelar fracciones equivalentes',
+          'Cuadrícula decimal para representar decimales y porcentajes',
+          'Calculadora básica para verificar resultados',
+          'Guías de trabajo elaboradas por el docente'
+        ],
+
+        estrategiasMetodologicas: [
+          'Uso de tiras fraccionarias y modelos de área para introducir fracciones equivalentes.',
+          'Modelado concreto antes de lo abstracto: partir objetos reales (pizza, chocolate) para sumar fracciones.',
+          'Comparación entre representaciones: tabla con fracción, decimal y porcentaje equivalentes.',
+          'Aprendizaje basado en problemas con situaciones de cocina, comercio y medición.',
+          'Trabajo en parejas con fichas de dominó de fracciones-decimales equivalentes.'
+        ],
+
+        criteriosEvaluacion: {
+          saber: [
+            'Clasifica fracciones y explica qué son fracciones equivalentes.',
+            'Enuncia el proceso para sumar y restar fracciones con diferente denominador (mínimo común múltiplo).',
+            'Describe la relación entre fracción, decimal y porcentaje.'
+          ],
+          hacer: [
+            'Simplifica fracciones y determina fracciones equivalentes.',
+            'Realiza las cuatro operaciones con fracciones correctamente.',
+            'Realiza operaciones con decimales aplicando correctamente el valor posicional.',
+            'Convierte entre fracciones, decimales y porcentajes en situaciones contextualizadas.'
+          ],
+          ser: [
+            'Muestra paciencia y precisión en los procedimientos con fracciones y decimales.',
+            'Relaciona los números racionales con situaciones cotidianas con actitud positiva.',
+            'Participa activamente en las discusiones sobre estrategias de solución.'
+          ],
+          porcentajes: { saber: 30, hacer: 50, ser: 20 }
+        },
+
+        tiposPensamiento: ['Numérico']
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 7 - PERIODO 2
+      // ----------------------------------------------------------
+      {
+        periodo: 2,
+        semanas: 10,
+        horasSemana: 4,
+        horasTotales: 40,
+
+        estandares: [
+          'Identifico y uso la proporcionalidad directa e inversa en situaciones de la vida cotidiana',
+          'Resuelvo problemas de proporcionalidad usando la regla de tres simple y compuesta'
+        ],
+
+        diagnostico: 'El 54% de los estudiantes no distingue correctamente situaciones de proporcionalidad directa de las de proporcionalidad inversa y no aplica el método adecuado para resolverlas.',
+
+        competenciaCiudadana: 'Comprende cómo la proporcionalidad directa e inversa aparece en fenómenos de la vida social: distribución de trabajo, velocidad y tiempo, consumo y costo, reconociendo su utilidad para la toma de decisiones.',
+
+        competenciasICFES: {
+          razonamiento: 'Justifica si una situación es de proporcionalidad directa o inversa analizando el comportamiento de las variables cuando una de ellas cambia.',
+          comunicacion: 'Representa situaciones de proporcionalidad en tablas y gráficos, interpretando la constante de proporcionalidad.',
+          resolucionProblemas: 'Aplica la regla de tres simple directa e inversa para resolver problemas en contextos de economía, ciencia y vida cotidiana.'
+        },
+
+        dba: 'Identifica y modela situaciones de proporcionalidad directa e inversa, y las resuelve usando la regla de tres simple.',
+
+        preguntaProblema: '¿Cómo la proporcionalidad directa e inversa nos permite predecir y calcular cantidades desconocidas en situaciones de trabajo, velocidad, consumo y distribución?',
+
+        ejesTematicos: [
+          'Proporcionalidad directa: tablas y gráficas',
+          'Constante de proporcionalidad directa',
+          'Regla de tres simple directa',
+          'Proporcionalidad inversa: tablas y comportamiento',
+          'Regla de tres simple inversa'
+        ],
+
+        evidenciasAprendizaje: [
+          'Identifica si dos magnitudes son directamente proporcionales y determina la constante de proporcionalidad.',
+          'Completa tablas de proporcionalidad directa e inversa.',
+          'Grafica situaciones de proporcionalidad directa e interpreta la gráfica.',
+          'Aplica la regla de tres simple directa para resolver problemas de proporcionalidad.',
+          'Aplica la regla de tres simple inversa para resolver situaciones de proporcionalidad inversa.'
+        ],
+
+        matrizReferencia: {
+          componente: 'Variacional / Numérico',
+          competencia: 'Resolución y planteamiento de problemas',
+          afirmaciones: [
+            'Reconoce si una situación es de proporcionalidad directa o inversa y justifica su elección.',
+            'Aplica la regla de tres simple para determinar el valor desconocido en situaciones proporcionales.'
+          ],
+          evidenciasICFES: [
+            'Determina el valor desconocido en una situación de proporcionalidad directa o inversa.',
+            'Identifica la gráfica que corresponde a una situación de proporcionalidad directa.'
+          ]
+        },
+
+        aprendizajesICFES: ['mat-s9-03', 'mat-s9-04'],
+        evidenciasICFES: ['mat-s9-03-e1', 'mat-s9-04-e1', 'mat-s9-04-e2'],
+        nivelEsperado: 'Satisfactorio',
+
+        materialesEducativos: [
+          'Texto escolar de Matemáticas 7°',
+          'Papel cuadriculado para graficar proporcionalidades',
+          'Guías de problemas de proporcionalidad en contextos variados',
+          'Calculadora básica',
+          'Situaciones reales: recetas, horarios, tarifas de servicios'
+        ],
+
+        estrategiasMetodologicas: [
+          'Exploración experimental: doblar una receta, calcular tiempo de viaje a diferente velocidad.',
+          'Construcción de tablas de valores para visualizar el comportamiento de las magnitudes.',
+          'Comparación directa: ¿qué pasa con Y cuando X aumenta? (directa vs. inversa).',
+          'Resolución de problemas graduados: directo simple → inverso simple → contextos mixtos.',
+          'Juego de roles: situaciones de compra-venta y distribución de trabajo en grupos.'
+        ],
+
+        criteriosEvaluacion: {
+          saber: [
+            'Define proporcionalidad directa e inversa y da ejemplos del contexto.',
+            'Enuncia la regla de tres simple directa e inversa.',
+            'Explica qué es la constante de proporcionalidad y cómo se calcula.'
+          ],
+          hacer: [
+            'Determina si dos magnitudes son directa o inversamente proporcionales.',
+            'Completa tablas de proporcionalidad directa e inversa.',
+            'Aplica la regla de tres simple directa e inversa en situaciones reales.',
+            'Grafica situaciones de proporcionalidad directa e interpreta la gráfica.'
+          ],
+          ser: [
+            'Relaciona la proporcionalidad con situaciones de equidad y distribución justa.',
+            'Verifica sus respuestas por métodos alternativos con espíritu crítico.',
+            'Trabaja de manera organizada y sistemática en la resolución de problemas.'
+          ],
+          porcentajes: { saber: 30, hacer: 50, ser: 20 }
+        },
+
+        tiposPensamiento: ['Numérico', 'Variacional']
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 7 - PERIODO 3
+      // ----------------------------------------------------------
+      {
+        periodo: 3,
+        semanas: 10,
+        horasSemana: 4,
+        horasTotales: 40,
+
+        estandares: [
+          'Reconozco y aplico transformaciones geométricas (traslación, rotación, reflexión) en el plano',
+          'Uso el plano cartesiano para representar y analizar figuras geométricas'
+        ],
+
+        diagnostico: 'El 50% de los estudiantes no identifica correctamente el resultado de una transformación geométrica ni ubica puntos en los cuatro cuadrantes del plano cartesiano.',
+
+        competenciaCiudadana: 'Aprecia las transformaciones geométricas en el arte, la arquitectura y los patrones culturales (mosaicos, tejidos, bordados) de diferentes comunidades colombianas.',
+
+        competenciasICFES: {
+          razonamiento: 'Justifica si una figura es imagen de otra mediante una transformación geométrica (traslación, rotación o reflexión), describiendo las propiedades conservadas.',
+          comunicacion: 'Representa figuras y sus transformaciones en el plano cartesiano usando coordenadas con precisión.',
+          resolucionProblemas: 'Aplica transformaciones geométricas para resolver problemas de diseño de patrones y figuras simétricas.'
+        },
+
+        dba: 'Aplica transformaciones geométricas (traslación, rotación, reflexión) a figuras en el plano cartesiano y describe las propiedades que se conservan.',
+
+        preguntaProblema: '¿Cómo las transformaciones geométricas nos permiten describir el movimiento, la simetría y los patrones que observamos en el arte, la naturaleza y el diseño?',
+
+        ejesTematicos: [
+          'El plano cartesiano: cuadrantes y coordenadas',
+          'Traslación de figuras en el plano',
+          'Reflexión: eje de simetría y figura imagen',
+          'Rotación: centro, ángulo y sentido de giro',
+          'Propiedades conservadas en las transformaciones isométricas'
+        ],
+
+        evidenciasAprendizaje: [
+          'Ubica puntos en los cuatro cuadrantes del plano cartesiano con coordenadas enteras y racionales.',
+          'Determina la imagen de una figura bajo una traslación dada por un vector.',
+          'Traza la imagen de una figura por reflexión con respecto a un eje dado.',
+          'Determina la imagen de una figura por rotación de 90°, 180° o 270° alrededor del origen.',
+          'Identifica y describe las propiedades conservadas (distancias, ángulos, forma) en las isometrías.'
+        ],
+
+        matrizReferencia: {
+          componente: 'Geométrico-Métrico',
+          competencia: 'Comunicación, representación y modelación',
+          afirmaciones: [
+            'Representa transformaciones geométricas en el plano cartesiano usando coordenadas.',
+            'Identifica el tipo de transformación que relaciona una figura con su imagen.'
+          ],
+          evidenciasICFES: [
+            'Determina las coordenadas de la imagen de un punto bajo una traslación, reflexión o rotación.',
+            'Identifica la transformación geométrica que lleva una figura a otra en el plano cartesiano.'
+          ]
+        },
+
+        aprendizajesICFES: ['mat-s9-05', 'mat-s9-07'],
+        evidenciasICFES: ['mat-s9-05-e1', 'mat-s9-07-e1', 'mat-s9-07-e2'],
+        nivelEsperado: 'Satisfactorio',
+
+        materialesEducativos: [
+          'Texto escolar de Matemáticas 7°',
+          'Papel cuadriculado para construcciones en el plano cartesiano',
+          'Espejo plano para explorar reflexiones',
+          'GeoGebra para aplicar transformaciones geométricas dinámicamente',
+          'Papel de calco para superponer figuras y verificar isometrías'
+        ],
+
+        estrategiasMetodologicas: [
+          'Introducción con el plano cartesiano: juego de coordenadas (batalla naval modificada).',
+          'Uso de espejo plano para explorar reflexiones de manera concreta antes del plano cartesiano.',
+          'Aplicación de transformaciones en papel cuadriculado antes de pasar a GeoGebra.',
+          'Diseño de patrones con transformaciones: mosaicos y frisos geométricos.',
+          'GeoGebra: exploración dinámica de traslación, rotación y reflexión con deslizadores.'
+        ],
+
+        criteriosEvaluacion: {
+          saber: [
+            'Define las transformaciones isométricas (traslación, reflexión, rotación) y sus elementos.',
+            'Explica qué propiedades conservan las isometrías.',
+            'Describe el sistema de coordenadas cartesianas y los cuatro cuadrantes.'
+          ],
+          hacer: [
+            'Ubica puntos en los cuatro cuadrantes del plano cartesiano.',
+            'Aplica traslaciones, reflexiones y rotaciones a figuras en el plano.',
+            'Determina las coordenadas de la imagen de una figura bajo una transformación.',
+            'Diseña un patrón usando al menos dos tipos de transformaciones geométricas.'
+          ],
+          ser: [
+            'Aprecia la geometría en el arte y los patrones culturales con sentido estético.',
+            'Trabaja con precisión y orden en las construcciones geométricas.',
+            'Colabora creativamente en el diseño de patrones geométricos grupales.'
+          ],
+          porcentajes: { saber: 30, hacer: 50, ser: 20 }
+        },
+
+        tiposPensamiento: ['Espacial', 'Métrico']
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 7 - PERIODO 4
+      // ----------------------------------------------------------
+      {
+        periodo: 4,
+        semanas: 10,
+        horasSemana: 4,
+        horasTotales: 40,
+
+        estandares: [
+          'Uso conceptos básicos de probabilidad para predecir la posibilidad de ocurrencia de un evento',
+          'Identifico y aplico el principio de conteo en situaciones de combinaciones simples'
+        ],
+
+        diagnostico: 'El 53% de los estudiantes no distingue entre probabilidad teórica y experimental, ni aplica el principio de conteo en situaciones de selección y arreglo simple.',
+
+        competenciaCiudadana: 'Usa el pensamiento probabilístico para tomar decisiones informadas ante situaciones de incertidumbre cotidiana: juegos, predicciones del clima, rifas y sorteos escolares.',
+
+        competenciasICFES: {
+          razonamiento: 'Justifica el cálculo de la probabilidad de un evento usando la definición clásica y compara con la probabilidad experimental.',
+          comunicacion: 'Representa el espacio muestral de un experimento aleatorio usando listas, tablas y diagramas de árbol.',
+          resolucionProblemas: 'Calcula probabilidades de eventos simples y aplica el principio de multiplicación para contar posibilidades en combinaciones simples.'
+        },
+
+        dba: 'Calcula la probabilidad de eventos simples en experimentos aleatorios y usa el principio de conteo para determinar el número de posibilidades en situaciones de selección.',
+
+        preguntaProblema: '¿Cómo la probabilidad y el conteo nos permiten predecir la posibilidad de que ocurran eventos en situaciones de azar y tomar mejores decisiones?',
+
+        ejesTematicos: [
+          'Experimentos aleatorios: espacio muestral y eventos',
+          'Probabilidad clásica: definición y cálculo',
+          'Probabilidad experimental: frecuencia relativa',
+          'Principio de multiplicación para el conteo',
+          'Combinaciones simples y diagramas de árbol'
+        ],
+
+        evidenciasAprendizaje: [
+          'Identifica el espacio muestral de experimentos aleatorios simples (dados, monedas, urnas).',
+          'Calcula la probabilidad de un evento usando la definición clásica (casos favorables / casos totales).',
+          'Realiza experimentos aleatorios y calcula la probabilidad experimental.',
+          'Aplica el principio de multiplicación para contar el total de posibilidades en una situación de selección.',
+          'Construye diagramas de árbol para representar combinaciones simples y calcular probabilidades.'
+        ],
+
+        matrizReferencia: {
+          componente: 'Aleatorio',
+          competencia: 'Resolución y planteamiento de problemas',
+          afirmaciones: [
+            'Calcula la probabilidad de un evento simple en un experimento aleatorio.',
+            'Usa el principio de multiplicación y diagramas de árbol para contar posibilidades.'
+          ],
+          evidenciasICFES: [
+            'Determina la probabilidad de un evento a partir de un espacio muestral dado.',
+            'Calcula el número de posibilidades usando el principio de multiplicación.'
+          ]
+        },
+
+        aprendizajesICFES: ['mat-s9-09', 'mat-s9-10'],
+        evidenciasICFES: ['mat-s9-09-e1', 'mat-s9-09-e2', 'mat-s9-10-e1'],
+        nivelEsperado: 'Satisfactorio',
+
+        materialesEducativos: [
+          'Texto escolar de Matemáticas 7°',
+          'Dados, monedas y cartas para experimentos aleatorios',
+          'Urnas o bolsas con fichas de colores',
+          'Guías de trabajo con diagramas de árbol',
+          'Hojas de registro para experimentos de probabilidad'
+        ],
+
+        estrategiasMetodologicas: [
+          'Experimentos con dados y monedas: registrar resultados y calcular probabilidad experimental.',
+          'Comparación entre probabilidad teórica y experimental mediante experimentación repetida.',
+          'Construcción de diagramas de árbol para situaciones de selección de menú, ropa, rutas.',
+          'Juegos de probabilidad: ¿cuál es más justo? Análisis y discusión grupal.',
+          'Proyecto final: diseño y análisis de un juego justo usando probabilidad.'
+        ],
+
+        criteriosEvaluacion: {
+          saber: [
+            'Define experimento aleatorio, espacio muestral y evento.',
+            'Enuncia la definición clásica de probabilidad y explica cuándo se puede aplicar.',
+            'Describe el principio de multiplicación para el conteo de posibilidades.'
+          ],
+          hacer: [
+            'Determina el espacio muestral de experimentos aleatorios simples.',
+            'Calcula la probabilidad clásica de eventos simples y compuestos.',
+            'Realiza y registra experimentos aleatorios calculando probabilidad experimental.',
+            'Construye diagramas de árbol y aplica el principio de multiplicación.'
+          ],
+          ser: [
+            'Relaciona la probabilidad con situaciones de toma de decisiones con actitud reflexiva.',
+            'Muestra honestidad en el registro de resultados experimentales.',
+            'Trabaja en equipo para diseñar y analizar experimentos probabilísticos.'
+          ],
+          porcentajes: { saber: 30, hacer: 50, ser: 20 }
+        },
+
+        tiposPensamiento: ['Aleatorio', 'Numérico']
+      }
+    ]
+  },
 
   // ============================================================
   // GRADO 8

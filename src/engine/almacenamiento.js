@@ -223,3 +223,61 @@ const Storage = {
     this.remove(this._coberturaKey(area, grupo));
   }
 };
+
+// === ANALYTICS OFFLINE ===
+const Analytics = {
+  KEY: 'articulador-analytics',
+
+  _getData() {
+    try {
+      return JSON.parse(localStorage.getItem(this.KEY)) || { vistas: {}, acciones: {}, sesiones: 0, ultimaSesion: null };
+    } catch { return { vistas: {}, acciones: {}, sesiones: 0, ultimaSesion: null }; }
+  },
+
+  _save(data) {
+    try { localStorage.setItem(this.KEY, JSON.stringify(data)); } catch {}
+  },
+
+  // Registrar vista de página
+  registrarVista(vista, detalles) {
+    const data = this._getData();
+    const key = detalles ? vista + ':' + detalles : vista;
+    data.vistas[key] = (data.vistas[key] || 0) + 1;
+    this._save(data);
+  },
+
+  // Registrar acción (exportar, simulacro, búsqueda, etc.)
+  registrarAccion(accion) {
+    const data = this._getData();
+    data.acciones[accion] = (data.acciones[accion] || 0) + 1;
+    this._save(data);
+  },
+
+  // Registrar nueva sesión (una por día)
+  registrarSesion() {
+    const data = this._getData();
+    const hoy = new Date().toISOString().split('T')[0];
+    if (data.ultimaSesion !== hoy) {
+      data.sesiones++;
+      data.ultimaSesion = hoy;
+      this._save(data);
+    }
+  },
+
+  // Obtener resumen para mostrar en config
+  getResumen() {
+    const data = this._getData();
+    const topVistas = Object.entries(data.vistas)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 5);
+    const topAcciones = Object.entries(data.acciones)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 5);
+    return { topVistas, topAcciones, sesiones: data.sesiones, ultimaSesion: data.ultimaSesion };
+  },
+
+  // Limpiar analytics
+  limpiar() {
+    localStorage.removeItem(this.KEY);
+  }
+};

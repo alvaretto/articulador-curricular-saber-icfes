@@ -2080,6 +2080,12 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
   transition: color var(--dur-fast), background var(--dur-fast), border-color var(--dur-fast);
 }
 
+.simulacro-timer.warning {
+  color: var(--warning);
+  background: rgba(245, 158, 11, 0.1);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
 .simulacro-timer.urgente {
   color: var(--danger);
   background: rgba(239, 68, 68, 0.1);
@@ -2089,7 +2095,42 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 
 @keyframes timer-pulse {
   0%, 100% { opacity: 1; }
-  50%       { opacity: 0.7; }
+  50%       { opacity: 0.5; }
+}
+
+/* Barra de configuracion del simulacro */
+.simulacro-config-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-6);
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--bg-overlay);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+}
+
+.simulacro-config-label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.simulacro-config-select {
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  padding: var(--sp-1) var(--sp-3);
+  cursor: pointer;
+  outline: none;
+  transition: border-color var(--dur-fast);
+}
+
+.simulacro-config-select:focus {
+  border-color: var(--accent);
 }
 
 /* Barra de progreso */
@@ -2688,5 +2729,158 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
   .cobertura-grupo-header {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BOTÓN IMPRIMIR (visible en pantalla, oculto en impresión)
+   ═══════════════════════════════════════════════════════════════ */
+.btn-print {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: var(--sp-2) var(--sp-4);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  border: 1px solid var(--accent);
+  background: var(--accent-dim);
+  color: var(--accent);
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease-out);
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+.btn-print:hover {
+  background: var(--accent);
+  color: #ffffff;
+  box-shadow: var(--shadow-glow);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ESTILOS ADICIONALES DE IMPRESIÓN / PDF
+   Complementa el @media print existente (líneas 1657-1752)
+   ═══════════════════════════════════════════════════════════════ */
+@media print {
+  /* Ocultar elementos de UI no imprimibles */
+  #menu-btn,
+  .btn:not(.btn-print),
+  .btn-print,
+  .simulacro-nav,
+  .filter-bar,
+  .tabs,
+  .cobertura-grupos-tabs,
+  .ia-panel,
+  .ia-fallback,
+  .theme-toggle,
+  .sidebar-backdrop {
+    display: none !important;
+  }
+
+  /* Fuente base legible en papel */
+  html {
+    font-size: 11pt;
+  }
+
+  /* app-main ocupa todo el ancho sin márgenes laterales */
+  .app-main {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: var(--sp-4) 0 !important;
+  }
+
+  /* Eliminar sombras en todos los elementos */
+  .card,
+  .estandar-card,
+  .nivel-card,
+  .area-card,
+  .plan-section,
+  .articulacion-col,
+  .progresion-card,
+  .simulacro-card,
+  .cobertura-area-card,
+  .cobertura-grupo-card {
+    box-shadow: none !important;
+    background: #ffffff !important;
+    border: 1px solid #bbb !important;
+  }
+
+  /* Evitar cortes de página dentro de cards */
+  .card,
+  .estandar-card,
+  .nivel-card,
+  .area-card,
+  .plan-section,
+  .articulacion-col,
+  .progresion-card,
+  .cobertura-grupo-card,
+  .simulacro-detalle-item,
+  .estandar-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Badges y tags: borde en vez de fondo de color */
+  .badge,
+  .chip,
+  .badge-mat,
+  .badge-len,
+  .badge-nat,
+  .badge-soc,
+  .badge-accent,
+  .badge-muted,
+  .badge-ia {
+    background: transparent !important;
+    border: 1px solid #888 !important;
+    color: #333 !important;
+  }
+
+  /* Enlaces: sin decoración de color */
+  a,
+  a:visited {
+    color: #000 !important;
+    text-decoration: none !important;
+  }
+
+  /* Tablas con bordes visibles */
+  table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+  }
+
+  th,
+  td {
+    border: 1px solid #999 !important;
+    padding: 4pt 6pt !important;
+    background: #ffffff !important;
+    color: #000 !important;
+  }
+
+  th {
+    background: #f0f0f0 !important;
+    font-weight: 700 !important;
+  }
+
+  /* Ocultar barra de scroll */
+  ::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  * {
+    scrollbar-width: none !important;
+  }
+
+  /* Columnas de articulación sin transformaciones */
+  .articulacion-col.anterior,
+  .articulacion-col.siguiente {
+    opacity: 1 !important;
+  }
+
+  /* Nivel cards sin escala */
+  .nivel-card.activo,
+  .progresion-card.actual {
+    transform: none !important;
   }
 }

@@ -1,11 +1,854 @@
 /**
- * Planes de aula de Lenguaje - Grados 8° a 11°
+ * Planes de aula de Lenguaje - Grados 6° a 11°
  * Estructura: 4 periodos x 10 semanas x 4 horas/semana = 160 horas/año
  * Basado en Estándares Básicos de Competencias (EBC) del MEN - Colombia
  * Articulado con Marco de Referencia ICFES Lectura Crítica (Saber 9° y Saber 11°)
  */
 
 const PLANES_LENGUAJE = {
+
+  // ============================================================
+  // GRADO 6
+  // ============================================================
+  '6': {
+    grado: '6°',
+    intensidadHoraria: 4,
+    totalSemanas: 40,
+    totalHorasAnuales: 160,
+    objetivo: 'Desarrollar habilidades básicas de comprensión e interpretación textual, producción escrita y oralidad, mediante el reconocimiento de tipologías textuales, el acercamiento a la literatura colombiana y el análisis crítico de los medios de comunicación',
+
+    periodos: [
+      // ----------------------------------------------------------
+      // GRADO 6 - PERIODO 1
+      // ----------------------------------------------------------
+      {
+        periodo: 1,
+        semanas: 10,
+        horasSemana: 4,
+        horasTotales: 40,
+
+        estandares: [
+          'Comprendo textos que tienen diferentes formatos y finalidades',
+          'Identifico la estructura y las características de los textos narrativos, descriptivos y expositivos',
+          'Elaboro hipótesis de predicción acerca del contenido de los textos'
+        ],
+
+        diagnostico: 'El 61% de los estudiantes no distingue las características propias de cada tipología textual ni identifica la intención comunicativa del texto que lee.',
+
+        competenciaCiudadana: 'Reconoce que diferentes tipos de textos cumplen funciones distintas en la sociedad y desarrolla hábitos de lectura como herramienta de aprendizaje y disfrute.',
+
+        competenciasICFES: {
+          identificar: 'Identifica información explícita y el tema central en textos narrativos, descriptivos y expositivos de complejidad básica.',
+          comprender: 'Reconoce la estructura y las características propias de cada tipología textual y comprende la intención comunicativa del autor.',
+          reflexionar: 'Formula apreciaciones sencillas sobre el contenido de los textos leídos y establece relaciones entre el texto y su experiencia cotidiana.'
+        },
+
+        dba: 'Lee comprensivamente textos de diferente tipo, longitud y complejidad, identificando su estructura, propósito comunicativo y principales ideas.',
+
+        preguntaProblema: '¿Cómo reconocer de qué tipo es un texto y para qué sirve, y cómo esto me ayuda a comprenderlo mejor?',
+
+        ejesTematicos: [
+          'Tipologías textuales: texto narrativo, descriptivo y expositivo',
+          'Características de cada tipo de texto: estructura, propósito, lenguaje',
+          'Comprensión lectora: ideas principales y secundarias',
+          'Inferencias simples: lo que el texto dice y lo que sugiere',
+          'Estrategias de prelectura: título, imágenes, paratextos',
+          'Vocabulario contextual: significado de palabras por contexto'
+        ],
+
+        evidenciasAprendizaje: [
+          'Clasifica textos según su tipología (narrativo, descriptivo, expositivo) justificando su respuesta.',
+          'Identifica la idea principal y las ideas secundarias en textos expositivos de complejidad básica.',
+          'Formula predicciones sobre el contenido de un texto a partir del título e imágenes.',
+          'Deduce el significado de palabras desconocidas usando el contexto del texto.',
+          'Compara dos textos de diferente tipología sobre un mismo tema e identifica sus diferencias.'
+        ],
+
+        matrizReferencia: {
+          componente: 'Semántico',
+          competencia: 'Identificar y entender los contenidos locales que conforman un texto',
+          afirmaciones: [
+            'Identifica información explícita y relevante en textos de diferente tipo.',
+            'Reconoce el tema central y las ideas principales de textos narrativos, descriptivos y expositivos.'
+          ],
+          evidenciasICFES: [
+            'Identifica el tema central de un texto y las ideas que lo desarrollan.',
+            'Reconoce la información explícita presente en distintas partes del texto.'
+          ]
+        },
+
+        aprendizajesICFES: ['lc-s9-01', 'lc-s9-02'],
+        evidenciasICFES: ['lc-s9-01-e1', 'lc-s9-01-e2', 'lc-s9-02-e1'],
+        nivelEsperado: 'Mínimo',
+
+        materialesEducativos: [
+          'Textos narrativos cortos: fábulas, cuentos y leyendas colombianas',
+          'Textos expositivos de enciclopedias infantiles y libros de texto',
+          'Textos descriptivos: postales, folletos turísticos, descripciones de animales',
+          'Guías de lectura con preguntas de comprensión por niveles',
+          'Diccionario escolar ilustrado'
+        ],
+
+        estrategiasMetodologicas: [
+          'Clasificación de textos: el docente presenta varios textos y los estudiantes los agrupan por tipología.',
+          'Lectura guiada con preguntas antes, durante y después del texto.',
+          'Actividad de predicción: ¿de qué crees que trata este texto? (basada en título e imágenes).',
+          'Mapa de ideas: representar visualmente la idea principal y las ideas secundarias.',
+          'Prueba diagnóstica de comprensión lectora con textos de diferente tipología.'
+        ],
+
+        criteriosEvaluacion: {
+          saber: [
+            'Define las características de los textos narrativos, descriptivos y expositivos.',
+            'Identifica el propósito comunicativo de diferentes tipos de texto.',
+            'Reconoce estrategias para abordar un texto antes de leerlo (paratextos, predicciones).'
+          ],
+          hacer: [
+            'Clasifica textos según su tipología identificando características clave.',
+            'Extrae la idea principal y las ideas secundarias de textos expositivos.',
+            'Deduce el significado de palabras por contexto.',
+            'Formula predicciones pertinentes sobre el contenido de textos no leídos.'
+          ],
+          ser: [
+            'Muestra disposición e interés hacia la lectura de diferentes tipos de texto.',
+            'Participa con respeto y escucha activa en las discusiones sobre los textos.',
+            'Entrega oportunamente las actividades y demuestra esfuerzo en su trabajo.'
+          ],
+          porcentajes: { saber: 30, hacer: 50, ser: 20 }
+        },
+
+        tiposPensamiento: ['Comprensión', 'Literatura', 'Producción']
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 6 - PERIODO 2
+      // ----------------------------------------------------------
+      {
+        periodo: 2,
+        semanas: 10,
+        horasSemana: 4,
+        horasTotales: 40,
+
+        estandares: [
+          'Produzco textos escritos que responden a diversas necesidades comunicativas y que siguen un procedimiento estratégico para su elaboración',
+          'Reconozco en situaciones comunicativas la oración como unidad de sentido y los elementos que la conforman'
+        ],
+
+        diagnostico: 'El 58% de los estudiantes comete errores recurrentes de ortografía acentual y no identifica sujeto y predicado en oraciones de mediana complejidad.',
+
+        competenciaCiudadana: 'Comprende que escribir correctamente es un acto de respeto hacia el lector y una herramienta de inclusión social, y valora el cuidado del idioma como patrimonio compartido.',
+
+        competenciasICFES: {
+          identificar: 'Identifica la oración como unidad básica de sentido y reconoce sus componentes principales: sujeto y predicado.',
+          comprender: 'Comprende las reglas básicas de acentuación (palabras agudas, graves, esdrújulas) y las aplica en la revisión de textos.',
+          reflexionar: 'Evalúa la corrección ortográfica y gramatical de sus propios textos y los mejora aplicando lo aprendido.'
+        },
+
+        dba: 'Produce textos escritos coherentes y cohesivos que atienden a una situación comunicativa determinada, usando adecuadamente recursos gramaticales y ortográficos básicos.',
+
+        preguntaProblema: '¿Cómo puedo escribir textos correctos y claros aplicando las reglas de la oración y de la ortografía?',
+
+        ejesTematicos: [
+          'La oración: concepto, sujeto y predicado',
+          'Clases de oraciones según la actitud del hablante',
+          'Acentuación: palabras agudas, graves y esdrújulas',
+          'Tilde diacrítica en casos básicos',
+          'El párrafo: estructura y tipos',
+          'Producción textual: planeación, escritura y revisión'
+        ],
+
+        evidenciasAprendizaje: [
+          'Identifica sujeto y predicado en oraciones de complejidad básica e intermedia.',
+          'Clasifica palabras como agudas, graves o esdrújulas y aplica correctamente la tilde.',
+          'Redacta párrafos coherentes con oración temática y oraciones de desarrollo.',
+          'Revisa sus escritos corrigiendo errores de acentuación y construcción oracional.',
+          'Produce un texto corto (descripción o exposición) siguiendo las etapas de escritura.'
+        ],
+
+        matrizReferencia: {
+          componente: 'Sintáctico',
+          competencia: 'Comprender cómo se articulan las partes de un texto para darle sentido',
+          afirmaciones: [
+            'Identifica la estructura gramatical básica de las oraciones y los elementos que las conforman.',
+            'Reconoce el uso de la tilde y las reglas de acentuación en textos escritos.'
+          ],
+          evidenciasICFES: [
+            'Reconoce la función de los elementos gramaticales en la construcción de oraciones correctas.',
+            'Identifica errores de acentuación y construcción oracional en textos dados.'
+          ]
+        },
+
+        aprendizajesICFES: ['lc-s9-04', 'lc-s9-05'],
+        evidenciasICFES: ['lc-s9-04-e1', 'lc-s9-05-e1', 'lc-s9-05-e2'],
+        nivelEsperado: 'Mínimo',
+
+        materialesEducativos: [
+          'Libro de gramática escolar (grado 6)',
+          'Guías de ejercicios de acentuación con corrección inmediata',
+          'Textos modelo para análisis gramatical (oraciones simples y compuestas)',
+          'Plantillas de escritura: estructura del párrafo',
+          'Diccionario de la lengua española (versión escolar)'
+        ],
+
+        estrategiasMetodologicas: [
+          'Análisis de oraciones: subrayar sujeto (rojo) y predicado (azul) en textos reales.',
+          'Juego de clasificación: tarjetas con palabras para clasificar como agudas, graves o esdrújulas.',
+          'Escritura por etapas: planeación (mapa de ideas) → borrador → revisión → versión final.',
+          'Coevaluación ortográfica: intercambiar escritos y marcar errores con criterios dados.',
+          'Dictado reflexivo: el estudiante escribe y luego justifica por qué tildó cada palabra.'
+        ],
+
+        criteriosEvaluacion: {
+          saber: [
+            'Define la oración y sus componentes principales: sujeto y predicado.',
+            'Explica las reglas de acentuación para palabras agudas, graves y esdrújulas.',
+            'Describe la estructura del párrafo y la función de la oración temática.'
+          ],
+          hacer: [
+            'Identifica sujeto y predicado en oraciones dadas.',
+            'Clasifica palabras según su acento prosódico y aplica la tilde correctamente.',
+            'Redacta párrafos coherentes con estructura clara.',
+            'Revisa y corrige sus escritos aplicando normas ortográficas y gramaticales.'
+          ],
+          ser: [
+            'Muestra cuidado y esmero en la presentación y ortografía de sus escritos.',
+            'Acepta con actitud positiva las correcciones de su docente y compañeros.',
+            'Valora la escritura correcta como herramienta de comunicación efectiva.'
+          ],
+          porcentajes: { saber: 30, hacer: 50, ser: 20 }
+        },
+
+        tiposPensamiento: ['Producción', 'Comprensión']
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 6 - PERIODO 3
+      // ----------------------------------------------------------
+      {
+        periodo: 3,
+        semanas: 10,
+        horasSemana: 4,
+        horasTotales: 40,
+
+        estandares: [
+          'Leo con sentido crítico textos literarios de diferentes géneros y épocas',
+          'Reconozco en los textos literarios las características de los géneros (lírico, narrativo, dramático)',
+          'Identifico la tradición oral colombiana como fuente de creación literaria'
+        ],
+
+        diagnostico: 'El 65% de los estudiantes no diferencia los géneros literarios por sus características ni ha tenido acercamiento a la literatura colombiana infantil y juvenil.',
+
+        competenciaCiudadana: 'Valora la literatura colombiana como expresión de la identidad cultural y como espacio para explorar la diversidad de experiencias humanas en el contexto nacional.',
+
+        competenciasICFES: {
+          identificar: 'Identifica las características básicas de los géneros literarios (narrativo, lírico, dramático) en obras colombianas infantiles y juveniles.',
+          comprender: 'Reconoce los elementos del texto narrativo (narrador, personajes, tiempo, espacio, argumento) en obras de la literatura colombiana para jóvenes.',
+          reflexionar: 'Formula apreciaciones personales sobre las obras leídas, relacionando los temas con su experiencia y contexto cultural.'
+        },
+
+        dba: 'Lee y analiza obras literarias representativas de la tradición colombiana, identificando sus características y el contexto en que fueron producidas.',
+
+        preguntaProblema: '¿Qué historias y personajes ha creado la literatura colombiana para niños y jóvenes, y qué nos dicen sobre nuestra cultura e identidad?',
+
+        ejesTematicos: [
+          'Géneros literarios: narrativo, lírico y dramático',
+          'Tradición oral colombiana: mitos, leyendas, fábulas y coplas',
+          'Literatura colombiana infantil y juvenil: autores y obras representativas',
+          'Elementos del texto narrativo: narrador, personajes, tiempo, espacio, argumento',
+          'El cuento colombiano: características y lectura de cuentos seleccionados',
+          'Lectura en voz alta y disfrute estético de la literatura'
+        ],
+
+        evidenciasAprendizaje: [
+          'Diferencia los géneros literarios por sus características formales y da ejemplos de cada uno.',
+          'Narra con sus palabras un mito o leyenda colombiana e identifica sus elementos narrativos.',
+          'Lee un cuento o fragmento de novela colombiana e identifica narrador, personajes y argumento.',
+          'Escribe un relato breve inspirado en la tradición oral de su región.',
+          'Comparte su apreciación personal sobre una obra leída en un círculo de lectura.'
+        ],
+
+        matrizReferencia: {
+          componente: 'Semántico',
+          competencia: 'Identificar y entender los contenidos locales que conforman un texto',
+          afirmaciones: [
+            'Reconoce las características de los géneros literarios y los elementos del texto narrativo.',
+            'Identifica los elementos del relato (narrador, personajes, tiempo, espacio) en obras literarias colombianas.'
+          ],
+          evidenciasICFES: [
+            'Reconoce el tipo de narrador y los personajes principales de una obra narrativa.',
+            'Identifica el tiempo, el espacio y los eventos principales en textos narrativos colombianos.'
+          ]
+        },
+
+        aprendizajesICFES: ['lc-s9-01', 'lc-s9-03'],
+        evidenciasICFES: ['lc-s9-01-e1', 'lc-s9-01-e3', 'lc-s9-03-e1', 'lc-s9-03-e2'],
+        nivelEsperado: 'Mínimo',
+
+        materialesEducativos: [
+          'Antología de mitos y leyendas colombianas (selección regional)',
+          'Cuentos de Rafael Pombo, Triunfo Arciniegas, Irene Vasco y otros autores colombianos',
+          'Fragmentos de novelas juveniles colombianas contemporáneas',
+          'Guías de análisis narrativo adaptadas al grado 6',
+          'Grabaciones de cuenteros y tradición oral colombiana'
+        ],
+
+        estrategiasMetodologicas: [
+          'Cuentería en el aula: narración en voz alta de mitos y leyendas por parte del docente y estudiantes.',
+          'Círculo de lectura: lectura compartida de cuentos colombianos con preguntas guía.',
+          'Mapa de personajes: representar visualmente los personajes de una obra y sus relaciones.',
+          'Escritura creativa: crear un relato breve usando elementos de la tradición oral regional.',
+          'Exposición oral: cada estudiante presenta un autor colombiano de literatura infantil/juvenil.'
+        ],
+
+        criteriosEvaluacion: {
+          saber: [
+            'Diferencia los géneros literarios (narrativo, lírico, dramático) por sus características.',
+            'Identifica los elementos del texto narrativo: narrador, personajes, tiempo, espacio, argumento.',
+            'Reconoce autores y obras representativas de la literatura colombiana infantil y juvenil.'
+          ],
+          hacer: [
+            'Analiza los elementos narrativos de cuentos y fragmentos de novelas colombianas.',
+            'Narra oralmente un mito o leyenda colombiana con coherencia y expresividad.',
+            'Escribe un relato breve usando elementos de la tradición oral de su región.',
+            'Comparte apreciaciones personales sobre obras leídas con argumentos sencillos.'
+          ],
+          ser: [
+            'Muestra aprecio y disfrute por la literatura colombiana durante las lecturas compartidas.',
+            'Respeta y valora las interpretaciones de sus compañeros en los círculos de lectura.',
+            'Reconoce la tradición oral de su región como patrimonio cultural valioso.'
+          ],
+          porcentajes: { saber: 30, hacer: 50, ser: 20 }
+        },
+
+        tiposPensamiento: ['Literatura', 'Comprensión', 'Producción']
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 6 - PERIODO 4
+      // ----------------------------------------------------------
+      {
+        periodo: 4,
+        semanas: 10,
+        horasSemana: 4,
+        horasTotales: 40,
+
+        estandares: [
+          'Comprendo y utilizo los medios de comunicación masiva para consultar, procesar y divulgar información',
+          'Identifico los diferentes elementos constitutivos de los mensajes mediáticos (visuales, auditivos, escritos)',
+          'Reconozco y valoro los usos éticos y creativos del lenguaje en los medios'
+        ],
+
+        diagnostico: 'El 59% de los estudiantes no identifica las intenciones persuasivas de la publicidad ni diferencia entre información y entretenimiento en los medios de comunicación.',
+
+        competenciaCiudadana: 'Desarrolla una actitud crítica y responsable frente a los mensajes de los medios, comprendiendo su influencia en las percepciones, valores y comportamientos sociales.',
+
+        competenciasICFES: {
+          identificar: 'Identifica el propósito comunicativo de mensajes publicitarios y de medios de comunicación básicos (televisión, radio, prensa, internet).',
+          comprender: 'Reconoce los elementos del lenguaje visual (imagen, color, texto, composición) y comprende cómo se combinan para construir mensajes en la publicidad.',
+          reflexionar: 'Adopta una postura reflexiva frente a los mensajes publicitarios, reconociendo las estrategias de persuasión utilizadas y sus posibles efectos.'
+        },
+
+        dba: 'Comprende mensajes de los medios de comunicación identificando su propósito y las estrategias de persuasión utilizadas.',
+
+        preguntaProblema: '¿Cómo los medios de comunicación y la publicidad usan el lenguaje para influir en lo que pensamos, sentimos y compramos?',
+
+        ejesTematicos: [
+          'Medios de comunicación: tipos, características y funciones',
+          'Lenguaje visual: imagen, color, texto y composición en la publicidad',
+          'Publicidad y propaganda: estrategias de persuasión básicas',
+          'La noticia: estructura y elementos',
+          'Medios digitales y redes sociales: usos responsables',
+          'Ética en el consumo de medios: información verdadera y falsa'
+        ],
+
+        evidenciasAprendizaje: [
+          'Clasifica medios de comunicación según su tipo y la función que cumplen.',
+          'Analiza un anuncio publicitario identificando el público objetivo y la estrategia de persuasión.',
+          'Describe los elementos visuales de un mensaje publicitario y explica su intención.',
+          'Lee y estructura una noticia identificando sus elementos básicos (qué, quién, cuándo, dónde, cómo).',
+          'Produce un mensaje publicitario sencillo para promover un valor o causa de su entorno escolar.'
+        ],
+
+        matrizReferencia: {
+          componente: 'Pragmático',
+          competencia: 'Reflexionar y evaluar el contenido, la forma y el propósito del texto',
+          afirmaciones: [
+            'Identifica la intención comunicativa del autor en textos publicitarios y mediáticos.',
+            'Reconoce las estrategias básicas de persuasión usadas en la publicidad y los medios.'
+          ],
+          evidenciasICFES: [
+            'Identifica el propósito comunicativo de mensajes de los medios (informar, persuadir, entretener).',
+            'Reconoce estrategias de persuasión en mensajes publicitarios sencillos.'
+          ]
+        },
+
+        aprendizajesICFES: ['lc-s9-06', 'lc-s9-09'],
+        evidenciasICFES: ['lc-s9-06-e1', 'lc-s9-06-e2', 'lc-s9-09-e1'],
+        nivelEsperado: 'Mínimo',
+
+        materialesEducativos: [
+          'Colección de anuncios publicitarios impresos (revistas, periódicos escolares)',
+          'Noticias de periódicos locales y nacionales adaptadas al nivel',
+          'Guía de análisis de medios de comunicación para grado 6',
+          'Videos cortos de publicidad televisiva para análisis en clase',
+          'Plantilla de producción de mensajes publicitarios'
+        ],
+
+        estrategiasMetodologicas: [
+          'Museo de publicidad: los estudiantes traen anuncios y los exponen con análisis breve.',
+          'Deconstrucción de un anuncio publicitario: identificar imagen, texto, colores y mensaje.',
+          'Comparación de noticias: el mismo hecho en dos medios distintos (radio vs. prensa).',
+          'Proyecto creativo: diseñar un afiche publicitario para promover un valor escolar.',
+          'Debate sobre publicidad engañosa: ¿cuándo los medios nos dicen mentiras y por qué?'
+        ],
+
+        criteriosEvaluacion: {
+          saber: [
+            'Identifica los principales medios de comunicación y sus características.',
+            'Describe los elementos del lenguaje visual presentes en la publicidad.',
+            'Reconoce estrategias básicas de persuasión en mensajes publicitarios.'
+          ],
+          hacer: [
+            'Analiza anuncios publicitarios identificando público, propósito y estrategia.',
+            'Lee noticias e identifica sus elementos básicos (qué, quién, cuándo, dónde, cómo).',
+            'Produce un mensaje publicitario usando lenguaje visual básico.',
+            'Evalúa con criterios simples la veracidad de una noticia.'
+          ],
+          ser: [
+            'Muestra actitud crítica frente a la publicidad y los mensajes de los medios.',
+            'Actúa con responsabilidad al consumir y compartir información en medios digitales.',
+            'Valora la importancia de ser un receptor activo y crítico de los medios.'
+          ],
+          porcentajes: { saber: 30, hacer: 50, ser: 20 }
+        },
+
+        tiposPensamiento: ['Medios', 'Ética', 'Comprensión']
+      }
+    ]
+  },
+
+  // ============================================================
+  // GRADO 7
+  // ============================================================
+  '7': {
+    grado: '7°',
+    intensidadHoraria: 4,
+    totalSemanas: 40,
+    totalHorasAnuales: 160,
+    objetivo: 'Fortalecer las competencias de comprensión lectora multinivel, producción de textos argumentativos, análisis de la literatura latinoamericana y uso crítico de los medios digitales, articulando lenguaje, pensamiento y ciudadanía',
+
+    periodos: [
+      // ----------------------------------------------------------
+      // GRADO 7 - PERIODO 1
+      // ----------------------------------------------------------
+      {
+        periodo: 1,
+        semanas: 10,
+        horasSemana: 4,
+        horasTotales: 40,
+
+        estandares: [
+          'Produzco textos escritos que evidencian el conocimiento que tengo de la estructura de cada tipo y de las relaciones entre forma y contenido',
+          'Identifico los elementos propios del texto argumentativo: tesis, argumentos y conclusión',
+          'Elaboro planes de escritura para organizar y desarrollar mis ideas en el texto'
+        ],
+
+        diagnostico: 'El 55% de los estudiantes no distingue una tesis de un argumento y no emplea conectores lógicos adecuados para dar cohesión a sus textos de opinión.',
+
+        competenciaCiudadana: 'Desarrolla la capacidad de expresar y defender posiciones propias con argumentos razonados, reconociendo que el diálogo argumentado es fundamental para la resolución pacífica de conflictos.',
+
+        competenciasICFES: {
+          identificar: 'Identifica la tesis, los argumentos y la conclusión en textos argumentativos de complejidad básica.',
+          comprender: 'Reconoce la función de los conectores lógicos (causa, contraste, conclusión, adición) en la cohesión de textos argumentativos.',
+          reflexionar: 'Evalúa si los argumentos de un texto son pertinentes y suficientes para sostener la tesis planteada.'
+        },
+
+        dba: 'Produce textos argumentativos con estructura clara (tesis, argumentos y conclusión) usando conectores lógicos que le den cohesión.',
+
+        preguntaProblema: '¿Cómo defender una posición de manera convincente usando argumentos sólidos y bien organizados?',
+
+        ejesTematicos: [
+          'El texto argumentativo: definición, estructura y propósito',
+          'Tesis, argumentos y conclusión: diferencias y función',
+          'Tipos de argumentos: de ejemplo, de causa, de autoridad',
+          'Conectores lógicos y marcadores discursivos',
+          'El párrafo argumentativo: estructura y desarrollo',
+          'La carta de opinión y el artículo de opinión'
+        ],
+
+        evidenciasAprendizaje: [
+          'Identifica tesis, argumentos y conclusión en textos argumentativos dados.',
+          'Clasifica argumentos según su tipo (ejemplo, causa, autoridad) en textos reales.',
+          'Usa conectores de causa, contraste y conclusión correctamente en sus escritos.',
+          'Produce un párrafo argumentativo con tesis clara y al menos dos argumentos.',
+          'Escribe una carta de opinión sobre un tema de interés escolar o comunitario.'
+        ],
+
+        matrizReferencia: {
+          componente: 'Sintáctico',
+          competencia: 'Comprender cómo se articulan las partes de un texto para darle sentido global',
+          afirmaciones: [
+            'Identifica la tesis central y los argumentos que la sostienen en textos argumentativos.',
+            'Reconoce la función de los conectores lógicos en la cohesión del texto.'
+          ],
+          evidenciasICFES: [
+            'Identifica la tesis y los argumentos de apoyo en textos argumentativos de complejidad básica.',
+            'Reconoce los conectores lógicos y su función cohesiva en el texto.'
+          ]
+        },
+
+        aprendizajesICFES: ['lc-s9-04', 'lc-s9-05', 'lc-s9-08'],
+        evidenciasICFES: ['lc-s9-04-e1', 'lc-s9-04-e2', 'lc-s9-05-e1', 'lc-s9-08-e2'],
+        nivelEsperado: 'Satisfactorio',
+
+        materialesEducativos: [
+          'Guía de escritura argumentativa con plantillas y ejemplos (nivel 7)',
+          'Artículos de opinión de prensa colombiana adaptados al nivel',
+          'Tabla de conectores lógicos clasificados por función',
+          'Rúbrica de evaluación del texto argumentativo',
+          'Cartas de opinión de estudiantes de grados superiores como modelos'
+        ],
+
+        estrategiasMetodologicas: [
+          'Deconstrucción de textos argumentativos: identificar tesis, argumentos y conclusión en editoriales.',
+          'Escritura progresiva: primero la tesis, luego cada argumento con su desarrollo, finalmente la conclusión.',
+          'Debate de posiciones: dos grupos defienden posturas contrarias sobre un tema cotidiano.',
+          'Análisis de argumentos: ¿este argumento convence? ¿por qué?',
+          'Coevaluación con rúbrica: revisar el texto argumentativo de un compañero.'
+        ],
+
+        criteriosEvaluacion: {
+          saber: [
+            'Define los elementos del texto argumentativo: tesis, argumento y conclusión.',
+            'Identifica y clasifica tipos de argumentos en textos dados.',
+            'Reconoce la función de los principales conectores lógicos.'
+          ],
+          hacer: [
+            'Identifica tesis y argumentos en textos argumentativos de complejidad básica.',
+            'Produce un párrafo argumentativo con estructura clara y conectores adecuados.',
+            'Escribe una carta de opinión con tesis, argumentos y conclusión.',
+            'Revisa y mejora sus textos según criterios de cohesión y coherencia.'
+          ],
+          ser: [
+            'Defiende sus puntos de vista con argumentos y respeta las posiciones de los demás.',
+            'Acepta las correcciones con actitud positiva y las aplica en la revisión.',
+            'Muestra compromiso en la entrega de borradores y la elaboración del texto final.'
+          ],
+          porcentajes: { saber: 30, hacer: 50, ser: 20 }
+        },
+
+        tiposPensamiento: ['Producción', 'Comprensión', 'Ética']
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 7 - PERIODO 2
+      // ----------------------------------------------------------
+      {
+        periodo: 2,
+        semanas: 10,
+        horasSemana: 4,
+        horasTotales: 40,
+
+        estandares: [
+          'Leo con sentido crítico textos de diversa naturaleza y complejidad, identificando diferentes niveles de significado',
+          'Comprendo e interpreto textos con actitudes de escucha y respeto',
+          'Reconozco los planos literal, inferencial y crítico de la lectura y los aplico en la comprensión'
+        ],
+
+        diagnostico: 'El 57% de los estudiantes opera exclusivamente en el nivel literal de comprensión y no logra formular inferencias ni emitir juicios críticos sobre los textos leídos.',
+
+        competenciaCiudadana: 'Desarrolla el pensamiento crítico como herramienta para la participación ciudadana informada, reconociendo que leer críticamente implica cuestionar, argumentar y tomar posición.',
+
+        competenciasICFES: {
+          identificar: 'Identifica información explícita y recupera datos específicos en textos de complejidad media (nivel literal).',
+          comprender: 'Deduce información implícita, infiere el significado de expresiones y establece relaciones causales en textos de complejidad media (nivel inferencial).',
+          reflexionar: 'Formula juicios valorativos sobre el contenido y la forma de los textos, sustentados con evidencias textuales (nivel crítico-intertextual).'
+        },
+
+        dba: 'Lee comprensivamente textos de diferente tipo operando en los niveles literal, inferencial y crítico de manera progresiva.',
+
+        preguntaProblema: '¿Qué dice el texto, qué quiere decir y qué pienso yo al respecto? Los tres niveles de lectura como herramientas para comprender mejor.',
+
+        ejesTematicos: [
+          'Niveles de comprensión lectora: literal, inferencial y crítico',
+          'Lectura literal: información explícita, paráfrasis y resumen',
+          'Lectura inferencial: deducciones, implícitos y relaciones causales',
+          'Lectura crítica: juicio valorativo, punto de vista y argumentación',
+          'Estrategias de lectura activa: subrayado, anotaciones, preguntas al texto',
+          'Textos continuos y discontinuos: tablas, gráficas, infografías'
+        ],
+
+        evidenciasAprendizaje: [
+          'Extrae información explícita y la parafrasea con sus palabras (nivel literal).',
+          'Formula inferencias sobre causas, consecuencias e intenciones del texto (nivel inferencial).',
+          'Emite juicios valorativos sobre el contenido de un texto sustentados con citas textuales.',
+          'Lee e interpreta textos discontinuos (tablas, gráficas, infografías) combinados con texto.',
+          'Aplica estrategias de lectura activa: subrayado, preguntas y anotaciones marginales.'
+        ],
+
+        matrizReferencia: {
+          componente: 'Semántico',
+          competencia: 'Comprender cómo se articulan las partes de un texto para darle sentido global',
+          afirmaciones: [
+            'Recupera información explícita del texto y deduce información implícita.',
+            'Formula inferencias sobre el propósito del autor y las relaciones causales del texto.'
+          ],
+          evidenciasICFES: [
+            'Identifica información explícita e implícita en textos de complejidad media.',
+            'Deduce causas, consecuencias e intenciones no expresadas directamente en el texto.',
+            'Formula apreciaciones sobre el contenido del texto sustentadas con evidencias.'
+          ]
+        },
+
+        aprendizajesICFES: ['lc-s9-01', 'lc-s9-02', 'lc-s9-10'],
+        evidenciasICFES: ['lc-s9-01-e1', 'lc-s9-01-e2', 'lc-s9-02-e1', 'lc-s9-02-e2', 'lc-s9-10-e1'],
+        nivelEsperado: 'Satisfactorio',
+
+        materialesEducativos: [
+          'Textos de complejidad media: artículos de divulgación, crónicas, textos informativos',
+          'Infografías y textos discontinuos sobre temas de interés juvenil',
+          'Guía de estrategias de lectura activa (subrayado, preguntas, anotaciones)',
+          'Banco de preguntas de comprensión en tres niveles (literal, inferencial, crítico)',
+          'Simulacros de comprensión lectora tipo Saber 9°'
+        ],
+
+        estrategiasMetodologicas: [
+          'Pirámide de comprensión: preguntas de nivel literal primero, luego inferencial, luego crítico.',
+          'Lectura activa: subrayar, anotar preguntas en los márgenes y formular hipótesis.',
+          'Análisis de textos discontinuos: interpretar gráficas y combinarlas con el texto principal.',
+          'Pensamiento en voz alta: el docente modela cómo realiza inferencias mientras lee.',
+          'Simulacro de preguntas Saber 9°: práctica individual y corrección colectiva.'
+        ],
+
+        criteriosEvaluacion: {
+          saber: [
+            'Define y diferencia los niveles de comprensión lectora: literal, inferencial y crítico.',
+            'Describe estrategias de lectura activa y explica para qué sirve cada una.',
+            'Reconoce los tipos de inferencias que pueden hacerse a partir de un texto.'
+          ],
+          hacer: [
+            'Extrae información explícita y la parafrasea con precisión.',
+            'Formula inferencias causales e intencionales sobre textos dados.',
+            'Emite juicios valorativos sustentados con citas y evidencias del texto.',
+            'Interpreta correctamente textos discontinuos (gráficas, tablas, infografías).'
+          ],
+          ser: [
+            'Muestra disposición para leer con atención y profundidad, más allá del nivel literal.',
+            'Participa activamente en las discusiones sobre los textos con actitud de escucha.',
+            'Reconoce el valor del pensamiento crítico para su vida cotidiana y académica.'
+          ],
+          porcentajes: { saber: 30, hacer: 50, ser: 20 }
+        },
+
+        tiposPensamiento: ['Comprensión', 'Producción']
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 7 - PERIODO 3
+      // ----------------------------------------------------------
+      {
+        periodo: 3,
+        semanas: 10,
+        horasSemana: 4,
+        horasTotales: 40,
+
+        estandares: [
+          'Leo con sentido crítico textos literarios de diferentes géneros y épocas',
+          'Reconozco la literatura latinoamericana como expresión de identidades culturales diversas',
+          'Establezco relaciones entre los textos literarios y el contexto histórico y cultural de su producción'
+        ],
+
+        diagnostico: 'El 62% de los estudiantes no conoce autores representativos de la literatura latinoamericana ni identifica las características de la narrativa y la poesía del continente.',
+
+        competenciaCiudadana: 'Valora la diversidad cultural de América Latina a través de su literatura, desarrollando empatía hacia realidades distintas y reconociendo lazos de identidad compartidos.',
+
+        competenciasICFES: {
+          identificar: 'Identifica características de la narrativa y la poesía latinoamericana en textos representativos de autores del continente.',
+          comprender: 'Establece relaciones entre los temas y recursos literarios de obras latinoamericanas y el contexto histórico-cultural de su producción.',
+          reflexionar: 'Evalúa el significado de obras literarias latinoamericanas en relación con la identidad cultural compartida y los problemas del continente.'
+        },
+
+        dba: 'Lee y analiza obras literarias latinoamericanas de narrativa y poesía, identificando sus características y estableciendo relaciones con el contexto histórico y cultural.',
+
+        preguntaProblema: '¿Qué nos dice la literatura latinoamericana sobre quiénes somos como pueblo y cuáles son las historias que compartimos como continente?',
+
+        ejesTematicos: [
+          'Literatura latinoamericana: panorama y contexto histórico-cultural',
+          'Narrativa latinoamericana: el cuento y la novela corta',
+          'Autores representativos: García Márquez, Cortázar, Rulfo, Borges, Allende',
+          'Poesía latinoamericana: Neruda, Mistral, Vallejo, Benedetti',
+          'Recursos literarios en la poesía: imágenes, ritmo, figuras retóricas',
+          'El realismo mágico: características y ejemplos'
+        ],
+
+        evidenciasAprendizaje: [
+          'Ubica en el mapa de Latinoamérica a los autores estudiados y menciona sus obras principales.',
+          'Analiza un cuento latinoamericano identificando narrador, personajes, argumento y recursos literarios.',
+          'Lee e interpreta un poema latinoamericano identificando imágenes y figuras retóricas.',
+          'Escribe un texto creativo inspirado en la técnica o los temas de un autor latinoamericano.',
+          'Relaciona un tema literario con una problemática actual de América Latina.'
+        ],
+
+        matrizReferencia: {
+          componente: 'Semántico',
+          competencia: 'Identificar y entender los contenidos locales que conforman un texto',
+          afirmaciones: [
+            'Reconoce las características de la narrativa y la poesía latinoamericanas en textos representativos.',
+            'Identifica recursos literarios y los relaciona con el sentido global de la obra.'
+          ],
+          evidenciasICFES: [
+            'Identifica recursos literarios (imágenes, figuras retóricas) en poemas latinoamericanos.',
+            'Reconoce las características del realismo mágico en cuentos de autores latinoamericanos.'
+          ]
+        },
+
+        aprendizajesICFES: ['lc-s9-03', 'lc-s9-01'],
+        evidenciasICFES: ['lc-s9-03-e1', 'lc-s9-03-e2', 'lc-s9-01-e1', 'lc-s9-01-e3'],
+        nivelEsperado: 'Satisfactorio',
+
+        materialesEducativos: [
+          'Antología de cuentos latinoamericanos seleccionados (Cortázar, Rulfo, García Márquez)',
+          'Selección de poemas de Neruda, Mistral, Vallejo y Benedetti',
+          'Guía de análisis literario para grado 7',
+          'Mapa literario de América Latina con autores y obras',
+          'Fragmentos de novelas latinoamericanas juveniles contemporáneas'
+        ],
+
+        estrategiasMetodologicas: [
+          'Viaje literario por Latinoamérica: un autor por semana, presentado con contexto geográfico e histórico.',
+          'Lectura dramatizada de cuentos con narrador y personajes a cargo de los estudiantes.',
+          'Análisis poético colectivo: leer un poema en voz alta y construir su interpretación entre todos.',
+          'Escritura creativa: imitar el estilo de un autor latinoamericano en un texto propio.',
+          'Mural literario: representación visual de los autores y obras trabajados en el periodo.'
+        ],
+
+        criteriosEvaluacion: {
+          saber: [
+            'Reconoce autores y obras representativas de la narrativa y la poesía latinoamericana.',
+            'Describe las características del realismo mágico e identifica ejemplos en textos leídos.',
+            'Identifica recursos literarios en poemas latinoamericanos (imagen, metáfora, ritmo).'
+          ],
+          hacer: [
+            'Analiza un cuento latinoamericano identificando sus elementos narrativos y recursos literarios.',
+            'Interpreta un poema latinoamericano con sus propias palabras, justificando su lectura.',
+            'Escribe un texto creativo usando técnicas o temas de autores latinoamericanos.',
+            'Relaciona una obra literaria con su contexto histórico-cultural.'
+          ],
+          ser: [
+            'Muestra aprecio y curiosidad por la literatura latinoamericana y sus autores.',
+            'Valora la diversidad cultural del continente como riqueza compartida.',
+            'Participa con entusiasmo en las actividades de lectura y creación literaria.'
+          ],
+          porcentajes: { saber: 30, hacer: 50, ser: 20 }
+        },
+
+        tiposPensamiento: ['Literatura', 'Comprensión', 'Producción']
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 7 - PERIODO 4
+      // ----------------------------------------------------------
+      {
+        periodo: 4,
+        semanas: 10,
+        horasSemana: 4,
+        horasTotales: 40,
+
+        estandares: [
+          'Comprendo y utilizo de manera crítica los medios de comunicación masiva para consultar, procesar y divulgar información',
+          'Reconozco las características del discurso digital y asumo una posición crítica frente a él',
+          'Selecciono y contrasto información de múltiples fuentes para tomar posiciones fundamentadas'
+        ],
+
+        diagnostico: 'El 60% de los estudiantes no evalúa la confiabilidad de las fuentes digitales ni distingue entre información veraz y desinformación en redes sociales.',
+
+        competenciaCiudadana: 'Asume una actitud crítica y responsable frente a la comunicación digital, reconociendo la importancia de verificar fuentes y participar con respeto y argumentos en espacios de debate.',
+
+        competenciasICFES: {
+          identificar: 'Identifica el propósito comunicativo y la intención del autor en textos digitales y mediáticos de complejidad media.',
+          comprender: 'Analiza la confiabilidad de una fuente de información digital usando criterios básicos de verificación.',
+          reflexionar: 'Adopta una posición crítica y argumentada frente a la información que circula en medios digitales y redes sociales.'
+        },
+
+        dba: 'Evalúa la confiabilidad de fuentes de información digitales y participa en debates con argumentos sustentados en evidencias verificadas.',
+
+        preguntaProblema: '¿Cómo saber qué es verdad en internet y cómo participar en debates digitales de manera responsable y argumentada?',
+
+        ejesTematicos: [
+          'Comunicación digital: características del discurso en redes sociales',
+          'Análisis de fuentes: criterios para evaluar la confiabilidad de la información',
+          'Desinformación y fake news: cómo identificarlas y cómo actuar',
+          'El debate: estructura, roles y reglas de participación',
+          'Argumentación oral: presentación y defensa de posiciones',
+          'Ética digital: privacidad, respeto y responsabilidad en línea'
+        ],
+
+        evidenciasAprendizaje: [
+          'Aplica criterios básicos para evaluar la confiabilidad de una fuente digital (autoría, fecha, referencias).',
+          'Identifica características de las fake news en textos y publicaciones de redes sociales.',
+          'Participa en un debate escolar presentando y defendiendo su posición con argumentos.',
+          'Escucha y refuta argumentos de sus compañeros con respeto y evidencias pertinentes.',
+          'Produce un artículo digital breve sobre un tema de interés, citando fuentes verificadas.'
+        ],
+
+        matrizReferencia: {
+          componente: 'Pragmático',
+          competencia: 'Reflexionar y evaluar el contenido, la forma y el propósito del texto',
+          afirmaciones: [
+            'Evalúa la confiabilidad de fuentes de información y asume una posición crítica fundamentada.',
+            'Identifica la intención del autor en textos mediáticos y digitales y cuestiona su veracidad.'
+          ],
+          evidenciasICFES: [
+            'Formula una opinión sobre el contenido de textos mediáticos y la sustenta con evidencias.',
+            'Evalúa la validez de los argumentos presentados en discursos digitales y mediáticos.',
+            'Relaciona el contenido de un texto con el contexto social o cultural en que fue producido.'
+          ]
+        },
+
+        aprendizajesICFES: ['lc-s9-06', 'lc-s9-09', 'lc-s9-10'],
+        evidenciasICFES: ['lc-s9-06-e1', 'lc-s9-06-e2', 'lc-s9-09-e1', 'lc-s9-09-e2', 'lc-s9-10-e1'],
+        nivelEsperado: 'Satisfactorio',
+
+        materialesEducativos: [
+          'Ejemplos de fake news vs. noticias verificadas para análisis comparativo',
+          'Guía de verificación de fuentes digitales (criterios básicos)',
+          'Videos cortos sobre desinformación en redes sociales',
+          'Guía de estructura y reglas del debate escolar',
+          'Artículos digitales de divulgación sobre temas de interés juvenil'
+        ],
+
+        estrategiasMetodologicas: [
+          'Taller de verificación: ¿es verdad o mentira? Analizar publicaciones y verificar fuentes.',
+          'Debate estructurado: dos equipos defienden posiciones opuestas con tiempos asignados.',
+          'Análisis de redes sociales: identificar intención comunicativa en publicaciones reales.',
+          'Proyecto de periodismo digital: producir un artículo corto con fuentes verificadas.',
+          'Simulación de conferencia de prensa: preguntas y respuestas con argumentos sustentados.'
+        ],
+
+        criteriosEvaluacion: {
+          saber: [
+            'Describe criterios para evaluar la confiabilidad de fuentes digitales.',
+            'Define el concepto de desinformación y explica cómo identificar una fake news.',
+            'Explica la estructura del debate y los roles de sus participantes.'
+          ],
+          hacer: [
+            'Evalúa fuentes digitales usando criterios básicos de verificación.',
+            'Identifica características de fake news en textos y publicaciones digitales.',
+            'Participa en el debate presentando su posición con argumentos y evidencias.',
+            'Produce un artículo digital corto citando fuentes confiables.'
+          ],
+          ser: [
+            'Actúa con responsabilidad y ética frente a la información que consume y comparte.',
+            'Participa en el debate con respeto, escucha activa y argumentos pertinentes.',
+            'Reflexiona sobre el impacto de la desinformación en la sociedad.'
+          ],
+          porcentajes: { saber: 30, hacer: 50, ser: 20 }
+        },
+
+        tiposPensamiento: ['Medios', 'Ética', 'Comprensión', 'Producción']
+      }
+    ]
+  },
 
   // ============================================================
   // GRADO 8

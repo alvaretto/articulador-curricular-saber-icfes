@@ -514,6 +514,486 @@ const PREGUNTAS_ICFES = {
         competencia: 'resolucion',
         componente: 'numerico-variacional',
       },
+
+      // 31. Numérico-variacional + razonamiento (factorización)
+      {
+        id: 'mat-p-s9-31',
+        enunciado: 'Un agricultor del Tolima tiene un lote cuya área, en metros cuadrados, está representada por la expresión x² + 7x + 12. Al factorizar esta expresión, el agricultor puede determinar las posibles dimensiones del lote. ¿Cuáles son los factores de x² + 7x + 12?',
+        opciones: [
+          { letra: 'A', texto: '(x + 3)(x + 4)' },
+          { letra: 'B', texto: '(x + 2)(x + 6)' },
+          { letra: 'C', texto: '(x + 1)(x + 12)' },
+          { letra: 'D', texto: '(x − 3)(x − 4)' },
+        ],
+        clave: 'A',
+        justificacion: 'Para factorizar x² + 7x + 12 se buscan dos números que sumados den 7 y multiplicados den 12: 3 + 4 = 7 y 3 × 4 = 12. Los factores son (x + 3)(x + 4). Verificación: (x+3)(x+4) = x² + 4x + 3x + 12 = x² + 7x + 12 ✓. La opción B: 2 + 6 = 8 ≠ 7. La opción C: 1 + 12 = 13 ≠ 7. La opción D produce x² − 7x + 12, con signos negativos.',
+        competencia: 'razonamiento',
+        componente: 'numerico-variacional',
+      },
+
+      // 32. Aleatorio + resolución (frecuencia relativa)
+      {
+        id: 'mat-p-s9-32',
+        enunciado: 'En una encuesta a 40 estudiantes de un colegio de Manizales sobre su deporte favorito se obtuvieron los siguientes resultados: fútbol: 16, baloncesto: 10, natación: 8, ciclismo: 6. ¿Cuál es la frecuencia relativa del fútbol y qué porcentaje de estudiantes prefiere deportes acuáticos o ciclismo?',
+        opciones: [
+          { letra: 'A', texto: 'Frecuencia relativa del fútbol = 0,40; deportes acuáticos o ciclismo = 35%.' },
+          { letra: 'B', texto: 'Frecuencia relativa del fútbol = 0,16; deportes acuáticos o ciclismo = 14%.' },
+          { letra: 'C', texto: 'Frecuencia relativa del fútbol = 0,40; deportes acuáticos o ciclismo = 30%.' },
+          { letra: 'D', texto: 'Frecuencia relativa del fútbol = 0,25; deportes acuáticos o ciclismo = 35%.' },
+        ],
+        clave: 'A',
+        justificacion: 'Frecuencia relativa del fútbol = 16/40 = 0,40. Natación + ciclismo = 8 + 6 = 14 estudiantes; porcentaje = 14/40 = 0,35 = 35%. La opción B confunde frecuencia absoluta con relativa. La opción C calcula bien el fútbol pero mal el porcentaje restante. La opción D divide 10/40 = 0,25 usando baloncesto en vez de fútbol.',
+        competencia: 'resolucion',
+        componente: 'aleatorio',
+      },
+
+      // 33. Geométrico-métrico + comunicación (cuerpos geométricos)
+      {
+        id: 'mat-p-s9-33',
+        enunciado: 'Una caja de cartón tiene forma de paralelepípedo rectangular con largo = 30 cm, ancho = 20 cm y alto = 15 cm. Para fabricar la caja se necesita el área total de todas sus caras. ¿Cuánto cartón se requiere para fabricar la caja (área total)?',
+        opciones: [
+          { letra: 'A', texto: '2.700 cm²' },
+          { letra: 'B', texto: '9.000 cm²' },
+          { letra: 'C', texto: '2.700 cm³' },
+          { letra: 'D', texto: '1.350 cm²' },
+        ],
+        clave: 'A',
+        justificacion: 'El área total de un paralelepípedo es: A = 2(l×a + l×h + a×h) = 2(30×20 + 30×15 + 20×15) = 2(600 + 450 + 300) = 2 × 1350 = 2700 cm². La opción B es el volumen (30×20×15 = 9000 cm³), no el área. La opción C tiene el valor correcto del área pero unidades de volumen. La opción D calcula solo la mitad del área total.',
+        competencia: 'comunicacion',
+        componente: 'geometrico-metrico',
+      },
+
+      // 34. Numérico-variacional + resolución (razones y proporciones)
+      {
+        id: 'mat-p-s9-34',
+        enunciado: 'En una receta para hacer pandebono se necesitan 3 tazas de almidón por cada 2 tazas de queso. Si se quieren usar 9 tazas de almidón, ¿cuántas tazas de queso se necesitan? ¿Y si se quieren usar 5 tazas de queso?',
+        opciones: [
+          { letra: 'A', texto: 'Con 9 tazas de almidón: 6 tazas de queso; con 5 tazas de queso: 7,5 tazas de almidón.' },
+          { letra: 'B', texto: 'Con 9 tazas de almidón: 4 tazas de queso; con 5 tazas de queso: 7 tazas de almidón.' },
+          { letra: 'C', texto: 'Con 9 tazas de almidón: 6 tazas de queso; con 5 tazas de queso: 8 tazas de almidón.' },
+          { letra: 'D', texto: 'Con 9 tazas de almidón: 3 tazas de queso; con 5 tazas de queso: 7,5 tazas de almidón.' },
+        ],
+        clave: 'A',
+        justificacion: 'La proporción es almidón/queso = 3/2. Con 9 tazas de almidón: 9/x = 3/2 → x = 18/3 = 6 tazas de queso. Con 5 tazas de queso: y/5 = 3/2 → y = 15/2 = 7,5 tazas de almidón. La opción B calcula incorrectamente. La opción C halla bien la primera parte pero falla en la segunda. La opción D reduce erróneamente la primera proporción a 1:1 en lugar de 3:2.',
+        competencia: 'resolucion',
+        componente: 'numerico-variacional',
+      },
+
+      // 35. Aleatorio + razonamiento (diagramas de Venn y conjuntos)
+      {
+        id: 'mat-p-s9-35',
+        enunciado: 'En un salón de 35 estudiantes, 20 practican fútbol, 15 practican baloncesto y 8 practican ambos deportes. ¿Cuántos estudiantes no practican ninguno de los dos deportes?',
+        opciones: [
+          { letra: 'A', texto: '8 estudiantes' },
+          { letra: 'B', texto: '27 estudiantes' },
+          { letra: 'C', texto: '0 estudiantes' },
+          { letra: 'D', texto: '7 estudiantes' },
+        ],
+        clave: 'A',
+        justificacion: 'Usando el principio de inclusión-exclusión: |Fútbol ∪ Baloncesto| = |Fútbol| + |Baloncesto| − |Fútbol ∩ Baloncesto| = 20 + 15 − 8 = 27. Los que practican algún deporte = 27. Los que no practican ninguno = 35 − 27 = 8 estudiantes. La opción B es la cantidad que practica al menos uno. La opción C daría 0, asumiendo que todos practican algún deporte. La opción D resta 8 del total sin considerar la unión.',
+        competencia: 'razonamiento',
+        componente: 'aleatorio',
+      },
+
+      // 36. Geométrico-métrico + resolución (escala)
+      {
+        id: 'mat-p-s9-36',
+        enunciado: 'En un mapa de Colombia con escala 1:5.000.000, la distancia entre Bogotá y Medellín mide 5,2 cm. ¿Cuál es la distancia real aproximada entre estas dos ciudades?',
+        opciones: [
+          { letra: 'A', texto: '26 km' },
+          { letra: 'B', texto: '260 km' },
+          { letra: 'C', texto: '2.600 km' },
+          { letra: 'D', texto: '0,26 km' },
+        ],
+        clave: 'B',
+        justificacion: 'Con la escala 1:5.000.000, cada centímetro en el mapa equivale a 5.000.000 cm = 50 km reales. Distancia real = 5,2 cm × 50 km/cm = 260 km. La opción A olvida convertir (divide entre 10 extra). La opción C multiplica dos veces. La opción D usa proporción inversa.',
+        competencia: 'resolucion',
+        componente: 'geometrico-metrico',
+      },
+
+      // 37. Numérico-variacional + razonamiento (valor absoluto)
+      {
+        id: 'mat-p-s9-37',
+        enunciado: '¿Cuál de las siguientes opciones representa correctamente la solución de |2x − 4| = 6?',
+        opciones: [
+          { letra: 'A', texto: 'x = 5 o x = −1' },
+          { letra: 'B', texto: 'x = 5 o x = 1' },
+          { letra: 'C', texto: 'Solo x = 5' },
+          { letra: 'D', texto: 'x = 4 o x = −1' },
+        ],
+        clave: 'A',
+        justificacion: 'La ecuación |2x − 4| = 6 tiene dos casos: Caso 1: 2x − 4 = 6 → 2x = 10 → x = 5. Caso 2: 2x − 4 = −6 → 2x = −2 → x = −1. Verificación: |2(5) − 4| = |6| = 6 ✓ y |2(−1) − 4| = |−6| = 6 ✓. La opción B falla en el segundo caso (1 en vez de −1). La opción C omite el segundo caso. La opción D tiene error en el primer caso.',
+        competencia: 'razonamiento',
+        componente: 'numerico-variacional',
+      },
+
+      // 38. Aleatorio + comunicación (tablas de frecuencia)
+      {
+        id: 'mat-p-s9-38',
+        enunciado: 'La siguiente tabla muestra las edades de 20 participantes en un taller:\n\nEdad: 14, 15, 16, 17, 18\nFrecuencia: 3, 5, 7, 4, 1\n\n¿Cuál es la edad modal y cuál es la media aritmética?',
+        opciones: [
+          { letra: 'A', texto: 'Moda = 16; media = 15,75.' },
+          { letra: 'B', texto: 'Moda = 16; media = 16.' },
+          { letra: 'C', texto: 'Moda = 15; media = 15,75.' },
+          { letra: 'D', texto: 'Moda = 16; media = 15,5.' },
+        ],
+        clave: 'A',
+        justificacion: 'La moda es la edad con mayor frecuencia: 16 años (frecuencia 7). Para la media: Σ(edad × frecuencia) = 14×3 + 15×5 + 16×7 + 17×4 + 18×1 = 42 + 75 + 112 + 68 + 18 = 315. Media = 315/20 = 15,75. La opción B redondea mal la media. La opción C confunde la moda con la edad 15. La opción D calcula incorrectamente la media.',
+        competencia: 'comunicacion',
+        componente: 'aleatorio',
+      },
+
+      // 39. Numérico-variacional + comunicación (expresiones algebraicas)
+      {
+        id: 'mat-p-s9-39',
+        enunciado: 'Un vendedor de arepas gana $800 por cada arepa vendida y tiene un costo fijo diario de $15.000. Si en un día vende "n" arepas, ¿cuál de las siguientes expresiones representa su ganancia neta diaria?',
+        opciones: [
+          { letra: 'A', texto: 'G(n) = 800n − 15.000' },
+          { letra: 'B', texto: 'G(n) = 15.000n − 800' },
+          { letra: 'C', texto: 'G(n) = 800n + 15.000' },
+          { letra: 'D', texto: 'G(n) = (800 − 15.000)n' },
+        ],
+        clave: 'A',
+        justificacion: 'Los ingresos son 800 pesos por arepa: 800n. Los costos fijos son $15.000 que se restan independientemente de cuántas arepas venda. Ganancia neta = Ingresos − Costos = 800n − 15.000. La opción B invierte el papel de ingresos y costos. La opción C suma el costo fijo en vez de restarlo. La opción D multiplica la diferencia por n, lo cual no representa correctamente el modelo.',
+        competencia: 'comunicacion',
+        componente: 'numerico-variacional',
+      },
+
+      // 40. Geométrico-métrico + razonamiento (Teorema de Tales)
+      {
+        id: 'mat-p-s9-40',
+        enunciado: 'En un triángulo ABC, una recta paralela a BC corta a los lados AB y AC en los puntos D y E respectivamente. Si AD = 4 cm, DB = 6 cm y AE = 5 cm, ¿cuánto mide EC?',
+        opciones: [
+          { letra: 'A', texto: 'EC = 6 cm' },
+          { letra: 'B', texto: 'EC = 7,5 cm' },
+          { letra: 'C', texto: 'EC = 8 cm' },
+          { letra: 'D', texto: 'EC = 4 cm' },
+        ],
+        clave: 'B',
+        justificacion: 'Por el Teorema de Tales, cuando una recta es paralela a la base de un triángulo, divide proporcialmente los otros dos lados: AD/DB = AE/EC. Entonces: 4/6 = 5/EC → EC = (5 × 6)/4 = 30/4 = 7,5 cm. La opción A no aplica la proporción. La opción C usa una proporción incorrecta. La opción D iguala EC a AD sin justificación.',
+        competencia: 'razonamiento',
+        componente: 'geometrico-metrico',
+      },
+
+      // 41. Numérico-variacional + resolución (porcentajes de variación)
+      {
+        id: 'mat-p-s9-41',
+        enunciado: 'El precio de un televisor en enero era de $1.200.000. En febrero subió un 15% y en marzo bajó un 10% del precio de febrero. ¿Cuánto cuesta el televisor al final de marzo?',
+        opciones: [
+          { letra: 'A', texto: '$1.242.000' },
+          { letra: 'B', texto: '$1.260.000' },
+          { letra: 'C', texto: '$1.200.000' },
+          { letra: 'D', texto: '$1.296.000' },
+        ],
+        clave: 'A',
+        justificacion: 'En febrero: 1.200.000 × 1,15 = 1.380.000. En marzo (baja 10% sobre el precio de febrero): 1.380.000 × 0,90 = 1.242.000. El aumento y la disminución no se cancelan porque se aplican sobre bases diferentes. La opción B aplica el 5% neto sobre el precio original (1.200.000 × 1,05 = 1.260.000), lo cual es incorrecto. La opción C supone que se cancelan los cambios. La opción D aplica solo el aumento.',
+        competencia: 'resolucion',
+        componente: 'numerico-variacional',
+      },
+
+      // 42. Aleatorio + razonamiento (probabilidad complementaria)
+      {
+        id: 'mat-p-s9-42',
+        enunciado: 'Se lanza un dado de 6 caras. ¿Cuál es la probabilidad de NO obtener un número mayor que 4?',
+        opciones: [
+          { letra: 'A', texto: '1/3' },
+          { letra: 'B', texto: '2/3' },
+          { letra: 'C', texto: '1/2' },
+          { letra: 'D', texto: '5/6' },
+        ],
+        clave: 'B',
+        justificacion: 'Los números mayores que 4 son {5, 6}: P(mayor que 4) = 2/6 = 1/3. El evento complementario (NO obtener mayor que 4) tiene probabilidad P = 1 − 1/3 = 2/3. Los números que cumplen "no mayores que 4" son {1, 2, 3, 4}: 4 casos, P = 4/6 = 2/3. La opción A es la probabilidad del evento original (mayor que 4). La opción C corresponde a {1,2,3} o {4,5,6}. La opción D se obtendría si solo un número fuera mayor que 4.',
+        competencia: 'razonamiento',
+        componente: 'aleatorio',
+      },
+
+      // 43. Numérico-variacional + razonamiento (monomios y polinomios)
+      {
+        id: 'mat-p-s9-43',
+        enunciado: '¿Cuál es el resultado de (3x² − 2x + 1) + (x² + 4x − 5)?',
+        opciones: [
+          { letra: 'A', texto: '4x² + 2x − 4' },
+          { letra: 'B', texto: '4x² + 2x + 4' },
+          { letra: 'C', texto: '3x² + 2x − 4' },
+          { letra: 'D', texto: '4x⁴ + 2x² − 4' },
+        ],
+        clave: 'A',
+        justificacion: 'Se suman los términos semejantes: (3x² + x²) + (−2x + 4x) + (1 − 5) = 4x² + 2x + (−4) = 4x² + 2x − 4. La opción B suma los términos independientes como 1 + 5 = 6 en vez de 1 − 5 = −4. La opción C no suma correctamente los términos en x². La opción D eleva los exponentes al sumar, lo cual es incorrecto.',
+        competencia: 'razonamiento',
+        componente: 'numerico-variacional',
+      },
+
+      // 44. Geométrico-métrico + resolución (áreas de figuras compuestas)
+      {
+        id: 'mat-p-s9-44',
+        enunciado: 'Un parque tiene forma de un rectángulo de 50 m × 30 m con un semicírculo en uno de sus lados cortos (radio = 15 m). ¿Cuál es el área total del parque? (Use π ≈ 3,14)',
+        opciones: [
+          { letra: 'A', texto: 'Aproximadamente 1.853,25 m²' },
+          { letra: 'B', texto: 'Aproximadamente 2.206,5 m²' },
+          { letra: 'C', texto: 'Aproximadamente 1.500 m²' },
+          { letra: 'D', texto: 'Aproximadamente 1.706,5 m²' },
+        ],
+        clave: 'A',
+        justificacion: 'Área del rectángulo = 50 × 30 = 1.500 m². Área del semicírculo = (1/2) × π × r² = (1/2) × 3,14 × 15² = (1/2) × 3,14 × 225 = 353,25 m². Área total = 1.500 + 353,25 = 1.853,25 m². La opción B calcula el área de un círculo completo. La opción C omite el semicírculo. La opción D usa un radio incorrecto.',
+        competencia: 'resolucion',
+        componente: 'geometrico-metrico',
+      },
+
+      // 45. Numérico-variacional + comunicación (funciones lineales — interpretación de pendiente)
+      {
+        id: 'mat-p-s9-45',
+        enunciado: 'Un taxi en Bogotá cobra una tarifa base de $4.500 más $350 por cada minuto de recorrido. Si el viaje dura "t" minutos, la función del costo es C(t) = 350t + 4.500. ¿Qué representa el número 350 en el modelo y cuál es el costo de un viaje de 20 minutos?',
+        opciones: [
+          { letra: 'A', texto: 'El 350 es la tarifa base del viaje; el costo a 20 min es $11.500.' },
+          { letra: 'B', texto: 'El 350 es el costo por cada minuto adicional (pendiente); el costo a 20 min es $11.500.' },
+          { letra: 'C', texto: 'El 350 es el costo por cada minuto adicional (pendiente); el costo a 20 min es $7.000.' },
+          { letra: 'D', texto: 'El 350 representa el tiempo máximo del viaje; el costo a 20 min es $11.500.' },
+        ],
+        clave: 'B',
+        justificacion: 'En C(t) = 350t + 4.500, el coeficiente de t (350) es la pendiente y representa el incremento en el costo por cada minuto: $350/min. El 4.500 es el intercepto o tarifa base. Para t = 20: C(20) = 350(20) + 4.500 = 7.000 + 4.500 = 11.500 pesos. La opción A confunde el 350 con la tarifa base. La opción C calcula solo 350 × 20 sin sumar la tarifa base. La opción D malinterpreta el coeficiente como tiempo.',
+        competencia: 'comunicacion',
+        componente: 'numerico-variacional',
+      },
+
+      // 46. Aleatorio + resolución (diagrama de caja — Q1 y Q3)
+      {
+        id: 'mat-p-s9-46',
+        enunciado: 'Los pesos (en kg) de 10 estudiantes ordenados de menor a mayor son: 45, 48, 50, 52, 55, 57, 60, 63, 66, 70. ¿Cuáles son el primer cuartil (Q1), la mediana y el tercer cuartil (Q3)?',
+        opciones: [
+          { letra: 'A', texto: 'Q1 = 50; mediana = 56; Q3 = 63.' },
+          { letra: 'B', texto: 'Q1 = 49; mediana = 56; Q3 = 64,5.' },
+          { letra: 'C', texto: 'Q1 = 50; mediana = 55; Q3 = 63.' },
+          { letra: 'D', texto: 'Q1 = 48; mediana = 56; Q3 = 66.' },
+        ],
+        clave: 'B',
+        justificacion: 'Con 10 datos, la mediana es el promedio de los datos 5° y 6°: (55 + 57)/2 = 56. Q1 es la mediana de los primeros 5 datos (45,48,50,52,55): Q1 = (48+50)/2 = 49. Q3 es la mediana de los últimos 5 datos (57,60,63,66,70): Q3 = (63+66)/2 = 64,5. La opción A usa el 3° valor como Q1. La opción C usa el 5° dato como mediana. La opción D usa los valores extremos como cuartiles.',
+        competencia: 'resolucion',
+        componente: 'aleatorio',
+      },
+
+      // 47. Numérico-variacional + razonamiento (conversión de unidades y tasas)
+      {
+        id: 'mat-p-s9-47',
+        enunciado: 'Un ciclista recorre 45 km en 1,5 horas a velocidad constante. ¿Cuál es su velocidad en km/h y cuántos metros recorre por segundo?',
+        opciones: [
+          { letra: 'A', texto: '30 km/h; aproximadamente 8,3 m/s.' },
+          { letra: 'B', texto: '30 km/h; aproximadamente 12,5 m/s.' },
+          { letra: 'C', texto: '67,5 km/h; aproximadamente 18,75 m/s.' },
+          { letra: 'D', texto: '30 km/h; aproximadamente 0,5 m/s.' },
+        ],
+        clave: 'A',
+        justificacion: 'Velocidad = distancia/tiempo = 45 km / 1,5 h = 30 km/h. Para convertir a m/s: 30 km/h × (1000 m/km) / (3600 s/h) = 30.000/3.600 ≈ 8,33 m/s. La opción B confunde la conversión (usa 2.400 s en vez de 3.600 s). La opción C multiplica en vez de dividir. La opción D divide entre 60 dos veces.',
+        competencia: 'razonamiento',
+        componente: 'numerico-variacional',
+      },
+
+      // 48. Geométrico-métrico + comunicación (simetría y figuras)
+      {
+        id: 'mat-p-s9-48',
+        enunciado: '¿Cuál de las siguientes figuras NO tiene ejes de simetría?',
+        opciones: [
+          { letra: 'A', texto: 'Un cuadrado.' },
+          { letra: 'B', texto: 'Un triángulo equilátero.' },
+          { letra: 'C', texto: 'Un paralelogramo que no es rectángulo.' },
+          { letra: 'D', texto: 'Un círculo.' },
+        ],
+        clave: 'C',
+        justificacion: 'Un paralelogramo que no es rectángulo tiene lados paralelos iguales pero no posee línea de reflexión que lo divida en dos mitades idénticas (sus ángulos no son rectos), por lo que carece de ejes de simetría. El cuadrado tiene 4 ejes, el triángulo equilátero tiene 3 ejes y el círculo tiene infinitos ejes de simetría.',
+        competencia: 'comunicacion',
+        componente: 'geometrico-metrico',
+      },
+
+      // 49. Aleatorio + razonamiento (muestra aleatoria e inferencia simple)
+      {
+        id: 'mat-p-s9-49',
+        enunciado: 'En una fábrica se revisan 50 productos al azar y se encuentran 4 defectuosos. Si la fábrica produce 5.000 productos por día, ¿cuántos productos defectuosos se esperan por día?',
+        opciones: [
+          { letra: 'A', texto: '200 productos' },
+          { letra: 'B', texto: '400 productos' },
+          { letra: 'C', texto: '100 productos' },
+          { letra: 'D', texto: '250 productos' },
+        ],
+        clave: 'B',
+        justificacion: 'La tasa de defectuosos en la muestra es 4/50 = 0,08 = 8%. Esperados en la producción total = 5.000 × 0,08 = 400 productos. Alternativamente: proporción = 4/50 = x/5000 → x = 4 × 100 = 400. La opción A aplica la proporción 4/100 (incorrecta). La opción C usa 2/100. La opción D aplica 5/100.',
+        competencia: 'razonamiento',
+        componente: 'aleatorio',
+      },
+
+      // 50. Numérico-variacional + resolución (plano cartesiano — función cuadrática)
+      {
+        id: 'mat-p-s9-50',
+        enunciado: 'Una pelota es lanzada verticalmente y su altura en metros está modelada por h(t) = −5t² + 20t, donde t es el tiempo en segundos. ¿En qué momento alcanza la altura máxima y cuánto mide esa altura máxima?',
+        opciones: [
+          { letra: 'A', texto: 'Altura máxima a t = 2 s; h_máx = 20 m.' },
+          { letra: 'B', texto: 'Altura máxima a t = 4 s; h_máx = 20 m.' },
+          { letra: 'C', texto: 'Altura máxima a t = 2 s; h_máx = 15 m.' },
+          { letra: 'D', texto: 'Altura máxima a t = 2 s; h_máx = 40 m.' },
+        ],
+        clave: 'A',
+        justificacion: 'Para una parábola h(t) = −5t² + 20t, el vértice (máximo) se halla en t = −b/(2a) = −20/(2×(−5)) = −20/(−10) = 2 s. La altura máxima es h(2) = −5(4) + 20(2) = −20 + 40 = 20 m. La opción B busca cuándo la pelota toca el suelo (h=0: −5t² + 20t = 0 → t = 4). La opción C comete un error aritmético. La opción D calcula h(4) = 0, no la altura máxima.',
+        competencia: 'resolucion',
+        componente: 'numerico-variacional',
+      },
+
+      // 51. Geométrico-métrico + razonamiento (polígonos regulares)
+      {
+        id: 'mat-p-s9-51',
+        enunciado: 'Un polígono regular tiene cada ángulo interior igual a 135°. ¿Cuántos lados tiene el polígono?',
+        opciones: [
+          { letra: 'A', texto: '6 lados (hexágono)' },
+          { letra: 'B', texto: '8 lados (octágono)' },
+          { letra: 'C', texto: '10 lados (decágono)' },
+          { letra: 'D', texto: '5 lados (pentágono)' },
+        ],
+        clave: 'B',
+        justificacion: 'La fórmula del ángulo interior de un polígono regular de n lados es: ángulo = (n−2)×180°/n. Igualando a 135°: (n−2)×180/n = 135 → 180n − 360 = 135n → 45n = 360 → n = 8. Un octágono regular tiene ángulos interiores de 135°. La opción A: hexágono tiene 120°. La opción C: decágono tiene 144°. La opción D: pentágono tiene 108°.',
+        competencia: 'razonamiento',
+        componente: 'geometrico-metrico',
+      },
+
+      // 52. Aleatorio + comunicación (correlación entre variables)
+      {
+        id: 'mat-p-s9-52',
+        enunciado: 'Un grupo de estudiantes registró las horas de estudio por semana y sus calificaciones promedio: (2 h, 3.0), (4 h, 3.5), (6 h, 4.0), (8 h, 4.2), (10 h, 4.8). Al graficar estos datos, el patrón muestra que a mayor tiempo de estudio, mayor calificación. ¿Qué tipo de correlación existe entre estas variables?',
+        opciones: [
+          { letra: 'A', texto: 'Correlación negativa, porque las horas de estudio afectan las calificaciones.' },
+          { letra: 'B', texto: 'No existe correlación porque las calificaciones dependen de la inteligencia, no del tiempo.' },
+          { letra: 'C', texto: 'Correlación positiva, porque al aumentar las horas de estudio, también aumentan las calificaciones.' },
+          { letra: 'D', texto: 'Correlación nula, porque los datos son muy pocos para concluir.' },
+        ],
+        clave: 'C',
+        justificacion: 'Una correlación positiva ocurre cuando al aumentar una variable, la otra también aumenta. Los datos muestran claramente que a más horas de estudio, mayor calificación, lo que define una correlación positiva. La opción A describe el efecto pero lo llama negativa incorrectamente. La opción B introduce factores externos irrelevantes para el análisis estadístico. La opción D es incorrecta porque 5 pares de datos sí permiten observar tendencias.',
+        competencia: 'comunicacion',
+        componente: 'aleatorio',
+      },
+
+      // 53. Numérico-variacional + resolución (progresión aritmética)
+      {
+        id: 'mat-p-s9-53',
+        enunciado: 'Un constructor coloca baldosas en un pasillo rectangular en filas paralelas. La primera fila tiene 5 baldosas, la segunda tiene 8, la tercera tiene 11. Si el patrón continúa aritméticamente, ¿cuántas baldosas tendrá la décima fila y cuántas en total en las primeras 10 filas?',
+        opciones: [
+          { letra: 'A', texto: 'Fila 10: 32 baldosas; total: 185 baldosas.' },
+          { letra: 'B', texto: 'Fila 10: 35 baldosas; total: 200 baldosas.' },
+          { letra: 'C', texto: 'Fila 10: 32 baldosas; total: 175 baldosas.' },
+          { letra: 'D', texto: 'Fila 10: 30 baldosas; total: 185 baldosas.' },
+        ],
+        clave: 'A',
+        justificacion: 'La sucesión es aritmética con a₁ = 5 y razón d = 3. Término 10: a₁₀ = 5 + (10−1)×3 = 5 + 27 = 32 baldosas. Suma de los primeros 10 términos: S₁₀ = (10/2) × (a₁ + a₁₀) = 5 × (5 + 32) = 5 × 37 = 185 baldosas. La opción B usa a₁₀ = 35 (error en la razón). La opción C tiene la suma incorrecta. La opción D usa a₁₀ = 30 (razón d = 2,78...).',
+        competencia: 'resolucion',
+        componente: 'numerico-variacional',
+      },
+
+      // 54. Geométrico-métrico + resolución (cuerpos de revolución — cilindro)
+      {
+        id: 'mat-p-s9-54',
+        enunciado: 'Una lata de refresco tiene forma cilíndrica con radio de 3,5 cm y altura de 12 cm. Se quiere pintar la superficie lateral de la lata. ¿Cuántos cm² de pintura se necesitan? (Use π ≈ 3,14)',
+        opciones: [
+          { letra: 'A', texto: 'Aproximadamente 263,76 cm²' },
+          { letra: 'B', texto: 'Aproximadamente 527,52 cm²' },
+          { letra: 'C', texto: 'Aproximadamente 76,93 cm²' },
+          { letra: 'D', texto: 'Aproximadamente 461,58 cm²' },
+        ],
+        clave: 'A',
+        justificacion: 'La superficie lateral de un cilindro es: A_lat = 2 × π × r × h = 2 × 3,14 × 3,5 × 12 = 2 × 3,14 × 42 = 2 × 131,88 = 263,76 cm². La opción B calcula el área total (lateral + dos bases): 263,76 + 2×(π×3,5²) = 263,76 + 2×38,465 ≈ 340,69 (diferente, pero la opción B dobla la lateral sin bases). La opción C calcula solo el área de la base. La opción D usa el diámetro en lugar del radio.',
+        competencia: 'resolucion',
+        componente: 'geometrico-metrico',
+      },
+
+      // 55. Numérico-variacional + comunicación (recta numérica y desigualdades)
+      {
+        id: 'mat-p-s9-55',
+        enunciado: 'En la recta numérica, ¿cuál de los siguientes intervalos representa la solución de la desigualdad compuesta −3 ≤ 2x + 1 < 7?',
+        opciones: [
+          { letra: 'A', texto: '−2 ≤ x < 3' },
+          { letra: 'B', texto: '−1 ≤ x < 4' },
+          { letra: 'C', texto: '−2 < x ≤ 3' },
+          { letra: 'D', texto: '−2 ≤ x ≤ 3' },
+        ],
+        clave: 'A',
+        justificacion: 'Resolviendo la desigualdad compuesta: −3 ≤ 2x + 1 < 7. Restando 1 en todos los términos: −4 ≤ 2x < 6. Dividiendo entre 2: −2 ≤ x < 3. El corchete izquierdo [−2 indica que −2 es solución; el paréntesis derecho 3) indica que 3 no es solución. La opción B comete un error al restar: 2x ≥ −3−1 = −4, x ≥ −2 (correcto) pero opera mal el límite superior. Las opciones C y D tienen los símbolos de desigualdad incorrectos.',
+        competencia: 'comunicacion',
+        componente: 'numerico-variacional',
+      },
+
+      // 56. Aleatorio + resolución (espacios muestrales)
+      {
+        id: 'mat-p-s9-56',
+        enunciado: 'Se lanza un dado de 4 caras (con números 1, 2, 3, 4) y una moneda al mismo tiempo. ¿Cuántos resultados posibles tiene el espacio muestral y cuál es la probabilidad de obtener un número impar en el dado Y cruz en la moneda?',
+        opciones: [
+          { letra: 'A', texto: 'Espacio muestral: 8 resultados; P(impar y cruz) = 1/4.' },
+          { letra: 'B', texto: 'Espacio muestral: 6 resultados; P(impar y cruz) = 1/4.' },
+          { letra: 'C', texto: 'Espacio muestral: 8 resultados; P(impar y cruz) = 3/8.' },
+          { letra: 'D', texto: 'Espacio muestral: 8 resultados; P(impar y cruz) = 1/8.' },
+        ],
+        clave: 'A',
+        justificacion: 'El espacio muestral = 4 (dado) × 2 (moneda) = 8 resultados. Los impares en el dado son {1, 3}. La cruz es 1 resultado de la moneda. Favorables = 2 × 1 = 2. P = 2/8 = 1/4. La opción B suma en vez de multiplicar. La opción C calcula P de obtener impar en el dado sin condición de la moneda. La opción D cuenta solo un impar (1 en vez de 2).',
+        competencia: 'resolucion',
+        componente: 'aleatorio',
+      },
+
+      // 57. Numérico-variacional + razonamiento (números irracionales)
+      {
+        id: 'mat-p-s9-57',
+        enunciado: '¿Cuál de las siguientes afirmaciones sobre los números irracionales es CORRECTA?',
+        opciones: [
+          { letra: 'A', texto: 'Todo número irracional puede expresarse como fracción de dos enteros.' },
+          { letra: 'B', texto: 'π y √2 son números irracionales porque sus decimales no se repiten ni terminan.' },
+          { letra: 'C', texto: 'El número 0,333... es irracional porque tiene infinitos decimales.' },
+          { letra: 'D', texto: 'La suma de dos números irracionales siempre es irracional.' },
+        ],
+        clave: 'B',
+        justificacion: 'Los números irracionales son aquellos que no pueden expresarse como fracción p/q (con p, q enteros y q ≠ 0), y su representación decimal es infinita no periódica. π ≈ 3,14159... y √2 ≈ 1,41421... son ejemplos clásicos. La opción A es la definición de número racional, no irracional. La opción C es incorrecta: 0,333... = 1/3 es racional (decimal periódico). La opción D es falsa: (√2) + (−√2) = 0, que es racional.',
+        competencia: 'razonamiento',
+        componente: 'numerico-variacional',
+      },
+
+      // 58. Geométrico-métrico + razonamiento (ángulos en un triángulo)
+      {
+        id: 'mat-p-s9-58',
+        enunciado: 'En un triángulo, uno de los ángulos mide 90° y otro mide 37°. Un arquitecto necesita conocer el tercer ángulo para diseñar una estructura. ¿Cuánto mide el tercer ángulo y cómo se clasifica el triángulo?',
+        opciones: [
+          { letra: 'A', texto: 'Tercer ángulo = 53°; es un triángulo rectángulo acutángulo.' },
+          { letra: 'B', texto: 'Tercer ángulo = 53°; es un triángulo rectángulo.' },
+          { letra: 'C', texto: 'Tercer ángulo = 43°; es un triángulo obtusángulo.' },
+          { letra: 'D', texto: 'Tercer ángulo = 53°; es un triángulo isósceles.' },
+        ],
+        clave: 'B',
+        justificacion: 'La suma de los ángulos de un triángulo es 180°. Tercer ángulo = 180° − 90° − 37° = 53°. Como el triángulo tiene un ángulo de exactamente 90°, es un triángulo rectángulo. La opción A agrega la clasificación de "acutángulo" que es incompatible con tener un ángulo recto. La opción C calcula mal el tercer ángulo. La opción D confunde la clasificación.',
+        competencia: 'razonamiento',
+        componente: 'geometrico-metrico',
+      },
+
+      // 59. Numérico-variacional + resolución (ecuaciones con fracciones)
+      {
+        id: 'mat-p-s9-59',
+        enunciado: 'Resuelve la ecuación: (x/3) + (x/4) = 7. ¿Cuál es el valor de x?',
+        opciones: [
+          { letra: 'A', texto: 'x = 12' },
+          { letra: 'B', texto: 'x = 28' },
+          { letra: 'C', texto: 'x = 21' },
+          { letra: 'D', texto: 'x = 7' },
+        ],
+        clave: 'A',
+        justificacion: 'Multiplicando por el mínimo común múltiplo de 3 y 4 (que es 12): 12×(x/3) + 12×(x/4) = 12×7 → 4x + 3x = 84 → 7x = 84 → x = 12. Verificación: 12/3 + 12/4 = 4 + 3 = 7 ✓. La opción B multiplica 7 × 4 = 28. La opción C multiplica 7 × 3 = 21. La opción D no aplica ningún procedimiento algebraico.',
+        competencia: 'resolucion',
+        componente: 'numerico-variacional',
+      },
+
+      // 60. Aleatorio + comunicación (interpretación de pictograma)
+      {
+        id: 'mat-p-s9-60',
+        enunciado: 'Un pictograma muestra la cantidad de libros leídos por estudiantes de tres cursos. Cada ícono de libro representa 5 libros. Grado 9A tiene 6 íconos, 9B tiene 4 íconos y 9C tiene 7 íconos. ¿Cuál fue el total de libros leídos entre los tres cursos y cuántos libros más leyó 9C que 9B?',
+        opciones: [
+          { letra: 'A', texto: 'Total: 85 libros; 9C leyó 15 libros más que 9B.' },
+          { letra: 'B', texto: 'Total: 17 libros; 9C leyó 3 libros más que 9B.' },
+          { letra: 'C', texto: 'Total: 85 libros; 9C leyó 10 libros más que 9B.' },
+          { letra: 'D', texto: 'Total: 170 libros; 9C leyó 15 libros más que 9B.' },
+        ],
+        clave: 'A',
+        justificacion: '9A = 6 × 5 = 30 libros; 9B = 4 × 5 = 20 libros; 9C = 7 × 5 = 35 libros. Total = 30 + 20 + 35 = 85 libros. Diferencia 9C − 9B = 35 − 20 = 15 libros. La opción B suma los íconos sin multiplicar por 5. La opción C tiene el total correcto pero la diferencia incorrecta (7−4=3 íconos sin convertir). La opción D multiplica el total por 2.',
+        competencia: 'comunicacion',
+        componente: 'aleatorio',
+      },
     ],
 
     // ---------------------------------------------------------
@@ -998,6 +1478,486 @@ const PREGUNTAS_ICFES = {
         clave: 'B',
         justificacion: 'La recta y = 3x − 5 tiene pendiente m = 3. Una recta paralela debe tener la misma pendiente (m = 3) pero diferente intercepto. La opción B: y = 3x + 7 tiene pendiente 3 ✓. La opción A: pendiente = −1/3 (recta perpendicular, no paralela). La opción C: y = −5x + 3 tiene pendiente −5. La opción D: 3y = x − 15 → y = (1/3)x − 5, pendiente = 1/3.',
         competencia: 'comunicacion',
+        componente: 'geometrico-metrico',
+      },
+
+      // 31. Numérico-variacional + resolución (función inversa)
+      {
+        id: 'mat-p-s11-31',
+        enunciado: 'Dada la función f(x) = 3x − 9, ¿cuál es su función inversa f⁻¹(x) y cuál es el valor de f⁻¹(6)?',
+        opciones: [
+          { letra: 'A', texto: 'f⁻¹(x) = (x + 9)/3; f⁻¹(6) = 5.' },
+          { letra: 'B', texto: 'f⁻¹(x) = 3x + 9; f⁻¹(6) = 27.' },
+          { letra: 'C', texto: 'f⁻¹(x) = (x − 9)/3; f⁻¹(6) = −1.' },
+          { letra: 'D', texto: 'f⁻¹(x) = x/3 − 9; f⁻¹(6) = −7.' },
+        ],
+        clave: 'A',
+        justificacion: 'Para hallar la inversa, se intercambian x e y y se despeja: y = 3x − 9 → x = 3y − 9 → x + 9 = 3y → y = (x + 9)/3. Por tanto f⁻¹(x) = (x + 9)/3. f⁻¹(6) = (6 + 9)/3 = 15/3 = 5. Verificación: f(5) = 3(5) − 9 = 6 ✓. La opción B multiplica en lugar de despejar. La opción C resta 9 en lugar de sumar. La opción D divide correctamente pero no suma antes.',
+        competencia: 'resolucion',
+        componente: 'numerico-variacional',
+      },
+
+      // 32. Aleatorio + razonamiento (variable aleatoria discreta)
+      {
+        id: 'mat-p-s11-32',
+        enunciado: 'Se lanza un dado dos veces y se anota la suma de los resultados. ¿Cuál es la probabilidad de que la suma sea exactamente 7?',
+        opciones: [
+          { letra: 'A', texto: '1/6' },
+          { letra: 'B', texto: '7/36' },
+          { letra: 'C', texto: '1/12' },
+          { letra: 'D', texto: '5/36' },
+        ],
+        clave: 'A',
+        justificacion: 'El espacio muestral tiene 36 resultados (6 × 6). Los pares que suman 7 son: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) — 6 pares en total. P(suma = 7) = 6/36 = 1/6. La suma 7 es la más probable en el lanzamiento de dos dados. La opción B confunde el 7 con el número de casos favorables. La opción C divide entre 12 sin justificación. La opción D confunde con la suma 8 o 6.',
+        competencia: 'razonamiento',
+        componente: 'aleatorio',
+      },
+
+      // 33. Geométrico-métrico + resolución (trigonometría — ley de senos)
+      {
+        id: 'mat-p-s11-33',
+        enunciado: 'En un triángulo, el ángulo A mide 45°, el ángulo B mide 60° y el lado opuesto a A mide 8 m. ¿Cuánto mide el lado opuesto a B? (Use la ley de senos: a/sen A = b/sen B; sen 45° ≈ 0,707; sen 60° ≈ 0,866)',
+        opciones: [
+          { letra: 'A', texto: 'Aproximadamente 9,8 m.' },
+          { letra: 'B', texto: 'Aproximadamente 7,35 m.' },
+          { letra: 'C', texto: 'Aproximadamente 11,3 m.' },
+          { letra: 'D', texto: 'Aproximadamente 6,54 m.' },
+        ],
+        clave: 'A',
+        justificacion: 'Por la ley de senos: a/sen A = b/sen B → 8/0,707 = b/0,866. Entonces b = 8 × 0,866/0,707 ≈ 6,928/0,707 ≈ 9,80 m. La opción B invierte la proporción. La opción C usa sen 30° en lugar de sen 45°. La opción D aplica incorrectamente la fórmula.',
+        competencia: 'resolucion',
+        componente: 'geometrico-metrico',
+      },
+
+      // 34. Numérico-variacional + comunicación (composición de funciones)
+      {
+        id: 'mat-p-s11-34',
+        enunciado: 'Dadas las funciones f(x) = 2x + 1 y g(x) = x² − 3, ¿cuál es el valor de (f ∘ g)(2)?',
+        opciones: [
+          { letra: 'A', texto: '3' },
+          { letra: 'B', texto: '9' },
+          { letra: 'C', texto: '1' },
+          { letra: 'D', texto: '5' },
+        ],
+        clave: 'A',
+        justificacion: '(f ∘ g)(x) = f(g(x)). Primero se calcula g(2) = 2² − 3 = 4 − 3 = 1. Luego f(g(2)) = f(1) = 2(1) + 1 = 3. La opción B calcularía f(g(3)) = f(6) = 13. La opción C es g(2) = 1, sin aplicar f. La opción D es f(2) = 5, sin componer con g.',
+        competencia: 'comunicacion',
+        componente: 'numerico-variacional',
+      },
+
+      // 35. Aleatorio + resolución (permutaciones)
+      {
+        id: 'mat-p-s11-35',
+        enunciado: 'En un concurso de ortografía, 6 estudiantes compiten por los tres primeros puestos (1.°, 2.° y 3.°). ¿De cuántas formas diferentes pueden distribuirse los tres primeros lugares si el orden importa?',
+        opciones: [
+          { letra: 'A', texto: '20 formas' },
+          { letra: 'B', texto: '120 formas' },
+          { letra: 'C', texto: '18 formas' },
+          { letra: 'D', texto: '216 formas' },
+        ],
+        clave: 'B',
+        justificacion: 'Se trata de una permutación: P(6,3) = 6!/(6−3)! = 6×5×4 = 120 formas. El orden importa (1.°, 2.°, 3.° son distintos). La opción A es la combinación C(6,3) = 20 (sin importar el orden). La opción C solo considera las posiciones del podio sin todas las combinaciones. La opción D sería 6³ (con repetición).',
+        competencia: 'resolucion',
+        componente: 'aleatorio',
+      },
+
+      // 36. Numérico-variacional + razonamiento (matrices — introducción)
+      {
+        id: 'mat-p-s11-36',
+        enunciado: 'Dadas las matrices A = [[2, 3], [1, 4]] y B = [[1, 0], [2, 1]], ¿cuál es el elemento de la fila 1, columna 2 del producto A × B?',
+        opciones: [
+          { letra: 'A', texto: '3' },
+          { letra: 'B', texto: '6' },
+          { letra: 'C', texto: '2' },
+          { letra: 'D', texto: '5' },
+        ],
+        clave: 'A',
+        justificacion: 'El elemento en la posición (1,2) de A×B se calcula como la fila 1 de A multiplicada por la columna 2 de B: [2, 3] · [0, 1] = 2×0 + 3×1 = 0 + 3 = 3. La opción B aplica incorrectamente la multiplicación. La opción C usa el elemento a₁₂ de A directamente. La opción D suma las filas sin multiplicar vectorialmente.',
+        competencia: 'razonamiento',
+        componente: 'numerico-variacional',
+      },
+
+      // 37. Geométrico-métrico + razonamiento (secciones cónicas — parábola)
+      {
+        id: 'mat-p-s11-37',
+        enunciado: 'Una parábola tiene la ecuación y = 2(x − 3)² + 1. ¿Cuáles son las coordenadas del vértice, la dirección de apertura y si la parábola tiene un máximo o un mínimo?',
+        opciones: [
+          { letra: 'A', texto: 'Vértice (3, 1); abre hacia arriba; tiene un mínimo.' },
+          { letra: 'B', texto: 'Vértice (−3, 1); abre hacia arriba; tiene un mínimo.' },
+          { letra: 'C', texto: 'Vértice (3, 1); abre hacia abajo; tiene un máximo.' },
+          { letra: 'D', texto: 'Vértice (3, −1); abre hacia arriba; tiene un mínimo.' },
+        ],
+        clave: 'A',
+        justificacion: 'La forma vértice y = a(x − h)² + k tiene vértice en (h, k). Con h = 3 y k = 1, el vértice es (3, 1). Como a = 2 > 0, la parábola abre hacia arriba y el vértice es un mínimo. La opción B usa −3 en vez de 3 (confunde signo del desplazamiento horizontal). La opción C tiene la dirección incorrecta (abre hacia abajo requeriría a < 0). La opción D usa k = −1.',
+        competencia: 'razonamiento',
+        componente: 'geometrico-metrico',
+      },
+
+      // 38. Aleatorio + comunicación (gráficas estadísticas — histograma)
+      {
+        id: 'mat-p-s11-38',
+        enunciado: 'Un histograma muestra los puntajes de 100 estudiantes en el ICFES con intervalos: [200-300): 10 est., [300-400): 25 est., [400-500): 40 est., [500-600): 20 est., [600-700]: 5 est. ¿Qué porcentaje de estudiantes obtuvo entre 400 y 600 puntos y cuál es la clase modal?',
+        opciones: [
+          { letra: 'A', texto: '60% entre 400 y 600; clase modal: [300-400).' },
+          { letra: 'B', texto: '60% entre 400 y 600; clase modal: [400-500).' },
+          { letra: 'C', texto: '65% entre 400 y 600; clase modal: [400-500).' },
+          { letra: 'D', texto: '40% entre 400 y 600; clase modal: [400-500).' },
+        ],
+        clave: 'B',
+        justificacion: 'Estudiantes entre 400 y 600: 40 + 20 = 60 → 60/100 = 60%. La clase modal es el intervalo con mayor frecuencia: [400-500) con 40 estudiantes. La opción A identifica correctamente el porcentaje pero se equivoca en la moda. La opción C agrega 5 estudiantes de más. La opción D solo cuenta el intervalo [400-500) sin sumar [500-600).',
+        competencia: 'comunicacion',
+        componente: 'aleatorio',
+      },
+
+      // 39. Numérico-variacional + resolución (sucesión geométrica — suma infinita)
+      {
+        id: 'mat-p-s11-39',
+        enunciado: 'Una pelota rebota hasta alcanzar el 60% de la altura anterior en cada rebote. Si se lanza desde 5 m de altura, ¿cuál es la distancia total que recorre la pelota hacia abajo (contando solo las caídas) si rebota infinitamente?',
+        opciones: [
+          { letra: 'A', texto: '12,5 m' },
+          { letra: 'B', texto: '10 m' },
+          { letra: 'C', texto: '8 m' },
+          { letra: 'D', texto: '15 m' },
+        ],
+        clave: 'A',
+        justificacion: 'Las distancias de caída forman una serie geométrica: 5 + 5(0,6) + 5(0,6)² + ... = 5/(1−0,6) = 5/0,4 = 12,5 m. Esta es la suma de una serie geométrica infinita con primer término a = 5 y razón r = 0,6 < 1. La opción B calcula solo caída + primer rebote. La opción C usa r = 0,4. La opción D usa la suma de subidas y bajadas sin distinción.',
+        competencia: 'resolucion',
+        componente: 'numerico-variacional',
+      },
+
+      // 40. Geométrico-métrico + comunicación (curvas y área bajo la curva — integrales intro)
+      {
+        id: 'mat-p-s11-40',
+        enunciado: 'La velocidad de un automóvil (en m/s) está dada por v(t) = 4t durante los primeros 5 segundos, donde t es el tiempo en segundos. La distancia recorrida equivale al área bajo la curva v(t) en ese intervalo. ¿Cuál es la distancia total recorrida?',
+        opciones: [
+          { letra: 'A', texto: '20 m' },
+          { letra: 'B', texto: '50 m' },
+          { letra: 'C', texto: '100 m' },
+          { letra: 'D', texto: '40 m' },
+        ],
+        clave: 'B',
+        justificacion: 'La gráfica de v(t) = 4t entre t = 0 y t = 5 forma un triángulo con base 5 y altura v(5) = 20. Área = (1/2) × base × altura = (1/2) × 5 × 20 = 50 m. Usando cálculo integral: ∫₀⁵ 4t dt = [2t²]₀⁵ = 2(25) − 0 = 50 m. La opción A calcula solo v(5)/2. La opción C multiplica base × altura sin dividir entre 2. La opción D calcula v(t=5) = 20 y multiplica por 2.',
+        competencia: 'comunicacion',
+        componente: 'geometrico-metrico',
+      },
+
+      // 41. Numérico-variacional + razonamiento (números complejos)
+      {
+        id: 'mat-p-s11-41',
+        enunciado: '¿Cuál es el módulo del número complejo z = 3 + 4i?',
+        opciones: [
+          { letra: 'A', texto: '5' },
+          { letra: 'B', texto: '7' },
+          { letra: 'C', texto: '√7' },
+          { letra: 'D', texto: '25' },
+        ],
+        clave: 'A',
+        justificacion: 'El módulo de un número complejo z = a + bi es |z| = √(a² + b²) = √(3² + 4²) = √(9 + 16) = √25 = 5. La terna pitagórica (3, 4, 5) es muy conocida. La opción B suma a y b directamente (3 + 4 = 7). La opción C calcula √(3² + 4) o √(3 + 4) incorrectamente. La opción D da el valor de a² + b² sin extraer la raíz.',
+        competencia: 'razonamiento',
+        componente: 'numerico-variacional',
+      },
+
+      // 42. Aleatorio + razonamiento (distribución binomial — introducción)
+      {
+        id: 'mat-p-s11-42',
+        enunciado: 'Un arquero acierta el blanco con probabilidad 0,7 en cada intento. Si lanza 4 flechas, ¿cuál es la probabilidad de que acierte exactamente 3? (Use la fórmula binomial: P = C(n,k) × p^k × (1−p)^(n−k))',
+        opciones: [
+          { letra: 'A', texto: 'Aproximadamente 0,412' },
+          { letra: 'B', texto: 'Aproximadamente 0,240' },
+          { letra: 'C', texto: 'Aproximadamente 0,756' },
+          { letra: 'D', texto: 'Aproximadamente 0,343' },
+        ],
+        clave: 'A',
+        justificacion: 'P(X=3) = C(4,3) × (0,7)³ × (0,3)¹ = 4 × 0,343 × 0,3 = 4 × 0,1029 = 0,4116 ≈ 0,412. C(4,3) = 4. La opción B es C(4,3) × (0,7)² × (0,3)² (acertar 2). La opción C es P(al menos 3). La opción D es solo (0,7)³ sin multiplicar por el coeficiente binomial.',
+        competencia: 'razonamiento',
+        componente: 'aleatorio',
+      },
+
+      // 43. Numérico-variacional + resolución (sistemas de 3 ecuaciones)
+      {
+        id: 'mat-p-s11-43',
+        enunciado: 'Una empresa produce tres tipos de productos A, B y C. Cada unidad de A requiere 2 h de trabajo, cada B requiere 3 h y cada C requiere 1 h. En un día con 20 h disponibles, se producen en total 10 unidades. Si se producen el doble de unidades de C que de A, ¿cuántas unidades de cada tipo se producen? (A = 2, C = 4)',
+        opciones: [
+          { letra: 'A', texto: 'A = 2, B = 4, C = 4.' },
+          { letra: 'B', texto: 'A = 2, B = 3, C = 5.' },
+          { letra: 'C', texto: 'A = 3, B = 3, C = 4.' },
+          { letra: 'D', texto: 'A = 2, B = 4, C = 5.' },
+        ],
+        clave: 'A',
+        justificacion: 'Sistema: A + B + C = 10 (total unidades), 2A + 3B + C = 20 (horas), C = 2A. Con A=2 y C=4: 2 + B + 4 = 10 → B = 4. Verificación de horas: 2(2) + 3(4) + 4 = 4 + 12 + 4 = 20 ✓. La opción B: 2+3+5=10 ✓ pero 4+9+5=18 ≠ 20 horas. La opción C: C ≠ 2A (4 ≠ 6). La opción D: 2+4+5 = 11 ≠ 10.',
+        competencia: 'resolucion',
+        componente: 'numerico-variacional',
+      },
+
+      // 44. Geométrico-métrico + resolución (área de una elipse)
+      {
+        id: 'mat-p-s11-44',
+        enunciado: 'Una cancha de atletismo tiene forma elíptica con semieje mayor a = 100 m y semieje menor b = 40 m. ¿Cuál es el área de la cancha? (A = π × a × b; use π ≈ 3,14)',
+        opciones: [
+          { letra: 'A', texto: 'Aproximadamente 12.560 m²' },
+          { letra: 'B', texto: 'Aproximadamente 25.120 m²' },
+          { letra: 'C', texto: 'Aproximadamente 6.280 m²' },
+          { letra: 'D', texto: 'Aproximadamente 31.400 m²' },
+        ],
+        clave: 'A',
+        justificacion: 'Área de una elipse = π × a × b = 3,14 × 100 × 40 = 3,14 × 4.000 = 12.560 m². La opción B dobla el resultado (confunde con la fórmula de la circunferencia o usa diámetros). La opción C usa solo uno de los semiejes al cuadrado. La opción D calcula π × a² (círculo con radio 100).',
+        competencia: 'resolucion',
+        componente: 'geometrico-metrico',
+      },
+
+      // 45. Aleatorio + resolución (valor esperado)
+      {
+        id: 'mat-p-s11-45',
+        enunciado: 'Un juego de azar ofrece las siguientes ganancias: ganar $5.000 con probabilidad 0,3; ganar $2.000 con probabilidad 0,5; perder $3.000 con probabilidad 0,2. ¿Cuál es el valor esperado (ganancia promedio) del juego?',
+        opciones: [
+          { letra: 'A', texto: '$2.900' },
+          { letra: 'B', texto: '$1.900' },
+          { letra: 'C', texto: '$3.500' },
+          { letra: 'D', texto: '$700' },
+        ],
+        clave: 'B',
+        justificacion: 'Valor esperado E(X) = Σ(xi × pi) = 5.000×0,3 + 2.000×0,5 + (−3.000)×0,2 = 1.500 + 1.000 − 600 = 1.900 pesos. La opción A no resta la pérdida. La opción C es el promedio aritmético sin pesos. La opción D comete un error en el cálculo.',
+        competencia: 'resolucion',
+        componente: 'aleatorio',
+      },
+
+      // 46. Numérico-variacional + comunicación (transformaciones de funciones)
+      {
+        id: 'mat-p-s11-46',
+        enunciado: 'La función f(x) = |x| se transforma a g(x) = −|x − 2| + 4. Describe el vértice de g y en qué dirección abre.',
+        opciones: [
+          { letra: 'A', texto: 'Vértice (2, 4); abre hacia abajo.' },
+          { letra: 'B', texto: 'Vértice (−2, 4); abre hacia abajo.' },
+          { letra: 'C', texto: 'Vértice (2, 4); abre hacia arriba.' },
+          { letra: 'D', texto: 'Vértice (2, −4); abre hacia abajo.' },
+        ],
+        clave: 'A',
+        justificacion: 'En g(x) = −|x − 2| + 4, el desplazamiento horizontal +2 (por x−2) mueve el vértice a x = 2. El desplazamiento vertical +4 lo sube a y = 4. El signo negativo delante del valor absoluto invierte la V: abre hacia abajo. Vértice = (2, 4). La opción B usa −2 (confunde el signo del desplazamiento). La opción C dice que abre hacia arriba (sin el signo negativo). La opción D usa −4 en vez de +4.',
+        competencia: 'comunicacion',
+        componente: 'numerico-variacional',
+      },
+
+      // 47. Geométrico-métrico + razonamiento (vectores — producto punto)
+      {
+        id: 'mat-p-s11-47',
+        enunciado: 'Dos vectores son u = (3, 4) y v = (−4, 3). ¿Son perpendiculares? ¿Cuánto mide el ángulo entre ellos?',
+        opciones: [
+          { letra: 'A', texto: 'No son perpendiculares; el ángulo es 45°.' },
+          { letra: 'B', texto: 'Sí son perpendiculares porque su producto punto es 0.' },
+          { letra: 'C', texto: 'No son perpendiculares; el ángulo es 60°.' },
+          { letra: 'D', texto: 'Sí son perpendiculares porque tienen la misma magnitud.' },
+        ],
+        clave: 'B',
+        justificacion: 'Producto punto: u · v = (3)(−4) + (4)(3) = −12 + 12 = 0. Cuando el producto punto de dos vectores es cero, los vectores son perpendiculares (el ángulo entre ellos es 90°). La opción A afirma que no son perpendiculares, lo cual es incorrecto dado que u·v = 0. La opción C da un ángulo incorrecto. La opción D razona correctamente que son perpendiculares pero por una razón equivocada (tener igual magnitud no implica perpendicularidad).',
+        competencia: 'razonamiento',
+        componente: 'geometrico-metrico',
+      },
+
+      // 48. Numérico-variacional + razonamiento (propiedades de logaritmos)
+      {
+        id: 'mat-p-s11-48',
+        enunciado: '¿Cuál de las siguientes expresiones es equivalente a log(12) si se usa la propiedad log(a × b) = log a + log b?',
+        opciones: [
+          { letra: 'A', texto: 'log(4) + log(3)' },
+          { letra: 'B', texto: 'log(6) + log(2)' },
+          { letra: 'C', texto: 'log(10) + log(2)' },
+          { letra: 'D', texto: 'log(3) + log(4) y log(6) + log(2) son ambas equivalentes.' },
+        ],
+        clave: 'D',
+        justificacion: 'log(12) = log(4 × 3) = log 4 + log 3 ✓. También: log(12) = log(6 × 2) = log 6 + log 2 ✓. Ambas descomposiciones son válidas porque 4×3 = 12 y 6×2 = 12. La opción C: log(10) + log(2) = 1 + log(2) = log(20), no log(12). Las opciones A y B individualmente son correctas pero la respuesta completa es D que reconoce que ambas lo son.',
+        competencia: 'razonamiento',
+        componente: 'numerico-variacional',
+      },
+
+      // 49. Aleatorio + comunicación (muestras y sesgos)
+      {
+        id: 'mat-p-s11-49',
+        enunciado: 'Para estudiar el puntaje promedio en matemáticas del ICFES en Colombia, un investigador encuesta solo a estudiantes de colegios privados de Bogotá. ¿Qué problema metodológico tiene esta muestra?',
+        opciones: [
+          { letra: 'A', texto: 'La muestra es demasiado pequeña para hacer inferencias.' },
+          { letra: 'B', texto: 'La muestra no es representativa de la población colombiana porque tiene sesgo de selección: los colegios privados de Bogotá no representan a todos los estudiantes del país.' },
+          { letra: 'C', texto: 'No hay ningún problema, ya que Bogotá es la ciudad más grande de Colombia.' },
+          { letra: 'D', texto: 'El problema es que solo se estudia matemáticas y no todas las áreas del ICFES.' },
+        ],
+        clave: 'B',
+        justificacion: 'El sesgo de selección ocurre cuando la muestra no es representativa de la población de interés. Los colegios privados de Bogotá tienen características socioeconómicas y académicas distintas al promedio nacional. Las conclusiones no pueden generalizarse a "Colombia". La opción A puede ser válida pero no es el problema principal. La opción C comete el error de razonamiento que se está evaluando. La opción D cambia el objeto de estudio, que sí se limitó a matemáticas de forma válida.',
+        competencia: 'comunicacion',
+        componente: 'aleatorio',
+      },
+
+      // 50. Numérico-variacional + resolución (integración — área entre curvas)
+      {
+        id: 'mat-p-s11-50',
+        enunciado: 'El área bajo la curva f(x) = x² entre x = 0 y x = 3 se calcula con la integral ∫₀³ x² dx. ¿Cuál es ese valor?',
+        opciones: [
+          { letra: 'A', texto: '9' },
+          { letra: 'B', texto: '27' },
+          { letra: 'C', texto: '3' },
+          { letra: 'D', texto: '4,5' },
+        ],
+        clave: 'A',
+        justificacion: '∫₀³ x² dx = [x³/3]₀³ = 3³/3 − 0³/3 = 27/3 − 0 = 9. La antiderivada de x² es x³/3. La opción B omite dividir entre 3 (calcula 3³ = 27). La opción C evalúa solo el límite superior sin integrar. La opción D calcula (1/2)×3×3 como si fuera un triángulo.',
+        competencia: 'resolucion',
+        componente: 'numerico-variacional',
+      },
+
+      // 51. Geométrico-métrico + comunicación (hipérbola y asíntotas)
+      {
+        id: 'mat-p-s11-51',
+        enunciado: 'La función f(x) = 1/(x − 2) tiene una asíntota vertical en x = 2 y una asíntota horizontal en y = 0. Si se evalúa f(x) cuando x → ∞, ¿qué valor se aproxima la función y cómo se comporta cerca de la asíntota vertical?',
+        opciones: [
+          { letra: 'A', texto: 'Cuando x → ∞, f(x) → 0; cuando x → 2⁺, f(x) → +∞.' },
+          { letra: 'B', texto: 'Cuando x → ∞, f(x) → ∞; cuando x → 2⁺, f(x) → 0.' },
+          { letra: 'C', texto: 'Cuando x → ∞, f(x) → 2; cuando x → 2⁺, f(x) → +∞.' },
+          { letra: 'D', texto: 'Cuando x → ∞, f(x) → 0; cuando x → 2⁻, f(x) → +∞.' },
+        ],
+        clave: 'A',
+        justificacion: 'Para f(x) = 1/(x−2): cuando x → ∞, el denominador crece sin límite y f(x) → 0 (asíntota horizontal y = 0). Cuando x → 2 desde la derecha (x > 2), el denominador (x−2) → 0⁺ positivo y f(x) → +∞. La opción B invierte ambos comportamientos. La opción C dice que f(x) → 2 cuando x → ∞, lo cual es incorrecto. La opción D confunde el comportamiento lateral: cuando x → 2⁻ (por la izquierda), (x−2) → 0⁻ y f(x) → −∞, no +∞.',
+        competencia: 'comunicacion',
+        componente: 'geometrico-metrico',
+      },
+
+      // 52. Aleatorio + razonamiento (estadística — sesgo vs dispersión)
+      {
+        id: 'mat-p-s11-52',
+        enunciado: 'Dos grupos de estudiantes presentaron la prueba ICFES. Grupo 1: media 280, desviación estándar 10. Grupo 2: media 270, desviación estándar 40. ¿Cuál de las siguientes afirmaciones es estadísticamente correcta?',
+        opciones: [
+          { letra: 'A', texto: 'El grupo 2 tiene mejor rendimiento porque su desviación estándar es mayor.' },
+          { letra: 'B', texto: 'El grupo 1 tiene mejor desempeño promedio y mayor consistencia en sus resultados.' },
+          { letra: 'C', texto: 'Ambos grupos tienen el mismo desempeño porque las diferencias son pequeñas.' },
+          { letra: 'D', texto: 'El grupo 2 es más homogéneo porque tiene mayor desviación estándar.' },
+        ],
+        clave: 'B',
+        justificacion: 'El grupo 1 tiene mayor media (280 > 270), lo que indica mejor desempeño promedio. Además, su desviación estándar es menor (10 < 40), lo que significa que los puntajes están más concentrados cerca de la media (mayor consistencia o homogeneidad). La opción A confunde mayor dispersión con mejor rendimiento. La opción C ignora la diferencia de 10 puntos en la media. La opción D invierte la relación: mayor desviación estándar implica mayor heterogeneidad.',
+        competencia: 'razonamiento',
+        componente: 'aleatorio',
+      },
+
+      // 53. Numérico-variacional + razonamiento (función logarítmica — ecuación)
+      {
+        id: 'mat-p-s11-53',
+        enunciado: 'Resuelve la ecuación logarítmica: log₃(x + 2) + log₃(x − 2) = log₃(5).',
+        opciones: [
+          { letra: 'A', texto: 'x = 3' },
+          { letra: 'B', texto: 'x = ±3' },
+          { letra: 'C', texto: 'x = 5' },
+          { letra: 'D', texto: 'No tiene solución.' },
+        ],
+        clave: 'A',
+        justificacion: 'Usando la propiedad log a + log b = log(a×b): log₃[(x+2)(x−2)] = log₃(5) → (x+2)(x−2) = 5 → x² − 4 = 5 → x² = 9 → x = ±3. Sin embargo, el dominio del logaritmo exige x + 2 > 0 y x − 2 > 0, es decir, x > 2. Solo x = 3 cumple esta condición (x = −3 no cumple x − 2 > 0). La opción B incluye x = −3 que no está en el dominio. La opción C falla en la ecuación. La opción D afirma incorrectamente que no hay solución.',
+        competencia: 'razonamiento',
+        componente: 'numerico-variacional',
+      },
+
+      // 54. Geométrico-métrico + resolución (área de superficie de una esfera)
+      {
+        id: 'mat-p-s11-54',
+        enunciado: 'Una empresa fabrica balones de fútbol esféricos con radio de 11 cm. Si se quiere recubrir la superficie exterior de cada balón con un material especial, ¿cuántos cm² de material se necesitan por balón? (Superficie de esfera = 4πr²; use π ≈ 3,14)',
+        opciones: [
+          { letra: 'A', texto: 'Aproximadamente 1.519,76 cm²' },
+          { letra: 'B', texto: 'Aproximadamente 379,94 cm²' },
+          { letra: 'C', texto: 'Aproximadamente 5.575,28 cm²' },
+          { letra: 'D', texto: 'Aproximadamente 3.039,52 cm²' },
+        ],
+        clave: 'A',
+        justificacion: 'Superficie = 4πr² = 4 × 3,14 × 11² = 4 × 3,14 × 121 = 4 × 379,94 = 1.519,76 cm². La opción B calcula πr² (área del círculo máximo, sin el factor 4). La opción C usa el diámetro como radio (22 cm). La opción D omite dividir correctamente (duplica el resultado).',
+        competencia: 'resolucion',
+        componente: 'geometrico-metrico',
+      },
+
+      // 55. Numérico-variacional + comunicación (funciones trigonométricas — gráficas)
+      {
+        id: 'mat-p-s11-55',
+        enunciado: 'La función f(x) = 2sin(x) tiene amplitud 2 y período 2π. Si se compara con g(x) = sen(2x), ¿cuál es la diferencia principal entre estas dos funciones?',
+        opciones: [
+          { letra: 'A', texto: 'f(x) tiene mayor amplitud que g(x); g(x) tiene el mismo período que f(x).' },
+          { letra: 'B', texto: 'f(x) tiene amplitud 2 y período 2π; g(x) tiene amplitud 1 y período π.' },
+          { letra: 'C', texto: 'f(x) y g(x) tienen la misma amplitud pero diferente período.' },
+          { letra: 'D', texto: 'g(x) tiene mayor amplitud que f(x) porque su coeficiente está en el argumento.' },
+        ],
+        clave: 'B',
+        justificacion: 'Para f(x) = 2sen(x): amplitud = |2| = 2; período = 2π/1 = 2π. Para g(x) = sen(2x): amplitud = |1| = 1; período = 2π/2 = π. Las diferencias son: f tiene mayor amplitud (2 vs 1) y mayor período (2π vs π). La opción A dice que tienen el mismo período, lo cual es incorrecto. La opción C dice que tienen la misma amplitud (2 ≠ 1). La opción D confunde el efecto del coeficiente en el argumento con la amplitud.',
+        competencia: 'comunicacion',
+        componente: 'numerico-variacional',
+      },
+
+      // 56. Aleatorio + resolución (intervalo de confianza — concepto)
+      {
+        id: 'mat-p-s11-56',
+        enunciado: 'Una encuesta a 500 jóvenes colombianos muestra que el 68% usa redes sociales diariamente. Con un nivel de confianza del 95% y un margen de error de ±4%, ¿cuál es el intervalo de confianza para el porcentaje real de la población?',
+        opciones: [
+          { letra: 'A', texto: '[64%, 72%]' },
+          { letra: 'B', texto: '[68%, 95%]' },
+          { letra: 'C', texto: '[64%, 95%]' },
+          { letra: 'D', texto: '[60%, 76%]' },
+        ],
+        clave: 'A',
+        justificacion: 'El intervalo de confianza se construye sumando y restando el margen de error al estadístico muestral: [68% − 4%, 68% + 4%] = [64%, 72%]. Esto significa que con un 95% de confianza, entre el 64% y el 72% de la población total usa redes sociales diariamente. La opción B confunde el nivel de confianza con el límite superior. La opción C mezcla el margen de error y el nivel de confianza. La opción D usa margen de error de ±8%.',
+        competencia: 'resolucion',
+        componente: 'aleatorio',
+      },
+
+      // 57. Geométrico-métrico + razonamiento (geometría analítica — rectas y sistemas)
+      {
+        id: 'mat-p-s11-57',
+        enunciado: 'Dos rectas son: r₁: 2x + y = 8 y r₂: x − y = 1. ¿En qué punto se intersectan estas dos rectas?',
+        opciones: [
+          { letra: 'A', texto: '(3, 2)' },
+          { letra: 'B', texto: '(4, 0)' },
+          { letra: 'C', texto: '(2, 4)' },
+          { letra: 'D', texto: '(3, 4)' },
+        ],
+        clave: 'A',
+        justificacion: 'Sumando las ecuaciones: (2x + y) + (x − y) = 8 + 1 → 3x = 9 → x = 3. Sustituyendo en r₂: 3 − y = 1 → y = 2. Punto de intersección: (3, 2). Verificación en r₁: 2(3) + 2 = 8 ✓. La opción B satisface r₁ (2×4+0=8) pero no r₂ (4−0=4≠1). La opción C satisface r₂ (2−4=−2≠1). La opción D no satisface ninguna.',
+        competencia: 'razonamiento',
+        componente: 'geometrico-metrico',
+      },
+
+      // 58. Numérico-variacional + razonamiento (función exponencial — crecimiento e interés)
+      {
+        id: 'mat-p-s11-58',
+        enunciado: 'Un banco ofrece una tasa de interés compuesto anual del 8%. Si se depositan $2.000.000, ¿cuánto dinero habrá después de 3 años? (Fórmula: A = P(1 + r)ⁿ)',
+        opciones: [
+          { letra: 'A', texto: '$2.519.424' },
+          { letra: 'B', texto: '$2.480.000' },
+          { letra: 'C', texto: '$2.160.000' },
+          { letra: 'D', texto: '$2.600.000' },
+        ],
+        clave: 'A',
+        justificacion: 'A = 2.000.000 × (1 + 0,08)³ = 2.000.000 × (1,08)³ = 2.000.000 × 1,259712 ≈ 2.519.424. El interés compuesto se calcula sobre el capital acumulado cada año. La opción B aplica 8% simple por año: 2.000.000 + 3×(160.000) = 2.480.000 (interés simple). La opción C solo aplica un año de interés. La opción D es un estimado sin base en la fórmula.',
+        competencia: 'razonamiento',
+        componente: 'numerico-variacional',
+      },
+
+      // 59. Aleatorio + razonamiento (pruebas de hipótesis — concepto)
+      {
+        id: 'mat-p-s11-59',
+        enunciado: 'Una empresa afirma que sus empleados trabajan en promedio 8 horas diarias. Un sindicato cree que trabajan más. Para comprobarlo, toman una muestra de 50 empleados y obtienen una media de 8,5 h con desviación estándar de 1,2 h. ¿Cuál es la hipótesis nula H₀ en esta prueba?',
+        opciones: [
+          { letra: 'A', texto: 'H₀: μ = 8 horas (la media real es exactamente 8 horas).' },
+          { letra: 'B', texto: 'H₀: μ > 8 horas (los empleados trabajan más de 8 horas).' },
+          { letra: 'C', texto: 'H₀: μ = 8,5 horas (la media muestral es la real).' },
+          { letra: 'D', texto: 'H₀: la muestra no representa a la población.' },
+        ],
+        clave: 'A',
+        justificacion: 'La hipótesis nula (H₀) es siempre la afirmación de igualdad o statu quo que se quiere poner a prueba. En este caso, la empresa afirma que μ = 8, por lo que H₀: μ = 8 horas. La hipótesis alternativa sería H₁: μ > 8 (lo que el sindicato quiere demostrar). La opción B es la hipótesis alternativa (H₁), no la nula. La opción C usa el valor muestral, no el parámetro poblacional. La opción D describe una preocupación metodológica, no una hipótesis estadística.',
+        competencia: 'razonamiento',
+        componente: 'aleatorio',
+      },
+
+      // 60. Geométrico-métrico + resolución (área de triángulo con coordenadas)
+      {
+        id: 'mat-p-s11-60',
+        enunciado: 'Los vértices de un triángulo en el plano cartesiano son A(0, 0), B(6, 0) y C(2, 4). ¿Cuál es el área del triángulo?',
+        opciones: [
+          { letra: 'A', texto: '12 unidades cuadradas' },
+          { letra: 'B', texto: '24 unidades cuadradas' },
+          { letra: 'C', texto: '8 unidades cuadradas' },
+          { letra: 'D', texto: '16 unidades cuadradas' },
+        ],
+        clave: 'A',
+        justificacion: 'La base AB va de (0,0) a (6,0): base = 6. La altura es la distancia vertical de C(2,4) a la recta AB (que está sobre el eje x, y=0): altura = 4. Área = (1/2) × base × altura = (1/2) × 6 × 4 = 12 unidades cuadradas. También se puede usar la fórmula del determinante: Área = (1/2)|x_A(y_B − y_C) + x_B(y_C − y_A) + x_C(y_A − y_B)| = (1/2)|0(0−4) + 6(4−0) + 2(0−0)| = (1/2)|0 + 24 + 0| = 12. La opción B omite dividir entre 2. Las opciones C y D aplican cálculos incorrectos.',
+        competencia: 'resolucion',
         componente: 'geometrico-metrico',
       },
     ],
@@ -1492,6 +2452,486 @@ const PREGUNTAS_ICFES = {
         competencia: 'indagacion',
         componente: 'entorno-vivo',
       },
+
+      // 31. Entorno físico + explicación (ondas y sonido)
+      {
+        id: 'nat-p-s9-31',
+        enunciado: 'En un concierto al aire libre en Barranquilla, los espectadores que están más lejos del escenario escuchan el sonido un instante después de verlo producirse en los instrumentos. ¿Cuál es la explicación física de este fenómeno?',
+        opciones: [
+          { letra: 'A', texto: 'El sonido viaja más rápido que la luz, por eso llega antes a los espectadores lejanos.' },
+          { letra: 'B', texto: 'La luz viaja aproximadamente 900.000 veces más rápido que el sonido en el aire; por eso la imagen llega casi instantáneamente mientras el sonido demora en recorrer la distancia.' },
+          { letra: 'C', texto: 'El calor del día en Barranquilla retarda el sonido pero no la luz.' },
+          { letra: 'D', texto: 'Los instrumentos emiten luz y sonido a la misma velocidad, pero la luz rebota y llega antes.' },
+        ],
+        clave: 'B',
+        justificacion: 'La luz viaja a aproximadamente 300.000 km/s en el vacío (y casi igual en el aire), mientras que el sonido viaja a unos 343 m/s en el aire. Esta diferencia de velocidades hace que los espectadores lejanos perciban la imagen prácticamente de forma instantánea, pero el sonido tarde más en llegar (aproximadamente 3 segundos por cada kilómetro de distancia). Este principio es también el que se usa para calcular la distancia a un rayo. La opción A invierte la relación de velocidades. La opción C introduce el calor como variable cuando el efecto es primariamente la diferencia de velocidades.',
+        competencia: 'explicacion',
+        componente: 'entorno-fisico',
+      },
+
+      // 32. Entorno vivo + uso-conocimiento (sistema circulatorio)
+      {
+        id: 'nat-p-s9-32',
+        enunciado: 'El corazón humano funciona como una bomba doble. La parte derecha recibe sangre sin oxígeno del cuerpo y la envía a los pulmones; la parte izquierda recibe sangre oxigenada de los pulmones y la envía al cuerpo. ¿Cómo se llaman estas dos circulaciones?',
+        opciones: [
+          { letra: 'A', texto: 'Circulación arterial (derecha) y circulación venosa (izquierda).' },
+          { letra: 'B', texto: 'Circulación mayor o sistémica (izquierda → cuerpo) y circulación menor o pulmonar (derecha → pulmones).' },
+          { letra: 'C', texto: 'Circulación pulmonar (izquierda) y circulación coronaria (derecha).' },
+          { letra: 'D', texto: 'Circulación mayor (derecha → pulmones) y circulación menor (izquierda → cuerpo).' },
+        ],
+        clave: 'B',
+        justificacion: 'El sistema circulatorio tiene dos circuitos: la circulación mayor o sistémica lleva sangre oxigenada desde el ventrículo izquierdo a todos los tejidos del cuerpo y regresa por las venas al lado derecho. La circulación menor o pulmonar lleva sangre desoxigenada desde el ventrículo derecho a los pulmones para oxigenarse y regresa al corazón izquierdo. La opción A usa terminología incorrecta. La opción C mezcla la circulación pulmonar con la coronaria. La opción D invierte cuál es la mayor y cuál la menor.',
+        competencia: 'uso-conocimiento',
+        componente: 'entorno-vivo',
+      },
+
+      // 33. Entorno físico + resolución (calor y temperatura)
+      {
+        id: 'nat-p-s9-33',
+        enunciado: 'Una estudiante calienta 200 g de agua de 20°C a 70°C. Si el calor específico del agua es 4,18 J/(g·°C), ¿cuánta energía en julios necesita?',
+        opciones: [
+          { letra: 'A', texto: '41.800 J' },
+          { letra: 'B', texto: '58.520 J' },
+          { letra: 'C', texto: '418 J' },
+          { letra: 'D', texto: '29.260 J' },
+        ],
+        clave: 'A',
+        justificacion: 'Q = m × c × ΔT = 200 g × 4,18 J/(g·°C) × (70 − 20)°C = 200 × 4,18 × 50 = 200 × 209 = 41.800 J. La opción B calcula 200 × 4,18 × 70 (usa la temperatura final en vez del cambio). La opción C omite la masa (calcula solo c × ΔT). La opción D calcula la mitad por algún error de división.',
+        competencia: 'resolucion',
+        componente: 'entorno-fisico',
+      },
+
+      // 34. CTS + uso-conocimiento (antibióticos y resistencia)
+      {
+        id: 'nat-p-s9-34',
+        enunciado: 'El uso excesivo e innecesario de antibióticos en humanos y animales ha generado un problema de salud pública global: la resistencia bacteriana. ¿Cuál es el mecanismo evolutivo que explica este fenómeno?',
+        opciones: [
+          { letra: 'A', texto: 'Las bacterias aprenden a resistir los antibióticos porque se exponen a ellos repetidamente.' },
+          { letra: 'B', texto: 'Mediante la selección natural, las bacterias que por mutación ya eran resistentes sobreviven y se reproducen cuando se aplica el antibiótico, mientras las sensibles mueren; así la resistencia se propaga en la población bacteriana.' },
+          { letra: 'C', texto: 'Los antibióticos se vuelven menos potentes con el tiempo porque pierden sus moléculas activas.' },
+          { letra: 'D', texto: 'La resistencia bacteriana es causada por el sistema inmunológico debilitado de los pacientes.' },
+        ],
+        clave: 'B',
+        justificacion: 'La resistencia bacteriana a los antibióticos es un ejemplo clásico de evolución por selección natural. En cualquier población bacteriana existen variaciones genéticas (mutaciones). Cuando se aplica un antibiótico, las bacterias sensibles mueren, pero las que por azar tenían mutaciones que les conferían resistencia sobreviven y se reproducen. Con el tiempo, la población resultante está dominada por bacterias resistentes. Esto no es aprendizaje consciente (opción A), no implica degradación del antibiótico (opción C) ni depende del sistema inmune del huésped (opción D).',
+        competencia: 'uso-conocimiento',
+        componente: 'cts',
+      },
+
+      // 35. Entorno vivo + explicación (fotosíntesis vs respiración)
+      {
+        id: 'nat-p-s9-35',
+        enunciado: 'Una hoja verde realiza fotosíntesis durante el día y respiración celular tanto de día como de noche. ¿Cuál de los siguientes enunciados describe correctamente la relación entre estos dos procesos?',
+        opciones: [
+          { letra: 'A', texto: 'La fotosíntesis y la respiración son procesos idénticos que ocurren en los cloroplastos.' },
+          { letra: 'B', texto: 'La fotosíntesis transforma energía lumínica en energía química (glucosa) consumiendo CO₂ y H₂O; la respiración libera energía de la glucosa consumiendo O₂ y produciendo CO₂ y H₂O. Son procesos inversos y complementarios.' },
+          { letra: 'C', texto: 'Las plantas solo realizan fotosíntesis y los animales solo realizan respiración.' },
+          { letra: 'D', texto: 'La respiración celular solo ocurre cuando no hay luz solar disponible.' },
+        ],
+        clave: 'B',
+        justificacion: 'La fotosíntesis (6CO₂ + 6H₂O + luz → C₆H₁₂O₆ + 6O₂) ocurre en los cloroplastos y captura energía solar para producir glucosa. La respiración celular (C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP) ocurre en las mitocondrias y libera la energía almacenada en la glucosa. Son químicamente complementarias y las plantas realizan ambas. La opción A confunde los dos procesos. La opción C es incorrecta: las plantas también respiran. La opción D es incorrecta: la respiración celular es continua.',
+        competencia: 'explicacion',
+        componente: 'entorno-vivo',
+      },
+
+      // 36. Entorno físico + indagación (diseño experimental — control)
+      {
+        id: 'nat-p-s9-36',
+        enunciado: 'Un estudiante quiere saber si el abono orgánico mejora el crecimiento de las plantas de tomate. Siembra 20 plantas en dos grupos de 10: el grupo A recibe abono orgánico y el grupo B no. Ambos grupos reciben la misma cantidad de agua y luz solar. Al final del experimento mide la altura de las plantas. ¿Cuál es el grupo control y por qué es necesario?',
+        opciones: [
+          { letra: 'A', texto: 'El grupo A es el control porque recibe el abono que se quiere probar.' },
+          { letra: 'B', texto: 'El grupo B es el control porque no recibe el tratamiento (abono); sirve como punto de referencia para comparar si el abono produce diferencias en el crecimiento.' },
+          { letra: 'C', texto: 'No es necesario un grupo control si se mide correctamente la altura.' },
+          { letra: 'D', texto: 'El grupo control debe recibir abono inorgánico para comparar tipos de abono.' },
+        ],
+        clave: 'B',
+        justificacion: 'El grupo control es el que no recibe el tratamiento experimental (el abono orgánico, en este caso). Su función es proporcionar una línea base de crecimiento "normal" para comparar con el grupo experimental (A). Sin grupo control, no se puede atribuir con certeza las diferencias en crecimiento al abono, ya que podrían deberse a otras variables. La opción A confunde el grupo experimental con el control. La opción C es incorrecta: el control es esencial para establecer causalidad. La opción D cambia el diseño del experimento original.',
+        competencia: 'indagacion',
+        componente: 'entorno-fisico',
+      },
+
+      // 37. Entorno físico + uso-conocimiento (tabla periódica)
+      {
+        id: 'nat-p-s9-37',
+        enunciado: 'El sodio (Na) tiene número atómico 11 y masa atómica 23. ¿Cuántos protones, neutrones y electrones tiene un átomo neutro de sodio?',
+        opciones: [
+          { letra: 'A', texto: '11 protones, 12 neutrones, 11 electrones.' },
+          { letra: 'B', texto: '12 protones, 11 neutrones, 12 electrones.' },
+          { letra: 'C', texto: '11 protones, 11 neutrones, 23 electrones.' },
+          { letra: 'D', texto: '23 protones, 11 neutrones, 11 electrones.' },
+        ],
+        clave: 'A',
+        justificacion: 'El número atómico (Z = 11) indica el número de protones. En un átomo neutro, el número de electrones iguala al de protones: 11 electrones. El número de neutrones = masa atómica − número atómico = 23 − 11 = 12 neutrones. La opción B intercambia protones y neutrones. La opción C confunde la masa atómica con los electrones. La opción D usa la masa atómica como número de protones.',
+        competencia: 'uso-conocimiento',
+        componente: 'entorno-fisico',
+      },
+
+      // 38. Entorno vivo + indagación (adaptaciones de animales)
+      {
+        id: 'nat-p-s9-38',
+        enunciado: 'Los murciélagos se orientan en la oscuridad emitiendo ultrasonidos y detectando sus ecos. Este sistema se llama ecolocalización. ¿Qué tipo de adaptación representa este mecanismo y qué función cumple?',
+        opciones: [
+          { letra: 'A', texto: 'Es una adaptación estructural que les permite ver en la oscuridad como los ojos.' },
+          { letra: 'B', texto: 'Es una adaptación funcional/fisiológica que les permite navegar, detectar obstáculos y localizar presas en condiciones de poca o nula visibilidad.' },
+          { letra: 'C', texto: 'Es un comportamiento aprendido que los murciélagos adquieren de sus padres.' },
+          { letra: 'D', texto: 'Es una adaptación exclusiva de los murciélagos que ningún otro animal posee.' },
+        ],
+        clave: 'B',
+        justificacion: 'La ecolocalización es una adaptación funcional o fisiológica: el sistema nervioso y auditivo de los murciélagos emite y procesa ultrasonidos para construir un "mapa" del entorno. Permite navegar, evitar obstáculos y cazar insectos en la oscuridad total. No es una adaptación estructural como los ojos (opción A). No es puramente aprendida: es innata aunque puede perfeccionarse (opción C). La ecolocalización también existe en delfines, marsopas y algunas aves (opción D).',
+        competencia: 'indagacion',
+        componente: 'entorno-vivo',
+      },
+
+      // 39. Entorno físico + explicación (electricidad — circuitos)
+      {
+        id: 'nat-p-s9-39',
+        enunciado: 'En un circuito en serie con tres bombillas, si una bombilla se rompe, todas las demás se apagan. En un circuito en paralelo con las mismas tres bombillas, si una se rompe, las otras dos siguen encendidas. ¿Cuál es la razón de esta diferencia?',
+        opciones: [
+          { letra: 'A', texto: 'En el circuito en serie hay más corriente, lo que provoca mayor calor y fallas.' },
+          { letra: 'B', texto: 'En el circuito en serie existe un solo camino para la corriente; si una bombilla se rompe, el circuito queda abierto y la corriente no puede fluir. En el paralelo existen caminos independientes, por lo que las otras bombillas mantienen su circuito completo.' },
+          { letra: 'C', texto: 'En el circuito en paralelo las bombillas tienen mayor voltaje, por eso resisten más las fallas.' },
+          { letra: 'D', texto: 'Los circuitos en serie y paralelo funcionan igual; la diferencia depende del tipo de bombilla.' },
+        ],
+        clave: 'B',
+        justificacion: 'En un circuito en serie, los componentes están conectados en un único camino continuo. Si se interrumpe en cualquier punto (bombilla rota), la corriente no puede circular por ningún componente. En un circuito en paralelo, cada componente tiene su propio camino de corriente independiente; si uno falla, los demás siguen conectados a la fuente. Este principio explica por qué las instalaciones eléctricas domésticas usan circuitos en paralelo. La opción A es incorrecta: en serie hay la misma corriente pero diferente distribución de voltaje.',
+        competencia: 'explicacion',
+        componente: 'entorno-fisico',
+      },
+
+      // 40. Entorno vivo + uso-conocimiento (reino Fungi y descomponedores)
+      {
+        id: 'nat-p-s9-40',
+        enunciado: 'Los hongos son organismos del reino Fungi. A diferencia de las plantas, no realizan fotosíntesis. ¿Cómo obtienen su energía y qué papel cumplen en los ecosistemas?',
+        opciones: [
+          { letra: 'A', texto: 'Los hongos son parásitos que solo obtienen energía de organismos vivos, perjudicándolos siempre.' },
+          { letra: 'B', texto: 'Los hongos son principalmente descomponedores: secretan enzimas que degradan materia orgánica muerta (hojas, madera, cadáveres), obteniendo nutrientes y reciclando elementos en el ecosistema.' },
+          { letra: 'C', texto: 'Los hongos son productores primarios que fijan nitrógeno del aire como las leguminosas.' },
+          { letra: 'D', texto: 'Los hongos obtienen energía del calor solar directamente a través de sus esporas.' },
+        ],
+        clave: 'B',
+        justificacion: 'Los hongos son heterótrofos que obtienen energía por absorción: secretan enzimas digestivas al exterior y absorben los nutrientes resultantes. La mayoría son saprófitos (se alimentan de materia orgánica muerta), cumpliendo el rol fundamental de descomponedores en los ecosistemas: reciclan nutrientes y devuelven minerales al suelo. Algunos son parásitos (opción A, parcialmente correcta) pero esto no aplica a todos. Los hongos no son productores primarios (opción C) ni fotosintéticos.',
+        competencia: 'uso-conocimiento',
+        componente: 'entorno-vivo',
+      },
+
+      // 41. Entorno físico + uso-conocimiento (soluciones y concentración)
+      {
+        id: 'nat-p-s9-41',
+        enunciado: 'Se disuelven 5 g de sal (NaCl) en 95 g de agua. ¿Cuál es el porcentaje en masa (% m/m) de la solución?',
+        opciones: [
+          { letra: 'A', texto: '5,26%' },
+          { letra: 'B', texto: '5%' },
+          { letra: 'C', texto: '50%' },
+          { letra: 'D', texto: '0,05%' },
+        ],
+        clave: 'B',
+        justificacion: '% m/m = (masa del soluto / masa total de la solución) × 100 = (5 g / (5 g + 95 g)) × 100 = (5/100) × 100 = 5%. La fórmula correcta usa la masa total de la solución como denominador (soluto + solvente = 100 g). La opción A usa solo el solvente en el denominador (5/95 × 100 ≈ 5,26%), que sería concentración molal o % en otra convención. La opción C confunde al dividir entre 10. La opción D pierde cuatro órdenes de magnitud.',
+        competencia: 'uso-conocimiento',
+        componente: 'entorno-fisico',
+      },
+
+      // 42. CTS + explicación (vacunas e inmunología)
+      {
+        id: 'nat-p-s9-42',
+        enunciado: 'Las vacunas han permitido eliminar o controlar enfermedades como la viruela, la polio y el sarampión. ¿Cuál es el mecanismo biológico por el que las vacunas protegen al organismo?',
+        opciones: [
+          { letra: 'A', texto: 'Las vacunas matan directamente los agentes patógenos antes de que entren al cuerpo.' },
+          { letra: 'B', texto: 'Las vacunas introducen antígenos (debilitados, muertos o fragmentos) que estimulan al sistema inmunológico a producir anticuerpos y células de memoria, de manera que si el patógeno real entra, el organismo responde rápidamente.' },
+          { letra: 'C', texto: 'Las vacunas fortalecen los músculos para que el cuerpo expulse los virus físicamente.' },
+          { letra: 'D', texto: 'Las vacunas actúan como antibióticos que previenen infecciones bacterianas y virales.' },
+        ],
+        clave: 'B',
+        justificacion: 'Las vacunas funcionan mediante el principio de inmunidad adaptativa: al introducir antígenos (organismos atenuados, muertos o proteínas de superficie), el sistema inmune reconoce el antígeno como extraño y genera una respuesta primaria creando anticuerpos específicos y células de memoria (linfocitos B y T de memoria). Si el organismo se expone luego al patógeno real, la respuesta secundaria (más rápida y potente) neutraliza la infección antes de causar enfermedad. La opción A confunde mecanismo con efecto. La opción C no tiene base científica. La opción D confunde vacunas con antibióticos.',
+        competencia: 'explicacion',
+        componente: 'cts',
+      },
+
+      // 43. Entorno vivo + explicación (reproducción celular — mitosis)
+      {
+        id: 'nat-p-s9-43',
+        enunciado: 'Durante la mitosis, una célula madre diploide (2n = 46 cromosomas en humanos) se divide para producir células hijas. ¿Cuántos cromosomas tienen las células hijas y para qué sirve este proceso?',
+        opciones: [
+          { letra: 'A', texto: 'Las células hijas tienen 23 cromosomas (n); la mitosis sirve para la reproducción sexual.' },
+          { letra: 'B', texto: 'Las células hijas tienen 46 cromosomas (2n); la mitosis sirve para el crecimiento, reparación de tejidos y reproducción asexual.' },
+          { letra: 'C', texto: 'Las células hijas tienen 92 cromosomas (4n); la mitosis duplica el material genético.' },
+          { letra: 'D', texto: 'Las células hijas tienen 46 cromosomas pero con diferente información genética que la célula madre.' },
+        ],
+        clave: 'B',
+        justificacion: 'La mitosis produce dos células hijas con el mismo número de cromosomas que la célula madre (2n = 46 en humanos) y con información genética idéntica. Este proceso es fundamental para el crecimiento del organismo (multiplicación celular), la reparación de tejidos dañados y la reproducción asexual de ciertos organismos. La meiosis (no la mitosis) produce células haploides (n = 23) para la reproducción sexual (opción A). La opción C confunde la duplicación del ADN (previa a la mitosis) con el número final de cromosomas. La opción D es incorrecta: las células hijas son genéticamente idénticas a la madre.',
+        competencia: 'explicacion',
+        componente: 'entorno-vivo',
+      },
+
+      // 44. Entorno físico + razonamiento (energías renovables y no renovables)
+      {
+        id: 'nat-p-s9-44',
+        enunciado: 'En Colombia, la mayor parte de la energía eléctrica proviene de centrales hidroeléctricas. En períodos de sequía severa (como el fenómeno de El Niño), la generación de energía puede disminuir drásticamente. ¿Por qué las energías solar y eólica pueden ayudar a reducir esta vulnerabilidad?',
+        opciones: [
+          { letra: 'A', texto: 'Porque la energía solar y eólica siempre generan más electricidad que las hidroeléctricas.' },
+          { letra: 'B', texto: 'Porque diversificar la matriz energética con fuentes que no dependan del agua (sol y viento) reduce la dependencia de una sola fuente y aumenta la resiliencia del sistema ante sequías.' },
+          { letra: 'C', texto: 'Porque durante las sequías hay más sol y viento, lo que garantiza el suministro total de electricidad.' },
+          { letra: 'D', texto: 'Las energías renovables no pueden reemplazar a las hidroeléctricas porque son menos eficientes.' },
+        ],
+        clave: 'B',
+        justificacion: 'La diversificación de la matriz energética es un principio de resiliencia: al combinar fuentes que dependen de recursos diferentes (agua, sol, viento), el sistema eléctrico no queda vulnerable a un solo factor climático como la sequía. Si las hidroeléctricas producen menos, las plantas solares y eólicas pueden compensar parte del déficit. La opción A es incorrecta: no necesariamente producen más. La opción C es una simplificación: el viento y el sol también pueden variar durante sequías. La opción D es un argumento incompleto y descontextualizado.',
+        competencia: 'razonamiento',
+        componente: 'entorno-fisico',
+      },
+
+      // 45. Entorno vivo + uso-conocimiento (sistema nervioso)
+      {
+        id: 'nat-p-s9-45',
+        enunciado: 'Cuando alguien toca accidentalmente una superficie muy caliente, retira la mano antes de sentir dolor conscientemente. Este comportamiento se llama arco reflejo. ¿Cuál es la vía correcta de la señal nerviosa en un arco reflejo espinal?',
+        opciones: [
+          { letra: 'A', texto: 'Receptor → cerebro → médula espinal → músculo.' },
+          { letra: 'B', texto: 'Receptor → neurona sensitiva → médula espinal (interneurona) → neurona motora → músculo efector.' },
+          { letra: 'C', texto: 'Receptor → músculo → médula espinal → cerebro.' },
+          { letra: 'D', texto: 'Cerebro → neurona motora → médula espinal → músculo.' },
+        ],
+        clave: 'B',
+        justificacion: 'En un arco reflejo espinal, la señal sigue este camino: el receptor (termorreceptor en la piel) detecta el estímulo y genera un impulso nervioso que viaja por la neurona sensitiva (aferente) hasta la médula espinal. Allí, una interneurona conecta la señal con la neurona motora (eferente), que envía la orden al músculo efector para que se contraiga. El cerebro recibe la señal después (por eso el dolor se siente tras retirar la mano), pero la respuesta refleja no requiere procesamiento cerebral previo. La opción A incluye el cerebro en la vía principal del reflejo, lo cual es incorrecto.',
+        competencia: 'uso-conocimiento',
+        componente: 'entorno-vivo',
+      },
+
+      // 46. Entorno físico + indagación (mezclas y separación)
+      {
+        id: 'nat-p-s9-46',
+        enunciado: 'Una estudiante tiene una mezcla de arena, sal y limaduras de hierro en agua. ¿Cuál sería la secuencia más adecuada de técnicas de separación para obtener cada componente por separado?',
+        opciones: [
+          { letra: 'A', texto: 'Filtración → evaporación → imantación.' },
+          { letra: 'B', texto: 'Imantación → filtración → evaporación.' },
+          { letra: 'C', texto: 'Evaporación → filtración → imantación.' },
+          { letra: 'D', texto: 'Destilación → cristalización → tamizado.' },
+        ],
+        clave: 'B',
+        justificacion: 'La secuencia óptima es: (1) Imantación para separar las limaduras de hierro (magnéticas). (2) Filtración para separar la arena del agua con sal disuelta. (3) Evaporación del agua para obtener la sal (NaCl). Si se filtrara primero, las limaduras y la arena pasarían o no juntas. La evaporación al inicio eliminaría el agua necesaria para el proceso. La opción A filtra primero (arena y limaduras quedarían juntas). La opción C evapora primero (mezclaría sal y arena). La opción D son técnicas válidas pero no las más apropiadas para esta mezcla específica.',
+        competencia: 'indagacion',
+        componente: 'entorno-fisico',
+      },
+
+      // 47. Entorno vivo + explicación (herencia ligada al sexo)
+      {
+        id: 'nat-p-s9-47',
+        enunciado: 'El daltonismo (dificultad para distinguir ciertos colores) es una condición recesiva ligada al cromosoma X. Una mujer portadora (X^D X^d) tiene hijos con un hombre normal (X^D Y). ¿Qué probabilidad hay de que un hijo varón sea daltónico?',
+        opciones: [
+          { letra: 'A', texto: '0% porque el padre es normal.' },
+          { letra: 'B', texto: '25% de todos los hijos.' },
+          { letra: 'C', texto: '50% de los hijos varones.' },
+          { letra: 'D', texto: '100% de los varones serán daltónicos.' },
+        ],
+        clave: 'C',
+        justificacion: 'Los hijos varones reciben el cromosoma Y del padre y uno de los cromosomas X de la madre. La madre es portadora: tiene X^D (normal) y X^d (daltónico). La probabilidad de que un hijo varón herede X^d es 1/2 = 50%. Si hereda X^d Y, será daltónico (solo tiene una copia y es recesivo). Las hijas heredan X del padre (X^D) y una X de la madre, siendo portadoras o normales pero raramente daltónicas. La opción A ignora el aporte de la madre. La opción B mezcla varones y mujeres. La opción D implicaría que la madre fuese daltónica (X^d X^d), no portadora.',
+        competencia: 'explicacion',
+        componente: 'entorno-vivo',
+      },
+
+      // 48. CTS + indagación (efecto invernadero)
+      {
+        id: 'nat-p-s9-48',
+        enunciado: 'El efecto invernadero es un proceso natural esencial para la vida en la Tierra: sin él, la temperatura promedio del planeta sería de −18°C. Sin embargo, las actividades humanas están intensificando este efecto. ¿Qué gases son los principales responsables del aumento del efecto invernadero antrópico?',
+        opciones: [
+          { letra: 'A', texto: 'El oxígeno (O₂) y el nitrógeno (N₂), que son los gases más abundantes en la atmósfera.' },
+          { letra: 'B', texto: 'El dióxido de carbono (CO₂), el metano (CH₄) y el óxido nitroso (N₂O), emitidos principalmente por la quema de combustibles fósiles, la ganadería y la deforestación.' },
+          { letra: 'C', texto: 'El vapor de agua, que aumenta con el calentamiento y retroalimenta el efecto invernadero de forma exclusiva.' },
+          { letra: 'D', texto: 'El dióxido de azufre (SO₂), que es el gas más contaminante producido por las industrias.' },
+        ],
+        clave: 'B',
+        justificacion: 'Los principales gases de efecto invernadero de origen antrópico son: CO₂ (combustión de fósiles, deforestación), CH₄ (ganadería, rellenos sanitarios, extracción de gas), N₂O (fertilizantes nitrogenados, agricultura). El O₂ y N₂ (opción A) no absorben radiación infrarroja. El vapor de agua (opción C) actúa como retroalimentación pero no es la causa principal del aumento antrópico. El SO₂ (opción D) es un contaminante relevante pero tiene efecto de enfriamiento (refleja radiación solar) más que calentamiento.',
+        competencia: 'indagacion',
+        componente: 'cts',
+      },
+
+      // 49. Entorno físico + uso-conocimiento (presión y flotabilidad)
+      {
+        id: 'nat-p-s9-49',
+        enunciado: 'Un objeto sumergido en agua experimenta una fuerza hacia arriba llamada empuje (principio de Arquímedes). Si un objeto con densidad menor que la del agua flota, ¿por qué los barcos de acero (cuya densidad es mayor que la del agua) no se hunden?',
+        opciones: [
+          { letra: 'A', texto: 'El acero de los barcos tiene una densidad diferente al acero sólido debido a procesos especiales.' },
+          { letra: 'B', texto: 'Los barcos flotan porque su forma hueca les da una densidad promedio (barco + aire interior) menor que la del agua; el volumen de agua desplazada por el casco genera un empuje mayor que el peso del barco.' },
+          { letra: 'C', texto: 'Los motores de los barcos generan una fuerza hacia arriba que contrarresta el peso.' },
+          { letra: 'D', texto: 'Los barcos flotan porque el agua del mar tiene mayor densidad que el agua dulce.' },
+        ],
+        clave: 'B',
+        justificacion: 'La clave está en que la densidad relevante es la del sistema completo (barco + aire en su interior), no solo la del material de construcción. Un barco tiene una gran cantidad de aire en su casco, lo que hace que su densidad promedio sea menor que la del agua. Por el principio de Arquímedes, el empuje = peso del fluido desplazado; si el barco desplaza un volumen de agua cuyo peso supera el peso total del barco, el barco flota. La opción A es incorrecta desde el punto de vista físico. La opción C confunde propulsión con flotabilidad. La opción D es una consideración menor (el agua salada sí ayuda ligeramente, pero no es la razón principal).',
+        competencia: 'uso-conocimiento',
+        componente: 'entorno-fisico',
+      },
+
+      // 50. Entorno vivo + uso-conocimiento (biotecnología — OGM)
+      {
+        id: 'nat-p-s9-50',
+        enunciado: 'Los organismos genéticamente modificados (OGM) son aquellos cuyo material genético ha sido alterado mediante ingeniería genética. El maíz Bt es un ejemplo: contiene un gen de la bacteria Bacillus thuringiensis que produce una proteína insecticida. Desde una perspectiva CTS, ¿cuál de las siguientes afirmaciones refleja mejor un análisis equilibrado de los OGM?',
+        opciones: [
+          { letra: 'A', texto: 'Los OGM son completamente seguros y deben usarse sin restricciones porque aumentan la producción agrícola.' },
+          { letra: 'B', texto: 'Los OGM deben prohibirse porque son venenos producidos en laboratorio.' },
+          { letra: 'C', texto: 'Los OGM ofrecen beneficios (mayor rendimiento, resistencia a plagas, menor uso de pesticidas) pero también plantean preocupaciones sobre biodiversidad, dependencia de las semillas y posibles efectos en la salud que deben regularse y evaluarse continuamente.' },
+          { letra: 'D', texto: 'Los OGM son exactamente iguales a las plantas naturales, por lo que no requieren ningún tipo de regulación especial.' },
+        ],
+        clave: 'C',
+        justificacion: 'El análisis CTS (Ciencia, Tecnología y Sociedad) requiere considerar los beneficios y riesgos de la tecnología en contexto. Los OGM han demostrado beneficios agronómicos, pero también generan preguntas legítimas sobre biodiversidad (contaminación genética), propiedad intelectual de semillas, impactos en ecosistemas y salud a largo plazo. La regulación basada en evidencia científica es la postura más sólida. La opción A ignora los riesgos. La opción B rechaza sin evidencia clara. La opción D niega diferencias relevantes que justifican la regulación.',
+        competencia: 'uso-conocimiento',
+        componente: 'cts',
+      },
+
+      // 51. Entorno físico + explicación (reacciones exotérmicas y endotérmicas)
+      {
+        id: 'nat-p-s9-51',
+        enunciado: 'Al encender una vela, la cera se derrite y arde, liberando calor y luz. Al disolver nitrato de amonio (NH₄NO₃) en agua, la temperatura de la solución disminuye notablemente. ¿Cómo se clasifican estas reacciones?',
+        opciones: [
+          { letra: 'A', texto: 'Ambas son reacciones exotérmicas porque producen un cambio de estado.' },
+          { letra: 'B', texto: 'La combustión de la cera es exotérmica (libera calor); la disolución de nitrato de amonio es endotérmica (absorbe calor del ambiente).' },
+          { letra: 'C', texto: 'La combustión de la cera es endotérmica porque necesita una llama para iniciarse.' },
+          { letra: 'D', texto: 'Ambas son reacciones endotérmicas porque requieren energía de activación.' },
+        ],
+        clave: 'B',
+        justificacion: 'Una reacción exotérmica libera energía (generalmente calor) al entorno, como la combustión, que calienta y da luz. Una reacción endotérmica absorbe energía del entorno, por lo que la temperatura de los alrededores baja; la disolución de nitrato de amonio en agua es un ejemplo clásico (base de las bolsas frías de primeros auxilios). La energía de activación (opción D) es la energía necesaria para iniciar cualquier reacción, no su clasificación. La opción C confunde la energía de activación con el balance energético total.',
+        competencia: 'explicacion',
+        componente: 'entorno-fisico',
+      },
+
+      // 52. Entorno vivo + indagación (clasificación de los seres vivos)
+      {
+        id: 'nat-p-s9-52',
+        enunciado: 'Un biólogo encuentra un organismo unicelular con núcleo definido, que se mueve mediante flagelos y puede realizar fotosíntesis. ¿A qué reino pertenece este organismo?',
+        opciones: [
+          { letra: 'A', texto: 'Reino Animal, porque tiene flagelos y puede moverse.' },
+          { letra: 'B', texto: 'Reino Vegetal, porque puede realizar fotosíntesis.' },
+          { letra: 'C', texto: 'Reino Protista (Protoctista), porque es unicelular con núcleo definido (eucariota) y combina características de animales y plantas.' },
+          { letra: 'D', texto: 'Reino Monera, porque es unicelular y microscópico.' },
+        ],
+        clave: 'C',
+        justificacion: 'El organismo descrito (unicelular, eucariota, con flagelos y capaz de fotosíntesis) corresponde a un protista, como la Euglena viridis. Los protistas son organismos eucariotas (núcleo definido) que no se clasifican en el reino Animal, Vegetal o Fungi. Muchos combinan características de varios reinos. El reino Animal (opción A) incluye organismos multicelulares heterótrofos. El reino Vegetal (opción B) incluye organismos multicelulares fotosintéticos. El reino Monera (opción D) incluye procariotas como bacterias y cianobacterias.',
+        competencia: 'indagacion',
+        componente: 'entorno-vivo',
+      },
+
+      // 53. Entorno físico + uso-conocimiento (luz — reflexión y refracción)
+      {
+        id: 'nat-p-s9-53',
+        enunciado: 'Cuando un pez en un acuario ve a un observador fuera del agua, y el observador ve al pez, ambas imágenes aparecen desplazadas de la posición real. ¿Cuál es el fenómeno responsable y cómo ocurre?',
+        opciones: [
+          { letra: 'A', texto: 'La reflexión total interna: la luz no puede salir del agua.' },
+          { letra: 'B', texto: 'La refracción: la luz cambia de velocidad al pasar del agua al aire (o viceversa), cambiando su dirección. El índice de refracción del agua es mayor que el del aire, haciendo que los objetos aparezcan desplazados.' },
+          { letra: 'C', texto: 'La dispersión: el agua descompone la luz en sus colores, distorsionando la imagen.' },
+          { letra: 'D', texto: 'La absorción: el agua absorbe parte de la luz, haciendo que el objeto parezca estar en otro lugar.' },
+        ],
+        clave: 'B',
+        justificacion: 'La refracción es el cambio de dirección de la luz cuando pasa de un medio a otro con diferente índice de refracción. El agua (n ≈ 1,33) es más densa ópticamente que el aire (n = 1), por lo que la luz se dobla al cruzar la interfaz agua-aire. Esto hace que los objetos vistos a través de la superficie del agua parezcan estar en posiciones diferentes a las reales. La reflexión total interna (opción A) ocurre cuando la luz va del medio más denso al menos denso con ángulo mayor al crítico: en ese caso no sale nada, lo cual no es el fenómeno descrito. La dispersión (opción C) separa colores pero no desplaza imágenes enteras.',
+        competencia: 'uso-conocimiento',
+        componente: 'entorno-fisico',
+      },
+
+      // 54. Entorno vivo + explicación (ecosistemas — ciclo del carbono)
+      {
+        id: 'nat-p-s9-54',
+        enunciado: 'El ciclo del carbono describe cómo el carbono se mueve entre la atmósfera, los seres vivos y la litosfera. ¿Cuál de los siguientes procesos extrae carbono de la atmósfera (CO₂) y lo incorpora a la materia orgánica?',
+        opciones: [
+          { letra: 'A', texto: 'La respiración aeróbica de todos los organismos.' },
+          { letra: 'B', texto: 'La fotosíntesis de las plantas y otros organismos fotosintéticos.' },
+          { letra: 'C', texto: 'La descomposición de la materia orgánica por bacterias y hongos.' },
+          { letra: 'D', texto: 'La quema de combustibles fósiles.' },
+        ],
+        clave: 'B',
+        justificacion: 'La fotosíntesis es el proceso por el que los productores primarios (plantas, algas, cianobacterias) capturan CO₂ de la atmósfera y lo convierten en glucosa y otros compuestos orgánicos usando energía solar: 6CO₂ + 6H₂O + luz → C₆H₁₂O₆ + 6O₂. Este proceso fija carbono atmosférico en la materia orgánica. La respiración (opción A) y la descomposición (opción C) liberan CO₂ a la atmósfera. La quema de combustibles fósiles (opción D) también libera CO₂ de forma masiva.',
+        competencia: 'explicacion',
+        componente: 'entorno-vivo',
+      },
+
+      // 55. Entorno físico + explicación (trabajo y energía mecánica)
+      {
+        id: 'nat-p-s9-55',
+        enunciado: 'Un ascensor levanta una carga de 500 kg hasta una altura de 20 m en 10 segundos. ¿Cuál es el trabajo realizado y cuál es la potencia del motor del ascensor? (g = 10 m/s²)',
+        opciones: [
+          { letra: 'A', texto: 'Trabajo = 100.000 J; potencia = 10.000 W.' },
+          { letra: 'B', texto: 'Trabajo = 100.000 J; potencia = 1.000.000 W.' },
+          { letra: 'C', texto: 'Trabajo = 10.000 J; potencia = 1.000 W.' },
+          { letra: 'D', texto: 'Trabajo = 100.000 J; potencia = 100.000 W.' },
+        ],
+        clave: 'A',
+        justificacion: 'Trabajo = Fuerza × distancia = m × g × h = 500 kg × 10 m/s² × 20 m = 100.000 J. Potencia = Trabajo / tiempo = 100.000 J / 10 s = 10.000 W = 10 kW. La opción B calcula la potencia como W = T² / t. La opción C usa solo m × h sin la gravedad. La opción D iguala potencia a trabajo.',
+        competencia: 'explicacion',
+        componente: 'entorno-fisico',
+      },
+
+      // 56. Entorno vivo + uso-conocimiento (sistema endocrino — diabetes)
+      {
+        id: 'nat-p-s9-56',
+        enunciado: 'La insulina es una hormona producida por el páncreas que permite que las células del cuerpo absorban glucosa de la sangre para obtener energía. En la diabetes tipo 1, el sistema inmune destruye las células que producen insulina. ¿Cuál es la consecuencia fisiológica directa de esta condición?',
+        opciones: [
+          { letra: 'A', texto: 'Las células absorben demasiada glucosa, lo que produce hipoglucemia crónica.' },
+          { letra: 'B', texto: 'Sin insulina, la glucosa no puede entrar a las células y se acumula en la sangre (hiperglucemia), mientras las células no obtienen energía suficiente.' },
+          { letra: 'C', texto: 'El páncreas produce más enzimas digestivas para compensar la falta de insulina.' },
+          { letra: 'D', texto: 'El hígado produce glucosa adicional para compensar la falta de insulina.' },
+        ],
+        clave: 'B',
+        justificacion: 'La insulina actúa como "llave" que abre las células para permitir el ingreso de glucosa. Sin insulina, la glucosa permanece en la sangre (hiperglucemia) y las células no pueden obtener energía de la glucosa, entrando en un estado de "hambre energética" a pesar de la abundancia de glucosa en sangre. Las células entonces pueden recurrir a metabolizar grasas y proteínas (produciendo cuerpos cetónicos). La opción A describe lo contrario (hipoglucemia). La opción C es una respuesta compensatoria incorrecta. La opción D ocurre en la regulación normal pero no compensa la falta de insulina.',
+        competencia: 'uso-conocimiento',
+        componente: 'entorno-vivo',
+      },
+
+      // 57. Entorno físico + uso-conocimiento (electromagnetismo — inducción)
+      {
+        id: 'nat-p-s9-57',
+        enunciado: 'Los generadores eléctricos transforman energía mecánica en energía eléctrica mediante el principio de inducción electromagnética. ¿Cuál de las siguientes afirmaciones describe correctamente este principio?',
+        opciones: [
+          { letra: 'A', texto: 'Un conductor en movimiento dentro de un campo magnético induce una corriente eléctrica en el conductor.' },
+          { letra: 'B', texto: 'Un campo eléctrico fuerte crea automáticamente un campo magnético sin necesidad de movimiento.' },
+          { letra: 'C', texto: 'Los imanes permanentes generan corriente eléctrica constante sin necesidad de movimiento relativo.' },
+          { letra: 'D', texto: 'La corriente eléctrica solo se puede inducir en materiales magnéticos como el hierro.' },
+        ],
+        clave: 'A',
+        justificacion: 'La ley de inducción electromagnética de Faraday establece que cuando un conductor se mueve en un campo magnético (o cuando el campo magnético cambia alrededor de un conductor), se genera una fuerza electromotriz (FEM) que produce una corriente eléctrica. Este es el principio de los generadores, alternadores y transformadores. Las opciones B, C y D malinterpretan las condiciones necesarias para la inducción: se requiere movimiento relativo entre el conductor y el campo magnético.',
+        competencia: 'uso-conocimiento',
+        componente: 'entorno-fisico',
+      },
+
+      // 58. Entorno vivo + explicación (biomas y distribución)
+      {
+        id: 'nat-p-s9-58',
+        enunciado: 'Los biomas son grandes conjuntos de ecosistemas caracterizados por el mismo tipo de vegetación y clima. En Colombia coexisten varios biomas: selva tropical, sabana, páramo, desierto y manglar. ¿Qué factores determinan principalmente la distribución de los biomas en el territorio colombiano?',
+        opciones: [
+          { letra: 'A', texto: 'Principalmente la altitud sobre el nivel del mar y la precipitación, que determinan la temperatura y la disponibilidad de agua.' },
+          { letra: 'B', texto: 'Principalmente la actividad humana, que ha creado los diferentes biomas a lo largo de los siglos.' },
+          { letra: 'C', texto: 'Principalmente la presencia de ríos y cuerpos de agua, que determinan qué plantas pueden crecer.' },
+          { letra: 'D', texto: 'Principalmente los minerales del suelo, que determinan qué especies animales pueden vivir.' },
+        ],
+        clave: 'A',
+        justificacion: 'Los factores abióticos que más influyen en la distribución de los biomas son la temperatura (determinada principalmente por la altitud y la latitud) y la precipitación (distribución de lluvias). En Colombia, la variación de altitud desde el nivel del mar hasta los 5.700 m del Nevado del Huila determina los pisos térmicos (cálido, templado, frío, páramo, nival), cada uno con su comunidad de organismos característica. La precipitación diferencia áreas de selva húmeda (Chocó) de sabanas y desiertos (La Guajira). La actividad humana modifica los biomas pero no los crea. Los ríos y minerales son factores secundarios.',
+        competencia: 'explicacion',
+        componente: 'entorno-vivo',
+      },
+
+      // 59. CTS + uso-conocimiento (nanotecnología)
+      {
+        id: 'nat-p-s9-59',
+        enunciado: 'La nanotecnología trabaja con materiales a escala nanométrica (1 nanómetro = 10⁻⁹ m). A esta escala, los materiales pueden tener propiedades físicas y químicas muy diferentes a las que tienen en tamaño macroscópico. Por ejemplo, el oro en nanopartículas puede ser rojo o morado, no dorado. ¿Cuál es la aplicación más prometedora de la nanotecnología en medicina?',
+        opciones: [
+          { letra: 'A', texto: 'Fabricar robots macroscópicos para cirugías de alta precisión.' },
+          { letra: 'B', texto: 'Desarrollar nanopartículas que puedan transportar medicamentos directamente a células cancerosas, minimizando los efectos secundarios.' },
+          { letra: 'C', texto: 'Crear nuevos tipos de sutura quirúrgica más resistentes.' },
+          { letra: 'D', texto: 'Reemplazar todos los medicamentos actuales con versiones nanotecnológicas más baratas.' },
+        ],
+        clave: 'B',
+        justificacion: 'Una de las aplicaciones más prometedoras de la nanotecnología en medicina es la entrega dirigida de fármacos: nanopartículas funcionalizadas pueden reconocer y unirse específicamente a células cancerosas (mediante anticuerpos en su superficie) y liberar el medicamento directamente allí, reduciendo la toxicidad sistémica que tienen los tratamientos convencionales como la quimioterapia. La opción A confunde nano con macro. La opción C es un uso de materiales avanzados, no específicamente de nanotecnología. La opción D es una sobregeneralización sin base científica.',
+        competencia: 'uso-conocimiento',
+        componente: 'cts',
+      },
+
+      // 60. Entorno vivo + explicación (evolución — evidencias)
+      {
+        id: 'nat-p-s9-60',
+        enunciado: 'Charles Darwin propuso la teoría de la evolución por selección natural. Entre las evidencias que la sustentan se encuentran los órganos vestigiales: estructuras que están reducidas o han perdido su función en una especie pero que eran funcionales en ancestros. ¿Cuál es un ejemplo de órgano vestigial en el ser humano?',
+        opciones: [
+          { letra: 'A', texto: 'El corazón, porque es más simple que el de otros mamíferos.' },
+          { letra: 'B', texto: 'El apéndice vermiforme y el músculo auricular (el que mueve las orejas), que son vestigios de estructuras funcionales en ancestros.' },
+          { letra: 'C', texto: 'El cerebro, que tiene partes que nunca usamos según la teoría del "10%".' },
+          { letra: 'D', texto: 'Los pulmones, porque los ancestros de los humanos vivían en el agua.' },
+        ],
+        clave: 'B',
+        justificacion: 'Los órganos vestigiales son evidencia de descendencia con modificación. El apéndice humano se cree que era parte de un sistema digestivo más extenso en ancestros herbívoros que necesitaban fermentar celulosa. El músculo auricular, que en la mayoría de humanos no puede mover las orejas pero sí en otros mamíferos, es otro ejemplo. La ballena también tiene vestigios de pelvis y fémur de cuando sus ancestros eran terrestres. La opción A es incorrecta. La opción C se refiere a un mito científico (sí usamos más del 10% del cerebro). La opción D invierte la historia evolutiva de los tetrápodos.',
+        competencia: 'explicacion',
+        componente: 'entorno-vivo',
+      },
     ],
 
     // ---------------------------------------------------------
@@ -1978,6 +3418,486 @@ const PREGUNTAS_ICFES = {
         competencia: 'indagacion',
         componente: 'cts',
       },
+
+      // 31. Entorno vivo + explicación (herencia cuantitativa y epigenética)
+      {
+        id: 'nat-p-s11-31',
+        enunciado: 'La epigenética estudia cambios en la expresión génica que no implican cambios en la secuencia de ADN. Se ha demostrado que factores ambientales como la dieta, el estrés o la exposición a tóxicos pueden "encender" o "apagar" genes mediante mecanismos como la metilación del ADN. ¿Cuál es la implicación más significativa de la epigenética para la medicina?',
+        opciones: [
+          { letra: 'A', texto: 'Que el ADN puede reescribirse completamente con intervenciones dietéticas.' },
+          { letra: 'B', texto: 'Que algunas enfermedades pueden surgir por patrones epigenéticos alterados y que ciertos tratamientos podrían revertir estos patrones sin modificar el ADN.' },
+          { letra: 'C', texto: 'Que la epigenética demuestra que el ambiente no afecta la expresión de los genes.' },
+          { letra: 'D', texto: 'Que los genes adquiridos durante la vida de un organismo se pueden transmitir a la descendencia (lamarckismo).' },
+        ],
+        clave: 'B',
+        justificacion: 'La epigenética ha demostrado que la regulación de la expresión génica es más dinámica de lo que se pensaba. Enfermedades como el cáncer tienen perfiles epigenéticos aberrantes (metilación anormal de genes supresores de tumores). Los fármacos epigenéticos (inhibidores de desacetilasas o demetilasas) pueden revertir estos patrones. La opción A exagera: la dieta puede influir pero no "reescribir" el ADN. La opción C contradice la base de la epigenética. La opción D malinterpreta: las marcas epigenéticas pueden transmitirse en algunos casos, pero esto no es lamarckismo clásico.',
+        competencia: 'explicacion',
+        componente: 'entorno-vivo',
+      },
+
+      // 32. Entorno físico + razonamiento (termodinámica — entropía)
+      {
+        id: 'nat-p-s11-32',
+        enunciado: 'El segundo principio de la termodinámica establece que en un proceso espontáneo, la entropía total del universo siempre aumenta. ¿Cuál de los siguientes ejemplos ilustra mejor este principio?',
+        opciones: [
+          { letra: 'A', texto: 'Un cubo de hielo que absorbe calor del entorno y se derrite, aumentando el desorden del sistema.' },
+          { letra: 'B', texto: 'Una planta que crece y organiza moléculas simples en estructuras complejas, disminuyendo su entropía local.' },
+          { letra: 'C', texto: 'El funcionamiento de un motor de combustión perfectamente eficiente sin pérdida de calor.' },
+          { letra: 'D', texto: 'El movimiento de las moléculas de un gas a temperatura constante sin cambio de presión.' },
+        ],
+        clave: 'A',
+        justificacion: 'El derretimiento del hielo ilustra el segundo principio: el hielo (estructura ordenada) absorbe calor del entorno y se convierte en agua líquida (mayor desorden molecular). La entropía del sistema (hielo → agua) aumenta, y aunque el entorno pierde calor, la entropía total del universo aumenta. La opción B describe una disminución local de entropía (posible), pero la planta requiere energía solar y libera calor, aumentando la entropía total del universo. La opción C viola el segundo principio (ningún motor puede ser 100% eficiente). La opción D no ilustra un cambio de entropía.',
+        competencia: 'razonamiento',
+        componente: 'entorno-fisico',
+      },
+
+      // 33. Entorno vivo + uso-conocimiento (inmunología avanzada — anticuerpos monoclonales)
+      {
+        id: 'nat-p-s11-33',
+        enunciado: 'Los anticuerpos monoclonales son proteínas producidas en laboratorio que reconocen específicamente un antígeno particular. Se usan en el tratamiento de ciertos cánceres (como el trastuzumab para cáncer de mama HER2+) y enfermedades autoinmunes. ¿Cuál es el principio biológico que hace posible esta especificidad?',
+        opciones: [
+          { letra: 'A', texto: 'Los anticuerpos son inespecíficos y actúan sobre cualquier célula del cuerpo.' },
+          { letra: 'B', texto: 'La región variable del anticuerpo tiene una forma tridimensional complementaria a un epítopo específico del antígeno, permitiendo una unión altamente específica tipo "llave-cerradura".' },
+          { letra: 'C', texto: 'Los anticuerpos monoclonales son más grandes que los policlonales, lo que les permite cubrir más antígenos.' },
+          { letra: 'D', texto: 'Los anticuerpos actúan como enzimas que descomponen los antígenos en aminoácidos.' },
+        ],
+        clave: 'B',
+        justificacion: 'La especificidad de los anticuerpos se debe a la complementariedad estructural entre la región variable (Fab) del anticuerpo y el epítopo específico del antígeno. Esta región variable es única para cada tipo de anticuerpo y ha sido seleccionada evolutivamente (o diseñada en laboratorio) para reconocer únicamente su antígeno diana. Este principio de reconocimiento molecular específico es análogo al modelo llave-cerradura de las enzimas. Los anticuerpos monoclonales son producidos por un único clon de células B, garantizando especificidad uniforme.',
+        competencia: 'uso-conocimiento',
+        componente: 'entorno-vivo',
+      },
+
+      // 34. CTS + indagación (energía nuclear — fisión y fusión)
+      {
+        id: 'nat-p-s11-34',
+        enunciado: 'La fisión nuclear (utilizada en centrales nucleares actuales) divide núcleos pesados liberando energía. La fusión nuclear (que alimenta las estrellas y que aún no se domina comercialmente) une núcleos ligeros liberando mucha más energía. ¿Cuál sería la ventaja principal de la fusión nuclear respecto a la fisión para la producción de energía?',
+        opciones: [
+          { letra: 'A', texto: 'La fisión produce más energía por kilogramo de combustible.' },
+          { letra: 'B', texto: 'La fusión usa hidrógeno (abundante en el agua de mar) como combustible y no produce residuos radiactivos de larga vida, lo que la hace más limpia y con combustible prácticamente ilimitado.' },
+          { letra: 'C', texto: 'La fusión ya está disponible comercialmente y es más barata que las energías renovables.' },
+          { letra: 'D', texto: 'La fusión solo funciona en el espacio exterior, no en condiciones terrestres.' },
+        ],
+        clave: 'B',
+        justificacion: 'Las ventajas teóricas de la fusión nuclear sobre la fisión son: (1) El combustible principal es el deuterio (H-2), extraíble del agua de mar en cantidades prácticamente ilimitadas. (2) No produce residuos radiactivos de larga vida como la fisión. (3) Libera más energía por unidad de masa que la fisión. El principal desafío es mantener las condiciones de temperatura y presión extremas (plasma a >100 millones °C) necesarias para la fusión. La opción A es incorrecta (la fusión produce más). La opción C no corresponde al estado actual de la tecnología. La opción D es incorrecta: proyectos como ITER en Francia buscan lograrla en la Tierra.',
+        competencia: 'indagacion',
+        componente: 'cts',
+      },
+
+      // 35. Entorno físico + explicación (mecánica cuántica — dualidad onda-partícula)
+      {
+        id: 'nat-p-s11-35',
+        enunciado: 'El principio de dualidad onda-partícula establece que objetos como el electrón pueden comportarse tanto como onda (interfieren y difractan) como partícula (colisionan y tienen posición). ¿Cuál de los siguientes experimentos demostró el comportamiento ondulatorio del electrón?',
+        opciones: [
+          { letra: 'A', texto: 'El experimento de Millikan, que midió la carga del electrón.' },
+          { letra: 'B', texto: 'El experimento de Davisson y Germer, que observó la difracción de electrones en una red cristalina.' },
+          { letra: 'C', texto: 'El experimento de Thomson, que descubrió el electrón como partícula cargada.' },
+          { letra: 'D', texto: 'El experimento de Rutherford, que descubrió el núcleo atómico.' },
+        ],
+        clave: 'B',
+        justificacion: 'En 1927, Davisson y Germer dirigieron un haz de electrones contra una superficie de níquel y observaron patrones de difracción (característica ondulatoria), confirmando la predicción de De Broglie de que las partículas materiales tienen asociada una longitud de onda. Este experimento fue fundamental para el desarrollo de la mecánica cuántica. El experimento de Millikan (A) midió la carga elemental. Thomson (C) identificó el electrón como partícula negativa. Rutherford (D) describió el núcleo atómico con su experimento de dispersión de partículas alfa.',
+        competencia: 'explicacion',
+        componente: 'entorno-fisico',
+      },
+
+      // 36. Entorno vivo + uso-conocimiento (bioquímica — enzimas y cofactores)
+      {
+        id: 'nat-p-s11-36',
+        enunciado: 'Las enzimas son catalizadores biológicos que aceleran reacciones químicas sin consumirse. Muchas enzimas requieren cofactores (iones metálicos como Zn²⁺, Fe²⁺) o coenzimas (moléculas orgánicas como vitaminas B) para ser funcionales. ¿Qué consecuencia tendría la deficiencia de hierro en el funcionamiento de enzimas que lo requieren?',
+        opciones: [
+          { letra: 'A', texto: 'Las enzimas se destruirían completamente y no quedaría ninguna actividad enzimática.' },
+          { letra: 'B', texto: 'Las enzimas que requieren hierro como cofactor reducirían su actividad catalítica, afectando las rutas metabólicas que dependen de ellas (como la cadena respiratoria mitocondrial, que usa citocromo c con hierro).' },
+          { letra: 'C', texto: 'Las enzimas usarían otro ion metálico en lugar del hierro, sin afectar su función.' },
+          { letra: 'D', texto: 'El organismo sintetizaría más enzimas para compensar la falta de cofactor.' },
+        ],
+        clave: 'B',
+        justificacion: 'El hierro es cofactor esencial de enzimas como los citocromos (cadena respiratoria), la catalasa y la peroxidasa. Sin el cofactor adecuado, la apoenzima (la parte proteica) no puede formar la holoenzima funcional, reduciendo la actividad catalítica. La deficiencia de hierro afecta la producción de ATP mitocondrial. Además, la hemoglobina (no enzima, pero proteína) requiere hierro para transportar oxígeno. La opción A exagera: hay otras enzimas que no requieren hierro. La opción C es incorrecta: la especificidad por el cofactor es alta. La opción D no compensa la falta de cofactor.',
+        competencia: 'uso-conocimiento',
+        componente: 'entorno-vivo',
+      },
+
+      // 37. Entorno físico + resolución (electrostática — ley de Coulomb)
+      {
+        id: 'nat-p-s11-37',
+        enunciado: 'Dos cargas eléctricas de +2 C y −3 C están separadas 3 m. La fuerza de Coulomb entre ellas es F = k × |q₁ × q₂| / r², con k = 9×10⁹ N·m²/C². ¿De qué tipo es la fuerza y cuánto vale aproximadamente?',
+        opciones: [
+          { letra: 'A', texto: 'Fuerza de repulsión; F = 6×10⁹ N.' },
+          { letra: 'B', texto: 'Fuerza de atracción; F = 6×10⁹ N.' },
+          { letra: 'C', texto: 'Fuerza de atracción; F = 2×10⁹ N.' },
+          { letra: 'D', texto: 'Fuerza de repulsión; F = 2×10⁹ N.' },
+        ],
+        clave: 'B',
+        justificacion: 'Cargas de signos opuestos se atraen (no repelen). F = k × |q₁ × q₂| / r² = 9×10⁹ × |2 × (−3)| / 3² = 9×10⁹ × 6 / 9 = 9×10⁹ × (2/3) = 6×10⁹ N. Las cargas + y − se atraen. La opción A calcula bien el módulo pero dice que es repulsión. La opción C divide incorrectamente (9×10⁹ × 6 / 9 = 6×10⁹, no 2×10⁹). La opción D combina el tipo de fuerza incorrecto con el valor incorrecto.',
+        competencia: 'resolucion',
+        componente: 'entorno-fisico',
+      },
+
+      // 38. Entorno vivo + indagación (microbioma humano)
+      {
+        id: 'nat-p-s11-38',
+        enunciado: 'El microbioma intestinal humano contiene aproximadamente 100 billones de microorganismos de más de 1.000 especies diferentes. Investigaciones recientes sugieren que la composición del microbioma influye en el sistema inmune, la digestión, la salud mental y el riesgo de ciertas enfermedades. Un investigador observa que pacientes con cierta enfermedad inflamatoria tienen una composición microbiana diferente a la de personas sanas. ¿Cuál es la limitación más importante de esta observación para establecer una causa-efecto?',
+        opciones: [
+          { letra: 'A', texto: 'La muestra de pacientes es siempre demasiado pequeña para sacar conclusiones.' },
+          { letra: 'B', texto: 'La correlación no implica causalidad: el microbioma alterado podría ser consecuencia (no causa) de la enfermedad, o ambos podrían ser causados por un tercer factor.' },
+          { letra: 'C', texto: 'El microbioma no se puede estudiar científicamente porque vive dentro del intestino.' },
+          { letra: 'D', texto: 'No hay limitaciones: si hay diferencia en el microbioma, definitivamente es la causa de la enfermedad.' },
+        ],
+        clave: 'B',
+        justificacion: 'El principal error en el razonamiento científico es confundir correlación con causalidad. En estudios observacionales del microbioma, existen tres posibilidades: (1) el microbioma alterado causa la enfermedad, (2) la enfermedad altera el microbioma, (3) un factor confusor (dieta, genética, medicamentos) causa ambos. Para establecer causalidad se necesitan experimentos controlados (trasplante de microbioma, modelos animales libres de gérmenes). La opción A es una preocupación metodológica válida pero no la limitación más fundamental. La opción C es incorrecta: existen técnicas de secuenciación metagnómica. La opción D es el error lógico que se pretende identificar.',
+        competencia: 'indagacion',
+        componente: 'entorno-vivo',
+      },
+
+      // 39. Entorno físico + uso-conocimiento (relatividad especial — introducción)
+      {
+        id: 'nat-p-s11-39',
+        enunciado: 'La teoría de la relatividad especial de Einstein (1905) establece que la velocidad de la luz en el vacío (c ≈ 3×10⁸ m/s) es la misma para todos los observadores, independientemente de su movimiento. Una consecuencia es que el tiempo pasa más despacio para un objeto en movimiento (dilatación temporal). ¿Cuál de las siguientes afirmaciones es una consecuencia correcta de esta teoría?',
+        opciones: [
+          { letra: 'A', texto: 'Un astronauta que viaja a velocidades cercanas a la luz envejece más rápido que los que quedan en la Tierra.' },
+          { letra: 'B', texto: 'Un astronauta que viaja a velocidades cercanas a la luz envejece más lentamente que los que quedan en la Tierra (paradoja de los gemelos).' },
+          { letra: 'C', texto: 'La relatividad especial aplica solo a objetos con masa cero, como los fotones.' },
+          { letra: 'D', texto: 'Ningún objeto puede moverse en el universo, porque todo es relativo.' },
+        ],
+        clave: 'B',
+        justificacion: 'La dilatación temporal es una consecuencia medida experimentalmente de la relatividad especial: los relojes en movimiento marchan más lentamente que los relojes en reposo (desde el punto de vista del observador en reposo). La "paradoja de los gemelos" ilustra que si uno viaja a velocidades relativistas y regresa, habrá envejecido menos que su gemelo en la Tierra. Esta predicción ha sido confirmada con relojes atómicos en aviones y satélites GPS (que requieren correcciones relativistas). La opción A invierte el efecto. La opción C es incorrecta: aplica a todas las partículas.',
+        competencia: 'uso-conocimiento',
+        componente: 'entorno-fisico',
+      },
+
+      // 40. Entorno vivo + explicación (sistema reproductivo y meiosis)
+      {
+        id: 'nat-p-s11-40',
+        enunciado: 'La meiosis produce células germinales (gametos) con la mitad del número cromosómico (n). ¿Por qué es esencial la meiosis para la reproducción sexual y qué sucedería si los gametos fueran diploides (2n)?',
+        opciones: [
+          { letra: 'A', texto: 'La meiosis es esencial porque produce gametos más pequeños y rápidos. Si fueran diploides, los gametos serían demasiado grandes para moverse.' },
+          { letra: 'B', texto: 'La meiosis produce gametos haploides (n) para que al fusionarse en la fecundación se restaure el número diploide (2n) de la especie. Si los gametos fueran diploides, cada generación duplicaría el número de cromosomas, siendo incompatible con la viabilidad del organismo.' },
+          { letra: 'C', texto: 'La meiosis es necesaria para que los gametos sean genéticamente idénticos a las células somáticas.' },
+          { letra: 'D', texto: 'Si los gametos fueran diploides, la reproducción sexual sería más eficiente.' },
+        ],
+        clave: 'B',
+        justificacion: 'La meiosis resuelve el problema matemático fundamental de la reproducción sexual: si los gametos fueran diploides (2n = 46 en humanos), la fecundación produciría células con 4n = 92 cromosomas, y cada generación subsequente duplicaría el número. Esto haría inviable la vida a corto plazo. La meiosis reduce el número cromosómico a la mitad (n = 23), de modo que al fusionarse dos gametos se restaura el número diploide (2n = 46) en cada generación. Además, el entrecruzamiento en meiosis I aumenta la variabilidad genética, esencial para la evolución.',
+        competencia: 'explicacion',
+        componente: 'entorno-vivo',
+      },
+
+      // 41. CTS + uso-conocimiento (impacto de plásticos en ecosistemas marinos)
+      {
+        id: 'nat-p-s11-41',
+        enunciado: 'Se estima que cada año llegan al océano entre 8 y 10 millones de toneladas de plásticos. Los microplásticos (fragmentos menores de 5 mm) han sido encontrados en el fondo del mar, en peces, en aves marinas y hasta en sangre humana. ¿Cuál es el principal mecanismo por el que los microplásticos se acumulan en organismos de niveles tróficos superiores?',
+        opciones: [
+          { letra: 'A', texto: 'Los microplásticos se fabrican en forma de alimento para que los peces los ingieran voluntariamente.' },
+          { letra: 'B', texto: 'A través de la bioacumulación y biomagnificación: organismos del nivel basal ingieren microplásticos; los depredadores que los consumen acumulan concentraciones aún mayores, con los contaminantes adsorbidos en el plástico.' },
+          { letra: 'C', texto: 'Los microplásticos se disuelven en el agua y los organismos los absorben directamente por osmosis.' },
+          { letra: 'D', texto: 'Los microplásticos solo afectan a los organismos que viven en la superficie del océano.' },
+        ],
+        clave: 'B',
+        justificacion: 'La bioacumulación (acumulación en un organismo) y la biomagnificación (aumento de concentración en niveles tróficos superiores) son mecanismos bien documentados para plásticos y sus contaminantes asociados (PCBs, pesticidas organoclorados). El zooplancton ingiere microplásticos confundiéndolos con alimento; los pequeños peces comen zooplancton contaminado; los peces grandes comen muchos peces pequeños; y así la concentración aumenta en cada nivel trófico. Los humanos, al final de la cadena, acumulan concentraciones relativamente altas. La opción C es incorrecta: los plásticos no se disuelven en agua.',
+        competencia: 'uso-conocimiento',
+        componente: 'cts',
+      },
+
+      // 42. Entorno físico + razonamiento (semiconductores y tecnología)
+      {
+        id: 'nat-p-s11-42',
+        enunciado: 'Los transistores son dispositivos semiconductores que actúan como interruptores o amplificadores en circuitos electrónicos. El silicio es el semiconductor más usado en la fabricación de chips. Un chip moderno puede contener miles de millones de transistores. ¿Cuál es la propiedad del silicio que lo hace adecuado como semiconductor?',
+        opciones: [
+          { letra: 'A', texto: 'El silicio es conductor perfecto de la electricidad a cualquier temperatura.' },
+          { letra: 'B', texto: 'El silicio es un semiconductor: su conductividad eléctrica puede modificarse añadiendo impurezas (dopaje), permitiendo controlar el flujo de corriente.' },
+          { letra: 'C', texto: 'El silicio es el material más duro de la corteza terrestre, lo que lo hace ideal para resistir presiones.' },
+          { letra: 'D', texto: 'El silicio actúa como aislante perfectamente a bajas temperaturas y conductor a altas temperaturas.' },
+        ],
+        clave: 'B',
+        justificacion: 'El silicio tiene una conductividad eléctrica intermedia entre conductores (como el cobre) y aislantes (como el plástico). Su propiedad más valiosa es que su conductividad puede controlarse mediante el dopaje: añadir impurezas tipo n (como fósforo, con electrones extra) o tipo p (como boro, con "huecos") permite crear uniones p-n que actúan como rectificadores, diodos y transistores. La opción A es incorrecta: el silicio puro tiene baja conductividad. La opción C describe el diamante, no el silicio. La opción D simplifica incorrectamente el comportamiento.',
+        competencia: 'razonamiento',
+        componente: 'entorno-fisico',
+      },
+
+      // 43. Entorno vivo + uso-conocimiento (neurociencia — sinapsis y neurotransmisores)
+      {
+        id: 'nat-p-s11-43',
+        enunciado: 'La transmisión sináptica es el proceso por el que una neurona transmite una señal a otra (o a un músculo). Los neurotransmisores liberados en la hendidura sináptica se unen a receptores en la neurona postsináptica. El GABA es el principal neurotransmisor inhibitorio del cerebro. ¿Cuál sería el efecto de un fármaco que bloquea los receptores de GABA?',
+        opciones: [
+          { letra: 'A', texto: 'El fármaco causaría sedación profunda, ya que bloquea la inhibición neural.' },
+          { letra: 'B', texto: 'El fármaco causaría hiperexcitabilidad neuronal (incluyendo posibles convulsiones), porque al bloquear la inhibición, las neuronas se activan sin control.' },
+          { letra: 'C', texto: 'El fármaco no tendría ningún efecto porque el GABA es un neurotransmisor secundario.' },
+          { letra: 'D', texto: 'El fármaco mejoraría la memoria porque el GABA interfiere con el aprendizaje.' },
+        ],
+        clave: 'B',
+        justificacion: 'El GABA (ácido gamma-aminobutírico) es el principal neurotransmisor inhibitorio: al unirse a sus receptores, hiperpolariza la neurona postsináptica y reduce su probabilidad de disparar. Si un fármaco bloquea los receptores de GABA (antagonista), la inhibición neural se reduce, causando hiperexcitabilidad. En casos extremos, esto puede provocar convulsiones (como la intoxicación con ciertos venenos como la bicuculina o el picrotoxin, que bloquean receptores GABA-A). Los ansiolíticos benzodiazepínicos hacen lo contrario: potencian el GABA para producir sedación (opción A), no bloquearlo.',
+        competencia: 'uso-conocimiento',
+        componente: 'entorno-vivo',
+      },
+
+      // 44. Entorno físico + explicación (óptica — lentes y dioptrías)
+      {
+        id: 'nat-p-s11-44',
+        enunciado: 'Un optómetra prescribe a un paciente lentes con potencia de −2,5 dioptrías. La potencia de una lente en dioptrías es P = 1/f, donde f es la distancia focal en metros. ¿Qué tipo de lente se recetó y cuál es su distancia focal?',
+        opciones: [
+          { letra: 'A', texto: 'Lente convergente; f = 0,4 m.' },
+          { letra: 'B', texto: 'Lente divergente; f = −0,4 m.' },
+          { letra: 'C', texto: 'Lente convergente; f = −2,5 m.' },
+          { letra: 'D', texto: 'Lente divergente; f = −2,5 m.' },
+        ],
+        clave: 'B',
+        justificacion: 'Una potencia negativa (−2,5 D) indica una lente divergente (cóncava), usada para corregir la miopía. La distancia focal: f = 1/P = 1/(−2,5) = −0,4 m. El signo negativo confirma que es divergente (la distancia focal es virtual, del mismo lado que el objeto). Las lentes convergentes tienen potencia positiva. Una miopía ocurre porque el ojo enfoca demasiado cerca y la lente divergente "aleja" el punto de convergencia. La opción A describe una lente convergente (positiva). La opción D aplica la potencia como distancia focal sin invertir.',
+        competencia: 'explicacion',
+        componente: 'entorno-fisico',
+      },
+
+      // 45. Entorno vivo + explicación (evolución — especiación)
+      {
+        id: 'nat-p-s11-45',
+        enunciado: 'La especiación alopátrica ocurre cuando una barrera geográfica (montaña, mar, río) separa una población en dos grupos aislados. Con el tiempo, los dos grupos acumulan suficientes diferencias genéticas para no poder reproducirse entre sí. ¿Cuál es el proceso evolutivo que impulsa estas diferencias genéticas acumuladas?',
+        opciones: [
+          { letra: 'A', texto: 'Únicamente las mutaciones aleatorias que ocurren a la misma velocidad en ambos grupos.' },
+          { letra: 'B', texto: 'La combinación de mutaciones, selección natural (diferentes presiones selectivas en cada ambiente), deriva genética y migración nula entre los grupos aislados.' },
+          { letra: 'C', texto: 'La hibridación entre los dos grupos que mezcla y diferencia el material genético.' },
+          { letra: 'D', texto: 'Solo la selección sexual, que favorece diferentes características estéticas en cada grupo.' },
+        ],
+        clave: 'B',
+        justificacion: 'La especiación alopátrica resulta de la acumulación de diferencias genéticas por múltiples mecanismos: (1) Mutaciones independientes en cada población. (2) Selección natural diferente según el ambiente de cada grupo (presiones selectivas distintas). (3) Deriva genética (cambios aleatorios en las frecuencias alélicas, más importantes en poblaciones pequeñas). (4) Ausencia de flujo génico entre los grupos. Con el tiempo, la incompatibilidad reproductiva puede volverse suficiente para constituir especies separadas. Solo las mutaciones (opción A) sería insuficiente sin los demás factores. La hibridación (opción C) uniría los grupos, no los diferenciaría.',
+        competencia: 'explicacion',
+        componente: 'entorno-vivo',
+      },
+
+      // 46. CTS + indagación (CRISPR-Cas9)
+      {
+        id: 'nat-p-s11-46',
+        enunciado: 'CRISPR-Cas9 es una tecnología de edición genética que permite cortar y modificar el ADN con gran precisión. Ha sido usada para desarrollar variedades de cultivos resistentes a enfermedades, tratar algunas enfermedades hereditarias y se investiga su uso para eliminar genes de mosquitos transmisores de malaria. ¿Cuál de los siguientes representa el dilema ético más complejo asociado al uso de CRISPR en seres humanos?',
+        opciones: [
+          { letra: 'A', texto: 'El costo de la tecnología, que la hace inaccesible para países en desarrollo.' },
+          { letra: 'B', texto: 'La edición de la línea germinal (embriones humanos): los cambios serían hereditarios, afectando a todas las generaciones futuras sin su consentimiento, y abre la puerta a la eugenesia.' },
+          { letra: 'C', texto: 'Que CRISPR podría eliminar el concepto de evolución natural.' },
+          { letra: 'D', texto: 'Que CRISPR no funciona en células humanas adultas.' },
+        ],
+        clave: 'B',
+        justificacion: 'El dilema ético más profundo de CRISPR en humanos es la edición germinal: modificar embriones significa que los cambios se heredarán permanentemente, afectando a seres que no han nacido y no pueden consentir. Esto abre la posibilidad de "diseñar bebés" con características elegidas por los padres (eugenesia), con enormes implicaciones para la justicia social e igualdad. Este fue el caso del científico chino He Jiankui (2018), que editó embriones humanos y fue sancionado. El costo (opción A) es un problema de equidad, pero no el dilema ético más complejo. La opción C es una exageración. La opción D es factualmente incorrecta.',
+        competencia: 'indagacion',
+        componente: 'cts',
+      },
+
+      // 47. Entorno físico + resolución (movimiento proyectil)
+      {
+        id: 'nat-p-s11-47',
+        enunciado: 'Un proyectil es lanzado horizontalmente desde una altura de 45 m con velocidad de 20 m/s. ¿Cuánto tiempo tarda en llegar al suelo y a qué distancia horizontal cae? (g = 10 m/s², desprecie la resistencia del aire)',
+        opciones: [
+          { letra: 'A', texto: 'Tiempo = 3 s; distancia horizontal = 60 m.' },
+          { letra: 'B', texto: 'Tiempo = 3 s; distancia horizontal = 30 m.' },
+          { letra: 'C', texto: 'Tiempo = 4,5 s; distancia horizontal = 90 m.' },
+          { letra: 'D', texto: 'Tiempo = 3 s; distancia horizontal = 90 m.' },
+        ],
+        clave: 'A',
+        justificacion: 'Movimiento vertical (caída libre): h = (1/2)gt² → 45 = (1/2)(10)t² → t² = 9 → t = 3 s. Movimiento horizontal (velocidad constante): x = vₓ × t = 20 × 3 = 60 m. El tiempo de vuelo solo depende de la altura inicial y la gravedad. La opción B calcula x = 20 × 1,5 = 30 (usa la mitad del tiempo). La opción C calcula t incorrectamente. La opción D usa una velocidad diferente para el cálculo horizontal.',
+        competencia: 'resolucion',
+        componente: 'entorno-fisico',
+      },
+
+      // 48. Entorno vivo + uso-conocimiento (metabolismo — ciclo de Krebs)
+      {
+        id: 'nat-p-s11-48',
+        enunciado: 'La glucólisis convierte una molécula de glucosa (C₆) en dos moléculas de piruvato (C₃) produciendo 2 ATP netos. En condiciones aeróbicas, el piruvato entra a la mitocondria y continúa el metabolismo oxidativo. ¿Qué proceso sigue inmediatamente al piruvato antes del ciclo de Krebs y qué molécula produce?',
+        opciones: [
+          { letra: 'A', texto: 'La gluconeogénesis: convierte el piruvato de regreso en glucosa.' },
+          { letra: 'B', texto: 'La decarboxilación oxidativa del piruvato (por el complejo piruvato deshidrogenasa): convierte el piruvato en acetil-CoA (2 carbonos), liberando CO₂ y produciendo NADH.' },
+          { letra: 'C', texto: 'La fermentación láctica: convierte el piruvato en ácido láctico para regenerar NAD⁺.' },
+          { letra: 'D', texto: 'La β-oxidación: convierte el piruvato en ácidos grasos para almacenar energía.' },
+        ],
+        clave: 'B',
+        justificacion: 'En condiciones aeróbicas, el piruvato es transportado a la mitocondria donde el complejo piruvato deshidrogenasa realiza su decarboxilación oxidativa: piruvato (3C) → acetil-CoA (2C) + CO₂ + NADH. El acetil-CoA (2 carbonos) es la molécula que entra al ciclo de Krebs. La gluconeogénesis (opción A) ocurre en el hígado para sintetizar glucosa, proceso diferente. La fermentación (opción C) ocurre en condiciones anaeróbicas. La β-oxidación (opción D) degrada ácidos grasos para producir acetil-CoA, no el piruvato.',
+        competencia: 'uso-conocimiento',
+        componente: 'entorno-vivo',
+      },
+
+      // 49. Entorno físico + uso-conocimiento (física de partículas — introducción)
+      {
+        id: 'nat-p-s11-49',
+        enunciado: 'El Modelo Estándar de física de partículas clasifica las partículas fundamentales en quarks (que forman protones y neutrones) y leptones (como el electrón y los neutrinos). El bosón de Higgs, descubierto en 2012 en el CERN, está asociado al campo de Higgs. ¿Cuál es el papel del campo de Higgs en el universo?',
+        opciones: [
+          { letra: 'A', texto: 'El campo de Higgs genera la fuerza gravitacional entre los planetas.' },
+          { letra: 'B', texto: 'El campo de Higgs es el mecanismo que confiere masa a ciertas partículas fundamentales (como los bosones W y Z y los quarks) al interactuar con ellas.' },
+          { letra: 'C', texto: 'El campo de Higgs es responsable de la velocidad de la luz y la limita a c ≈ 3×10⁸ m/s.' },
+          { letra: 'D', texto: 'El campo de Higgs es lo mismo que la antimateria y tiene carga negativa.' },
+        ],
+        clave: 'B',
+        justificacion: 'El bosón de Higgs es la partícula mensajera del campo de Higgs, que permea todo el universo. Las partículas adquieren masa al interactuar con este campo: cuanto más intensa es la interacción, mayor es la masa. Este mecanismo (ruptura espontánea de simetría) explica por qué los bosones W y Z (mediadores de la fuerza débil) tienen masa, mientras que el fotón no la tiene. La gravedad (opción A) está asociada al gravitón hipotético, no al Higgs. La velocidad de la luz (opción C) no tiene relación con el Higgs. La opción D confunde el bosón de Higgs con la antimateria.',
+        competencia: 'uso-conocimiento',
+        componente: 'entorno-fisico',
+      },
+
+      // 50. Entorno vivo + explicación (coevolución — mutualismo)
+      {
+        id: 'nat-p-s11-50',
+        enunciado: 'La coevolución es el proceso en que dos o más especies evolucionan en respuesta mutua a las presiones selectivas que se ejercen entre sí. Las flores de orquídeas y los insectos polinizadores han coevolucionado a tal punto que muchas orquídeas solo pueden ser polinizadas por una especie de insecto específica. ¿Cuál sería la consecuencia ecológica de la extinción de ese insecto polinizador?',
+        opciones: [
+          { letra: 'A', texto: 'La orquídea se adaptaría rápidamente a otro polinizador en pocas generaciones.' },
+          { letra: 'B', texto: 'La orquídea quedaría sin polinizador, no podría reproducirse sexualmente y enfrentaría riesgo de extinción, ilustrando cómo la pérdida de una especie puede desencadenar extinciones en cascada.' },
+          { letra: 'C', texto: 'La orquídea empezaría a reproducirse asexualmente sin ningún cambio.' },
+          { letra: 'D', texto: 'El ecosistema no se vería afectado porque otras flores compensarían la pérdida.' },
+        ],
+        clave: 'B',
+        justificacion: 'La especialización extrema producto de la coevolución genera dependencia mutua. Si el insecto polinizador único se extingue, la orquídea pierde su único mecanismo de polinización cruzada y no puede producir semillas viables, llevando a su probable extinción. Este fenómeno se conoce como extinción en cascada o co-extinción: la pérdida de una especie arrastra a las que dependen de ella. La opción A es incorrecta: la adaptación evolutiva toma miles de generaciones. La opción C es posible en algunas plantas pero no resuelve la falta de diversidad genética. La opción D minimiza el impacto de las interdependencias ecológicas.',
+        competencia: 'explicacion',
+        componente: 'entorno-vivo',
+      },
+
+      // 51. Entorno físico + razonamiento (astronomía — ciclo de vida de estrellas)
+      {
+        id: 'nat-p-s11-51',
+        enunciado: 'El Sol es una estrella de secuencia principal de tipo espectral G2. Dentro de aproximadamente 5.000 millones de años, agotará su hidrógeno central y se expandirá hasta convertirse en una gigante roja. ¿Qué proceso nuclear ocurre en el núcleo del Sol actualmente y qué lo diferencia de una gigante roja?',
+        opciones: [
+          { letra: 'A', texto: 'Actualmente el Sol realiza fisión nuclear de uranio; en la gigante roja quemará helio.' },
+          { letra: 'B', texto: 'Actualmente el Sol fusiona hidrógeno en helio (cadena protón-protón) en su núcleo; como gigante roja fusionará helio en carbono y oxígeno.' },
+          { letra: 'C', texto: 'Actualmente el Sol quema carbono; como gigante roja quemará oxígeno en silicio.' },
+          { letra: 'D', texto: 'No hay diferencia: el Sol siempre ha fusionado los mismos elementos.' },
+        ],
+        clave: 'B',
+        justificacion: 'El Sol genera energía por fusión nuclear de hidrógeno: cuatro protones se fusionan para formar un núcleo de helio-4, liberando energía (E = mc²). Cuando el hidrógeno central se agote, el núcleo se contraerá y calentará, y las capas externas se expandirán (gigante roja). La temperatura del núcleo permitirá entonces la fusión del helio en carbono y oxígeno (triple alfa y alfa + carbono). En estrellas más masivas que el Sol, este proceso continúa hasta el hierro. La fisión nuclear (opción A) no ocurre en el interior estelar. La opción C describe etapas de estrellas mucho más masivas.',
+        competencia: 'razonamiento',
+        componente: 'entorno-fisico',
+      },
+
+      // 52. Entorno vivo + uso-conocimiento (trasplante de órganos e histocompatibilidad)
+      {
+        id: 'nat-p-s11-52',
+        enunciado: 'En los trasplantes de órganos, el sistema inmune del receptor puede reconocer el órgano del donante como extraño y atacarlo (rechazo). ¿Cuál es el mecanismo inmunológico principal del rechazo y cómo se previene?',
+        opciones: [
+          { letra: 'A', texto: 'Los anticuerpos del receptor atacan el nuevo órgano; se previene con antihistamínicos.' },
+          { letra: 'B', texto: 'Los linfocitos T del receptor reconocen como extrañas las proteínas del complejo mayor de histocompatibilidad (CMH) del donante y desencadenan una respuesta inmune contra el órgano; se previene con medicamentos inmunosupresores y tipificación HLA compatible.' },
+          { letra: 'C', texto: 'El receptor produce toxinas que destruyen el órgano trasplantado; se previene con antibióticos.' },
+          { letra: 'D', texto: 'El rechazo ocurre porque el órgano del donante tiene diferente tipo de sangre; se previene haciendo coincidir los grupos sanguíneos.' },
+        ],
+        clave: 'B',
+        justificacion: 'El rechazo de trasplantes es principalmente mediado por células T: los linfocitos T citotóxicos (CD8+) reconocen las proteínas del CMH (o HLA, Antígenos Leucocitarios Humanos) del donante como ajenas y las atacan. Para minimizar el rechazo se hace tipificación HLA para encontrar donante compatible, y los receptores toman inmunosupresores (como ciclosporina, tacrolimus) de por vida. Los anticuerpos también participan en el rechazo hiperagudo (opción A, parcialmente cierta). El grupo sanguíneo (opción D) es uno de los factores a compatibilizar, pero no el mecanismo principal del rechazo celular.',
+        competencia: 'uso-conocimiento',
+        componente: 'entorno-vivo',
+      },
+
+      // 53. Entorno físico + uso-conocimiento (superconductividad)
+      {
+        id: 'nat-p-s11-53',
+        enunciado: 'Ciertos materiales llamados superconductores tienen resistencia eléctrica exactamente cero por debajo de una temperatura crítica (Tc). Esto significa que una corriente eléctrica en un anillo superconductor fluiría indefinidamente sin pérdida de energía. ¿Cuál es la principal aplicación tecnológica de la superconductividad en la actualidad?',
+        opciones: [
+          { letra: 'A', texto: 'Fabricar cables de transmisión eléctrica doméstica más baratos.' },
+          { letra: 'B', texto: 'Generar campos magnéticos extremadamente intensos para imanes en resonancias magnéticas médicas (MRI) y aceleradores de partículas como el LHC.' },
+          { letra: 'C', texto: 'Crear procesadores de computadora que funcionen a temperatura ambiente sin calentarse.' },
+          { letra: 'D', texto: 'Almacenar energía solar a bajo costo en baterías superconductoras.' },
+        ],
+        clave: 'B',
+        justificacion: 'La principal aplicación actual de la superconductividad son los electroimanes superconductores: bobinas de material superconductor (generalmente niobio-titanio a 4 K con helio líquido) que generan campos magnéticos de 1-20 Tesla, órdenes de magnitud superiores a los imanes convencionales. Esto es fundamental para las máquinas de resonancia magnética (MRI) en hospitales y para los imanes de guía de partículas en el LHC del CERN. La superconductividad a temperatura ambiente (opción A, C) aún no se ha logrado prácticamente. Las baterías superconductoras (opción D) no son la aplicación principal.',
+        competencia: 'uso-conocimiento',
+        componente: 'entorno-fisico',
+      },
+
+      // 54. CTS + explicación (farmacología y ensayos clínicos)
+      {
+        id: 'nat-p-s11-54',
+        enunciado: 'Antes de que un medicamento llegue al mercado, debe pasar por ensayos clínicos en cuatro fases. En la fase III se compara el nuevo medicamento contra un placebo en cientos o miles de pacientes, usando diseño doble ciego. ¿Por qué es crucial el diseño doble ciego en los ensayos clínicos?',
+        opciones: [
+          { letra: 'A', texto: 'Para que los pacientes no conozcan los efectos secundarios del medicamento y no se asusten.' },
+          { letra: 'B', texto: 'Para eliminar el sesgo de expectativa: ni el paciente (que podría responder al placebo si sabe que recibe el medicamento real) ni el médico evaluador (que podría inconscientemente registrar mejorías donde no las hay) conocen qué tratamiento recibe cada paciente.' },
+          { letra: 'C', texto: 'Para proteger la confidencialidad de los datos del laboratorio farmacéutico.' },
+          { letra: 'D', texto: 'Porque los pacientes no son capaces de reportar sus síntomas de forma objetiva.' },
+        ],
+        clave: 'B',
+        justificacion: 'El doble ciego es uno de los controles metodológicos más importantes en investigación clínica. El sesgo del placebo (mejoría por expectativa del paciente) y el sesgo del evaluador (tendencia a interpretar positivamente si sabe el tratamiento) son fuentes conocidas de error. El diseño doble ciego controla ambos simultáneamente: ni el paciente ni el evaluador saben qué tratamiento se está administrando hasta después del análisis estadístico. La opción A desvirtúa el propósito del doble ciego. La opción C es una preocupación diferente (confidencialidad). La opción D es incorrecta y desvalorizadora hacia los pacientes.',
+        competencia: 'explicacion',
+        componente: 'cts',
+      },
+
+      // 55. Entorno vivo + uso-conocimiento (proteómica y plegamiento de proteínas)
+      {
+        id: 'nat-p-s11-55',
+        enunciado: 'Las proteínas son polímeros de aminoácidos cuya función depende de su estructura tridimensional específica. El mal plegamiento de proteínas está asociado a enfermedades como el Alzheimer (acumulación de beta-amiloide) y el Parkinson (alfa-sinucleína). ¿Qué determina principalmente el plegamiento correcto de una proteína?',
+        opciones: [
+          { letra: 'A', texto: 'La secuencia de nucleótidos del ADN que codifica para la proteína, porque los nucleótidos tienen cargas que dictan el plegamiento.' },
+          { letra: 'B', texto: 'La secuencia de aminoácidos (estructura primaria) determina las interacciones fisicoquímicas (puentes de hidrógeno, interacciones hidrofóbicas, puentes disulfuro) que definen la estructura tridimensional; las chaperonas ayudan a que este proceso sea correcto.' },
+          { letra: 'C', texto: 'El plegamiento es completamente aleatorio y ocurre por azar cada vez que se sintetiza una proteína.' },
+          { letra: 'D', texto: 'Las proteínas se pliegan gracias a los ribosomas, que actúan como moldes para cada forma tridimensional posible.' },
+        ],
+        clave: 'B',
+        justificacion: 'El dogma central del plegamiento proteico (cristalizado por el trabajo de Anfinsen, Nobel 1972) es que la información para el plegamiento está contenida en la secuencia de aminoácidos (estructura primaria). Las interacciones fisicoquímicas entre los residuos de aminoácidos (hidrofóbicas, iónicas, puentes de H, disulfuro) dirigen el plegamiento hacia la conformación de mínima energía libre. Las chaperonas moleculares facilitan el plegamiento correcto y evitan la agregación. AlphaFold (IA, 2021) ha podido predecir estructuras proteicas solo con la secuencia. La opción C negaría la reproducibilidad de las estructuras. Los ribosomas (opción D) sintetizan pero no moldean el plegamiento.',
+        competencia: 'uso-conocimiento',
+        componente: 'entorno-vivo',
+      },
+
+      // 56. Entorno físico + explicación (cosmología — expansión del universo)
+      {
+        id: 'nat-p-s11-56',
+        enunciado: 'Edwin Hubble observó en 1929 que las galaxias se alejan de la Vía Láctea y que la velocidad de alejamiento es proporcional a la distancia: v = H₀ × d (Ley de Hubble). ¿Qué implica este hallazgo sobre el origen y la evolución del universo?',
+        opciones: [
+          { letra: 'A', texto: 'Que la Vía Láctea está en el centro del universo y todo se aleja de ella.' },
+          { letra: 'B', texto: 'Que el universo se está expandiendo, lo que implica que en el pasado todo estaba más concentrado y sugiere un origen en el Big Bang hace ~13.800 millones de años.' },
+          { letra: 'C', texto: 'Que el universo se está contrayendo y eventualmente colapsará en un Big Crunch.' },
+          { letra: 'D', texto: 'Que las galaxias se mueven en el espacio como objetos dentro de un contenedor fijo.' },
+        ],
+        clave: 'B',
+        justificacion: 'La recesión de las galaxias proporcional a la distancia implica que el universo se expande uniformemente, sin un centro especial (toda galaxia ve a las demás alejarse de ella). Si se invierte el tiempo, las galaxias debieron estar más cercanas en el pasado, convergiendo en una singularidad: el Big Bang, hace ~13.800 millones de años. La opción A comete el error de asumir que hay un centro del universo. La opción C (Big Crunch) fue una posibilidad teórica, pero las observaciones actuales indican que la expansión se acelera (energía oscura). La opción D confunde la expansión del espacio mismo con movimiento de objetos en el espacio.',
+        competencia: 'explicacion',
+        componente: 'entorno-fisico',
+      },
+
+      // 57. Entorno vivo + razonamiento (ecología de poblaciones)
+      {
+        id: 'nat-p-s11-57',
+        enunciado: 'El modelo logístico de crecimiento poblacional describe cómo una población crece hasta alcanzar la capacidad de carga (K) del ecosistema. La tasa de crecimiento es máxima cuando la población es K/2. Si la capacidad de carga de ciervos en un bosque es de 500 individuos, ¿cuándo crecerá más rápido la población de ciervos?',
+        opciones: [
+          { letra: 'A', texto: 'Cuando la población sea de 500 individuos (capacidad de carga).' },
+          { letra: 'B', texto: 'Cuando la población sea de 250 individuos (K/2).' },
+          { letra: 'C', texto: 'Cuando la población sea menor a 10 individuos (mínima competencia).' },
+          { letra: 'D', texto: 'La tasa de crecimiento es siempre constante, independientemente del tamaño poblacional.' },
+        ],
+        clave: 'B',
+        justificacion: 'En el modelo logístico dN/dt = rN(1 − N/K), la tasa de crecimiento N/dt es máxima cuando N = K/2 = 500/2 = 250 individuos. En este punto, hay suficiente individuo para reproducirse activamente pero también suficientes recursos disponibles para soportar el crecimiento. Cuando N → K (opción A), (1 − N/K) → 0 y el crecimiento se detiene. Con N muy pequeño (opción C), hay pocos reproductores aunque haya recursos abundantes. La opción D describe el crecimiento exponencial (modelo de Malthus), no el logístico.',
+        competencia: 'razonamiento',
+        componente: 'entorno-vivo',
+      },
+
+      // 58. Entorno físico + uso-conocimiento (química orgánica — polímeros)
+      {
+        id: 'nat-p-s11-58',
+        enunciado: 'Los polímeros son moléculas de gran masa molecular formadas por la repetición de unidades más pequeñas llamadas monómeros. El polietileno se forma por polimerización del etileno (CH₂=CH₂). ¿Cuál de las siguientes afirmaciones sobre los polímeros es CORRECTA?',
+        opciones: [
+          { letra: 'A', texto: 'Todos los polímeros son de origen sintético (fabricados por el ser humano).' },
+          { letra: 'B', texto: 'Las proteínas, el ADN y el almidón son ejemplos de biopolímeros naturales formados por aminoácidos, nucleótidos y glucosa respectivamente.' },
+          { letra: 'C', texto: 'Los polímeros siempre son sólidos a temperatura ambiente.' },
+          { letra: 'D', texto: 'El polietileno y el ADN tienen la misma estructura química porque ambos son polímeros.' },
+        ],
+        clave: 'B',
+        justificacion: 'Los polímeros pueden ser naturales (biopolímeros) o sintéticos. Las proteínas son polímeros de aminoácidos; el ADN y ARN son polinucleótidos; el almidón y la celulosa son polisacáridos (polímeros de glucosa). Los polímeros sintéticos incluyen polietileno, PVC, nylon, etc. La opción A es incorrecta: la naturaleza ha producido polímeros durante miles de millones de años. La opción C es incorrecta: hay polímeros líquidos (polímeros de silicona) y gaseosos. La opción D es incorrecta: el polietileno y el ADN son polímeros pero con estructuras, monómeros y funciones completamente diferentes.',
+        competencia: 'uso-conocimiento',
+        componente: 'entorno-fisico',
+      },
+
+      // 59. Entorno vivo + indagación (secuenciación genómica)
+      {
+        id: 'nat-p-s11-59',
+        enunciado: 'El Proyecto Genoma Humano (completado en 2003) determinó la secuencia completa de los ~3.200 millones de pares de bases del genoma humano. Sin embargo, solo el ~2% codifica para proteínas. El resto, llamado "ADN no codificante", incluye secuencias reguladoras, ARN no codificantes y elementos transponibles. ¿Por qué el Proyecto Genoma Humano fue relevante para la medicina personalizada?',
+        opciones: [
+          { letra: 'A', texto: 'Porque permitió clonar humanos idénticos usando la secuencia completa del genoma.' },
+          { letra: 'B', texto: 'Porque identificar variaciones genéticas individuales (SNPs) puede predisponer a ciertas enfermedades, permitiendo diagnósticos preventivos y tratamientos adaptados al perfil genético de cada paciente (farmacogenómica).' },
+          { letra: 'C', texto: 'Porque demostró que todos los humanos son genéticamente idénticos y, por tanto, responden igual a todos los medicamentos.' },
+          { letra: 'D', texto: 'Porque el proyecto creó un banco de órganos artificiales basado en la secuencia genómica.' },
+        ],
+        clave: 'B',
+        justificacion: 'El Proyecto Genoma Humano fue la base de la medicina de precisión: al conocer la secuencia completa y las variaciones individuales (SNPs y otros polimorfismos), es posible identificar predisposición genética a enfermedades como cáncer, cardiopatías o diabetes; predecir la respuesta a medicamentos (farmacogenómica: ej. si alguien metaboliza rápido o lento ciertos fármacos); y desarrollar terapias génicas. La opción A confunde secuenciación con clonación. La opción C es incorrecta: el genoma humano varía ~0,1% entre individuos, pero esas diferencias son médicamente relevantes. La opción D es una aplicación inexistente.',
+        competencia: 'indagacion',
+        componente: 'entorno-vivo',
+      },
+
+      // 60. CTS + razonamiento (inteligencia artificial en ciencias)
+      {
+        id: 'nat-p-s11-60',
+        enunciado: 'AlphaFold2 (DeepMind, 2021) es un sistema de inteligencia artificial que predice con alta precisión la estructura tridimensional de proteínas a partir de su secuencia de aminoácidos, un problema que tardaba años en resolverse experimentalmente. ¿Cuál es el impacto más significativo de AlphaFold en las ciencias de la vida?',
+        opciones: [
+          { letra: 'A', texto: 'AlphaFold reemplaza completamente la investigación experimental en biología molecular.' },
+          { letra: 'B', texto: 'AlphaFold democratiza el acceso a estructuras proteicas de interés médico y científico, acelerando el diseño de fármacos, la comprensión de enfermedades y la investigación básica a escala global.' },
+          { letra: 'C', texto: 'AlphaFold solo puede predecir estructuras de proteínas de bacterias, no de proteínas humanas.' },
+          { letra: 'D', texto: 'AlphaFold es una herramienta exclusiva de grandes farmacéuticas y no está disponible para la academia.' },
+        ],
+        clave: 'B',
+        justificacion: 'AlphaFold2 predijo con precisión atómica las estructuras de más de 200 millones de proteínas de prácticamente todos los organismos conocidos, poniéndolas a disposición gratuitamente (AlphaFold Protein Structure Database). Su impacto es inmenso: acelera el descubrimiento de fármacos (diseño racional de inhibidores), permite entender mecanismos de enfermedades a nivel molecular y abre vías de investigación que antes eran inaccesibles por limitaciones de tiempo y costo. La opción A exagera: la experimentación sigue siendo necesaria para validar predicciones. La opción C es incorrecta: predice proteínas de todos los organismos. La opción D es incorrecta: la base de datos es de acceso abierto.',
+        competencia: 'razonamiento',
+        componente: 'cts',
+      },
     ],
   },
 
@@ -2230,6 +4150,406 @@ const PREGUNTAS_ICFES = {
         competencia: 'pensamiento-sistemico',
         componente: 'argumentacion',
       },
+
+      // 16. Conocimientos sociales + pensamiento-social (organización territorial)
+      {
+        id: 'soc-p-s9-16',
+        enunciado: 'Colombia es un Estado unitario descentralizado dividido en 32 departamentos y un Distrito Capital (Bogotá). ¿Qué implica que Colombia sea un Estado "descentralizado"?',
+        opciones: [
+          { letra: 'A', texto: 'Que cada departamento puede declarar su independencia del gobierno central cuando lo considere conveniente.' },
+          { letra: 'B', texto: 'Que los departamentos y municipios tienen autonomía para gestionar algunos asuntos locales, elegir sus propios gobernantes y administrar recursos, aunque dentro del marco jurídico nacional.' },
+          { letra: 'C', texto: 'Que no existe un gobierno central en Colombia y cada región funciona de forma completamente independiente.' },
+          { letra: 'D', texto: 'Que la Constitución de 1991 eliminó todos los poderes del gobierno nacional y los transfirió a las regiones.' },
+        ],
+        clave: 'B',
+        justificacion: 'La descentralización en Colombia significa que los entes territoriales (departamentos y municipios) tienen autonomía política (elección de gobernadores y alcaldes), administrativa (gestión de servicios locales) y fiscal (recursos del sistema general de participaciones), pero dentro del marco jurídico nacional. No implica independencia ni eliminación del gobierno central. La opción A confunde descentralización con separatismo. La opción C describe un Estado federal extremo o confederación. La opción D exagera el alcance de la descentralización.',
+        competencia: 'pensamiento-social',
+        componente: 'conocimientos-sociales',
+      },
+
+      // 17. Multiperspectividad + interpretacion (Bogotazo)
+      {
+        id: 'soc-p-s9-17',
+        enunciado: 'El 9 de abril de 1948, tras el asesinato de Jorge Eliécer Gaitán en Bogotá, se desataron disturbios masivos conocidos como "El Bogotazo". Desde la perspectiva de los historiadores, ¿qué revelan estos eventos sobre la sociedad colombiana de mediados del siglo XX?',
+        opciones: [
+          { letra: 'A', texto: 'Que los colombianos eran intrínsecamente violentos y por eso los disturbios no tenían ninguna causa social.' },
+          { letra: 'B', texto: 'Que existían profundas tensiones sociales, políticas y económicas represadas que se desbordaron ante el asesinato del líder popular que encarnaba las esperanzas de cambio de los sectores excluidos.' },
+          { letra: 'C', texto: 'Que el único problema de Colombia era el enfrentamiento entre los partidos Liberal y Conservador, sin ninguna dimensión social o económica.' },
+          { letra: 'D', texto: 'Que los disturbios fueron planificados por el partido comunista para derrocar al gobierno.' },
+        ],
+        clave: 'B',
+        justificacion: 'El Bogotazo fue una expresión de las tensiones estructurales de la Colombia de mediados del siglo XX: desigualdad económica profunda, exclusión política bipartidista, concentración de la tierra y marginalización de los sectores populares. Gaitán representaba la posibilidad de un cambio que incluía a esos sectores. Su asesinato actuó como detonante de una explosión social contenida durante décadas. La opción A reduce el fenómeno a un rasgo de carácter. Las opciones C y D son simplificaciones o explicaciones conspiradoras sin sustento histórico.',
+        competencia: 'interpretacion',
+        componente: 'multiperspectividad',
+      },
+
+      // 18. Argumentación + pensamiento-sistemico (salud pública)
+      {
+        id: 'soc-p-s9-18',
+        enunciado: 'Un estudio muestra que en los municipios colombianos con mayor inversión en agua potable y saneamiento básico, la mortalidad infantil es significativamente menor. Un funcionario concluye: "Si queremos reducir la mortalidad infantil, solo necesitamos invertir en agua potable." ¿Cuál es la limitación de esta conclusión?',
+        opciones: [
+          { letra: 'A', texto: 'La conclusión es perfectamente válida porque el estudio demuestra que el agua potable salva vidas infantiles.' },
+          { letra: 'B', texto: 'La conclusión es demasiado simplista: aunque la correlación es real, la mortalidad infantil tiene múltiples causas (nutrición, acceso a salud, educación materna) y no puede resolverse con una sola intervención.' },
+          { letra: 'C', texto: 'La conclusión es incorrecta porque el agua potable no tiene ninguna relación con la mortalidad infantil.' },
+          { letra: 'D', texto: 'La conclusión es válida solo si se aplica en ciudades grandes, no en municipios pequeños.' },
+        ],
+        clave: 'B',
+        justificacion: 'La mortalidad infantil es un fenómeno multifactorial: depende del acceso a agua potable y saneamiento, pero también de la nutrición materna e infantil, el acceso a atención médica prenatal y postnatal, la educación de las madres y el nivel socioeconómico del hogar. Reducirla requiere intervenciones coordinadas en múltiples frentes. El funcionario comete el error de atribuir una sola causa a un fenómeno complejo, aunque el factor que identifica sí es importante. La opción A acepta la simplificación sin cuestionar. La opción C niega una relación científicamente comprobada. La opción D introduce una distinción sin sustento.',
+        competencia: 'pensamiento-sistemico',
+        componente: 'argumentacion',
+      },
+
+      // 19. Conocimientos sociales + pensamiento-social (diversidad cultural)
+      {
+        id: 'soc-p-s9-19',
+        enunciado: 'Colombia es uno de los países con mayor diversidad étnica y cultural de América Latina, con comunidades indígenas, afrocolombianas, raizales, palenqueras y mestizas. ¿Qué principio constitucional reconoce y protege esta diversidad?',
+        opciones: [
+          { letra: 'A', texto: 'El principio de homogeneización cultural, que busca que todos los colombianos adopten una sola identidad nacional.' },
+          { letra: 'B', texto: 'El principio de pluralismo étnico y cultural, consagrado en la Constitución de 1991, que reconoce y protege la diversidad de culturas, lenguas y tradiciones como riqueza de la nación.' },
+          { letra: 'C', texto: 'El principio de asimilación, que obliga a las comunidades étnicas a adoptar las costumbres de la cultura mayoritaria.' },
+          { letra: 'D', texto: 'El principio de segregación, que establece territorios separados e incomunicados para cada grupo étnico.' },
+        ],
+        clave: 'B',
+        justificacion: 'La Constitución de 1991 reconoce en su artículo 7° que "el Estado reconoce y protege la diversidad étnica y cultural de la Nación colombiana". Este principio de pluralismo se traduce en derechos específicos: territorios colectivos, consulta previa, educación intercultural bilingüe y reconocimiento de autoridades propias. Las opciones A, C y D describen políticas contrarias a la Constitución: la asimilación forzada y la segregación son formas de violación de derechos que Colombia ha experimentado históricamente y que la Constitución busca superar.',
+        competencia: 'pensamiento-social',
+        componente: 'conocimientos-sociales',
+      },
+
+      // 20. Multiperspectividad + interpretacion (educación)
+      {
+        id: 'soc-p-s9-20',
+        enunciado: 'Lee el siguiente argumento:\n\n"La educación privada es superior a la educación pública porque los colegios privados tienen mejores resultados en las pruebas Saber."\n\nDesde las ciencias sociales, ¿qué elemento fundamental falta en este argumento?',
+        opciones: [
+          { letra: 'A', texto: 'El argumento es completo y correcto: los colegios privados siempre tienen mejores resultados.' },
+          { letra: 'B', texto: 'El argumento no considera que los mejores resultados pueden explicarse por el nivel socioeconómico de las familias que acceden a la educación privada, no necesariamente por la calidad pedagógica del colegio.' },
+          { letra: 'C', texto: 'El argumento falla porque las pruebas Saber no son una medición válida del aprendizaje.' },
+          { letra: 'D', texto: 'El argumento es correcto, pero solo aplica a las ciudades capitales.' },
+        ],
+        clave: 'B',
+        justificacion: 'Los estudios en educación muestran que los resultados en pruebas estandarizadas están fuertemente correlacionados con el nivel socioeconómico de los estudiantes, independientemente del tipo de colegio (público o privado). Si los colegios privados obtienen mejores resultados, puede deberse a que sus estudiantes provienen de familias con más recursos económicos, mayor nivel educativo de los padres y mejores condiciones de aprendizaje en el hogar. Comparar sin controlar por el nivel socioeconómico es una falacia de correlación-causalidad. Las opciones A y D aceptan la conclusión sin cuestionar. La opción C invalida el instrumento de medición sin sustento.',
+        competencia: 'interpretacion',
+        componente: 'multiperspectividad',
+      },
+
+      // 21. Conocimientos sociales + pensamiento-social (geografía económica)
+      {
+        id: 'soc-p-s9-21',
+        enunciado: 'Colombia limita al norte con el mar Caribe y Venezuela, al oriente con Venezuela y Brasil, al sur con Perú y Ecuador, al occidente con el océano Pacífico y Panamá. ¿Cuál es la ventaja geopolítica más importante de esta ubicación?',
+        opciones: [
+          { letra: 'A', texto: 'Colombia no tiene ninguna ventaja geopolítica porque está rodeada de países pobres.' },
+          { letra: 'B', texto: 'Colombia tiene acceso a dos océanos (Atlántico/Caribe y Pacífico), lo que le permite diversificar sus rutas de comercio internacional y conectarse con mercados de América del Norte, Europa, Asia y el resto de América Latina.' },
+          { letra: 'C', texto: 'La posición de Colombia es una desventaja porque dificulta el control de sus fronteras.' },
+          { letra: 'D', texto: 'Colombia tiene acceso a un solo océano, lo que limita sus rutas comerciales.' },
+        ],
+        clave: 'B',
+        justificacion: 'Colombia es el único país de América del Sur con acceso a dos océanos: el Atlántico (a través del Mar Caribe) y el Pacífico. Esta condición es una ventaja geopolítica y comercial significativa: permite establecer rutas de exportación hacia América del Norte, Europa y el Caribe por el Atlántico, y hacia Asia y la costa oeste de América por el Pacífico. Además, Colombia está en la esquina noroccidental de América del Sur, lo que la posiciona como hub logístico de la región. La opción A desconoce la ventaja real. La opción C convierte una característica neutral en desventaja. La opción D es factualmente incorrecta.',
+        competencia: 'pensamiento-social',
+        componente: 'conocimientos-sociales',
+      },
+
+      // 22. Argumentación + interpretacion (conflicto y paz)
+      {
+        id: 'soc-p-s9-22',
+        enunciado: 'Después de la firma del Acuerdo de Paz de 2016, algunas comunidades rurales reportan que la violencia ha disminuido, mientras que otras señalan que ha aumentado por la llegada de nuevos grupos armados. ¿Qué conclusión es más adecuada sobre el proceso de paz?',
+        opciones: [
+          { letra: 'A', texto: 'El Acuerdo de Paz fracasó completamente porque la violencia no desapareció.' },
+          { letra: 'B', texto: 'El Acuerdo de Paz ha tenido logros (desmovilización de las FARC, reducción de violencia en algunas regiones) pero también limitaciones (rearme de disidencias, expansión de otros grupos); la paz es un proceso en construcción, no un resultado inmediato.' },
+          { letra: 'C', texto: 'El Acuerdo de Paz fue un éxito total porque todas las formas de violencia desaparecieron.' },
+          { letra: 'D', texto: 'Los procesos de paz nunca funcionan en ningún país del mundo.' },
+        ],
+        clave: 'B',
+        justificacion: 'Los procesos de paz son complejos y sus resultados son mixtos y graduales. El Acuerdo de 2016 logró la desmovilización de más de 13.000 combatientes de las FARC-EP, redujo significativamente la violencia en ciertas regiones y abrió caminos políticos para la reintegración. Sin embargo, la ausencia del Estado en zonas rurales permitió la llegada de disidencias y otros grupos armados. Evaluar el proceso requiere reconocer tanto los avances como las limitaciones, sin caer en el optimismo ni el pesimismo absolutos. Las opciones A y D adoptan posturas pesimistas extremas sin matices. La opción C niega problemas reales documentados.',
+        competencia: 'interpretacion',
+        componente: 'argumentacion',
+      },
+
+      // 23. Conocimientos sociales + pensamiento-social (demografía)
+      {
+        id: 'soc-p-s9-23',
+        enunciado: 'Según el DANE, la mayoría de la población colombiana vive en zonas urbanas, especialmente en las cuatro ciudades más grandes: Bogotá, Medellín, Cali y Barranquilla. ¿A qué proceso histórico se debe principalmente este fenómeno?',
+        opciones: [
+          { letra: 'A', texto: 'A una decisión del gobierno nacional de trasladar a la población rural hacia las ciudades.' },
+          { letra: 'B', texto: 'A procesos de migración interna impulsados por la búsqueda de empleo, educación y servicios, y por el desplazamiento forzado causado por el conflicto armado.' },
+          { letra: 'C', texto: 'A que Colombia nunca tuvo población rural significativa.' },
+          { letra: 'D', texto: 'A la llegada masiva de inmigrantes extranjeros a las ciudades colombianas durante el siglo XX.' },
+        ],
+        clave: 'B',
+        justificacion: 'La urbanización acelerada de Colombia durante el siglo XX se explica por dos factores principales: (1) la migración rural-urbana voluntaria en busca de empleo industrial, educación y mejores servicios; (2) el desplazamiento forzado por el conflicto armado, que convirtió a Colombia en uno de los países con más desplazados internos del mundo. Estos procesos explican la concentración poblacional en grandes ciudades. La opción A atribuye el fenómeno a una decisión gubernamental que no ocurrió. La opción C es históricamente incorrecta. La opción D sobreestima la inmigración extranjera, que fue menor comparada con la migración interna.',
+        competencia: 'pensamiento-social',
+        componente: 'conocimientos-sociales',
+      },
+
+      // 24. Multiperspectividad + pensamiento-social (derechos de la niñez)
+      {
+        id: 'soc-p-s9-24',
+        enunciado: 'En Colombia, la Ley 1098 de 2006 (Código de la Infancia y la Adolescencia) establece que los derechos de los niños prevalecen sobre los de los demás. Un padre argumenta que tiene derecho a educar a su hijo como él considere conveniente, incluso si eso implica negarse a llevarlo al colegio. ¿Cuál es el conflicto jurídico que plantea esta situación?',
+        opciones: [
+          { letra: 'A', texto: 'No hay conflicto jurídico: el padre siempre tiene razón sobre la educación de sus hijos.' },
+          { letra: 'B', texto: 'Existe una tensión entre la patria potestad de los padres y el derecho fundamental del niño a la educación, que por ley prevalece; el Estado puede intervenir para garantizar la escolarización del menor.' },
+          { letra: 'C', texto: 'El niño no tiene derechos propios hasta que cumpla 18 años, por lo que el padre puede decidir libremente.' },
+          { letra: 'D', texto: 'La educación en Colombia es optativa y ningún padre puede ser obligado a matricular a sus hijos en el colegio.' },
+        ],
+        clave: 'B',
+        justificacion: 'El Código de la Infancia y la Adolescencia establece el principio del interés superior del menor: los derechos del niño prevalecen sobre los de los adultos. La educación es un derecho fundamental de los niños y una obligación que el Estado, la familia y la sociedad deben garantizar. Si un padre niega este derecho a su hijo, el Estado puede intervenir a través del ICBF y las entidades de protección. La patria potestad no es absoluta: no puede ejercerse de manera que vulnere derechos fundamentales del menor. Las opciones A, C y D desconocen el marco legal de protección a la infancia.',
+        competencia: 'pensamiento-social',
+        componente: 'multiperspectividad',
+      },
+
+      // 25. Argumentación + pensamiento-sistemico (cambio climático y Colombia)
+      {
+        id: 'soc-p-s9-25',
+        enunciado: 'Colombia genera menos del 0.5% de las emisiones mundiales de CO2, pero es uno de los países más vulnerables al cambio climático, con aumentos proyectados en lluvias extremas, sequías y derretimiento de glaciares. Un estudiante concluye: "Colombia no tiene ninguna responsabilidad frente al cambio climático porque casi no contamina." ¿Cuál es la limitación de esta conclusión?',
+        opciones: [
+          { letra: 'A', texto: 'La conclusión es correcta: los países pequeños no tienen ninguna responsabilidad ambiental.' },
+          { letra: 'B', texto: 'La conclusión confunde responsabilidad en las causas (emisiones) con responsabilidad en las soluciones: aunque Colombia emite poco, puede contribuir con políticas de conservación forestal, energías limpias y adaptación climática, y tiene el deber de proteger a su población de los impactos.' },
+          { letra: 'C', texto: 'La conclusión es válida porque la responsabilidad de contaminar recae exclusivamente en los países desarrollados.' },
+          { letra: 'D', texto: 'La conclusión es correcta porque el cambio climático no afectará a Colombia.' },
+        ],
+        clave: 'B',
+        justificacion: 'La responsabilidad climática tiene dos dimensiones: la responsabilidad histórica en las causas (principalmente los países industrializados) y la responsabilidad compartida en las soluciones. Colombia, aunque emite poco CO2, tiene una de las mayores reservas de bosques tropicales del mundo (la Amazonía), que son sumideros de carbono fundamentales. Preservarlos es una contribución global. Además, el gobierno colombiano tiene la obligación de proteger a su población ante los impactos climáticos proyectados. Responsabilidad no significa culpa histórica exclusiva, sino compromiso activo con las soluciones. Las opciones A, C y D niegan o minimizan esta responsabilidad.',
+        competencia: 'pensamiento-sistemico',
+        componente: 'argumentacion',
+      },
+
+      // 26. Conocimientos sociales + interpretacion (sistema político colombiano)
+      {
+        id: 'soc-p-s9-26',
+        enunciado: 'La Constitución de 1991 estableció en Colombia la separación de poderes en tres ramas: Ejecutivo (Presidente y ministros), Legislativo (Congreso) y Judicial (Corte Suprema, Consejo de Estado, Corte Constitucional). ¿Cuál es la función principal de esta separación?',
+        opciones: [
+          { letra: 'A', texto: 'Permitir que cada rama actúe de manera completamente independiente sin ningún tipo de control mutuo.' },
+          { letra: 'B', texto: 'Evitar la concentración de poder en un solo órgano, estableciendo mecanismos de frenos y contrapesos para que ninguna rama pueda actuar de manera arbitraria.' },
+          { letra: 'C', texto: 'Asegurarse de que el Presidente tenga el control total sobre las decisiones del Congreso y de los jueces.' },
+          { letra: 'D', texto: 'Dividir el territorio colombiano en tres zonas de gobierno independiente.' },
+        ],
+        clave: 'B',
+        justificacion: 'El principio de separación de poderes (Montesquieu) busca evitar la tiranía distribuyendo el poder en tres ramas que se controlan mutuamente. En Colombia: el Congreso aprueba leyes y controla al Ejecutivo; el Presidente ejecuta las leyes y puede vetarlas; la Corte Constitucional revisa la constitucionalidad de las normas. Este sistema de frenos y contrapesos (checks and balances) protege los derechos ciudadanos. La opción A describe una separación sin control mutuo, lo que podría generar anarquía. La opción C describe una concentración de poder en el Ejecutivo, contraria al principio. La opción D confunde la división de poderes con la organización territorial.',
+        competencia: 'interpretacion',
+        componente: 'conocimientos-sociales',
+      },
+
+      // 27. Multiperspectividad + pensamiento-social (trabajo infantil)
+      {
+        id: 'soc-p-s9-27',
+        enunciado: 'En algunas regiones rurales de Colombia, niños de 10 a 14 años trabajan junto a sus familias en labores agrícolas. Algunos padres argumentan que esto es parte de su cultura y les enseña responsabilidad. Desde los derechos humanos y las ciencias sociales, ¿cuál es la perspectiva más equilibrada?',
+        opciones: [
+          { letra: 'A', texto: 'El trabajo infantil en cualquier forma es aceptable si los padres lo aprueban.' },
+          { letra: 'B', texto: 'Existe una tensión entre el respeto a las prácticas culturales y el derecho del niño a la educación y a no ser explotado; la legislación colombiana prohíbe el trabajo que afecta la escolarización, aunque reconoce algunas formas de participación en actividades familiares sin carácter explotador.' },
+          { letra: 'C', texto: 'El trabajo infantil rural no afecta la educación porque en el campo no hay colegios.' },
+          { letra: 'D', texto: 'Los padres que permiten el trabajo infantil deben ser encarcelados inmediatamente.' },
+        ],
+        clave: 'B',
+        justificacion: 'El trabajo infantil es un tema de tensión entre derechos: el derecho del niño a la educación y la protección contra la explotación (Código de la Infancia y la Adolescencia, art. 35) y el respeto a las prácticas culturales de las comunidades rurales. La ley colombiana distingue entre trabajo que interfiere con la escolarización o es peligroso (prohibido) y la participación en actividades familiares leves. El enfoque de derechos no criminaliza automáticamente a los padres, sino que busca garantizar educación y protección. Las opciones A y C minimizan el problema. La opción D propone una sanción desproporcionada que ignora el contexto social.',
+        competencia: 'pensamiento-social',
+        componente: 'multiperspectividad',
+      },
+
+      // 28. Argumentación + interpretacion (pobreza y desigualdad)
+      {
+        id: 'soc-p-s9-28',
+        enunciado: 'Colombia tiene uno de los coeficientes de Gini más altos de América Latina, lo que indica una desigualdad en la distribución del ingreso muy marcada. Lee el siguiente argumento:\n\n"La desigualdad en Colombia se debe a que los pobres no trabajan lo suficiente y no tienen iniciativa."\n\n¿Cuál es la principal debilidad de este argumento?',
+        opciones: [
+          { letra: 'A', texto: 'El argumento es correcto: la pobreza se explica exclusivamente por el esfuerzo individual.' },
+          { letra: 'B', texto: 'El argumento ignora los factores estructurales de la desigualdad: acceso desigual a la educación de calidad, concentración de la tierra, herencia económica, discriminación étnica y de género, y políticas tributarias regresivas.' },
+          { letra: 'C', texto: 'El argumento es incorrecto porque los pobres trabajan más que los ricos en todos los casos.' },
+          { letra: 'D', texto: 'El argumento es parcialmente correcto: la falta de iniciativa explica el 50% de la pobreza.' },
+        ],
+        clave: 'B',
+        justificacion: 'La desigualdad es un fenómeno estructural que no puede reducirse al esfuerzo o iniciativa individual. Los factores estructurales incluyen: desigualdad en el acceso a educación de calidad (quienes nacen pobres tienen menos opciones educativas), concentración de la propiedad de la tierra (el 1% más rico posee más del 80% de las tierras productivas), discriminación étnica y de género en el mercado laboral, y sistemas tributarios que gravan más a quienes consumen que a quienes acumulan. La opción A adopta una visión meritocrática que ignora estas estructuras. La opción C invierte sin matices la relación. La opción D cuantifica sin ningún fundamento.',
+        competencia: 'interpretacion',
+        componente: 'argumentacion',
+      },
+
+      // 29. Conocimientos sociales + pensamiento-sistemico (movimientos sociales)
+      {
+        id: 'soc-p-s9-29',
+        enunciado: 'En Colombia han existido múltiples movimientos sociales: el movimiento sindical obrero, los movimientos indígenas, los movimientos de mujeres y los movimientos estudiantiles. ¿Cuál ha sido la función histórica más importante de estos movimientos?',
+        opciones: [
+          { letra: 'A', texto: 'Los movimientos sociales han sido principalmente fuentes de desestabilización que dañan la economía colombiana.' },
+          { letra: 'B', texto: 'Los movimientos sociales han sido actores clave en la ampliación de derechos: los sindicatos lograron derechos laborales, los movimientos indígenas obtuvieron reconocimiento constitucional, y los movimientos de mujeres impulsaron leyes contra la violencia de género.' },
+          { letra: 'C', texto: 'Los movimientos sociales no han logrado ningún cambio significativo en la legislación colombiana.' },
+          { letra: 'D', texto: 'Los movimientos sociales son exclusivamente instrumentos de partidos políticos que los controlan.' },
+        ],
+        clave: 'B',
+        justificacion: 'Históricamente, los movimientos sociales han sido agentes de cambio que han ampliado los derechos reconocidos legalmente. En Colombia: el movimiento sindical impulsó el Código Sustantivo del Trabajo (1950), los movimientos indígenas lograron el reconocimiento de territorios colectivos y consulta previa en la Constitución de 1991, y los movimientos de mujeres han promovido legislación contra la violencia doméstica y la discriminación. La opción A adopta una visión negativa sin sustento. La opción C niega logros documentados. La opción D simplifica la relación entre movimientos sociales y partidos políticos.',
+        competencia: 'pensamiento-sistemico',
+        componente: 'conocimientos-sociales',
+      },
+
+      // 30. Multiperspectividad + pensamiento-social (medios de comunicación)
+      {
+        id: 'soc-p-s9-30',
+        enunciado: 'En Colombia, los grandes medios de comunicación (televisión, radio, periódicos) son mayoritariamente de propiedad privada y están concentrados en pocas empresas. ¿Qué implicación tiene esta concentración para la democracia?',
+        opciones: [
+          { letra: 'A', texto: 'La concentración de medios no tiene ningún impacto en la democracia porque los ciudadanos siempre pueden formar sus propias opiniones.' },
+          { letra: 'B', texto: 'La concentración de medios en pocas manos puede limitar la diversidad de voces y perspectivas en el debate público, favoreciendo los intereses de los propietarios y dificultando la representación de grupos minoritarios o con menos poder económico.' },
+          { letra: 'C', texto: 'La concentración de medios es siempre positiva porque garantiza mayor calidad informativa y coherencia editorial.' },
+          { letra: 'D', texto: 'Solo los medios estatales son confiables; los medios privados siempre mienten.' },
+        ],
+        clave: 'B',
+        justificacion: 'La concentración mediática es una preocupación democrática documentada por organismos internacionales como la UNESCO y la Comisión Interamericana de Derechos Humanos. Cuando pocos dueños controlan muchos medios, se reduce la diversidad de perspectivas, se pueden invisibilizar ciertos temas o actores, y los intereses empresariales pueden influir en la cobertura. Esto no implica que todos los medios privados sean corruptos, pero sí que la pluralidad informativa requiere regulaciones antimonopolio y medios alternativos. La opción A niega el efecto de los medios en la opinión pública. La opción C invierte el problema. La opción D generaliza de manera absoluta.',
+        competencia: 'pensamiento-social',
+        componente: 'multiperspectividad',
+      },
+
+      // 31. Conocimientos sociales + interpretacion (historia siglo XIX)
+      {
+        id: 'soc-p-s9-31',
+        enunciado: 'Durante el siglo XIX, Colombia (llamada Nueva Granada hasta 1863) vivió numerosas guerras civiles entre liberales y conservadores. ¿Cuáles eran las principales diferencias ideológicas entre estos dos partidos?',
+        opciones: [
+          { letra: 'A', texto: 'Los liberales y conservadores tenían exactamente las mismas ideas; sus diferencias eran solo personales.' },
+          { letra: 'B', texto: 'Los liberales defendían el federalismo, la separación Iglesia-Estado, el libre comercio y las libertades individuales; los conservadores apoyaban el centralismo, la alianza con la Iglesia Católica, el proteccionismo económico y el orden tradicional.' },
+          { letra: 'C', texto: 'Los liberales eran el partido de los ricos terratenientes y los conservadores el de los campesinos pobres.' },
+          { letra: 'D', texto: 'La diferencia principal era religiosa: los liberales eran protestantes y los conservadores eran católicos.' },
+        ],
+        clave: 'B',
+        justificacion: 'El bipartidismo colombiano del siglo XIX tenía raíces ideológicas claras: el Partido Liberal defendía la descentralización federal, la separación entre Iglesia y Estado, el libre comercio y las libertades individuales (de prensa, asociación, enseñanza). El Partido Conservador promovía el centralismo, el papel protagónico de la Iglesia Católica en la educación y la moral pública, y el orden social tradicional. La opción A niega las diferencias ideológicas reales. La opción C invierte la composición social de los partidos (ambos tenían élites). La opción D es incorrecta: ambos partidos eran mayoritariamente católicos.',
+        competencia: 'interpretacion',
+        componente: 'conocimientos-sociales',
+      },
+
+      // 32. Argumentación + pensamiento-social (corrupción)
+      {
+        id: 'soc-p-s9-32',
+        enunciado: 'Lee el siguiente argumento de un ciudadano:\n\n"Votar no sirve para nada porque todos los políticos son iguales de corruptos. Es mejor no participar."\n\nDesde la perspectiva de las ciencias sociales y la democracia, ¿cuál es la limitación más importante de este razonamiento?',
+        opciones: [
+          { letra: 'A', texto: 'El argumento es completamente correcto: la democracia no funciona nunca.' },
+          { letra: 'B', texto: 'El argumento generaliza indebidamente ("todos los políticos") y lleva a una conclusión contraproducente: la abstención no reduce la corrupción, sino que puede facilitar que quienes tienen el poder se mantengan en él sin competencia electoral efectiva.' },
+          { letra: 'C', texto: 'El argumento es válido porque la abstención electoral es una forma de presión democrática que siempre genera cambios positivos.' },
+          { letra: 'D', texto: 'El argumento es correcto porque en Colombia no existen partidos políticos honestos.' },
+        ],
+        clave: 'B',
+        justificacion: 'El razonamiento comete dos errores: (1) generalización: equiparar a todos los políticos sin distinción entre quienes tienen prácticas corruptas y quienes no; (2) conclusión ineficaz: la no participación electoral no reduce la corrupción, sino que puede beneficiar a quienes dependen de una baja participación de votantes informados. Las ciencias sociales muestran que la participación ciudadana informada, combinada con mecanismos de control social (veedurías, denuncias, medios independientes) es más efectiva contra la corrupción que la abstención pasiva. Las opciones A, C y D adoptan posiciones sin matices o sin sustento.',
+        competencia: 'pensamiento-social',
+        componente: 'argumentacion',
+      },
+
+      // 33. Conocimientos sociales + pensamiento-sistemico (geografía física)
+      {
+        id: 'soc-p-s9-33',
+        enunciado: 'El río Magdalena es considerado el río más importante de Colombia. ¿Por qué razón histórica y económica tiene esta importancia?',
+        opciones: [
+          { letra: 'A', texto: 'Porque es el río más largo de América del Sur y desemboca en el océano Pacífico.' },
+          { letra: 'B', texto: 'Porque durante siglos fue la principal vía de comunicación y transporte entre el interior andino del país y el mar Caribe, articulando la economía nacional; hoy sigue siendo importante para el transporte de carga y la generación de energía.' },
+          { letra: 'C', texto: 'Porque es el único río navegable de Colombia y sus aguas se usan exclusivamente para riego agrícola.' },
+          { letra: 'D', texto: 'Porque nace en Venezuela y aporta la mayor parte del agua potable de Bogotá.' },
+        ],
+        clave: 'B',
+        justificacion: 'El río Magdalena, que nace en el macizo colombiano y desemboca en el Mar Caribe (Barranquilla), fue durante siglos la columna vertebral de la economía y la comunicación colombiana: por él se transportaba el oro colonial hacia Cartagena, el café de exportación y los bienes de importación. Ciudades como Honda, Mompox y La Dorada crecieron gracias al comercio fluvial. Con la llegada de carreteras y ferrocarriles declinó su importancia, pero sigue siendo fundamental. La opción A confunde geografía: el Magdalena no es el más largo de Suramérica (es el Amazonas) y desemboca en el Caribe, no el Pacífico. Las opciones C y D tienen errores factuales.',
+        competencia: 'pensamiento-sistemico',
+        componente: 'conocimientos-sociales',
+      },
+
+      // 34. Multiperspectividad + interpretacion (justicia transicional)
+      {
+        id: 'soc-p-s9-34',
+        enunciado: 'La Jurisdicción Especial para la Paz (JEP) creada por el Acuerdo de Paz ofrece penas alternativas (restricciones de libertad en territorios, no cárcel) a quienes confiesen sus crímenes y reparen a las víctimas. Algunos sectores exigen penas de cárcel ordinarias. ¿Cuál es el dilema central de la justicia transicional?',
+        opciones: [
+          { letra: 'A', texto: 'No existe ningún dilema: la justicia transicional es simplemente impunidad disfrazada.' },
+          { letra: 'B', texto: 'El dilema está entre la justicia retributiva (castigo proporcional al daño) y la justicia restaurativa (verdad, reparación, garantías de no repetición) en contextos donde exigir cárcel para todos puede impedir la firma de acuerdos de paz y la desmovilización.' },
+          { letra: 'C', texto: 'No existe dilema porque todos los actores del conflicto deben recibir penas de cárcel largas para lograr la paz.' },
+          { letra: 'D', texto: 'La JEP es innecesaria porque los tribunales ordinarios son suficientes para juzgar los crímenes del conflicto.' },
+        ],
+        clave: 'B',
+        justificacion: 'La justicia transicional enfrenta un dilema genuino: si el Estado exige penas de cárcel estrictas, los actores armados no negociarán ni se desmovilizarán (experiencias internacionales lo confirman). Pero si las penas son demasiado leves, se puede percibir como impunidad, especialmente para las víctimas. La JEP intenta un equilibrio: castigo no convencional (restricciones de libertad, reparación) a cambio de verdad plena y garantías de no repetición. Este modelo sigue la experiencia de países como Sudáfrica y Rwanda. La opción A descalifica el modelo sin análisis. La opción C niega el dilema. La opción D ignora la experiencia del sistema penal ordinario con crímenes de guerra.',
+        competencia: 'interpretacion',
+        componente: 'multiperspectividad',
+      },
+
+      // 35. Conocimientos sociales + pensamiento-social (bienes públicos)
+      {
+        id: 'soc-p-s9-35',
+        enunciado: '¿Cuál de las siguientes es la mejor definición de un "bien público" en economía y ciencias sociales?',
+        opciones: [
+          { letra: 'A', texto: 'Un bien que pertenece al gobierno nacional y que nadie más puede usar.' },
+          { letra: 'B', texto: 'Un bien que es no rivalizado (su uso por una persona no reduce su disponibilidad para otras) y no excluyente (nadie puede ser impedido de usarlo), como el alumbrado público, la defensa nacional o el conocimiento científico publicado.' },
+          { letra: 'C', texto: 'Un bien que se vende en el mercado a precios accesibles para toda la población.' },
+          { letra: 'D', texto: 'Un bien producido exclusivamente por empresas estatales como Ecopetrol.' },
+        ],
+        clave: 'B',
+        justificacion: 'En economía, los bienes públicos tienen dos características que los diferencian de los bienes privados: (1) no rivalidad: que yo use el alumbrado público no impide que otros también lo usen; (2) no exclusión: no es posible excluir a nadie de su uso. Ejemplos: defensa nacional, iluminación de calles, conocimiento científico publicado. Debido a estas características, el mercado privado tiende a subproducirlos (el "problema del polizón"), lo que justifica la intervención del Estado. La opción A confunde "público" con "gubernamental". La opción C describe bienes con precios accesibles, no necesariamente públicos. La opción D confunde con empresas estatales.',
+        competencia: 'pensamiento-social',
+        componente: 'conocimientos-sociales',
+      },
+
+      // 36. Argumentación + interpretacion (impuestos)
+      {
+        id: 'soc-p-s9-36',
+        enunciado: 'Lee el siguiente argumento sobre los impuestos:\n\n"Los impuestos son un robo porque el gobierno toma mi dinero sin mi permiso y lo gasta en cosas que yo no decido."\n\n¿Cuál es la respuesta más sólida desde las ciencias sociales?',
+        opciones: [
+          { letra: 'A', texto: 'El argumento es completamente correcto: los impuestos son ilegítimos.' },
+          { letra: 'B', texto: 'El argumento ignora que los impuestos son el mecanismo mediante el cual los ciudadanos financian colectivamente bienes y servicios que ningún individuo podría pagar solo (vías, educación pública, salud, defensa), y que en una democracia, el Congreso decide su destino con representación ciudadana.' },
+          { letra: 'C', texto: 'El argumento es correcto, pero solo aplica a los impuestos que financian gastos militares.' },
+          { letra: 'D', texto: 'El argumento es incorrecto porque los impuestos son voluntarios en Colombia.' },
+        ],
+        clave: 'B',
+        justificacion: 'Los impuestos son el mecanismo de financiación colectiva de los bienes públicos y servicios sociales que ningún individuo podría costear solo: carreteras, ejército, sistema educativo público, salud, justicia. En una democracia, el uso de los impuestos es decidido por el Congreso (representación ciudadana) y controlado por organismos como la Contraloría. No son un "robo" sino una contribución obligatoria acordada socialmente para financiar lo común. El argumento del texto refleja una visión libertaria extrema que ignora los fundamentos del contrato social. Las opciones A y C aceptan el argumento. La opción D es factualmente incorrecta (los impuestos son obligatorios).',
+        competencia: 'interpretacion',
+        componente: 'argumentacion',
+      },
+
+      // 37. Conocimientos sociales + pensamiento-sistemico (siglo XX colombiano)
+      {
+        id: 'soc-p-s9-37',
+        enunciado: 'El Frente Nacional (1958-1974) fue un acuerdo entre los partidos Liberal y Conservador en Colombia que puso fin a La Violencia. ¿Cuál fue su principal consecuencia negativa para la democracia?',
+        opciones: [
+          { letra: 'A', texto: 'El Frente Nacional eliminó totalmente la violencia política en Colombia.' },
+          { letra: 'B', texto: 'El Frente Nacional estabilizó el país pero generó exclusión política: al repartir el poder solo entre liberales y conservadores, marginó a otros movimientos políticos y contribuyó al surgimiento de grupos guerrilleros que buscaron vías armadas de participación.' },
+          { letra: 'C', texto: 'El Frente Nacional fue un período de gran prosperidad económica sin ninguna consecuencia negativa.' },
+          { letra: 'D', texto: 'El Frente Nacional entregó el poder al ejército y eliminó el sistema de partidos.' },
+        ],
+        clave: 'B',
+        justificacion: 'El Frente Nacional fue un pacto bipartidista que acordó alternarse la presidencia y repartir cargos gubernamentales entre liberales y conservadores durante 16 años. Si bien logró estabilizar el país tras La Violencia, tuvo el efecto negativo de cerrar el sistema político a otras fuerzas: movimientos de izquierda, sindicatos y nuevos partidos quedaron excluidos de la participación institucional. Historiadores han señalado que esta exclusión contribuyó al surgimiento de grupos guerrilleros (FARC, ELN) en los años 60, que encontraron en la lucha armada una vía de participación. Las opciones A, C y D son imprecisas o incorrectas.',
+        competencia: 'pensamiento-sistemico',
+        componente: 'conocimientos-sociales',
+      },
+
+      // 38. Multiperspectividad + pensamiento-social (redes sociales y democracia)
+      {
+        id: 'soc-p-s9-38',
+        enunciado: 'Las redes sociales han sido usadas tanto para organizar movimientos ciudadanos como para difundir desinformación durante elecciones. Desde las ciencias sociales, ¿cuál es la evaluación más equilibrada de su impacto en la democracia?',
+        opciones: [
+          { letra: 'A', texto: 'Las redes sociales son siempre positivas para la democracia porque dan voz a todos.' },
+          { letra: 'B', texto: 'Las redes sociales tienen impactos ambivalentes: facilitan la organización ciudadana, la denuncia y la participación, pero también permiten la difusión de desinformación, la polarización y la manipulación electoral, lo que exige regulación y alfabetización digital.' },
+          { letra: 'C', texto: 'Las redes sociales son siempre negativas para la democracia y deberían prohibirse.' },
+          { letra: 'D', texto: 'Las redes sociales no tienen ningún impacto real en los procesos políticos.' },
+        ],
+        clave: 'B',
+        justificacion: 'Las redes sociales son tecnologías con efectos múltiples sobre la democracia. Por un lado, han facilitado movimientos ciudadanos (la Primavera Árabe, el paro nacional colombiano de 2019-2021), la denuncia de corrupción y la participación de sectores antes marginados. Por otro, han sido usadas para difundir noticias falsas, crear "cámaras de eco" que polarizan, y realizar campañas de manipulación electoral (caso Cambridge Analytica). Un análisis riguroso reconoce ambas dimensiones y propone respuestas como la educación mediática y la regulación de contenidos. Las opciones A, C y D adoptan posiciones absolutas sin matices.',
+        competencia: 'pensamiento-social',
+        componente: 'multiperspectividad',
+      },
+
+      // 39. Argumentación + pensamiento-sistemico (medio ambiente urbano)
+      {
+        id: 'soc-p-s9-39',
+        enunciado: 'Bogotá tiene uno de los peores índices de calidad del aire en América Latina, principalmente por el parque automotor. Un concejal propone: "La solución es plantar un millón de árboles en la ciudad." ¿Cuál es la limitación más importante de esta propuesta como política pública?',
+        opciones: [
+          { letra: 'A', texto: 'La propuesta es correcta: plantar árboles es la única solución posible a la contaminación del aire.' },
+          { letra: 'B', texto: 'Plantar árboles ayuda pero no ataca la causa del problema; una política integral requeriría reducir las fuentes de emisión (modernizar el transporte público, regular la antigüedad de los vehículos) además de aumentar zonas verdes.' },
+          { letra: 'C', texto: 'No hay ninguna solución al problema de la contaminación en ciudades grandes.' },
+          { letra: 'D', texto: 'La contaminación del aire en Bogotá no proviene de los vehículos sino de otras fuentes naturales.' },
+        ],
+        clave: 'B',
+        justificacion: 'Los árboles urbanos tienen beneficios reales: absorben CO2, reducen el efecto isla de calor y mejoran el bienestar psicológico. Sin embargo, no son suficientes para combatir la contaminación generada por millones de vehículos. Las ciudades con mejor calidad del aire (como Ámsterdam, Ámsterdam o Bogotá en sus mejores momentos) han combinado múltiples estrategias: transporte público eficiente y masivo, restricciones vehiculares (pico y placa, Día sin Carro), electrificación del transporte y ciclovías. Una política que solo planta árboles ataca los síntomas sin reducir las causas. La opción A acepta la propuesta incompleta. Las opciones C y D son incorrectas.',
+        competencia: 'pensamiento-sistemico',
+        componente: 'argumentacion',
+      },
+
+      // 40. Conocimientos sociales + interpretacion (derechos humanos internacionales)
+      {
+        id: 'soc-p-s9-40',
+        enunciado: 'La Declaración Universal de los Derechos Humanos fue adoptada por la ONU en 1948. ¿Cuál es la característica más importante de estos derechos?',
+        opciones: [
+          { letra: 'A', texto: 'Los derechos humanos aplican únicamente en los países que los ratificaron mediante tratados específicos.' },
+          { letra: 'B', texto: 'Los derechos humanos son universales (para todas las personas), inalienables (no pueden renunciarse ni quitarse), indivisibles (civiles, políticos, económicos y sociales tienen igual jerarquía) e interdependientes.' },
+          { letra: 'C', texto: 'Los derechos humanos son concedidos por los gobiernos y pueden ser retirados cuando el Estado lo considere necesario.' },
+          { letra: 'D', texto: 'Los derechos humanos solo protegen a los ciudadanos de su propio país, no a los extranjeros.' },
+        ],
+        clave: 'B',
+        justificacion: 'Los principios que definen los derechos humanos según el derecho internacional son: (1) universalidad: son de todas las personas, sin distinción de origen, género, religión o nacionalidad; (2) inalienabilidad: no pueden renunciarse ni ser transferidos; (3) indivisibilidad: los derechos civiles y políticos y los económicos, sociales y culturales tienen igual jerarquía; (4) interdependencia: el cumplimiento de unos facilita el de los demás. La opción A condiciona los derechos a la ratificación de tratados. La opción C invierte el principio: los derechos no son concedidos por el Estado sino inherentes a la persona. La opción D contradice la universalidad.',
+        competencia: 'interpretacion',
+        componente: 'conocimientos-sociales',
+      },
     ],
 
     // ---------------------------------------------------------
@@ -2474,6 +4794,406 @@ const PREGUNTAS_ICFES = {
         clave: 'B',
         justificacion: 'Las ciencias sociales analizan los debates sociales reconociendo la pluralidad de perspectivas legítimas dentro de una democracia. En este caso, la tensión es entre principios constitucionales: el de igualdad y no discriminación (que protege a grupos históricamente excluidos) y las libertades de conciencia y expresión (que amparan a quienes discrepan). Un análisis riguroso no descalifica a ninguna parte, pero sí distingue entre la expresión de opiniones (protegida) y la discriminación (prohibida). Las opciones A y C adoptan posiciones unilaterales. La opción D limita incorrectamente el objeto de estudio de las ciencias sociales.',
         competencia: 'interpretacion',
+        componente: 'multiperspectividad',
+      },
+
+      // 16. Conocimientos sociales + pensamiento-sistemico (historia mundial)
+      {
+        id: 'soc-p-s11-16',
+        enunciado: 'La Revolución Francesa (1789) proclamó los principios de Libertad, Igualdad y Fraternidad. ¿Cuál fue la contradicción más documentada entre estos principios y la realidad que siguió a la Revolución?',
+        opciones: [
+          { letra: 'A', texto: 'La Revolución Francesa no tuvo ninguna contradicción porque estableció la igualdad perfecta.' },
+          { letra: 'B', texto: 'La Revolución proclamó la igualdad universal, pero en la práctica excluyó a las mujeres del sufragio y los derechos políticos, mantuvo la esclavitud en las colonias por años y favoreció principalmente a la burguesía sobre los sectores populares.' },
+          { letra: 'C', texto: 'La Revolución Francesa eliminó todas las formas de desigualdad social en Europa.' },
+          { letra: 'D', texto: 'La contradicción principal fue que la Revolución no afectó a ningún otro país fuera de Francia.' },
+        ],
+        clave: 'B',
+        justificacion: 'La Revolución Francesa es un ejemplo clásico de la brecha entre ideales proclamados y realidades históricas. A pesar del principio de Igualdad, las mujeres (Olympe de Gouges lo denunció en 1791) fueron excluidas de los derechos políticos; la esclavitud en las colonias (Haití) no fue abolida de inmediato; y la burguesía fue la principal beneficiaria política y económica del nuevo orden. Esto no niega la importancia histórica de la Revolución, pero exige una mirada crítica a sus límites. Las opciones A y C idealizan el proceso. La opción D desconoce el impacto continental e incluso mundial de la Revolución Francesa.',
+        competencia: 'pensamiento-sistemico',
+        componente: 'conocimientos-sociales',
+      },
+
+      // 17. Argumentación + pensamiento-social (populismo)
+      {
+        id: 'soc-p-s11-17',
+        enunciado: 'Desde las ciencias políticas, el populismo se define como una ideología que divide la sociedad entre "el pueblo puro" y "una élite corrupta", presentando al líder populista como representante directo del pueblo. ¿Cuál de las siguientes afirmaciones describe mejor los riesgos del populismo para la democracia?',
+        opciones: [
+          { letra: 'A', texto: 'El populismo siempre es positivo porque defiende los intereses del pueblo frente a las élites.' },
+          { letra: 'B', texto: 'El populismo puede erosionar las instituciones democráticas al deslegitimar a cualquier oposición como "enemiga del pueblo", concentrar el poder en el líder y debilitar los controles institucionales (prensa libre, poder judicial independiente).' },
+          { letra: 'C', texto: 'El populismo y la democracia son sinónimos: cualquier gobierno popular es democrático.' },
+          { letra: 'D', texto: 'El populismo es exclusivo de los partidos de izquierda y nunca ocurre en partidos de derecha.' },
+        ],
+        clave: 'B',
+        justificacion: 'La ciencia política (Jan-Werner Müller, Ernesto Laclau) ha analizado cómo el populismo puede ser funcional para incluir sectores marginados, pero también tiene riesgos para la democracia liberal: (1) al dividir en "pueblo bueno" vs. "élite mala", descalifica la oposición como ilegítima; (2) concentra el poder en un líder que dice encarnar la voluntad popular; (3) ataca instituciones de control. Ejemplos: Chávez, Bolsonaro, Trump. La opción A solo ve el aspecto positivo. La opción C confunde populismo con democracia. La opción D es incorrecta: el populismo existe en derecha e izquierda.',
+        competencia: 'pensamiento-social',
+        componente: 'argumentacion',
+      },
+
+      // 18. Multiperspectividad + interpretacion (colonialismo y desarrollo)
+      {
+        id: 'soc-p-s11-18',
+        enunciado: 'Algunos economistas argumentan que los países que fueron colonias europeas son pobres hoy porque sus gobiernos actuales son corruptos o sus culturas no valoran el trabajo. Otros académicos señalan que el colonialismo creó estructuras de desigualdad que persisten. ¿Cuál de estas perspectivas tiene mayor respaldo en las ciencias sociales contemporáneas?',
+        opciones: [
+          { letra: 'A', texto: 'La perspectiva cultural es más sólida: la riqueza depende exclusivamente de los valores culturales de cada pueblo.' },
+          { letra: 'B', texto: 'Existe amplia evidencia de que el colonialismo estableció estructuras extractivas (instituciones que beneficiaban al colonizador, no al territorio), concentración de la riqueza y dependencia económica que condicionan el desarrollo hasta hoy, aunque sin negar la responsabilidad de los gobiernos actuales.' },
+          { letra: 'C', texto: 'Ambas perspectivas son igualmente válidas y no hay evidencia que favorezca ninguna.' },
+          { letra: 'D', texto: 'El colonialismo fue en realidad beneficioso para los países colonizados porque les trajo infraestructura y civilización.' },
+        ],
+        clave: 'B',
+        justificacion: 'Los trabajos de Acemoglu y Robinson (Por qué fracasan las naciones), de Walter Rodney (Cómo Europa subdesarrolló a África) y de numerosos historiadores económicos muestran que el colonialismo instaló instituciones extractivas (encomienda, mita, plantaciones esclavistas) que concentraron la riqueza en manos de colonizadores, destruyeron sistemas económicos y sociales propios y crearon dependencias estructurales. Estas herencias institucionales explican en buena parte las diferencias de desarrollo. La opción A adopta un culturalismo simplista. La opción C evade la evidencia disponible. La opción D justifica el colonialismo con argumentos históricamente cuestionados.',
+        competencia: 'interpretacion',
+        componente: 'multiperspectividad',
+      },
+
+      // 19. Conocimientos sociales + pensamiento-social (estado de bienestar)
+      {
+        id: 'soc-p-s11-19',
+        enunciado: 'Los países escandinavos (Suecia, Noruega, Dinamarca) tienen altos impuestos pero también altos indicadores de calidad de vida, equidad y movilidad social. Algunos analistas los presentan como modelo de "estado de bienestar". ¿Cuál es el argumento principal de quienes critican este modelo?',
+        opciones: [
+          { letra: 'A', texto: 'Los países escandinavos son pobres y no tienen calidad de vida alta.' },
+          { letra: 'B', texto: 'Los críticos argumentan que los altos impuestos desincentivan la inversión y el emprendimiento, y que el modelo es posible por condiciones específicas (pequeñas poblaciones homogéneas históricamente, alta productividad, petróleo noruego) que no son replicables en países como Colombia.' },
+          { letra: 'C', texto: 'El modelo escandinavo ha generado grandes desigualdades en sus países.' },
+          { letra: 'D', texto: 'Los países escandinavos no tienen impuestos altos; su éxito se debe al libre mercado sin intervención estatal.' },
+        ],
+        clave: 'B',
+        justificacion: 'El debate sobre el modelo escandinavo es genuinamente complejo. Los críticos (liberales y neoliberales) señalan que los altos impuestos pueden desincentivar la inversión y que las condiciones que hacen posible el modelo (alta confianza institucional, homogeneidad histórica, petróleo en Noruega, alta productividad) no son fácilmente trasladables a países como Colombia, con mayores niveles de desigualdad estructural, instituciones más débiles y economías menos productivas. Esto no invalida el modelo, pero sí exige contextualización. La opción A es factualmente incorrecta. La opción C invierte la realidad: Escandinavia tiene baja desigualdad. La opción D desconoce los altos impuestos escandinavos.',
+        competencia: 'pensamiento-social',
+        componente: 'conocimientos-sociales',
+      },
+
+      // 20. Argumentación + pensamiento-sistemico (seguridad ciudadana)
+      {
+        id: 'soc-p-s11-20',
+        enunciado: 'Un alcalde propone aumentar las penas de cárcel para delitos menores como el hurto como principal estrategia para reducir el crimen. Desde las ciencias sociales, ¿cuál es la principal limitación de esta estrategia?',
+        opciones: [
+          { letra: 'A', texto: 'La estrategia es correcta: mayor tiempo de cárcel siempre reduce la criminalidad.' },
+          { letra: 'B', texto: 'La evidencia criminológica muestra que el efecto disuasivo depende más de la certeza del castigo que de su severidad; además, las cárceles colombianas superpobladas actúan como "escuelas del crimen", por lo que la solución requiere abordar causas estructurales como el desempleo, la inequidad y la falta de oportunidades.' },
+          { letra: 'C', texto: 'La propuesta es limitada porque los delitos menores no merecen ningún tipo de sanción.' },
+          { letra: 'D', texto: 'La única solución efectiva al crimen es la pena de muerte.' },
+        ],
+        clave: 'B',
+        justificacion: 'La criminología y la ciencia política han producido evidencia sólida de que el efecto disuasivo del castigo depende más de su certeza (probabilidad de ser capturado) que de su severidad (tiempo de cárcel). Incrementar penas sin mejorar la eficacia del sistema judicial no reduce el crimen. Además, Colombia tiene tasas de hacinamiento carcelario superiores al 130%, lo que convierte a las cárceles en espacios donde los delincuentes menores se conectan con redes criminales. Las causas estructurales del hurto (desempleo juvenil, pobreza, falta de oportunidades) requieren soluciones sociales. Las opciones A y D defienden el punitivismo sin respaldo empírico. La opción C niega la necesidad de sanción.',
+        competencia: 'pensamiento-sistemico',
+        componente: 'argumentacion',
+      },
+
+      // 21. Multiperspectividad + interpretacion (feminismo y familia)
+      {
+        id: 'soc-p-s11-21',
+        enunciado: 'Lee el siguiente texto de un ensayo académico:\n\n"La familia nuclear (padre, madre, hijos) no es la única forma legítima de organización familiar; es un modelo histórico surgido con la industrialización, no una constante universal. La diversidad de configuraciones familiares —monoparentales, homoparentales, extensas— es una realidad en todas las sociedades contemporáneas."\n\n¿Cuál es la posición del autor?',
+        opciones: [
+          { letra: 'A', texto: 'El autor defiende que la familia nuclear debe desaparecer.' },
+          { letra: 'B', texto: 'El autor argumenta que la familia nuclear es un modelo histórico, no universal, y que existen otras formas legítimas de organización familiar que deben reconocerse.' },
+          { letra: 'C', texto: 'El autor afirma que todas las formas de familia son igualmente problemáticas.' },
+          { letra: 'D', texto: 'El autor defiende el regreso a la familia extensa como modelo superior.' },
+        ],
+        clave: 'B',
+        justificacion: 'El autor hace un argumento de desnaturalización histórica: muestra que la familia nuclear no es eterna ni universal, sino un modelo que emergió con la industrialización del siglo XIX. Con esto, no ataca a la familia nuclear ni propone eliminarla, sino ampliar el reconocimiento de otras formas familiares que también son válidas. Este es un argumento típico de la sociología y la historia de la familia. La opción A extrae una conclusión que el texto no plantea. La opción C introduce una valoración negativa que tampoco está en el texto. La opción D propone un regreso que el autor no sugiere.',
+        competencia: 'interpretacion',
+        componente: 'multiperspectividad',
+      },
+
+      // 22. Conocimientos sociales + pensamiento-sistemico (deuda externa)
+      {
+        id: 'soc-p-s11-22',
+        enunciado: 'Colombia, como muchos países latinoamericanos, tiene una deuda externa significativa con organismos como el FMI y el Banco Mundial. ¿Cuál de las siguientes afirmaciones describe mejor las implicaciones de la deuda externa para el desarrollo?',
+        opciones: [
+          { letra: 'A', texto: 'La deuda externa siempre es positiva porque permite financiar proyectos de desarrollo sin consecuencias.' },
+          { letra: 'B', texto: 'La deuda externa puede financiar inversión productiva, pero su pago implica destinar recursos del presupuesto nacional (que podrían usarse en educación, salud o infraestructura) al servicio de intereses y capital, lo que puede limitar la soberanía de la política económica.' },
+          { letra: 'C', texto: 'La deuda externa es siempre negativa y ningún país debería endeudarse.' },
+          { letra: 'D', texto: 'La deuda externa no tiene ninguna consecuencia sobre el presupuesto nacional.' },
+        ],
+        clave: 'B',
+        justificacion: 'La deuda externa es un instrumento financiero con efectos ambivalentes. Puede ser positiva cuando financia inversión productiva que genera crecimiento y empleo, pero tiene costos: el servicio de la deuda (pago de intereses y capital) compite directamente con el gasto social en el presupuesto. Además, los préstamos del FMI suelen condicionarse a reformas estructurales (ajustes fiscales, privatizaciones) que pueden reducir el gasto público. Colombia destina un porcentaje significativo de su presupuesto al pago de la deuda, lo que limita la inversión social. La opción A ignora los costos. La opción C niega los beneficios. La opción D niega los efectos presupuestarios.',
+        competencia: 'pensamiento-sistemico',
+        componente: 'conocimientos-sociales',
+      },
+
+      // 23. Argumentación + interpretacion (educación y mercado laboral)
+      {
+        id: 'soc-p-s11-23',
+        enunciado: 'Lee el siguiente argumento de un economista:\n\n"Colombia debería focalizar toda la inversión educativa en carreras STEM (ciencia, tecnología, ingeniería y matemáticas) porque son las más demandadas por el mercado laboral y las que generan más ingresos."\n\n¿Cuál es la perspectiva que falta en este argumento?',
+        opciones: [
+          { letra: 'A', texto: 'El argumento es completo porque el mercado laboral es el mejor indicador de qué se debe estudiar.' },
+          { letra: 'B', texto: 'El argumento reduce la educación a su función económica, ignorando su valor para la formación ciudadana, el pensamiento crítico, la cultura y la democracia; además, las demandas del mercado laboral cambian y una educación integral es más adaptable.' },
+          { letra: 'C', texto: 'El argumento es correcto, pero debería incluir también el derecho y la medicina.' },
+          { letra: 'D', texto: 'El argumento falla porque las carreras STEM no generan buenos ingresos en Colombia.' },
+        ],
+        clave: 'B',
+        justificacion: 'El argumento instrumentaliza la educación: la reduce a su capacidad de generar ingreso económico. Pero la educación también tiene funciones que no se miden en el mercado laboral: forma ciudadanos capaces de participar en la democracia, desarrolla el pensamiento crítico, transmite el patrimonio cultural y permite la reflexión ética. Además, la concentración excesiva en STEM puede crear desequilibrios: las humanidades y las ciencias sociales forman a quienes analizan los problemas éticos de la tecnología, diseñan políticas públicas y entienden los contextos culturales donde se aplica la innovación. La opción A acepta el argumento sin cuestionarlo. Las opciones C y D modifican el argumento sin cuestionar su premisa.',
+        competencia: 'interpretacion',
+        componente: 'argumentacion',
+      },
+
+      // 24. Multiperspectividad + pensamiento-social (historia y memoria)
+      {
+        id: 'soc-p-s11-24',
+        enunciado: 'El Centro Nacional de Memoria Histórica ha documentado los crímenes del conflicto armado colombiano desde múltiples perspectivas, incluyendo la de los victimarios. Algunos sectores critican que esto "humaniza a los criminales". Desde las ciencias sociales, ¿cuál es la función de esta perspectiva múltiple en la memoria histórica?',
+        opciones: [
+          { letra: 'A', texto: 'Incluir la perspectiva de los victimarios es una forma de justificar sus crímenes.' },
+          { letra: 'B', texto: 'Comprender las motivaciones y contextos de quienes cometieron crímenes no es justificarlos, sino explicarlos para entender cómo prevenir su repetición; la memoria histórica rigurosa requiere múltiples perspectivas para ser completa.' },
+          { letra: 'C', texto: 'Solo las víctimas tienen derecho a participar en la construcción de la memoria histórica.' },
+          { letra: 'D', texto: 'La memoria histórica debe limitarse a registrar los hechos sin interpretarlos.' },
+        ],
+        clave: 'B',
+        justificacion: 'La distinción entre explicar y justificar es fundamental en las ciencias sociales. Comprender por qué alguien cometió un crimen (contexto histórico, reclutamiento forzado, ideología, estructura de incentivos) no significa absolver su responsabilidad moral o jurídica. Este análisis es necesario para diseñar políticas de no repetición efectivas: si no entendemos por qué surgieron los grupos armados, cómo reclutaron y qué los motivó, no podremos prevenir la reincidencia. La memoria histórica rigurosa, como la de Sudáfrica o Rwanda, incluye perspectivas múltiples. Las opciones A y C limitan la memoria. La opción D reduce la historia a registro, sin análisis.',
+        competencia: 'pensamiento-social',
+        componente: 'multiperspectividad',
+      },
+
+      // 25. Conocimientos sociales + pensamiento-sistemico (urbanismo)
+      {
+        id: 'soc-p-s11-25',
+        enunciado: 'Medellín fue considerada en los años 90 la ciudad más violenta del mundo. En los años 2010 fue premiada como la ciudad más innovadora del mundo. ¿Qué factores explican mejor esta transformación desde las ciencias sociales?',
+        opciones: [
+          { letra: 'A', texto: 'La transformación se explica exclusivamente por la muerte de Pablo Escobar en 1993.' },
+          { letra: 'B', texto: 'La transformación fue el resultado de múltiples intervenciones simultáneas: urbanismo social en comunas marginadas (Metro Cable, escaleras eléctricas, parques-biblioteca), inversión en educación, políticas de seguridad y formalización de la economía local.' },
+          { letra: 'C', texto: 'La transformación fue impulsada exclusivamente por el sector privado sin ninguna participación del Estado.' },
+          { letra: 'D', texto: 'La ciudad cambió solo por la llegada de inversión extranjera directa.' },
+        ],
+        clave: 'B',
+        justificacion: 'La transformación de Medellín es estudiada internacionalmente como un caso de "urbanismo social": la intervención integral en comunas marginadas con infraestructura pública de calidad (Metro Cable, escaleras eléctricas, parques-biblioteca en las zonas más vulnerables), combinada con inversión en educación (colegios de calidad en barrios pobres), políticas de convivencia y seguridad, y desarrollo económico. No fue resultado de un solo factor, sino de una estrategia multidimensional con liderazgo público (alcaldías de Sergio Fajardo y posteriores) y participación comunitaria. La opción A sobredimensiona un solo hecho. Las opciones C y D niegan el papel del Estado y la complejidad del proceso.',
+        competencia: 'pensamiento-sistemico',
+        componente: 'conocimientos-sociales',
+      },
+
+      // 26. Argumentación + interpretacion (relaciones internacionales)
+      {
+        id: 'soc-p-s11-26',
+        enunciado: 'Colombia ha firmado tratados de libre comercio (TLC) con Estados Unidos, la Unión Europea y otros países. Un analista argumenta: "Los TLC son siempre beneficiosos porque aumentan las exportaciones colombianas." ¿Cuál es la debilidad principal de esta afirmación?',
+        opciones: [
+          { letra: 'A', texto: 'La afirmación es correcta: los TLC siempre aumentan las exportaciones y benefician a todos.' },
+          { letra: 'B', texto: 'La afirmación es parcial: los TLC pueden aumentar algunas exportaciones (flores, café) pero también abren el mercado a importaciones que pueden perjudicar a productores nacionales (agricultores, industria manufacturera); los beneficios y costos se distribuyen desigualmente.' },
+          { letra: 'C', texto: 'La afirmación es incorrecta porque Colombia no ha firmado ningún TLC.' },
+          { letra: 'D', texto: 'Los TLC son siempre negativos y Colombia debería retirarse de todos ellos.' },
+        ],
+        clave: 'B',
+        justificacion: 'Los tratados de libre comercio generan efectos ambivalentes. Ganan los sectores exportadores competitivos (floricultura, café, petróleo) y los consumidores (acceso a productos importados más baratos). Pero pierden los productores que no pueden competir con bienes importados más baratos (arroz, maíz, pollo de Estados Unidos en el TLC con Colombia). El TLC con EE.UU. afectó negativamente a pequeños agricultores colombianos que compiten con la agricultura subsidiada estadounidense. Un análisis riguroso reconoce ganadores y perdedores en lugar de afirmar que todos se benefician. La opción A acepta la afirmación simplista. La opción C es factualmente incorrecta. La opción D rechaza todos los TLC sin análisis.',
+        competencia: 'interpretacion',
+        componente: 'argumentacion',
+      },
+
+      // 27. Multiperspectividad + pensamiento-sistemico (medio ambiente y desarrollo)
+      {
+        id: 'soc-p-s11-27',
+        enunciado: 'La minería de oro en Chocó y Antioquia genera ingresos para comunidades locales, pero también contamina ríos con mercurio y destruye ecosistemas. Las comunidades afrocolombianas están divididas: algunos la apoyan como fuente de sustento, otros la rechazan por el daño ambiental. ¿Cuál es el análisis más adecuado desde las ciencias sociales?',
+        opciones: [
+          { letra: 'A', texto: 'La minería debe prohibirse completamente porque el medio ambiente siempre es más importante que el empleo.' },
+          { letra: 'B', texto: 'Esta situación evidencia la tensión entre el derecho al desarrollo económico de comunidades empobrecidas y el derecho a un ambiente sano; la solución requiere consulta previa con las comunidades, alternativas económicas viables y regulación estricta de la minería legal.' },
+          { letra: 'C', texto: 'La minería debe permitirse sin regulaciones porque las comunidades necesitan sobrevivir.' },
+          { letra: 'D', texto: 'Las comunidades afrocolombianas no tienen derecho a opinar sobre la minería en sus territorios.' },
+        ],
+        clave: 'B',
+        justificacion: 'Este caso ilustra una tensión real entre derechos: el derecho al desarrollo y al sustento (reconocido en el Pacto Internacional de Derechos Económicos, Sociales y Culturales) y el derecho a un ambiente sano (art. 79 de la Constitución colombiana). No hay una respuesta simple. El análisis de ciencias sociales reconoce la complejidad, los intereses legítimos de todas las partes y busca soluciones que no impongan una carga desproporcionada sobre las comunidades más pobres. La consulta previa (art. 6 del Convenio 169 de la OIT) es un mecanismo constitucional para que las comunidades participen en estas decisiones. Las opciones A y C adoptan posiciones extremas. La opción D viola el derecho a la consulta previa.',
+        competencia: 'pensamiento-sistemico',
+        componente: 'multiperspectividad',
+      },
+
+      // 28. Conocimientos sociales + interpretacion (Segunda Guerra Mundial)
+      {
+        id: 'soc-p-s11-28',
+        enunciado: 'La Segunda Guerra Mundial (1939-1945) terminó con la rendición de Alemania y Japón. ¿Cuáles fueron las consecuencias geopolíticas más importantes para el orden mundial posterior?',
+        opciones: [
+          { letra: 'A', texto: 'La guerra no tuvo consecuencias geopolíticas significativas para la organización del mundo.' },
+          { letra: 'B', texto: 'La guerra rediseñó el orden mundial: surgió la bipolaridad EE.UU.-URSS (Guerra Fría), se creó la ONU para prevenir futuros conflictos, se estableció el Plan Marshall para reconstruir Europa, se consolidó Estados Unidos como potencia hegemónica y comenzó la descolonización de Asia y África.' },
+          { letra: 'C', texto: 'La principal consecuencia fue que Alemania se convirtió en la potencia dominante de Europa.' },
+          { letra: 'D', texto: 'La guerra terminó la influencia de Estados Unidos en los asuntos mundiales.' },
+        ],
+        clave: 'B',
+        justificacion: 'La Segunda Guerra Mundial transformó radicalmente el orden mundial: (1) creó la bipolaridad de la Guerra Fría entre EE.UU. y la URSS; (2) llevó a la creación de la ONU (1945) y del sistema de derechos humanos internacionales; (3) el Plan Marshall (1948) financió la reconstrucción europea y consolidó la influencia estadounidense; (4) la derrota de las potencias coloniales europeas aceleró los procesos de independencia de Asia y África en los años 50-60. La opción A niega consecuencias enormes. La opción C invierte el resultado (Alemania fue derrotada y dividida). La opción D invierte la realidad: EE.UU. emergió como la principal potencia mundial.',
+        competencia: 'interpretacion',
+        componente: 'conocimientos-sociales',
+      },
+
+      // 29. Argumentación + pensamiento-social (economía informal)
+      {
+        id: 'soc-p-s11-29',
+        enunciado: 'Más del 60% de los trabajadores colombianos están en la informalidad (sin contrato, sin seguridad social, sin prestaciones). Un funcionario propone: "La solución a la informalidad es aplicar multas más severas a las empresas que contraten trabajadores informales." ¿Cuál es la principal limitación de esta propuesta?',
+        opciones: [
+          { letra: 'A', texto: 'La propuesta es correcta: las multas son la única solución para reducir la informalidad.' },
+          { letra: 'B', texto: 'La propuesta ignora que gran parte de la informalidad no proviene de empresas que evaden normas, sino de trabajadores independientes, vendedores ambulantes y microempresarios que no tienen la capacidad de pagar los costos de la formalización; multar sin ofrecer incentivos y apoyos puede reducir el empleo en lugar de formalizarlo.' },
+          { letra: 'C', texto: 'La propuesta es correcta, pero las multas deberían aplicarse solo a las empresas extranjeras.' },
+          { letra: 'D', texto: 'La informalidad es una elección libre de los trabajadores y el Estado no debe intervenir.' },
+        ],
+        clave: 'B',
+        justificacion: 'La informalidad laboral en Colombia tiene causas estructurales: los costos de la formalización (parafiscales, seguridad social, prestaciones) representan un porcentaje alto del salario que muchas microempresas y trabajadores independientes no pueden asumir. Además, una parte importante de la informalidad es de subsistencia: vendedores ambulantes, trabajadoras del hogar, campesinos que no caben en el sistema formal. Las políticas efectivas combinan reducción de costos de formalización, simplificación de trámites, apoyos a microempresas y gradualidad. Solo multar sin reformar los incentivos puede llevar a más desempleo. Las opciones A y C aceptan el enfoque punitivo. La opción D niega el rol del Estado.',
+        competencia: 'pensamiento-social',
+        componente: 'argumentacion',
+      },
+
+      // 30. Multiperspectividad + interpretacion (movimiento indígena latinoamericano)
+      {
+        id: 'soc-p-s11-30',
+        enunciado: 'En los años 90, los movimientos indígenas de Ecuador, Bolivia, México y Colombia lograron importantes reconocimientos en sus Constituciones (territorios colectivos, consulta previa, autonomía). Algunos analistas los consideran un modelo de democracia intercultural; otros critican que la autonomía indígena puede fragmentar el Estado-nación. ¿Cuál es el análisis más adecuado desde las ciencias sociales?',
+        opciones: [
+          { letra: 'A', texto: 'Los derechos indígenas deben eliminarse porque fragmentan la unidad nacional.' },
+          { letra: 'B', texto: 'Los derechos de los pueblos indígenas representan una ampliación democrática que reconoce la diversidad; la tensión con el Estado-nación es real pero manejable mediante marcos de autonomía graduada que respeten tanto la integridad territorial como los derechos culturales.' },
+          { letra: 'C', texto: 'Los pueblos indígenas deben asimilarse completamente a la cultura nacional para garantizar la unidad del Estado.' },
+          { letra: 'D', texto: 'Los derechos indígenas son suficientes tal como están y no requieren ajustes ni debate.' },
+        ],
+        clave: 'B',
+        justificacion: 'El reconocimiento de derechos de los pueblos indígenas es una respuesta a siglos de exclusión, asimilación forzada y despojo territorial. Las constituciones pluralistas (Bolivia, Ecuador, Colombia) han demostrado que es posible combinar unidad estatal con respeto a la diversidad cultural. La tensión con el Estado-nación es real: los casos de consulta previa sobre proyectos extractivos generan conflictos. Pero las ciencias sociales muestran que la asimilación forzada (opción C) produce exclusión y conflicto, mientras que el pluralismo bien diseñado genera cohesión. La opción A adopta una postura homogeneizadora. La opción D niega la necesidad de mejora continua del marco jurídico.',
+        competencia: 'interpretacion',
+        componente: 'multiperspectividad',
+      },
+
+      // 31. Conocimientos sociales + pensamiento-sistemico (sistema tributario)
+      {
+        id: 'soc-p-s11-31',
+        enunciado: 'Un sistema tributario "progresivo" grava con tasas más altas a quienes tienen mayores ingresos; uno "regresivo" cobra proporcionalmente más a quienes tienen menores ingresos. El IVA (impuesto al valor agregado) sobre los bienes de consumo es criticado por ser regresivo. ¿Por qué?',
+        opciones: [
+          { letra: 'A', texto: 'Porque el IVA solo lo pagan las personas ricas.' },
+          { letra: 'B', texto: 'Porque una persona pobre que gana $800.000 al mes paga el mismo porcentaje de IVA que una persona rica que gana $10.000.000, pero el IVA representa una proporción mucho mayor de los ingresos del pobre, lo que lo afecta desproporcionadamente.' },
+          { letra: 'C', texto: 'Porque el IVA financia programas exclusivos para ricos.' },
+          { letra: 'D', texto: 'Porque el IVA es un impuesto que solo se cobra en Colombia.' },
+        ],
+        clave: 'B',
+        justificacion: 'La regresividad del IVA es una crítica clásica de la economía pública: si una persona pobre destina el 80% de su ingreso al consumo básico y paga IVA sobre esos bienes, el impuesto consume una parte significativa de sus ingresos. En cambio, una persona rica destina un porcentaje mucho menor de su ingreso al consumo (el resto va a ahorro e inversión) y paga IVA solo sobre esa fracción. Por eso el IVA como único impuesto o con pocas exenciones es regresivo: pesa proporcionalmente más sobre los pobres. Los sistemas fiscales más equitativos combinan IVA con exenciones en bienes básicos y tasas progresivas de impuesto a la renta. Las opciones A, C y D son incorrectas.',
+        competencia: 'pensamiento-sistemico',
+        componente: 'conocimientos-sociales',
+      },
+
+      // 32. Argumentación + pensamiento-social (seguridad y libertades)
+      {
+        id: 'soc-p-s11-32',
+        enunciado: 'Después de los ataques del 11 de septiembre de 2001 en EE.UU., varios países adoptaron leyes antiterroristas que ampliaron la vigilancia estatal (escuchas telefónicas, monitoreo de internet). El debate fue: ¿se justifica sacrificar libertades civiles en nombre de la seguridad? ¿Cuál es el marco analítico más adecuado?',
+        opciones: [
+          { letra: 'A', texto: 'La seguridad siempre debe primar sobre cualquier libertad civil; no hay debate posible.' },
+          { letra: 'B', texto: 'Este es un dilema clásico de las democracias liberales: la seguridad colectiva y la libertad individual son bienes en tensión; las medidas de vigilancia deben ser proporcionales, temporales, sometidas a control judicial y transparentes para evitar que las herramientas antiterroristas se usen para reprimir la disidencia política.' },
+          { letra: 'C', texto: 'Las libertades civiles siempre deben primar sobre la seguridad, sin excepciones.' },
+          { letra: 'D', texto: 'Este debate no es relevante para Colombia porque el país no ha sufrido ataques terroristas.' },
+        ],
+        clave: 'B',
+        justificacion: 'El dilema seguridad-libertad es uno de los debates centrales de la filosofía política y el derecho constitucional. Las democracias deben proteger a sus ciudadanos de amenazas reales, pero las medidas de seguridad no pueden ser ilimitadas: la historia muestra que poderes de vigilancia sin control judicial pueden usarse para perseguir opositores, disidentes y minorías. El principio de proporcionalidad, el control judicial y la revisión parlamentaria son salvaguardias esenciales. Colombia, que ha vivido el conflicto armado, conoce bien este dilema con normas como la detención administrativa y el uso de inteligencia. Las opciones A y C adoptan extremos absolutos. La opción D es incorrecta.',
+        competencia: 'pensamiento-social',
+        componente: 'argumentacion',
+      },
+
+      // 33. Conocimientos sociales + interpretacion (organismos internacionales)
+      {
+        id: 'soc-p-s11-33',
+        enunciado: 'La Comisión Interamericana de Derechos Humanos (CIDH) y la Corte Interamericana de Derechos Humanos son organismos del sistema interamericano que pueden condenar a los Estados por violaciones de derechos humanos. ¿Cuál es la importancia de este sistema para Colombia?',
+        opciones: [
+          { letra: 'A', texto: 'El sistema interamericano no tiene ninguna relevancia para Colombia porque el Estado colombiano siempre protege los derechos humanos.' },
+          { letra: 'B', texto: 'El sistema interamericano actúa como instancia internacional que complementa la justicia nacional: cuando los tribunales internos no protegen adecuadamente los derechos, las víctimas pueden acudir a este sistema; Colombia ha sido condenada múltiples veces, lo que ha generado reformas institucionales.' },
+          { letra: 'C', texto: 'El sistema interamericano puede reemplazar completamente al sistema judicial colombiano en todos los casos.' },
+          { letra: 'D', texto: 'El sistema interamericano solo protege derechos económicos, no civiles ni políticos.' },
+        ],
+        clave: 'B',
+        justificacion: 'El sistema interamericano de derechos humanos opera como mecanismo subsidiario: solo interviene cuando se han agotado los recursos internos o cuando el Estado no tiene voluntad de investigar y sancionar. Colombia ha sido condenada por la Corte IDH en casos emblemáticos (masacre de Mapiripán, desapariciones forzadas, uso de paramilitares) y estas condenas han generado reformas en el sistema penal y de protección. La CIDH también monitorea la situación de derechos humanos y emite medidas cautelares. La opción A niega la necesidad del sistema internacional. La opción C exagera su alcance (es subsidiario). La opción D limita incorrectamente su competencia.',
+        competencia: 'interpretacion',
+        componente: 'conocimientos-sociales',
+      },
+
+      // 34. Multiperspectividad + pensamiento-sistemico (globalización económica)
+      {
+        id: 'soc-p-s11-34',
+        enunciado: 'La Organización Mundial del Comercio (OMC) promueve el libre comercio entre países. Algunos economistas argumentan que este sistema favorece a los países ricos; otros dicen que también beneficia a los países en desarrollo. ¿Cuál es la evaluación más equilibrada de las ciencias sociales?',
+        opciones: [
+          { letra: 'A', texto: 'El libre comercio siempre beneficia por igual a todos los países del mundo.' },
+          { letra: 'B', texto: 'El libre comercio puede generar crecimiento global, pero las reglas de la OMC no son completamente equitativas: los países ricos mantienen subsidios agrícolas y protecciones que niegan a los países en desarrollo, creando asimetrías que limitan los beneficios del comercio para las economías menos desarrolladas.' },
+          { letra: 'C', texto: 'El libre comercio es siempre negativo y los países deben cerrarse al comercio internacional.' },
+          { letra: 'D', texto: 'La OMC tiene reglas perfectamente equitativas que ningún país puede cuestionar.' },
+        ],
+        clave: 'B',
+        justificacion: 'La evidencia sobre el libre comercio es matizada. Hay ganancias netas del comercio internacional (especialización, acceso a bienes, crecimiento), pero también asimetrías estructurales: los países ricos mantienen subsidios agrícolas masivos (EE.UU., UE) que hacen competencia desleal a los agricultores de países en desarrollo; además, tienen mayor capacidad de negociación en los tratados. Economistas como Dani Rodrik han mostrado que el "hiperglobalismo" puede dañar a los sectores vulnerables de los países en desarrollo si no va acompañado de políticas sociales de compensación. La opción A ignora las asimetrías. La opción C niega los beneficios del comercio. La opción D idealiza las reglas de la OMC.',
+        competencia: 'pensamiento-sistemico',
+        componente: 'multiperspectividad',
+      },
+
+      // 35. Conocimientos sociales + pensamiento-social (ciencias políticas)
+      {
+        id: 'soc-p-s11-35',
+        enunciado: 'El concepto de "Estado fallido" se usa para describir países donde el gobierno no puede proveer seguridad, servicios básicos ni el monopolio legítimo de la violencia. ¿Cuáles de las siguientes características son propias de un Estado fallido?',
+        opciones: [
+          { letra: 'A', texto: 'Un Estado fallido es aquel que tiene déficit fiscal y deuda externa alta.' },
+          { letra: 'B', texto: 'Un Estado fallido se caracteriza por la pérdida del control territorial (presencia de grupos armados no estatales), incapacidad para proveer servicios básicos, colapso de las instituciones judiciales y ausencia de legitimidad del gobierno.' },
+          { letra: 'C', texto: 'Un Estado fallido es aquel que pierde elecciones democráticas.' },
+          { letra: 'D', texto: 'Un Estado fallido es aquel que tiene conflictos diplomáticos con otros países.' },
+        ],
+        clave: 'B',
+        justificacion: 'El concepto de "Estado fallido" (failed state), desarrollado por académicos como Robert Rotberg, incluye: pérdida del monopolio de la violencia (grupos armados controlan territorios), incapacidad de proveer seguridad física a los ciudadanos, colapso de la capacidad de prestación de servicios básicos (salud, educación, agua) y pérdida de legitimidad gubernamental. Somalia, Yemen y partes de la República Democrática del Congo son ejemplos. Colombia no es un Estado fallido pero tiene zonas con "presencia diferenciada del Estado" donde grupos armados ejercen control. La opción A describe problemas fiscales comunes a muchos Estados funcionales. Las opciones C y D describen situaciones políticas distintas al concepto de Estado fallido.',
+        competencia: 'pensamiento-social',
+        componente: 'conocimientos-sociales',
+      },
+
+      // 36. Argumentación + interpretacion (educación sexual)
+      {
+        id: 'soc-p-s11-36',
+        enunciado: 'La evidencia internacional muestra que los programas integrales de educación sexual reducen los embarazos en adolescentes y las infecciones de transmisión sexual. Sin embargo, algunos sectores se oponen argumentando que estos programas van en contra de sus valores religiosos y morales. Desde las ciencias sociales, ¿cómo debe abordarse este debate en una democracia pluralista?',
+        opciones: [
+          { letra: 'A', texto: 'Los programas de educación sexual deben eliminarse para no ofender a los sectores religiosos.' },
+          { letra: 'B', texto: 'En una democracia pluralista, las políticas públicas de salud pública (como la educación sexual) deben basarse en evidencia científica; las familias pueden complementar con sus valores, pero el Estado tiene la obligación de garantizar información científica que proteja la salud de los adolescentes.' },
+          { letra: 'C', texto: 'Los valores religiosos deben determinar las políticas de educación sexual del Estado.' },
+          { letra: 'D', texto: 'La educación sexual no debe incluirse en el currículo escolar porque es asunto exclusivamente familiar.' },
+        ],
+        clave: 'B',
+        justificacion: 'En una democracia pluralista y laica, las políticas públicas de salud se basan en evidencia científica, no en preceptos religiosos de ninguna confesión particular. El derecho a la salud y a la información (art. 49 y 73 de la Constitución colombiana) obliga al Estado a garantizar que los jóvenes accedan a información científica sobre salud sexual. Esto no impide que las familias complementen esa educación con sus valores. La separación entre Iglesia y Estado (art. 19 Constitución de 1991) implica que ninguna religión determina las políticas públicas. Las opciones A, C y D privilegian los valores religiosos sobre la evidencia científica y los derechos constitucionales.',
+        competencia: 'interpretacion',
+        componente: 'argumentacion',
+      },
+
+      // 37. Multiperspectividad + pensamiento-social (migraciones globales)
+      {
+        id: 'soc-p-s11-37',
+        enunciado: 'La migración internacional es el desplazamiento de personas entre países. Los países desarrollados reciben migrantes que contribuyen a su economía, pero algunos sectores de esos países los rechazan. ¿Cuál es el análisis más documentado de las migraciones desde las ciencias sociales?',
+        opciones: [
+          { letra: 'A', texto: 'Los migrantes siempre perjudican la economía de los países que los reciben.' },
+          { letra: 'B', texto: 'La investigación económica y sociológica muestra que los migrantes generalmente contribuyen positivamente a las economías receptoras (mano de obra, innovación, emprendimiento), aunque pueden generar tensiones en sectores específicos; los países de origen también sufren pérdida de capital humano (fuga de cerebros).' },
+          { letra: 'C', texto: 'Los migrantes no tienen ningún impacto económico en los países receptores.' },
+          { letra: 'D', texto: 'Las migraciones son siempre positivas sin ninguna consecuencia negativa.' },
+        ],
+        clave: 'B',
+        justificacion: 'La investigación sobre migraciones (Giovanni Peri, OCDE) muestra que los migrantes contribuyen positivamente a las economías receptoras: ocupan nichos laborales desatendidos, pagan impuestos, emprenden negocios y generan innovación (muchos grandes empresarios de Silicon Valley son migrantes). Sin embargo, pueden generar presiones en sectores específicos (competencia por empleos de baja calificación) y tensiones culturales. Para los países de origen, la emigración de profesionales calificados representa "fuga de cerebros". Un análisis equilibrado reconoce estos efectos múltiples y propone políticas de integración efectivas. Las opciones A, C y D adoptan posiciones absolutas sin matices.',
+        competencia: 'pensamiento-social',
+        componente: 'multiperspectividad',
+      },
+
+      // 38. Conocimientos sociales + pensamiento-sistemico (historia reciente de Colombia)
+      {
+        id: 'soc-p-s11-38',
+        enunciado: 'El narcotráfico en Colombia alcanzó su máxima expresión entre los años 80 y 90 con los carteles de Medellín y Cali. ¿Cuáles fueron sus principales impactos en la sociedad colombiana?',
+        opciones: [
+          { letra: 'A', texto: 'El narcotráfico fue positivo para Colombia porque generó empleos y divisas.' },
+          { letra: 'B', texto: 'El narcotráfico generó corrupción sistémica (infiltración en política, justicia y seguridad), violencia extrema (atentados, sicariato, masacres), erosión del Estado de derecho y daño a la imagen internacional del país.' },
+          { letra: 'C', texto: 'El narcotráfico no tuvo ningún impacto político ni social, solo económico.' },
+          { letra: 'D', texto: 'El narcotráfico fue el único factor que generó violencia en Colombia durante los años 80 y 90.' },
+        ],
+        clave: 'B',
+        justificacion: 'El narcotráfico tuvo impactos multidimensionales en Colombia: (1) corrupción del sistema político (elecciones financiadas por carteles, infiltración de políticos y funcionarios); (2) violencia extrema (asesinatos de candidatos presidenciales, jueces, periodistas; decenas de miles de muertes); (3) erosión del Estado de derecho (el cartel de Medellín desafió al Estado con bombas y secuestros); (4) daño reputacional internacional que afectó el comercio y el turismo; (5) normalización de economías ilegales en regiones empobrecidas. La opción A ignora estos daños. La opción C reduce el impacto a lo económico. La opción D simplifica excesivamente: también existía el conflicto armado.',
+        competencia: 'pensamiento-sistemico',
+        componente: 'conocimientos-sociales',
+      },
+
+      // 39. Argumentación + interpretacion (participación ciudadana)
+      {
+        id: 'soc-p-s11-39',
+        enunciado: 'La Constitución de 1991 creó mecanismos de participación directa: el referendo, la consulta popular, el cabildo abierto, la iniciativa legislativa y la revocatoria del mandato. A pesar de esto, la participación ciudadana en Colombia sigue siendo baja. ¿Cuál es la explicación más completa de esta paradoja?',
+        opciones: [
+          { letra: 'A', texto: 'Los mecanismos de participación no existen en realidad porque el gobierno los ha bloqueado todos.' },
+          { letra: 'B', texto: 'Los mecanismos existen formalmente, pero su uso está limitado por requisitos procedimentales exigentes, bajo conocimiento ciudadano de los instrumentos, desconfianza institucional y falta de cultura de participación; la democracia formal no garantiza por sí sola la participación real.' },
+          { letra: 'C', texto: 'Los colombianos no participan porque la Constitución de 1991 prohíbe la participación activa.' },
+          { letra: 'D', texto: 'La participación ciudadana no es importante en una democracia representativa.' },
+        ],
+        clave: 'B',
+        justificacion: 'La paradoja es real: Colombia tiene una Constitución participativa de las más avanzadas del mundo, pero la participación efectiva es baja. Las ciencias políticas explican esto por múltiples factores: (1) los mecanismos tienen requisitos altos (el número de firmas para una consulta es muy exigente); (2) muchos ciudadanos no conocen estos instrumentos; (3) hay desconfianza en que la participación produzca cambios reales; (4) la cultura política clientelista desestimula la participación autónoma. Esta brecha entre democracia formal e informal es un problema documentado en muchas democracias jóvenes. La opción A desconoce el marco constitucional real. Las opciones C y D son incorrectas.',
+        competencia: 'interpretacion',
+        componente: 'argumentacion',
+      },
+
+      // 40. Multiperspectividad + pensamiento-social (justicia social)
+      {
+        id: 'soc-p-s11-40',
+        enunciado: 'Desde la filosofía política, existen dos concepciones de la justicia social. John Rawls argumenta que una sociedad justa es aquella que garantiza condiciones de vida digna para los más desfavorecidos (principio de diferencia). Robert Nozick argumenta que la justicia es el resultado de transacciones voluntarias libres, sin redistribución forzada. ¿Qué implica este debate para el diseño de políticas públicas?',
+        opciones: [
+          { letra: 'A', texto: 'Solo la posición de Rawls es válida: el Estado siempre debe redistribuir la riqueza.' },
+          { letra: 'B', texto: 'Este debate refleja una tensión filosófica real sobre el papel del Estado: la posición rawlsiana justifica impuestos redistributivos y políticas sociales; la posición de Nozick defiende el libre mercado y la propiedad privada; los sistemas democráticos concretos negocian entre estos polos.' },
+          { letra: 'C', texto: 'Solo la posición de Nozick es válida: el Estado nunca debe intervenir en la distribución de la riqueza.' },
+          { letra: 'D', texto: 'Este debate filosófico no tiene ninguna implicación práctica para las políticas públicas.' },
+        ],
+        clave: 'B',
+        justificacion: 'El debate Rawls-Nozick es uno de los más influyentes en la filosofía política y tiene implicaciones directas para las políticas públicas. Rawls (Teoría de la Justicia, 1971) fundamenta filosóficamente los sistemas de bienestar, los impuestos progresivos y las acciones afirmativas: son justos si benefician a los más desfavorecidos. Nozick (Anarquía, Estado y Utopía, 1974) defiende el Estado mínimo: solo puede garantizar seguridad y derechos de propiedad, sin redistribuir. Los sistemas democráticos reales (incluido Colombia) negocian entre estos extremos según sus tradiciones, culturas políticas y correlaciones de fuerzas. Ninguna posición es absolutamente correcta o incorrecta. Las opciones A, C y D adoptan posiciones absolutas.',
+        competencia: 'pensamiento-social',
         componente: 'multiperspectividad',
       },
     ],
@@ -2728,6 +5448,406 @@ const PREGUNTAS_ICFES = {
         competencia: 'reflexionar',
         componente: 'pragmatico',
       },
+
+      // 16. Semántico + identificar (texto descriptivo)
+      {
+        id: 'lc-p-s9-16',
+        enunciado: 'Lee el siguiente fragmento:\n\n"La Ciénaga Grande de Santa Marta es el cuerpo de agua más extenso de Colombia. Sus aguas salobres albergan manglares centenarios cuyos troncos retorcidos emergen del lodo como dedos de una mano gigante. Al amanecer, la superficie del agua refleja tonos anaranjados y rosas que hacen de la ciénaga un espejo de luz cambiante. Las comunidades palafíticas construyen sus casas sobre pilotes de madera, suspendidas entre el agua y el cielo."\n\n¿Cuál es la función principal de la expresión "como dedos de una mano gigante"?',
+        opciones: [
+          { letra: 'A', texto: 'Explicar el proceso biológico de crecimiento de los mangles.' },
+          { letra: 'B', texto: 'Comparar visualmente los troncos retorcidos con una parte del cuerpo humano para hacer la descripción más vívida.' },
+          { letra: 'C', texto: 'Indicar que los mangles son peligrosos para las personas que navegan la ciénaga.' },
+          { letra: 'D', texto: 'Argumentar que los manglares deben protegerse de la tala.' },
+        ],
+        clave: 'B',
+        justificacion: 'La expresión "como dedos de una mano gigante" es un símil: compara los troncos retorcidos de los manglares con dedos humanos para ofrecer una imagen visual concreta y expresiva al lector. Su función es descriptiva y estética: permite al lector visualizar la forma peculiar de los manglares sin haberlos visto. No tiene función explicativa científica (A), no expresa peligro (C) ni argumenta a favor de la conservación (D).',
+        competencia: 'identificar',
+        componente: 'semantico',
+      },
+
+      // 17. Pragmático + comprender (texto argumentativo)
+      {
+        id: 'lc-p-s9-17',
+        enunciado: 'Lee el siguiente párrafo de un artículo de opinión:\n\n"Prohibir las pantallas a los niños menores de 3 años es una medida acertada que los pediatras respaldan. El cerebro en desarrollo necesita estímulos del mundo real, no imágenes digitales. Sin embargo, reconozco que para muchos padres esto es difícil de implementar cuando trabajan todo el día y el televisor es el único \'niñero\' accesible."\n\n¿Qué estrategia argumentativa usa el autor al incluir la última frase?',
+        opciones: [
+          { letra: 'A', texto: 'El autor abandona su posición inicial porque reconoce que prohíbir pantallas es imposible.' },
+          { letra: 'B', texto: 'El autor matiza su argumento al reconocer las limitaciones prácticas de aplicar la medida, lo que hace su posición más equilibrada y menos dogmática sin abandonar la tesis.' },
+          { letra: 'C', texto: 'El autor critica a los padres trabajadores por usar el televisor como niñero.' },
+          { letra: 'D', texto: 'El autor introduce un argumento en contra que invalida completamente su posición inicial.' },
+        ],
+        clave: 'B',
+        justificacion: 'El autor usa la técnica argumentativa de la concesión: reconoce una dificultad práctica real (la situación de los padres trabajadores) sin abandonar su tesis (prohibir pantallas es acertado). Esta estrategia hace el argumento más honesto y menos absoluto, mostrando que el autor conoce el contexto real. No abandona su posición (A). No critica a los padres (C), sino que comprende su situación. No invalida su argumento (D): reconocer una dificultad práctica no equivale a negar la validez de la recomendación médica.',
+        competencia: 'comprender',
+        componente: 'pragmatico',
+      },
+
+      // 18. Semántico + reflexionar (cuento - inferencia)
+      {
+        id: 'lc-p-s9-18',
+        enunciado: 'Lee el siguiente fragmento de un cuento:\n\n"Cuando la señora Rosario llegó a casa de su hija después de diez años, encontró la puerta pintada de azul. Antes era roja. Tocó el timbre y esperó. La niña que abrió tenía los ojos de su hija pero no la reconoció. \'No vive nadie con ese nombre aquí\', dijo la niña, y cerró la puerta."\n\n¿Cuál es la interpretación más adecuada del final del fragmento?',
+        opciones: [
+          { letra: 'A', texto: 'La niña mentía porque no quería que la señora Rosario entrara.' },
+          { letra: 'B', texto: 'El fragmento sugiere que la hija de la señora Rosario ha muerto y la niña es su nieta, que nunca conoció a su abuela.' },
+          { letra: 'C', texto: 'La niña no reconoció a la señora Rosario porque era demasiado pequeña cuando se separaron, o porque la hija cambió de nombre y nunca le habló de su madre, lo que implica que hubo una ruptura profunda y dolorosa en la relación familiar.' },
+          { letra: 'D', texto: 'La señora Rosario se equivocó de casa porque la puerta cambió de color.' },
+        ],
+        clave: 'C',
+        justificacion: 'La interpretación más adecuada considera todos los indicios textuales. "Tenía los ojos de su hija" confirma que está en la casa correcta. La niña (probablemente nieta de la señora Rosario) "no reconoció" el nombre, lo que puede significar que su madre (la hija) la crio sin mencionar a la abuela, lo cual implica una ruptura familiar profunda. La puerta pintada de azul simboliza el cambio y el paso del tiempo. La opción A atribuye malicia sin evidencia. La opción B asume la muerte sin datos suficientes. La opción D ignora el indicio visual "ojos de su hija" que confirma la dirección correcta.',
+        competencia: 'reflexionar',
+        componente: 'semantico',
+      },
+
+      // 19. Sintáctico + identificar (conectores y estructura)
+      {
+        id: 'lc-p-s9-19',
+        enunciado: 'Lee las siguientes versiones de un párrafo y determina cuál tiene mejor cohesión:\n\nVersión 1: "Los ríos colombianos están contaminados. Los ríos reciben desechos industriales. Los ríos reciben aguas residuales domésticas. Las ciudades no tratan las aguas."\n\nVersión 2: "Los ríos colombianos están contaminados porque reciben desechos industriales y aguas residuales domésticas que las ciudades no tratan adecuadamente."\n\n¿Por qué la Versión 2 tiene mejor cohesión?',
+        opciones: [
+          { letra: 'A', texto: 'Porque la Versión 2 usa palabras más difíciles y técnicas.' },
+          { letra: 'B', texto: 'Porque la Versión 2 usa conectores causales ("porque"), coordinación ("y") y referencia ("que") para integrar las ideas en una sola estructura coherente, evitando la repetición y mostrando las relaciones lógicas entre las oraciones.' },
+          { letra: 'C', texto: 'Porque la Versión 2 tiene más información nueva que la Versión 1.' },
+          { letra: 'D', texto: 'Porque la Versión 2 es más corta y los textos cortos siempre son más claros.' },
+        ],
+        clave: 'B',
+        justificacion: 'La cohesión textual es la propiedad que hace que las oraciones de un texto se conecten de forma fluida y lógica. La Versión 2 logra esto mediante recursos explícitos: (1) "porque" expresa la relación causal entre contaminación y sus fuentes; (2) "y" coordina las dos fuentes de contaminación evitando repetir el sujeto; (3) "que" es un pronombre relativo que conecta la oración subordinada con su antecedente. La Versión 1, aunque comprensible, es repetitiva y no muestra las relaciones lógicas. La opción A es incorrecta: la dificultad léxica no es cohesión. La opción C es incorrecta: ambas versiones contienen la misma información. La opción D es una generalización falsa.',
+        competencia: 'identificar',
+        componente: 'sintactico',
+      },
+
+      // 20. Semántico + comprender (poesía colombiana)
+      {
+        id: 'lc-p-s9-20',
+        enunciado: 'Lee el siguiente poema de Aurelio Arturo:\n\n"Toda la noche el viento trae rumores de hojas\ny el alba las primeras palabras del día.\nY el viento que pasa,\ny la lluvia pequeña, mínima,\nque susurra, que cuenta su secreto."\n\n¿Qué tema central desarrolla el poema?',
+        opciones: [
+          { letra: 'A', texto: 'La descripción científica del ciclo del agua y el viento.' },
+          { letra: 'B', texto: 'La naturaleza como fuente de lenguaje, comunicación y significado: los elementos naturales (viento, lluvia, hojas) hablan y transmiten mensajes.' },
+          { letra: 'C', texto: 'El miedo del poeta ante una tormenta nocturna.' },
+          { letra: 'D', texto: 'La crítica a la contaminación ambiental que silencia los sonidos naturales.' },
+        ],
+        clave: 'B',
+        justificacion: 'Aurelio Arturo es conocido por su poesía que humaniza y poetiza la naturaleza colombiana. En este fragmento, los elementos naturales "hablan": el viento "trae rumores", el alba trae "las primeras palabras del día", la lluvia "susurra" y "cuenta su secreto". El poema establece una equivalencia entre naturaleza y lenguaje: la naturaleza se convierte en un sistema de comunicación y significado. No es descripción científica (A), no expresa miedo (C) y no critica la contaminación (D).',
+        competencia: 'comprender',
+        componente: 'semantico',
+      },
+
+      // 21. Pragmático + reflexionar (discurso y género)
+      {
+        id: 'lc-p-s9-21',
+        enunciado: 'Lee el siguiente anuncio de empleo:\n\n"Se busca vendedor dinámico, con habilidades de liderazgo y espíritu competitivo. Salario según experiencia. Enviar hoja de vida a recursos@empresa.com"\n\n¿Qué aspecto del discurso de este anuncio podría ser cuestionado desde una perspectiva de género?',
+        opciones: [
+          { letra: 'A', texto: 'El anuncio no tiene ningún problema porque cualquier persona puede aplicar.' },
+          { letra: 'B', texto: 'El uso del masculino genérico ("vendedor") y la valoración de atributos estereotípicamente masculinos ("competitivo", "liderazgo") pueden desalentar a mujeres y personas no binarias de aplicar, aunque legalmente cualquiera puede hacerlo.' },
+          { letra: 'C', texto: 'El anuncio es discriminatorio porque solo permite aplicar a hombres.' },
+          { letra: 'D', texto: 'El anuncio es incorrecto porque no especifica el salario exacto.' },
+        ],
+        clave: 'B',
+        justificacion: 'El análisis crítico del discurso muestra que el lenguaje no es neutro: el uso del masculino genérico ("vendedor") puede interpretarse como exclusivo aunque no lo sea legalmente, y los atributos descritos ("competitivo", "liderazgo") han sido históricamente asociados con características masculinas en la cultura occidental. Estudios muestran que las mujeres aplican menos a empleos con ese tipo de lenguaje. Esto no significa que el anuncio sea ilegal (C), pero sí que tiene implicaciones discursivas de género. La opción A ignora estos efectos. La opción D señala un problema diferente (transparencia salarial) que no es el objeto de la pregunta.',
+        competencia: 'reflexionar',
+        componente: 'pragmatico',
+      },
+
+      // 22. Semántico + identificar (texto expositivo)
+      {
+        id: 'lc-p-s9-22',
+        enunciado: 'Lee el siguiente texto:\n\n"El maíz fue domesticado hace aproximadamente 9.000 años en el valle de Balsas, México, a partir de una planta silvestre llamada teosinte. Las civilizaciones mesoamericanas lo convirtieron en el eje de su agricultura, economía y cosmovisión. Hoy, el maíz es el tercer cereal más producido en el mundo y un alimento básico para millones de personas en América Latina, África y Asia."\n\n¿Qué tipo de progresión temática usa el texto?',
+        opciones: [
+          { letra: 'A', texto: 'El texto presenta una sola idea y la repite con distintas palabras.' },
+          { letra: 'B', texto: 'El texto desarrolla el tema del maíz de forma progresiva: origen histórico → importancia cultural prehispánica → relevancia global contemporánea, ampliando el tema en el tiempo y el espacio.' },
+          { letra: 'C', texto: 'El texto presenta dos temas opuestos: el maíz antiguo y el maíz moderno.' },
+          { letra: 'D', texto: 'El texto no tiene una organización temática definida.' },
+        ],
+        clave: 'B',
+        justificacion: 'El texto sigue una progresión temática lineal y cronológica: comienza con el origen del maíz (9.000 años atrás, México), pasa a su importancia en las civilizaciones mesoamericanas (pasado histórico) y concluye con su relevancia mundial actual (presente global). Esta estructura va de lo particular (origen puntual) a lo general (importancia mundial), y de lo antiguo a lo contemporáneo. No hay repetición (A), ni dos temas opuestos (C), ni desorganización (D).',
+        competencia: 'identificar',
+        componente: 'semantico',
+      },
+
+      // 23. Sintáctico + comprender (relaciones lógicas)
+      {
+        id: 'lc-p-s9-23',
+        enunciado: 'Lee el siguiente texto y determina la relación lógica entre las dos partes:\n\n"Los estudiantes que leen habitualmente obtienen mejores resultados académicos. Sin embargo, en Colombia solo el 43% de los colombianos lee al menos un libro al año."\n\n¿Qué relación lógica establece el conector "sin embargo"?',
+        opciones: [
+          { letra: 'A', texto: 'Establece una relación de consecuencia: el bajo índice de lectura es la consecuencia de los malos resultados académicos.' },
+          { letra: 'B', texto: 'Establece una relación de contraste: a pesar de la importancia demostrada de la lectura, la práctica lectora en Colombia es baja, lo cual genera una contradicción entre lo deseable y lo real.' },
+          { letra: 'C', texto: 'Establece una relación de causa: los colombianos leen poco porque obtienen malos resultados.' },
+          { letra: 'D', texto: 'Establece una relación de equivalencia entre ambas afirmaciones.' },
+        ],
+        clave: 'B',
+        justificacion: '"Sin embargo" es un conector adversativo o de contraste. Introduce una idea que va en dirección opuesta o inesperada respecto a lo anterior. En este caso, contrasta la evidencia sobre los beneficios de la lectura (primera oración, lo deseable) con la baja tasa de lectura en Colombia (segunda oración, la realidad), creando una contradicción entre lo que se sabe que es beneficioso y lo que realmente ocurre. No expresa consecuencia (A), causa (C) ni equivalencia (D).',
+        competencia: 'comprender',
+        componente: 'sintactico',
+      },
+
+      // 24. Pragmático + identificar (texto multimodal)
+      {
+        id: 'lc-p-s9-24',
+        enunciado: 'Una caricatura muestra a un político con la bolsa del presupuesto de educación llena de billetes, pero el político está vaciando la bolsa dentro de una alcancía con su nombre. Al fondo, hay una escuela con paredes caídas y niños sin pupitres. ¿Cuál es el mensaje principal de la caricatura?',
+        opciones: [
+          { letra: 'A', texto: 'Los políticos trabajan duro para mejorar la educación colombiana.' },
+          { letra: 'B', texto: 'Los recursos destinados a educación son desviados por la corrupción política, mientras las condiciones reales de las escuelas permanecen precarias.' },
+          { letra: 'C', texto: 'La caricatura describe el proceso de ahorro personal de un político honesto.' },
+          { letra: 'D', texto: 'La caricatura denuncia que los maestros no tienen salarios justos.' },
+        ],
+        clave: 'B',
+        justificacion: 'Los textos visuales como las caricaturas usan símbolos y composición para comunicar ideas complejas de forma sintética. En esta imagen, los elementos se combinan para producir un mensaje de denuncia: (1) la bolsa de educación llena de billetes representa recursos destinados a educación; (2) el político vaciándola en su alcancía personal representa la apropiación indebida (corrupción); (3) la escuela en ruinas al fondo representa el resultado real de esa corrupción (el dinero no llega a donde debe). La caricatura denuncia específicamente la corrupción en el manejo de los recursos educativos. Las opciones A y C invierten el mensaje. La opción D introduce un elemento no presente en la descripción.',
+        competencia: 'identificar',
+        componente: 'pragmatico',
+      },
+
+      // 25. Semántico + reflexionar (texto literario - personaje)
+      {
+        id: 'lc-p-s9-25',
+        enunciado: 'Lee el siguiente fragmento de la novela "El coronel no tiene quien le escriba" de Gabriel García Márquez:\n\n"El coronel necesitaba ochenta pesos para pagar los gastos del médico y la botica. Revolvió los cajones del armario sin encontrar nada. Llevaba tres semanas buscando trabajo. Esa mañana había comido mazorcas hervidas. En el cuarto de al lado, su esposa tosía y tosía."\n\n¿Cómo caracteriza el fragmento la situación del coronel?',
+        opciones: [
+          { letra: 'A', texto: 'El coronel es un hombre rico que tiene problemas menores de administración del dinero.' },
+          { letra: 'B', texto: 'El fragmento retrata una situación de pobreza extrema y dignidad silenciosa: la acumulación de detalles cotidianos (la búsqueda infructuosa, las semanas sin trabajo, la comida escasa, la esposa enferma) construye un cuadro de privación sin que el personaje se queje explícitamente.' },
+          { letra: 'C', texto: 'El coronel está feliz con su vida sencilla porque no necesita dinero.' },
+          { letra: 'D', texto: 'El fragmento describe una situación temporal que se resolverá fácilmente.' },
+        ],
+        clave: 'B',
+        justificacion: 'García Márquez construye la situación del coronel mediante la acumulación de detalles concretos y cotidianos: necesita dinero para la medicina (no puede pagar la salud básica), busca en cajones vacíos (no tiene ahorros), lleva semanas sin trabajo (desempleo prolongado), ha comido solo mazorcas (alimentación precaria), y su esposa está enferma. Esta técnica narrativa es más poderosa que una descripción explícita de pobreza: el lector construye el cuadro a partir de los detalles. La dignidad del personaje está en que no se lamenta: enfrenta la situación en silencio. Las opciones A, C y D contradicen los indicios textuales.',
+        competencia: 'reflexionar',
+        componente: 'semantico',
+      },
+
+      // 26. Sintáctico + reflexionar (argumentación escrita)
+      {
+        id: 'lc-p-s9-26',
+        enunciado: 'Lee el siguiente borrador de conclusión de un ensayo sobre el uso del celular en clase:\n\n"Por todo lo anterior, claramente se puede concluir que los celulares son malos y no deberían usarse nunca en ningún contexto educativo porque distraen a los estudiantes."\n\n¿Cuál es el principal problema de escritura de esta conclusión?',
+        opciones: [
+          { letra: 'A', texto: 'La conclusión no tiene ningún problema: es clara y directa.' },
+          { letra: 'B', texto: 'La conclusión generaliza en exceso ("nunca en ningún contexto") y no matiza la posición como haría un ensayo riguroso; además, la expresión "claramente" asume lo que debería estar demostrado y no recoge los argumentos del texto de manera sintética.' },
+          { letra: 'C', texto: 'La conclusión es demasiado larga y debería resumirse en una sola palabra.' },
+          { letra: 'D', texto: 'La conclusión no cita ninguna fuente bibliográfica.' },
+        ],
+        clave: 'B',
+        justificacion: 'Una buena conclusión debe: (1) retomar sintéticamente los argumentos del ensayo; (2) confirmar la tesis sin exagerar; (3) evitar generalizaciones absolutas si el ensayo no las sustenta. Este borrador tiene varios problemas: "nunca en ningún contexto" es una generalización absoluta que un análisis riguroso difícilmente puede sostener; "claramente" es un marcador que asume la obviedad de lo que debería estar argumentado; y no sintetiza los argumentos previos. La opción A acepta los problemas. La opción C invierte el problema (la conclusión es corta, no larga). La opción D puede ser relevante en otros géneros académicos, pero en un ensayo de opinión las conclusiones no siempre requieren citas.',
+        competencia: 'reflexionar',
+        componente: 'sintactico',
+      },
+
+      // 27. Semántico + comprender (texto periodístico)
+      {
+        id: 'lc-p-s9-27',
+        enunciado: 'Lee el siguiente lead (primer párrafo) de una noticia:\n\n"Al menos 12 personas resultaron heridas la tarde de ayer tras el derrumbe de un puente vehicular en construcción en el municipio de Puerto Tejada, Cauca. Los heridos fueron trasladados al hospital regional y las autoridades investigan las causas del accidente."\n\n¿Cuáles de las preguntas básicas del periodismo responde este lead?',
+        opciones: [
+          { letra: 'A', texto: 'Solo responde "qué" y "dónde"; las demás preguntas no están respondidas.' },
+          { letra: 'B', texto: 'Responde: qué (derrumbe del puente y heridos), cuándo (tarde de ayer), dónde (Puerto Tejada, Cauca), cuántos (12 heridos) y qué se hace al respecto (investigación, atención médica); falta el "por qué" que está en proceso de investigación.' },
+          { letra: 'C', texto: 'Responde todas las preguntas del periodismo, incluido el "por qué" completo.' },
+          { letra: 'D', texto: 'El lead no responde ninguna pregunta periodística porque no es un texto informativo.' },
+        ],
+        clave: 'B',
+        justificacion: 'El lead periodístico ("pirámide invertida") busca responder las preguntas básicas en el primer párrafo: qué (derrumbe, heridos), quién (12 personas), cuándo (tarde de ayer), dónde (Puerto Tejada, Cauca), cómo (en construcción) y qué consecuencias (atención médica, investigación). El "por qué" (causas del derrumbe) no está respondido porque "las autoridades investigan las causas": es la única pregunta que queda abierta. La opción A subestima la información presente. La opción C afirma que el "por qué" está respondido, lo cual contradice la mención de la investigación en curso. La opción D desconoce el género periodístico.',
+        competencia: 'comprender',
+        componente: 'semantico',
+      },
+
+      // 28. Pragmático + reflexionar (intertextualidad)
+      {
+        id: 'lc-p-s9-28',
+        enunciado: 'Lee el siguiente texto publicitario:\n\n"Muchos años después, frente a las rebajas de verano, el consumidor habría de recordar aquella tarde remota en que su tarjeta de crédito marcaba cero."\n\n¿Qué efecto produce la imitación del inicio de "Cien años de soledad" en este texto publicitario?',
+        opciones: [
+          { letra: 'A', texto: 'El texto demuestra que García Márquez era un gran admirador del consumismo.' },
+          { letra: 'B', texto: 'La intertextualidad con la obra de García Márquez otorga humor y sofisticación al anuncio, buscando identificación con lectores cultos; también trivializa irónicamente el consumo al equipararlo con la memoria épica de la novela.' },
+          { letra: 'C', texto: 'El texto es una copia ilegal que plagia a García Márquez sin transformar el original.' },
+          { letra: 'D', texto: 'El texto cita a García Márquez para demostrar que la publicidad es una forma literaria.' },
+        ],
+        clave: 'B',
+        justificacion: 'La intertextualidad es la relación que un texto establece con otro texto conocido. En este caso, el anuncio toma la estructura sintáctica y la cadencia del inicio más famoso de la literatura latinoamericana y la aplica a una situación banal (las rebajas de verano y la tarjeta de crédito). El efecto es doble: (1) humor por la incongruencia entre la grandilocuencia del modelo literario y la trivialidad del referente comercial; (2) búsqueda de identificación con lectores que reconocen la cita. Esta técnica es común en publicidad dirigida a públicos con capital cultural. No es plagio (C) porque es una transformación paródica, uso legítimo de la cita.',
+        competencia: 'reflexionar',
+        componente: 'pragmatico',
+      },
+
+      // 29. Semántico + identificar (texto científico divulgativo)
+      {
+        id: 'lc-p-s9-29',
+        enunciado: 'Lee el siguiente fragmento de un artículo de divulgación científica:\n\n"El sueño no es una pausa del cerebro, sino una actividad frenética. Durante la fase REM, el cerebro procesa y consolida los recuerdos del día, descarta información irrelevante y fortalece las conexiones neuronales asociadas a nuevos aprendizajes. Los estudiantes que duermen bien después de estudiar retienen más que quienes estudian más pero duermen menos."\n\n¿Cuál es la idea principal del párrafo?',
+        opciones: [
+          { letra: 'A', texto: 'Los estudiantes deben dormir más y estudiar menos.' },
+          { letra: 'B', texto: 'El sueño, lejos de ser un descanso pasivo, es un proceso activo e imprescindible para el aprendizaje y la consolidación de la memoria.' },
+          { letra: 'C', texto: 'El cerebro humano es más activo de noche que de día.' },
+          { letra: 'D', texto: 'La fase REM es la única etapa importante del sueño para los estudiantes.' },
+        ],
+        clave: 'B',
+        justificacion: 'La idea principal del párrafo es que el sueño es un proceso activo (no una pausa) que cumple funciones cognitivas fundamentales: consolidación de la memoria y el aprendizaje. Esto lo confirma la frase inicial ("no es una pausa del cerebro, sino una actividad frenética") y el dato final sobre la retención de los estudiantes. La opción A extrae una recomendación implícita pero no recoge el mensaje central sobre la naturaleza del sueño. La opción C va más allá de lo que el texto dice (no compara día y noche). La opción D limita la importancia al REM, mientras el texto habla del sueño en general.',
+        competencia: 'identificar',
+        componente: 'semantico',
+      },
+
+      // 30. Sintáctico + comprender (ironía y lenguaje figurado)
+      {
+        id: 'lc-p-s9-30',
+        enunciado: 'Lee el siguiente texto:\n\n"El señor alcalde prometió que en dos años la ciudad tendría agua potable en todos los barrios. Siete años después, el señor alcalde —que ya era concejal— felicitó a su sucesor por el \'avance histórico\' de instalar tuberías en el 20% de los barrios sin agua."\n\n¿Qué recurso retórico usa el texto y qué efecto produce?',
+        opciones: [
+          { letra: 'A', texto: 'El texto usa hipérbole para exagerar los logros del alcalde.' },
+          { letra: 'B', texto: 'El texto usa ironía: al llamar "avance histórico" a un logro mínimo (20%) frente a una promesa incumplida, contrasta lo que se dice con la realidad, creando un efecto crítico y humorístico.' },
+          { letra: 'C', texto: 'El texto usa metáfora para describir el trabajo del alcalde como un viaje.' },
+          { letra: 'D', texto: 'El texto usa eufemismo para suavizar la crítica al alcalde.' },
+        ],
+        clave: 'B',
+        justificacion: 'La ironía consiste en decir lo contrario de lo que se piensa, o en presentar algo positivamente cuando la realidad lo contradice. En este texto, las comillas en "avance histórico" marcan que la expresión es irónica: se llama "avance histórico" a haber cumplido solo el 20% de una promesa en el doble del tiempo previsto. La ironía crea un efecto crítico y sardónico respecto al político. No es hipérbole (A), que exageraría algo real. No es metáfora (C). No es eufemismo (D), que suavizaría algo negativo; aquí la ironía hace lo contrario.',
+        competencia: 'comprender',
+        componente: 'sintactico',
+      },
+
+      // 31. Pragmático + reflexionar (diversidad lingüística)
+      {
+        id: 'lc-p-s9-31',
+        enunciado: 'Colombia tiene 65 lenguas indígenas además del español. Un docente de un colegio urbano le dice a un estudiante indígena: "Debes olvidar tu lengua materna para aprender bien el español." Desde la perspectiva de la lingüística y los derechos culturales, ¿cuál es el error del docente?',
+        opciones: [
+          { letra: 'A', texto: 'El docente tiene razón: es necesario olvidar la lengua materna para aprender bien una segunda lengua.' },
+          { letra: 'B', texto: 'El docente comete un error lingüístico y cultural: la investigación muestra que una sólida competencia en la lengua materna facilita el aprendizaje de segundas lenguas; además, las lenguas indígenas son patrimonio cultural protegido por la Constitución colombiana.' },
+          { letra: 'C', texto: 'El docente tiene razón porque el español es más útil que las lenguas indígenas en la sociedad actual.' },
+          { letra: 'D', texto: 'El problema es que el docente no habla ninguna lengua indígena.' },
+        ],
+        clave: 'B',
+        justificacion: 'La investigación en lingüística aplicada (Jim Cummins, entre otros) demuestra que una sólida competencia en la lengua materna (L1) facilita el aprendizaje de segundas lenguas (L2): las habilidades cognitivas y lingüísticas se transfieren entre lenguas. Pedir a un niño que "olvide" su lengua materna no solo es lingüísticamente contraproducente, sino que atenta contra su identidad cultural y sus derechos. La Constitución colombiana (art. 10) reconoce las lenguas indígenas como oficiales en sus territorios y la educación intercultural bilingüe como derecho. La opción A adopta una posición refutada por la lingüística. La opción C hace un juicio de valor sobre la "utilidad" que ignora el valor cultural. La opción D introduce un factor no relevante.',
+        competencia: 'reflexionar',
+        componente: 'pragmatico',
+      },
+
+      // 32. Semántico + comprender (crónica)
+      {
+        id: 'lc-p-s9-32',
+        enunciado: 'Lee el siguiente fragmento de crónica:\n\n"Doña Transito lleva 40 años vendiendo obleas en el parque principal de Girardot. Sus manos, pequeñas y ágiles, forman los conos de wafer con la destreza de quien ha repetido el gesto miles de veces. No tiene redes sociales, ni página web, ni sistema de pago digital. Pero a las 10 de la mañana de cualquier domingo, hay una fila de quince personas esperando su turno."\n\n¿Qué idea sobre el éxito y el comercio expresa implícitamente el fragmento?',
+        opciones: [
+          { letra: 'A', texto: 'Doña Transito debe modernizarse con tecnología digital para seguir siendo exitosa.' },
+          { letra: 'B', texto: 'El verdadero éxito comercial puede sostenerse en la calidad del producto, la tradición y la confianza de la clientela, sin necesidad de herramientas digitales.' },
+          { letra: 'C', texto: 'La fila de clientes demuestra que los parques son los mejores lugares para vender alimentos.' },
+          { letra: 'D', texto: 'El fragmento critica a los negocios modernos que no valoran la tradición.' },
+        ],
+        clave: 'B',
+        justificacion: 'El fragmento construye un contraste implícito: la ausencia de herramientas digitales modernas (redes sociales, pago digital) vs. la fila constante de clientes. Este contraste sugiere que el éxito de Doña Transito no depende de la tecnología, sino de la calidad del producto (el gesto repetido con destreza), la permanencia en el tiempo (40 años) y la fidelidad de la clientela. La crónica celebra implícitamente este tipo de éxito basado en el oficio y la tradición. La opción A extrae una recomendación que el texto no hace; más bien lo contrario. La opción C hace una generalización no sustentada. La opción D critica algo que el texto no critica.',
+        competencia: 'comprender',
+        componente: 'semantico',
+      },
+
+      // 33. Sintáctico + identificar (tipos de párrafo)
+      {
+        id: 'lc-p-s9-33',
+        enunciado: 'Lee el siguiente párrafo:\n\n"Los videojuegos no son solo entretenimiento: varios estudios han demostrado que mejoran la coordinación mano-ojo, la capacidad de tomar decisiones bajo presión y las habilidades de resolución de problemas. El juego Minecraft, por ejemplo, ha sido implementado en escuelas de varios países como herramienta pedagógica para enseñar matemáticas, arquitectura y trabajo en equipo."\n\n¿Cuál es la estructura del párrafo?',
+        opciones: [
+          { letra: 'A', texto: 'Oración temática al final + desarrollo antes de la oración temática.' },
+          { letra: 'B', texto: 'Oración temática al inicio ("Los videojuegos no son solo entretenimiento") + argumentos de desarrollo (beneficios cognitivos) + ejemplo de cierre (Minecraft).' },
+          { letra: 'C', texto: 'El párrafo tiene dos oraciones temáticas de igual jerarquía.' },
+          { letra: 'D', texto: 'El párrafo no tiene oración temática porque es puramente narrativo.' },
+        ],
+        clave: 'B',
+        justificacion: 'Un párrafo bien estructurado generalmente tiene: (1) oración temática (idea principal), (2) oraciones de desarrollo (argumentos, datos, explicaciones) y (3) cierre o ejemplo. En este caso: la oración temática es "Los videojuegos no son solo entretenimiento", que anuncia la tesis del párrafo; las oraciones de desarrollo presentan los beneficios cognitivos con respaldo en estudios; y el ejemplo de Minecraft cierra con un caso concreto. Esta estructura es la más común en textos argumentativos e informativos. La opción A invierte la posición de la oración temática. La opción C asume dos tesis de igual peso. La opción D niega la existencia de oración temática.',
+        competencia: 'identificar',
+        componente: 'sintactico',
+      },
+
+      // 34. Pragmático + comprender (texto institucional)
+      {
+        id: 'lc-p-s9-34',
+        enunciado: 'Lee el siguiente fragmento del Manual de Convivencia de un colegio:\n\n"Artículo 12. El uso de dispositivos electrónicos (celulares, tabletas, audífonos) durante las clases está prohibido. El incumplimiento de esta norma implicará la retención del dispositivo hasta la jornada siguiente, con entrega al acudiente. Reincidencias serán tratadas como falta grave."\n\n¿Cuál es la característica principal del lenguaje de este texto?',
+        opciones: [
+          { letra: 'A', texto: 'El texto usa un lenguaje poético con figuras literarias para comunicar la norma.' },
+          { letra: 'B', texto: 'El texto usa un lenguaje normativo y jurídico: preciso, impersonal, con enumeración de consecuencias escaladas, para regular el comportamiento sin dar lugar a interpretaciones ambiguas.' },
+          { letra: 'C', texto: 'El texto usa un lenguaje coloquial para acercarse a los estudiantes.' },
+          { letra: 'D', texto: 'El texto usa un lenguaje narrativo que cuenta una historia sobre el uso de celulares.' },
+        ],
+        clave: 'B',
+        justificacion: 'Los textos normativos e institucionales (manuales de convivencia, leyes, reglamentos) tienen características lingüísticas específicas: precisión léxica (enumeración de los dispositivos: "celulares, tabletas, audífonos"), impersonalidad (no hay "yo" ni "tú"), consecuencias claras y escalonadas ("retención", "falta grave") y estructura de artículo numerado típica del lenguaje jurídico-administrativo. El propósito es regular comportamientos eliminando la ambigüedad. No es poético (A), coloquial (C) ni narrativo (D).',
+        competencia: 'comprender',
+        componente: 'pragmatico',
+      },
+
+      // 35. Semántico + reflexionar (lectura literaria)
+      {
+        id: 'lc-p-s9-35',
+        enunciado: 'Lee el siguiente inicio de cuento:\n\n"La primera vez que Tomás vio el mar, lloró. No era la primera vez que lloraba frente al agua: había llovido el día del entierro de su madre, y él había mirado la lluvia caer sobre el cajón de madera como si el cielo también supiera que algo grande había terminado."\n\n¿Qué función cumplen las memorias del entierro en el texto?',
+        opciones: [
+          { letra: 'A', texto: 'Son una digresión innecesaria que interrumpe la narración principal.' },
+          { letra: 'B', texto: 'Las memorias del entierro establecen una conexión entre el mar (primera experiencia) y el agua de la lluvia (experiencia dolorosa anterior), sugiriendo que para Tomás el agua está cargada de significado emocional profundo, especialmente relacionado con la pérdida.' },
+          { letra: 'C', texto: 'Las memorias explican que Tomás siempre llora cuando ve agua porque tiene una condición médica.' },
+          { letra: 'D', texto: 'Las memorias del entierro demuestran que el padre de Tomás también murió.' },
+        ],
+        clave: 'B',
+        justificacion: 'El recurso narrativo utilizado es la analepsis (flashback) o memoria evocada. El llanto frente al mar conecta con el recuerdo del llanto ante la lluvia durante el entierro de su madre, estableciendo un campo de sentido: el agua (lluvia, mar) se convierte en un símbolo emocional vinculado a experiencias de pérdida y duelo. El narrador refuerza esto con la imagen de la lluvia sobre el cajón "como si el cielo también supiera". No es una digresión (A) sino parte de la construcción del personaje. La opción C introduce una explicación médica que no está en el texto. La opción D hace una inferencia incorrecta (el texto solo menciona a la madre).',
+        competencia: 'reflexionar',
+        componente: 'semantico',
+      },
+
+      // 36. Sintáctico + comprender (transformación de textos)
+      {
+        id: 'lc-p-s9-36',
+        enunciado: 'Un estudiante tiene el siguiente texto argumentativo:\n\n"Las mascotas son buenas para la salud mental. Un estudio mostró que acariciar un perro reduce el cortisol. Los niños con mascotas desarrollan más empatía."\n\nY escribe la siguiente versión mejorada:\n\n"Las mascotas tienen efectos positivos comprobados sobre la salud mental: un estudio demostró que acariciar un perro reduce el nivel de cortisol, y los niños que crecen con mascotas desarrollan mayor capacidad de empatía."\n\n¿Qué mejora concreta hace la segunda versión?',
+        opciones: [
+          { letra: 'A', texto: 'La segunda versión agrega más argumentos que la primera.' },
+          { letra: 'B', texto: 'La segunda versión integra las tres oraciones en una estructura con oración temática + dos argumentos coordinados, usa conectores ("y"), evita la repetición y muestra relaciones lógicas más claras entre las ideas.' },
+          { letra: 'C', texto: 'La segunda versión es simplemente más larga y por eso es mejor.' },
+          { letra: 'D', texto: 'La segunda versión reemplaza palabras difíciles por palabras más sencillas.' },
+        ],
+        clave: 'B',
+        justificacion: 'La comparación entre ambas versiones muestra una mejora en la integración sintáctica y la cohesión. La primera versión tiene tres oraciones cortas e independientes, yuxtapuestas sin conectores explícitos. La segunda integra las ideas en una estructura más elaborada: una oración temática clara ("efectos positivos comprobados"), dos argumentos coordinados con "y", y una sintaxis que muestra las relaciones lógicas. No agrega información nueva (A). No es mejor por ser larga (C). No simplifica vocabulario (D): de hecho, usa un lenguaje más formal.',
+        competencia: 'comprender',
+        componente: 'sintactico',
+      },
+
+      // 37. Pragmático + identificar (correo electrónico formal)
+      {
+        id: 'lc-p-s9-37',
+        enunciado: 'Un estudiante necesita pedirle a su profesor que le dé un plazo adicional para entregar un trabajo. Escribe:\n\n"profe necesito más tiempo pa el trabajo xq tuve que trabajar esta semana y no pude hacer nada avíseme"\n\n¿Qué aspectos del registro y el formato deben corregirse para que sea un correo formal?',
+        opciones: [
+          { letra: 'A', texto: 'El correo es adecuado porque los profesores prefieren mensajes informales de sus estudiantes.' },
+          { letra: 'B', texto: 'El correo debe corregir: uso de mayúscula inicial, saludo formal ("Estimado profesor"), ortografía completa ("para", "porque"), tono respetuoso ("le solicito"), explicación de la razón, solicitud clara y despedida formal.' },
+          { letra: 'C', texto: 'Solo debe corregirse la ortografía de "xq" y "pa"; lo demás está bien.' },
+          { letra: 'D', texto: 'El correo no puede corregirse porque la informalidad es el estilo del autor.' },
+        ],
+        clave: 'B',
+        justificacion: 'Los textos formales tienen convenciones de registro que los diferencian de los informales: (1) saludo formal ("Estimado profesor / Buenos días"); (2) uso de usted y formas de cortesía; (3) escritura completa sin abreviaciones coloquiales ("xq" → "porque"; "pa" → "para"); (4) tono respetuoso y explícito; (5) estructura: planteamiento del problema, solicitud clara y despedida formal. El correo del estudiante viola varias de estas convenciones. Conocer y dominar los registros formales e informales es una competencia comunicativa fundamental. La opción A normaliza la informalidad en contextos inapropiados. La opción C subestima los problemas. La opción D niega la importancia del registro.',
+        competencia: 'identificar',
+        componente: 'pragmatico',
+      },
+
+      // 38. Semántico + comprender (alegoría)
+      {
+        id: 'lc-p-s9-38',
+        enunciado: 'Lee el siguiente texto:\n\n"El árbol más viejo del bosque era también el más generoso: compartía su sombra con todos, sus frutos caían para que los animales comieran y sus raíces sostenían la tierra para que los demás pudieran crecer. Cuando la tormenta llegó, fue el primero en resistir, protegiendo con sus ramas a los más pequeños. Y cuando al fin cayó, su tronco se convirtió en hogar y puente."\n\n¿Qué tema humano puede leerse en esta alegoría?',
+        opciones: [
+          { letra: 'A', texto: 'El texto es simplemente una descripción botánica de los árboles viejos del bosque.' },
+          { letra: 'B', texto: 'El texto es una alegoría sobre el liderazgo o la sabiduría generosa: el árbol representa a quien, desde una posición de fortaleza, sirve a los demás, los protege en la adversidad y deja un legado útil incluso en la muerte.' },
+          { letra: 'C', texto: 'El texto argumenta que los árboles viejos no deben talarse en los bosques.' },
+          { letra: 'D', texto: 'El texto narra la historia de un árbol específico que existió en un bosque real.' },
+        ],
+        clave: 'B',
+        justificacion: 'Una alegoría es una narración en la que los elementos representan ideas abstractas o experiencias humanas más allá de su significado literal. En este texto, el árbol funciona como símbolo del líder generoso o la figura protectora: comparte (generosidad), resiste (fortaleza en la adversidad), protege a los más pequeños (responsabilidad con los vulnerables) y deja un legado (tronco como hogar y puente). Los atributos del árbol corresponden sistemáticamente a virtudes humanas. No es descripción botánica (A). No es un argumento ecológico (C). No afirma ser historia real (D).',
+        competencia: 'comprender',
+        componente: 'semantico',
+      },
+
+      // 39. Sintáctico + reflexionar (texto discontinuo - tabla)
+      {
+        id: 'lc-p-s9-39',
+        enunciado: 'Una tabla muestra el resultado de cuatro grupos en un concurso de lectura:\n\nGrupo A: 45 libros leídos\nGrupo B: 38 libros leídos\nGrupo C: 51 libros leídos\nGrupo D: 29 libros leídos\n\nUn estudiante escribe: "El Grupo C leyó más libros que todos los demás grupos juntos."\n\n¿Es correcta esta afirmación?',
+        opciones: [
+          { letra: 'A', texto: 'Sí, es correcta porque 51 es el número más alto de la tabla.' },
+          { letra: 'B', texto: 'No, es incorrecta: el Grupo C leyó 51 libros, pero los demás grupos juntos leyeron 45 + 38 + 29 = 112 libros, que es más que 51. La afirmación confunde "más que cualquier otro grupo" con "más que todos los demás juntos".' },
+          { letra: 'C', texto: 'Sí, es correcta porque el Grupo C es el ganador del concurso.' },
+          { letra: 'D', texto: 'No se puede saber si es correcta sin más información.' },
+        ],
+        clave: 'B',
+        justificacion: 'Esta pregunta evalúa la comprensión lectora de textos discontinuos (tablas) y el razonamiento matemático-lingüístico. La afirmación "más que todos los demás grupos juntos" implica que 51 > (45 + 38 + 29). Calculando: 45 + 38 = 83 + 29 = 112. Como 51 < 112, la afirmación es falsa. El error del estudiante es confundir "el mayor valor individual" (51 > 45, 38, 29) con "mayor que la suma de todos los demás". Esta distinción es fundamental para la comprensión precisa de textos con datos. La opción A acepta la afirmación incorrecta. La opción C no responde a la pregunta formulada. La opción D niega que se pueda resolver con los datos disponibles.',
+        competencia: 'reflexionar',
+        componente: 'sintactico',
+      },
+
+      // 40. Pragmático + comprender (función social del texto)
+      {
+        id: 'lc-p-s9-40',
+        enunciado: 'Lee el siguiente texto:\n\n"La biblioteca pública de tu ciudad está abierta de lunes a sábado, de 8 a.m. a 6 p.m. Puedes inscribirte gratuitamente presentando tu documento de identidad. Los socios pueden prestar hasta 3 libros por 15 días. La biblioteca también ofrece acceso gratuito a internet, sala infantil y talleres de lectura los sábados a las 10 a.m."\n\n¿Cuál es la función social principal de este texto?',
+        opciones: [
+          { letra: 'A', texto: 'Persuadir a la comunidad de que la lectura es importante.' },
+          { letra: 'B', texto: 'Informar a la ciudadanía sobre los servicios y condiciones de acceso a la biblioteca pública para facilitar su uso.' },
+          { letra: 'C', texto: 'Narrar la historia de fundación de la biblioteca pública.' },
+          { letra: 'D', texto: 'Argumentar que las bibliotecas públicas son superiores a las privadas.' },
+        ],
+        clave: 'B',
+        justificacion: 'El texto es un texto informativo-funcional cuya función social es proporcionar información práctica y útil que permita a los ciudadanos acceder a un servicio público. Sus características confirman esto: datos precisos y verificables (horarios, condiciones de inscripción, número de libros, duración del préstamo), ausencia de argumentos o juicios de valor, lenguaje claro y directo. Su propósito no es persuadir (A), narrar historia (C) ni argumentar comparaciones (D), sino facilitar el acceso de la comunidad a la biblioteca.',
+        competencia: 'comprender',
+        componente: 'pragmatico',
+      },
     ],
 
     // ---------------------------------------------------------
@@ -2973,6 +6093,406 @@ const PREGUNTAS_ICFES = {
         justificacion: 'El supuesto cuestionable implícito es que la cultura y la formación intelectual solo se logran a través de libros impresos, ignorando que la lectura digital, los artículos en línea, los videos educativos y otras formas de acceso al conocimiento también son válidos. Además, el texto asume que la generación anterior era más culta únicamente por leer libros físicos, lo cual es una nostalgia no sustentada. Las opciones A y D son hechos mencionados explícitamente, no supuestos implícitos cuestionables. La opción C es un supuesto que comparten tanto el autor como la mayoría de lectores críticos, y no es cuestionable en este contexto.',
         competencia: 'identificar',
         componente: 'pragmatico',
+      },
+
+      // 16. Semántico + identificar (texto filosófico complejo)
+      {
+        id: 'lc-p-s11-16',
+        enunciado: 'Lee el siguiente fragmento de Hannah Arendt:\n\n"La banalidad del mal no significa que el mal sea banal o trivial, sino que puede ser perpetrado por personas ordinarias que simplemente dejan de pensar, que obedecen órdenes sin reflexionar sobre su significado moral. El mal extremo no requiere monstruos; requiere funcionarios."\n\n¿Cuál es la afirmación central del fragmento?',
+        opciones: [
+          { letra: 'A', texto: 'El mal extremo siempre es cometido por personas psicológicamente perturbadas o monstruosas.' },
+          { letra: 'B', texto: 'El mal masivo puede ser perpetrado por personas comunes que renuncian al pensamiento crítico y a la responsabilidad moral, ejecutando órdenes sin cuestionarlas.' },
+          { letra: 'C', texto: 'Los funcionarios del gobierno son siempre más peligrosos que los criminales comunes.' },
+          { letra: 'D', texto: 'La obediencia a las leyes es siempre moralmente correcta porque el Estado representa la voluntad colectiva.' },
+        ],
+        clave: 'B',
+        justificacion: 'Arendt desarrolló este concepto analizando el juicio a Adolf Eichmann (1961), un funcionario nazi que organizó la deportación de judíos pero se presentó como un simple ejecutor de órdenes. Su tesis es que el mal no requiere monstruosidad psicológica: basta con la suspensión del pensamiento crítico y la renuncia a la responsabilidad moral individual. La expresión "banalidad" no significa que el mal sea menor, sino que puede surgir de personas ordinarias en contextos de obediencia burocrática. La opción A contradice la tesis central. La opción C hace una generalización diferente a la del texto. La opción D representa exactamente la postura que Arendt rechaza.',
+        competencia: 'identificar',
+        componente: 'semantico',
+      },
+
+      // 17. Sintáctico + reflexionar (polifonía y voces en el texto)
+      {
+        id: 'lc-p-s11-17',
+        enunciado: 'Lee el siguiente fragmento de un artículo académico:\n\n"Según García (2019), la educación virtual incrementó la brecha educativa durante la pandemia. Sin embargo, Martínez y López (2021) argumentan que, si se midieran adecuadamente los aprendizajes informales, los resultados serían distintos. El presente estudio propone una metodología que integra ambas perspectivas."\n\n¿Cuántas voces o perspectivas hay en el texto y cómo se distinguen?',
+        opciones: [
+          { letra: 'A', texto: 'Solo hay una voz: la del autor del artículo.' },
+          { letra: 'B', texto: 'Hay tres voces: la de García (2019), la de Martínez y López (2021) y la del propio autor del artículo; se distinguen mediante citas explícitas con nombres y años, y el uso de verbos de cita ("según", "argumentan", "propone").' },
+          { letra: 'C', texto: 'Hay dos voces: las de los autores citados; el autor del artículo no tiene voz propia.' },
+          { letra: 'D', texto: 'Las tres fuentes citadas dicen lo mismo con distintas palabras.' },
+        ],
+        clave: 'B',
+        justificacion: 'En los textos académicos es fundamental identificar las diferentes voces (polifonía textual). Este párrafo construye un diálogo explícito entre perspectivas: (1) García (2019) con la tesis sobre la brecha educativa; (2) Martínez y López (2021) con la contratesis sobre los aprendizajes informales; (3) el autor del artículo ("el presente estudio propone") que presenta su propia metodología como síntesis. Los verbos de cita ("según", "argumentan", "propone") y las referencias bibliográficas son los recursos lingüísticos que distinguen estas voces. La opción A niega las citas explícitas. La opción C niega la voz del autor. La opción D es incorrecta: las perspectivas son claramente distintas.',
+        competencia: 'reflexionar',
+        componente: 'sintactico',
+      },
+
+      // 18. Pragmático + reflexionar (propaganda política)
+      {
+        id: 'lc-p-s11-18',
+        enunciado: 'Lee el siguiente eslogan político:\n\n"Con el partido X, tu familia estará segura. Los otros solo traen caos y destrucción. ¡Protege lo que amas!"\n\n¿Qué estrategias de persuasión utiliza este eslogan y cuáles son sus riesgos para el debate democrático?',
+        opciones: [
+          { letra: 'A', texto: 'El eslogan usa argumentos racionales y evidencia verificable; no tiene ningún riesgo para la democracia.' },
+          { letra: 'B', texto: 'El eslogan usa apelación al miedo ("caos y destrucción"), protección de la familia (apelación emocional) y pensamiento dicotómico ("nosotros los seguros" vs. "ellos el caos"); estas estrategias simplifican la realidad política, estigmatizan al adversario y dificultan el debate racional.' },
+          { letra: 'C', texto: 'El eslogan es democráticamente ideal porque resume bien la posición del partido.' },
+          { letra: 'D', texto: 'El eslogan no tiene estrategias de persuasión porque es demasiado corto.' },
+        ],
+        clave: 'B',
+        justificacion: 'El análisis retórico del eslogan revela varias estrategias: (1) apelación al miedo: "caos y destrucción" asociados a los adversarios; (2) apelación emocional a valores fundamentales: "tu familia", "protege lo que amas"; (3) pensamiento dicotómico o maniqueo: división entre "nosotros" (seguros) y "ellos" (caos), sin matices. Estas estrategias tienen riesgos para la democracia: simplifican debates complejos de política pública, estigmatizan al adversario en lugar de debatir ideas, y apelan a emociones primarias que dificultan el razonamiento crítico. No usa argumentos racionales ni evidencia (A). No es ideal para la democracia (C). La longitud no determina la presencia de estrategias (D).',
+        competencia: 'reflexionar',
+        componente: 'pragmatico',
+      },
+
+      // 19. Semántico + comprender (texto de Gabriel García Márquez - novela)
+      {
+        id: 'lc-p-s11-19',
+        enunciado: 'Lee el siguiente fragmento de "El amor en los tiempos del cólera" de García Márquez:\n\n"Fermina Daza lo rechazó con tanto valor y tanta determinación que Florentino Ariza se fue a su cuarto a llorar de rabia, pero también a esperar. Esperó cincuenta y un años, nueve meses y cuatro días."\n\n¿Qué efecto produce la precisión numérica ("cincuenta y un años, nueve meses y cuatro días") en la narrativa?',
+        opciones: [
+          { letra: 'A', texto: 'La precisión numérica es un error del autor que interrumpe el ritmo de la narración.' },
+          { letra: 'B', texto: 'La precisión numérica hiperbólica crea un efecto de absurdo amoroso: magnifica la persistencia de Florentino, haciendo visible la desmesura de su amor; el contraste entre la enormidad del tiempo y la exactitud de su registro produce un efecto simultáneamente trágico y cómico.' },
+          { letra: 'C', texto: 'La precisión numérica indica que el narrador llevó un diario exacto de la espera.' },
+          { letra: 'D', texto: 'La precisión demuestra que García Márquez realizó cálculos matemáticos precisos para escribir la novela.' },
+        ],
+        clave: 'B',
+        justificacion: 'García Márquez usa la hipérbole con precisión numérica como recurso literario característico del realismo mágico y del amor romántico exacerbado. Decir "cincuenta y un años, nueve meses y cuatro días" en lugar de "más de cincuenta años" crea un efecto paradójico: cuanto más precisa es la medición de algo tan subjetivo como la espera amorosa, más absurda y sublime parece. Es simultáneamente cómico (la precisión de un contador para medir el amor) y trágico (la enormidad de la espera). Este recurso es una de las marcas de estilo de García Márquez. Las opciones C y D interpretan la cifra de forma literal. La opción A la evalúa negativamente.',
+        competencia: 'comprender',
+        componente: 'semantico',
+      },
+
+      // 20. Sintáctico + comprender (texto argumentativo complejo - contraargumentación)
+      {
+        id: 'lc-p-s11-20',
+        enunciado: 'Lee el siguiente texto:\n\n"Quienes defienden la legalizción total de las drogas argumentan que reduciría la violencia del narcotráfico. Este argumento tiene validez parcial: en los países que han regulado el cannabis, los mercados ilegales se han reducido en ese producto. Sin embargo, los defensores de la legalización omiten que la demanda de cocaína y heroína, drogas con mayor poder adictivo, podría aumentar con la legalización, creando un problema de salud pública de mayor escala que el problema de seguridad que buscan resolver."\n\n¿Cuál es la estructura argumentativa del texto?',
+        opciones: [
+          { letra: 'A', texto: 'El texto solo presenta el argumento a favor de la legalización.' },
+          { letra: 'B', texto: 'El texto usa una estructura de concesión y refutación: primero reconoce la validez parcial del argumento a favor ("tiene validez parcial"), luego la refuta señalando la omisión del otro lado (impacto en salud pública de drogas más adictivas).' },
+          { letra: 'C', texto: 'El texto defiende sin reservas la legalización de todas las drogas.' },
+          { letra: 'D', texto: 'El texto rechaza completamente el argumento a favor de la legalización sin conceder nada.' },
+        ],
+        clave: 'B',
+        justificacion: 'La estructura de concesión y refutación es una técnica argumentativa sofisticada: en lugar de rechazar totalmente el argumento contrario, el autor reconoce su parte válida ("Este argumento tiene validez parcial") y luego lo debilita señalando lo que omite (el problema de salud pública con drogas más adictivas). Esta estructura es más persuasiva que el rechazo total porque demuestra que el autor conoce los argumentos del otro lado. El conector "sin embargo" marca el giro hacia la refutación. La opción A solo ve la primera parte. La opción C invierte la posición. La opción D no reconoce la concesión explícita del texto.',
+        competencia: 'comprender',
+        componente: 'sintactico',
+      },
+
+      // 21. Pragmático + reflexionar (discurso científico vs. pseudocientífico)
+      {
+        id: 'lc-p-s11-21',
+        enunciado: 'Lee el siguiente fragmento:\n\n"Los investigadores del Instituto Nacional de Salud realizaron un estudio con 1.200 participantes durante 5 años. Los resultados, publicados en la revista New England Journal of Medicine, muestran que el consumo moderado de aceite de oliva reduce en un 18% el riesgo de enfermedades cardiovasculares (IC 95%, p < 0.05)."\n\n¿Cuáles de las siguientes características hacen que este sea un texto científico legítimo?',
+        opciones: [
+          { letra: 'A', texto: 'Que menciona el aceite de oliva, que es un producto natural.' },
+          { letra: 'B', texto: 'Que cita la institución que realizó el estudio, el tamaño de la muestra, la duración, la revista de publicación revisada por pares y los datos estadísticos con intervalos de confianza y valor p, todo lo cual permite evaluar su credibilidad y replicabilidad.' },
+          { letra: 'C', texto: 'Que usa números y porcentajes, lo que siempre garantiza que un texto sea científico.' },
+          { letra: 'D', texto: 'Que el texto es largo y tiene terminología técnica difícil de entender.' },
+        ],
+        clave: 'B',
+        justificacion: 'La credibilidad de un texto científico se evalúa por criterios específicos de rigor metodológico y transparencia: (1) identificación de la institución que realizó la investigación; (2) tamaño de la muestra (1.200 participantes); (3) duración del estudio (5 años); (4) publicación en revista revisada por pares (peer review); (5) presentación de datos estadísticos con intervalos de confianza (IC 95%) y valor p, que permiten evaluar la significancia estadística. Estos elementos distinguen la ciencia legítima de la pseudociencia. La opción A apela al origen natural, que no es un criterio científico. La opción C es incorrecta: los números también pueden usarse en pseudociencia. La opción D confunde tecnicismo con rigor.',
+        competencia: 'reflexionar',
+        componente: 'pragmatico',
+      },
+
+      // 22. Semántico + identificar (texto literario - perspectiva narrativa)
+      {
+        id: 'lc-p-s11-22',
+        enunciado: 'Lee el siguiente fragmento:\n\n"La guerra terminó un martes. Para Lucía, el martes fue el día en que su hermano llegó cojeando al patio con una sonrisa en la cara y barro hasta las rodillas. Para el general, fue el día en que firmó los documentos y bebió whisky por primera vez en tres años. Para los niños del orfanato, fue el día en que por fin hubo sopa con carne."\n\n¿Qué técnica narrativa usa el fragmento?',
+        opciones: [
+          { letra: 'A', texto: 'Narración omnisciente que describe los hechos de forma objetiva e imparcial.' },
+          { letra: 'B', texto: 'El fragmento usa perspectivas múltiples o multiperspectividad narrativa: describe el mismo evento (el fin de la guerra) a través de las experiencias particulares de diferentes personajes, mostrando que un mismo hecho tiene significados distintos para cada persona.' },
+          { letra: 'C', texto: 'El fragmento usa la técnica del flujo de conciencia de un solo personaje.' },
+          { letra: 'D', texto: 'El fragmento usa la narración en primera persona del plural para incluir a todos los personajes.' },
+        ],
+        clave: 'B',
+        justificacion: 'El fragmento usa la multiperspectividad narrativa: el mismo evento (el fin de la guerra) es presentado a través de la experiencia particular de tres personajes distintos (Lucía, el general, los niños del orfanato). Para cada uno, "el fin de la guerra" significa algo diferente y concreto: el regreso del hermano, la firma del armisticio, la comida. Esta técnica narrativa relativiza los grandes eventos históricos mostrando que su significado se construye desde las experiencias individuales y cotidianas. No es omnisciente imparcial (A), flujo de conciencia (C) ni primera persona plural (D).',
+        competencia: 'identificar',
+        componente: 'semantico',
+      },
+
+      // 23. Sintáctico + comprender (texto científico - inferencia)
+      {
+        id: 'lc-p-s11-23',
+        enunciado: 'Un texto de divulgación científica afirma:\n\n"El 98,5% del genoma humano es idéntico al del chimpancé. Sin embargo, esa diferencia del 1,5% equivale a aproximadamente 45 millones de pares de bases nitrogenadas, y pequeñas diferencias en genes reguladores pueden producir cambios fenotípicos enormes."\n\n¿Cuál es la inferencia más adecuada a partir de este texto?',
+        opciones: [
+          { letra: 'A', texto: 'Los humanos son prácticamente iguales a los chimpancés porque compartimos el 98,5% del ADN.' },
+          { letra: 'B', texto: 'Un porcentaje de diferencia genética aparentemente pequeño puede traducirse en un número enorme de diferencias moleculares y en cambios fenotípicos significativos; el porcentaje de similitud no determina directamente el grado de diferencia observable.' },
+          { letra: 'C', texto: 'El 1,5% de diferencia genética es irrelevante para explicar las diferencias entre humanos y chimpancés.' },
+          { letra: 'D', texto: 'El texto demuestra que los humanos y los chimpancés tienen el mismo número de genes.' },
+        ],
+        clave: 'B',
+        justificacion: 'El texto advierte explícitamente contra la interpretación simplista del porcentaje: aunque 1,5% parece pequeño, equivale a 45 millones de pares de bases, y además las diferencias en genes reguladores (que controlan cuándo y cuánto se expresan otros genes) pueden producir diferencias fenotípicas enormes. La inferencia correcta es que los porcentajes de similitud genética no son directamente proporcionales a las diferencias observables entre especies. La opción A hace la interpretación ingenua que el texto refuta. La opción C minimiza precisamente lo que el texto magnifica. La opción D hace una afirmación sobre el número total de genes que el texto no sostiene.',
+        competencia: 'comprender',
+        componente: 'sintactico',
+      },
+
+      // 24. Pragmático + reflexionar (producción textual - ensayo)
+      {
+        id: 'lc-p-s11-24',
+        enunciado: 'Lee el siguiente inicio de ensayo:\n\n"En este ensayo voy a hablar sobre la contaminación del agua en Colombia. Primero voy a explicar qué es la contaminación, luego sus causas y finalmente sus consecuencias. Al final voy a dar mi conclusión."\n\n¿Cuál es el problema principal de esta introducción como texto académico?',
+        opciones: [
+          { letra: 'A', texto: 'La introducción no tiene ningún problema: es organizada y clara.' },
+          { letra: 'B', texto: 'La introducción anuncia la estructura del ensayo pero no presenta una tesis o hipótesis propia; "voy a hablar sobre" es una formulación demasiado vaga que no compromete al autor con ninguna posición argumentativa específica.' },
+          { letra: 'C', texto: 'La introducción es demasiado corta; debería tener al menos 5 párrafos.' },
+          { letra: 'D', texto: 'La introducción no debe mencionar la estructura del ensayo.' },
+        ],
+        clave: 'B',
+        justificacion: 'Una introducción de ensayo académico debe cumplir funciones específicas: (1) contextualizar el tema; (2) presentar la tesis o hipótesis (la posición del autor, lo que va a argumentar); (3) opcionalmente anunciar la estructura. Este ejemplo solo anuncia la estructura sin presentar ninguna tesis: "voy a hablar sobre" no revela qué posición tomará el autor sobre la contaminación del agua. Un buen inicio podría ser: "La contaminación del agua en Colombia, agravada por la minería ilegal y la falta de saneamiento básico, representa una crisis de derechos humanos que requiere intervención urgente del Estado." La opción A acepta el problema. La opción C introduce un criterio cuantitativo irrelevante. La opción D es incorrecta: anunciar la estructura es válido en ensayos.',
+        competencia: 'reflexionar',
+        componente: 'pragmatico',
+      },
+
+      // 25. Semántico + reflexionar (ironía en texto político)
+      {
+        id: 'lc-p-s11-25',
+        enunciado: 'Lee el siguiente fragmento de un artículo de opinión:\n\n"El congresista declaró, con sincera indignación, que no sabía nada sobre el contrato de $800 millones que firmó su secretaria, en su oficina, con su sello, en su nombre. Qué terrible es trabajar con gente tan autónoma."\n\n¿Qué recurso retórico usa el último enunciado y qué efecto produce?',
+        opciones: [
+          { letra: 'A', texto: 'El último enunciado usa una metáfora para describir el trabajo en equipo en el sector público.' },
+          { letra: 'B', texto: 'El último enunciado usa ironía: al llamar "terrible" la "autonomía" de la secretaria, el autor señala la inverosimilitud de la defensa del congresista; el contraste entre la descripción detallada de los indicios de autoría y la excusa de desconocimiento crea un efecto sardónico y de denuncia.' },
+          { letra: 'C', texto: 'El último enunciado es un elogio genuino a la autonomía de los funcionarios públicos.' },
+          { letra: 'D', texto: 'El último enunciado usa una hipérbole para exagerar los problemas burocráticos.' },
+        ],
+        clave: 'B',
+        justificacion: 'La ironía funciona aquí mediante el contraste entre lo dicho y lo que el texto muestra. El autor acumula en la primera oración todos los indicios que hacen inverosímil la excusa (el contrato firmado en su oficina, con su sello, en su nombre), y luego remata con una frase irónica: "Qué terrible es trabajar con gente tan autónoma." El tono es sarcástico: "terrible" e "independiente" se usan para expresar lo contrario, señalando que la "ignorancia" del congresista no es creíble. El efecto es de crítica política mordaz sin afirmaciones directas que puedan considerarse difamatorias. No es metáfora (A), elogio genuino (C) ni hipérbole (D).',
+        competencia: 'reflexionar',
+        componente: 'semantico',
+      },
+
+      // 26. Sintáctico + identificar (texto académico - citas y referencias)
+      {
+        id: 'lc-p-s11-26',
+        enunciado: 'Lee el siguiente párrafo de un ensayo:\n\n"La desigualdad económica no es solo un problema moral, sino también económico. Como señala Stiglitz (2012), "las economías más desiguales tienden a crecer más lentamente porque la demanda interna se concentra en pocas manos" (p. 78). Esto sugiere que reducir la desigualdad puede ser un requisito para el crecimiento sostenido."\n\n¿Qué función cumple la cita de Stiglitz en el párrafo?',
+        opciones: [
+          { letra: 'A', texto: 'La cita demuestra que el autor del ensayo copió el párrafo de Stiglitz.' },
+          { letra: 'B', texto: 'La cita aporta autoridad académica al argumento del autor: al usar las palabras exactas de un economista reconocido, respalda la afirmación con evidencia especializada y cumple la norma académica de reconocer las fuentes.' },
+          { letra: 'C', texto: 'La cita no tiene ninguna función relevante: podría eliminarse sin afectar el argumento.' },
+          { letra: 'D', texto: 'La cita indica que el autor no tiene opinión propia sobre el tema.' },
+        ],
+        clave: 'B',
+        justificacion: 'Las citas en los textos académicos cumplen funciones específicas: (1) respaldo: aportan la autoridad de una fuente especializada para apoyar el argumento; (2) evidencia: presentan datos o conclusiones de investigaciones previas; (3) ética académica: reconocen la propiedad intelectual. En este caso, la cita de Stiglitz (Nobel de Economía) refuerza la tesis del párrafo con evidencia académica de peso. El formato (apellido, año, página) sigue normas de citación (APA). No es plagio (A) porque se cita correctamente. La cita es funcional al argumento (C). La presencia de citas no niega la voz del autor (D): el autor de hecho parafrasea la implicación de la cita en la última oración.',
+        competencia: 'identificar',
+        componente: 'sintactico',
+      },
+
+      // 27. Pragmático + reflexionar (lenguaje y poder)
+      {
+        id: 'lc-p-s11-27',
+        enunciado: 'El análisis crítico del discurso estudia cómo el lenguaje reproduce o cuestiona relaciones de poder. Lee el siguiente fragmento de un decreto gubernamental:\n\n"Los beneficiarios del subsidio deberán demostrar su condición de vulnerabilidad mediante los mecanismos que determine la autoridad competente, en los plazos y condiciones establecidos."\n\n¿Qué relación de poder refleja el lenguaje de este decreto?',
+        opciones: [
+          { letra: 'A', texto: 'El decreto pone al ciudadano en posición de poder porque puede reclamar el subsidio libremente.' },
+          { letra: 'B', texto: 'El decreto coloca al ciudadano en posición de demostrar (someterse a una evaluación) ante una "autoridad competente" que define los criterios y plazos; el lenguaje pasivo y burocrático ("deberán", "que determine la autoridad") establece una relación asimétrica donde el Estado fija las condiciones y el ciudadano se ajusta a ellas.' },
+          { letra: 'C', texto: 'El decreto es un ejemplo de lenguaje democrático que equilibra los derechos del ciudadano y el Estado.' },
+          { letra: 'D', texto: 'El lenguaje del decreto no refleja ninguna relación de poder porque es neutral y técnico.' },
+        ],
+        clave: 'B',
+        justificacion: 'El análisis crítico del discurso (Fairclough, Van Dijk) muestra que el lenguaje burocrático no es neutro: reproduce relaciones de poder. En este decreto: (1) "deberán demostrar" coloca la carga sobre el ciudadano (obligación de probar); (2) "que determine la autoridad competente" concentra la definición de los criterios en el Estado, no en el ciudadano; (3) el lenguaje pasivo e impersonal oculta quiénes toman las decisiones, creando una sensación de inevitabilidad. La asimetría es clara: el ciudadano pide, el Estado decide los criterios. Las opciones A y C niegan la asimetría. La opción D asume que el lenguaje técnico es neutro, lo que el análisis crítico del discurso cuestiona.',
+        competencia: 'reflexionar',
+        componente: 'pragmatico',
+      },
+
+      // 28. Semántico + comprender (texto ensayístico colombiano)
+      {
+        id: 'lc-p-s11-28',
+        enunciado: 'Lee el siguiente fragmento del ensayo "El colombiano y su lengua" (paráfrasis de Orlando Fals Borda):\n\n"Hay en el habla popular colombiana una riqueza de metáforas, hipérboles y figuras que no encuentra equivalente en el español peninsular. Cuando el campesino antioqueño dice que algo es \'mejor que el pan biche con agua panela\', condensa en una expresión un mundo de sensaciones, memorias y afectos que ninguna traducción académica puede capturar."\n\n¿Cuál es la tesis implícita del fragmento?',
+        opciones: [
+          { letra: 'A', texto: 'El español peninsular es superior al habla popular colombiana.' },
+          { letra: 'B', texto: 'Las variedades populares y regionales del español colombiano poseen riqueza expresiva propia que no puede reducirse ni equipararse al español estándar, y que vale la pena valorar y estudiar como patrimonio cultural.' },
+          { letra: 'C', texto: 'Las expresiones populares deben reemplazarse por un español más formal en todos los contextos.' },
+          { letra: 'D', texto: 'El español académico es el único capaz de expresar emociones complejas.' },
+        ],
+        clave: 'B',
+        justificacion: 'La tesis está implícita en la valoración positiva que el autor hace del habla popular colombiana: "riqueza de metáforas, hipérboles y figuras", "no encuentra equivalente", el reconocimiento de que la expresión popular "condensa un mundo de sensaciones" que "ninguna traducción académica puede capturar". El autor defiende el valor propio de las variedades lingüísticas populares, que la tradición normativa ha subordinado al español estándar o peninsular. Esta es una posición central en la sociolingüística y la etnografía: cada variedad lingüística es un sistema completo y válido con su propia riqueza. Las opciones A, C y D contradirectamente la tesis del texto.',
+        competencia: 'comprender',
+        componente: 'semantico',
+      },
+
+      // 29. Sintáctico + reflexionar (cohesión y coherencia en ensayo)
+      {
+        id: 'lc-p-s11-29',
+        enunciado: 'Lee el siguiente párrafo de un ensayo sobre la tecnología:\n\n"Las redes sociales afectan la salud mental de los jóvenes. Los estudios son importantes. El agua es esencial para la vida. Por otro lado, las redes tienen beneficios. La conectividad global es positiva."\n\n¿Cuál es el problema principal de este párrafo?',
+        opciones: [
+          { letra: 'A', texto: 'El párrafo tiene demasiados argumentos y debería reducirse a una sola oración.' },
+          { letra: 'B', texto: 'El párrafo tiene graves problemas de coherencia (incluye una idea completamente irrelevante: "el agua es esencial") y de cohesión (las oraciones no están conectadas lógicamente; no hay conectores que muestren la relación entre las ideas).' },
+          { letra: 'C', texto: 'El párrafo es demasiado objetivo; debería incluir más opiniones personales.' },
+          { letra: 'D', texto: 'El párrafo no tiene ningún problema: todas las oraciones están relacionadas con la tecnología.' },
+        ],
+        clave: 'B',
+        justificacion: 'Este párrafo tiene dos problemas graves: (1) coherencia: la oración "El agua es esencial para la vida" es completamente ajena al tema (las redes sociales y la salud mental), lo que rompe la coherencia temática; (2) cohesión: las demás oraciones, aunque relacionadas con el tema, no están conectadas con conectores discursivos que muestren sus relaciones lógicas (causa, contraste, consecuencia). "Los estudios son importantes" es tan vaga que no contribuye a ningún argumento. La opción A sugiere reducir cuando el problema es la organización. La opción C introduce un criterio no relevante. La opción D niega el problema evidente de la oración sobre el agua.',
+        competencia: 'reflexionar',
+        componente: 'sintactico',
+      },
+
+      // 30. Pragmático + comprender (géneros discursivos digitales)
+      {
+        id: 'lc-p-s11-30',
+        enunciado: 'Lee el siguiente texto publicado en una red social:\n\n"Según ESTUDIO CIENTÍFICO REVELADOR que los medios no quieren que sepas, el wifi causa cáncer en 9 de cada 10 personas. Comparte antes de que lo borren. URGENTE."\n\n¿Cuáles son los marcadores lingüísticos que alertan sobre la baja credibilidad de este texto?',
+        opciones: [
+          { letra: 'A', texto: 'El uso de mayúsculas, que indica que el autor tiene mucha información importante.' },
+          { letra: 'B', texto: 'Varios marcadores de baja credibilidad: generalizaciones absolutas (9 de 10 personas), apelación a la conspiración ("que los medios no quieren que sepas"), urgencia artificial ("antes de que lo borren"), ausencia de fuente específica ("estudio científico" sin identificar autores ni publicación), y uso de mayúsculas para crear alarmismo.' },
+          { letra: 'C', texto: 'El texto es creíble porque menciona un estudio científico.' },
+          { letra: 'D', texto: 'El texto es creíble porque fue publicado en una red social y tiene muchos compartidos.' },
+        ],
+        clave: 'B',
+        justificacion: 'La alfabetización mediática incluye reconocer marcadores de desinformación en textos digitales. Este texto tiene varios: (1) afirmación estadística sin fuente ("9 de cada 10 personas") que parece específica pero es inventada; (2) apelación a la conspiración ("que los medios no quieren que sepas"), técnica típica para crear desconfianza en las fuentes verificables; (3) urgencia artificial ("antes de que lo borren"), que presiona a compartir sin verificar; (4) ausencia de fuente identificable ("estudio científico" sin autores, revista, institución); (5) uso de mayúsculas para crear impacto emocional. Ninguno de estos elementos garantiza credibilidad. Las opciones A, C y D interpretan mal los marcadores.',
+        competencia: 'comprender',
+        componente: 'pragmatico',
+      },
+
+      // 31. Semántico + identificar (texto filosófico - autonomía)
+      {
+        id: 'lc-p-s11-31',
+        enunciado: 'Lee el siguiente fragmento de John Stuart Mill:\n\n"El único propósito legítimo por el cual el poder puede ejercerse sobre cualquier miembro de una comunidad civilizada, en contra de su voluntad, es el de prevenir daño a otros. Su propio bien, ya sea físico o moral, no es justificación suficiente."\n\n¿Cuál es el principio filosófico que el texto defiende?',
+        opciones: [
+          { letra: 'A', texto: 'El texto defiende que el Estado puede intervenir en la vida privada siempre que lo considere conveniente para el bien común.' },
+          { letra: 'B', texto: 'El texto defiende el principio del daño (harm principle): el Estado solo puede limitar la libertad individual cuando las acciones de una persona causan daño a otras; no puede hacerlo para proteger a la propia persona de sí misma.' },
+          { letra: 'C', texto: 'El texto defiende que todos los ciudadanos deben obedecer al Estado sin cuestionar sus decisiones.' },
+          { letra: 'D', texto: 'El texto afirma que la moral religiosa debe guiar las decisiones políticas.' },
+        ],
+        clave: 'B',
+        justificacion: 'Este pasaje de "Sobre la libertad" (1859) es la formulación clásica del "principio del daño" (harm principle) de Mill, un pilar del liberalismo político: el Estado solo está justificado para coercionar a un individuo cuando sus acciones dañan a terceros, no para protegerlo de sí mismo (paternalismo) ni para imponer estándares morales. Este principio fundamenta debates actuales sobre legalización de drogas, eutanasia y decisiones personales. La opción A describe el paternalismo que Mill rechaza. La opción C es opuesta a la defensa de la autonomía que hace Mill. La opción D introduce la religión, que el texto no menciona.',
+        competencia: 'identificar',
+        componente: 'semantico',
+      },
+
+      // 32. Sintáctico + comprender (argumentación - estructura toulminiana)
+      {
+        id: 'lc-p-s11-32',
+        enunciado: 'Lee el siguiente fragmento de un editorial:\n\n"El gobierno debe aumentar la inversión en transporte público masivo [CLAIM]. El 60% de los bogotanos usa bus o metro para moverse [DATO], lo que muestra que el transporte público es esencial para la ciudad [GARANTÍA]. Además, invertir en infraestructura pública reduce la congestión y la contaminación [RESPALDO]. Sin embargo, si el presupuesto ya está comprometido, se requeriría replantear otras partidas [REFUTACIÓN]."\n\n¿Cuál es la función del último enunciado ("Sin embargo...")?',
+        opciones: [
+          { letra: 'A', texto: 'El último enunciado invalida completamente la afirmación inicial.' },
+          { letra: 'B', texto: 'El último enunciado introduce una condición de excepción o cualificación al argumento: reconoce que hay una circunstancia bajo la cual la propuesta requeriría pasos adicionales, lo que hace el argumento más honesto y completo sin abandonar la tesis.' },
+          { letra: 'C', texto: 'El último enunciado es el argumento más importante del párrafo.' },
+          { letra: 'D', texto: 'El último enunciado repite la afirmación inicial con otras palabras.' },
+        ],
+        clave: 'B',
+        justificacion: 'En el modelo argumentativo de Toulmin, los argumentos sólidos incluyen no solo datos y garantías, sino también refutaciones o cualificaciones (rebuttal): condiciones bajo las cuales el argumento podría no aplicar o requerir modificaciones. Aquí, "sin embargo, si el presupuesto ya está comprometido" introduce una condición de excepción: la propuesta sigue siendo válida, pero su implementación requiere consideraciones adicionales. Esto no invalida la tesis (A), sino que la hace más rigurosa y honesta. No es el argumento central (C). No repite la tesis (D).',
+        competencia: 'comprender',
+        componente: 'sintactico',
+      },
+
+      // 33. Pragmático + identificar (intertextualidad y género)
+      {
+        id: 'lc-p-s11-33',
+        enunciado: 'Lee el siguiente texto:\n\n"Querida Clarita:\n\nHan pasado veinte años desde aquella tarde en el puerto. Todavía guardo tu carta entre las páginas del libro que me prestaste. Supongo que ya sabes que me casé, que tuve hijos, que la vida siguió su curso sin preguntarme nada. A veces me pregunto si tomé la decisión correcta. Probablemente nunca lo sabré."\n\n¿Qué género textual es este y qué característica lingüística principal lo define?',
+        opciones: [
+          { letra: 'A', texto: 'Es un ensayo académico que analiza la toma de decisiones en la vida humana.' },
+          { letra: 'B', texto: 'Es una carta personal (epistolar); se define por el vocativo inicial ("Querida Clarita"), el uso de la primera persona que expresa reflexión íntima, referencias al pasado compartido entre emisor y destinatario, y un registro afectivo y confidencial.' },
+          { letra: 'C', texto: 'Es una noticia periodística sobre una persona que se casó hace veinte años.' },
+          { letra: 'D', texto: 'Es un texto argumentativo que defiende la tesis de que las decisiones pasadas no pueden cuestionarse.' },
+        ],
+        clave: 'B',
+        justificacion: 'El género epistolar (carta) tiene marcas textuales específicas: el vocativo inicial que nombra al destinatario ("Querida Clarita"), el uso de la primera persona singular para narrar y reflexionar, referencias a una historia compartida entre emisor y destinatario (el puerto, el libro, la carta), el tono íntimo y confidencial, y la ausencia de propósito argumentativo o informativo directo. La carta personal se caracteriza por la expresión subjetiva y afectiva. No es un ensayo (A: sin argumentación sistemática), una noticia (C: sin hechos de interés público narrados de forma objetiva) ni un texto argumentativo (D: no defiende ninguna tesis).',
+        competencia: 'identificar',
+        componente: 'pragmatico',
+      },
+
+      // 34. Semántico + reflexionar (ambigüedad lingüística)
+      {
+        id: 'lc-p-s11-34',
+        enunciado: 'Lee el siguiente titular de periódico:\n\n"El alcalde prometió a los vendedores ambulantes que no los molestaría más"\n\n¿Por qué este titular es ambiguo y cuáles son sus dos posibles interpretaciones?',
+        opciones: [
+          { letra: 'A', texto: 'El titular es completamente claro: el alcalde prometió no perseguir a los vendedores.' },
+          { letra: 'B', texto: 'El titular es ambiguo porque "no los molestaría más" puede interpretarse de dos formas: (1) el alcalde prometió no hostigar a los vendedores ambulantes (interpretación favorable a los vendedores), o (2) el alcalde prometió a sus aliados políticos vendedores que dejaría de estar en contacto con ellos (interpretación que cambia el referente de "molestar").' },
+          { letra: 'C', texto: 'El titular es ambiguo porque no sabemos si el alcalde habló en español o en otra lengua.' },
+          { letra: 'D', texto: 'El titular es ambiguo porque la palabra "vendedores" tiene dos significados distintos en el diccionario.' },
+        ],
+        clave: 'B',
+        justificacion: 'La ambigüedad del titular surge de la polisemia del verbo "molestar" y de la ambigüedad en el referente del complemento directo. "Molestar" puede significar (1) hostigar o perseguir (el alcalde promete cesar los operativos contra vendedores) o (2) incomodar en sentido más neutro. Pero también el referente cambia: ¿a quiénes les prometió no molestar a los vendedores? ¿A la ciudadanía, asegurando que no habrá conflictos? ¿O directamente a los vendedores? Esta ambigüedad es un tipo de problema lingüístico frecuente en titulares periodísticos que buscan brevedad. La opción A afirma que no hay ambigüedad. Las opciones C y D identifican fuentes de ambigüedad incorrectas.',
+        competencia: 'reflexionar',
+        componente: 'semantico',
+      },
+
+      // 35. Sintáctico + reflexionar (texto multimodal - infografía)
+      {
+        id: 'lc-p-s11-35',
+        enunciado: 'Una infografía sobre el cambio climático tiene el siguiente texto central en letras rojas grandes: "¡El planeta se está calentando!" Debajo, en letras pequeñas y grises: "Datos de la NASA muestran un aumento promedio de 1,1°C desde 1880." ¿Qué relación hay entre los dos niveles del texto en términos de argumentación?',
+        opciones: [
+          { letra: 'A', texto: 'Los dos niveles dicen lo mismo con distintas palabras.' },
+          { letra: 'B', texto: 'Los dos niveles cumplen funciones complementarias: el texto grande apela a la emoción y la urgencia para captar la atención, mientras que el texto pequeño aporta el sustento factual y científico; la separación visual también indica la jerarquía entre mensaje emocional y dato verificable.' },
+          { letra: 'C', texto: 'El texto pequeño contradice al texto grande porque 1,1°C es un cambio insignificante.' },
+          { letra: 'D', texto: 'En una infografía, el texto pequeño siempre es más importante que el texto grande.' },
+        ],
+        clave: 'B',
+        justificacion: 'Los textos multimodales como las infografías usan múltiples recursos (tamaño, color, disposición) para comunicar diferentes tipos de información. El texto grande en rojo cumple una función retórica emocional: captar atención, generar urgencia, conectar con el lector. El texto pequeño en gris cumple una función epistémica: aportar el dato verificable y la fuente ("NASA") que da credibilidad científica a la afirmación emocional. Ambos niveles son necesarios: sin el dato (texto pequeño), el mensaje es solo alarma; sin el impacto emocional (texto grande), el dato puede pasar desapercibido. La opción A ignora las diferencias funcionales. La opción C hace una valoración subjetiva del dato. La opción D generaliza incorrectamente.',
+        competencia: 'reflexionar',
+        componente: 'sintactico',
+      },
+
+      // 36. Pragmático + reflexionar (función de la literatura)
+      {
+        id: 'lc-p-s11-36',
+        enunciado: 'El escritor peruano Mario Vargas Llosa escribió: "La literatura sirve para que el ser humano viva más vidas que la suya propia, para que se asoma a experiencias que su existencia real le niega."\n\n¿Cuál de las siguientes afirmaciones desarrolla mejor la idea de Vargas Llosa?',
+        opciones: [
+          { letra: 'A', texto: 'La literatura es útil principalmente para aprender vocabulario y mejorar la ortografía.' },
+          { letra: 'B', texto: 'La literatura expande la experiencia humana al permitir que el lector se identifique con personajes de otros tiempos, culturas y situaciones, desarrollando empatía y una comprensión más amplia de la condición humana.' },
+          { letra: 'C', texto: 'La literatura es una forma de entretenimiento sin ningún valor formativo adicional.' },
+          { letra: 'D', texto: 'Solo los grandes clásicos de la literatura mundial cumplen la función que describe Vargas Llosa.' },
+        ],
+        clave: 'B',
+        justificacion: 'La idea de Vargas Llosa sobre la función de la literatura se desarrolla en la noción de "experiencia vicaria": a través de la lectura, el lector vive situaciones que no viviría en su vida real (la guerra, el amor en otra época, la injusticia en otro país) y se pone en el lugar de personajes distintos. Esto desarrolla la empatía y amplía la comprensión de la diversidad humana. Esta función va mucho más allá de aprender vocabulario (A) o del entretenimiento puro (C). La opción D limita arbitrariamente la función a "grandes clásicos", cuando Vargas Llosa habla de la literatura en general.',
+        competencia: 'reflexionar',
+        componente: 'pragmatico',
+      },
+
+      // 37. Semántico + comprender (texto histórico)
+      {
+        id: 'lc-p-s11-37',
+        enunciado: 'Lee el siguiente fragmento de un documento histórico (Acta de Independencia de Colombia, 1810):\n\n"El cuerpo del pueblo, aquel en cuyo favor y para cuya felicidad se han establecido todas las instituciones sociales, tiene el derecho imprescriptible e inalienable de reformarlas, alterarlas y abolirlas enteramente cuando su conservación ya no corresponda a los objetos de su institución."\n\n¿En qué corriente filosófica se inspira principalmente este fragmento?',
+        opciones: [
+          { letra: 'A', texto: 'En el pensamiento medieval que defiende el derecho divino de los reyes.' },
+          { letra: 'B', texto: 'En el pensamiento ilustrado y el contractualismo liberal, especialmente en las ideas de Locke y Rousseau sobre la soberanía popular y el derecho de los pueblos a reformar o disolver los gobiernos que no cumplen su fin.' },
+          { letra: 'C', texto: 'En el pensamiento marxista sobre la lucha de clases y la revolución proletaria.' },
+          { letra: 'D', texto: 'En el pensamiento conservador que defiende la preservación de las tradiciones.' },
+        ],
+        clave: 'B',
+        justificacion: 'El fragmento refleja conceptos centrales de la Ilustración y el contractualismo: (1) la soberanía popular ("el cuerpo del pueblo"); (2) la idea de que las instituciones existen para servir al pueblo, no al revés (Locke, Rousseau); (3) el derecho de resistencia o revolución cuando el gobierno incumple su contrato social (Locke: "cuando un gobierno traiciona su mandato, el pueblo puede disolverlo"). Estas ideas circularon ampliamente en la América hispana tras la Revolución Francesa y la independencia estadounidense. La opción A es anacrónica y opuesta a la soberanía popular. La opción C introduce el marxismo, posterior en el tiempo y diferente en sus premisas. La opción D es contraria al espíritu reformador del texto.',
+        competencia: 'comprender',
+        componente: 'semantico',
+      },
+
+      // 38. Sintáctico + reflexionar (coherencia global del texto)
+      {
+        id: 'lc-p-s11-38',
+        enunciado: 'Lee el siguiente ensayo breve y determina cuál es su problema principal de coherencia:\n\n"La lectura crítica es fundamental en la educación. Los libros son objetos culturales importantes. Sin embargo, la tecnología ha cambiado muchas cosas. Los jóvenes prefieren los dispositivos digitales. Por esta razón, las bibliotecas son importantes para la comunidad. En conclusión, debemos leer más."\n\n¿Cuál es el problema central?',
+        opciones: [
+          { letra: 'A', texto: 'El ensayo es demasiado corto para un texto académico.' },
+          { letra: 'B', texto: 'El ensayo carece de una tesis clara que articule todas las ideas: las oraciones no mantienen una línea argumentativa coherente; hay saltos temáticos (libros → tecnología → juventud → bibliotecas) sin conectores lógicos que los integren, y la conclusión no se deriva de los argumentos previos.' },
+          { letra: 'C', texto: 'El ensayo tiene demasiados argumentos y debería elegir solo uno.' },
+          { letra: 'D', texto: 'El ensayo usa conectores incorrectos como "sin embargo" y "por esta razón".' },
+        ],
+        clave: 'B',
+        justificacion: 'La coherencia de un texto depende de que todas sus partes contribuyan a desarrollar una idea central de forma progresiva y articulada. Este ensayo tiene una tesis implícita vaga ("debemos leer más") pero las ideas intermedias no se articulan para llegar a ella: la mención de la tecnología, los jóvenes y las bibliotecas no está conectada lógicamente con la afirmación inicial sobre la lectura crítica. Además, el conector "por esta razón" no expresa ninguna relación causal real entre la preferencia juvenil por lo digital y la importancia de las bibliotecas. La falla es de coherencia global, no de extensión (A), cantidad de argumentos (C) ni de los conectores en sí (D).',
+        competencia: 'reflexionar',
+        componente: 'sintactico',
+      },
+
+      // 39. Pragmático + reflexionar (escritura creativa y subjetividad)
+      {
+        id: 'lc-p-s11-39',
+        enunciado: 'Lee el siguiente inicio de cuento:\n\n"La primera vez que vi a mi ciudad desde el avión, pensé que parecía una herida en la tierra: cicatrices de asfalto, costras de cemento, inflamaciones de barrios hacinados. Pero también tenía la belleza de las heridas que sanan: el verde que se cuela por las grietas, el río que todavía corre aunque nadie lo limpie."\n\n¿Qué recurso retórico domina el fragmento y qué visión de la ciudad comunica?',
+        opciones: [
+          { letra: 'A', texto: 'El fragmento usa una enumeración de datos estadísticos para describir los problemas urbanos.' },
+          { letra: 'B', texto: 'El fragmento usa una metáfora sostenida (la ciudad como herida/cicatriz) que articula una visión ambivalente: reconoce el daño y el deterioro urbano, pero también la resiliencia y la vida que persiste; esta visión es crítica y esperanzadora a la vez.' },
+          { letra: 'C', texto: 'El fragmento es una descripción objetiva y sin valoraciones de la ciudad vista desde el avión.' },
+          { letra: 'D', texto: 'El fragmento argumenta que todas las ciudades latinoamericanas son iguales.' },
+        ],
+        clave: 'B',
+        justificacion: 'El fragmento construye y desarrolla una metáfora sostenida: la ciudad como herida corporal (cicatrices, costras, inflamaciones). Esta metáfora no es decorativa: articula una visión. La "herida" expresa daño, violencia, deterioro. Pero inmediatamente el autor complejiza la imagen: también hay "belleza de las heridas que sanan", el verde que resiste, el río que corre. La metáfora expresa una visión dialéctica de la ciudad: deteriorada pero viva, dañada pero resistente. Esta ambivalencia es característica de la literatura urbana latinoamericana. No es descripción objetiva (C), no usa datos estadísticos (A), y no generaliza sobre todas las ciudades (D).',
+        competencia: 'reflexionar',
+        componente: 'pragmatico',
+      },
+
+      // 40. Semántico + comprender (texto discontinuo complejo - dos fuentes)
+      {
+        id: 'lc-p-s11-40',
+        enunciado: 'Fuente 1 (gráfica): Muestra que el 78% de los estudiantes universitarios colombianos trabajan y estudian simultáneamente.\n\nFuente 2 (texto): "Los estudiantes que trabajan más de 20 horas semanales tienen un 35% más de probabilidad de abandonar la universidad antes de graduarse."\n\nCombinando ambas fuentes, ¿cuál es la inferencia más adecuada?',
+        opciones: [
+          { letra: 'A', texto: 'La mayoría de los estudiantes universitarios colombianos trabajan porque prefieren tener dinero propio.' },
+          { letra: 'B', texto: 'Una proporción muy alta de estudiantes universitarios colombianos combina trabajo y estudio, lo que, dado el riesgo de deserción asociado a muchas horas de trabajo, sugiere que la deserción universitaria puede estar relacionada con la necesidad económica de los estudiantes.' },
+          { letra: 'C', texto: 'Los datos demuestran que trabajar es siempre negativo para el desempeño académico.' },
+          { letra: 'D', texto: 'El 78% de los estudiantes que trabajan abandonarán la universidad.' },
+        ],
+        clave: 'B',
+        justificacion: 'La inferencia válida combina la información de ambas fuentes sin mezclarla con supuestos no sustentados. De la Fuente 1 sabemos que el 78% de estudiantes trabaja y estudia (una proporción muy alta). De la Fuente 2 sabemos que trabajar más de 20 horas aumenta el riesgo de deserción en un 35%. La combinación sugiere que la deserción universitaria puede estar vinculada a la necesidad económica de los estudiantes (que los obliga a trabajar muchas horas). La opción A introduce motivación ("prefieren dinero propio") no sustentada por los datos. La opción C generaliza a "siempre negativo" (la fuente dice más de 20 horas, no cualquier trabajo). La opción D confunde la probabilidad adicional de deserción con una certeza para todos.',
+        competencia: 'comprender',
+        componente: 'semantico',
       },
     ],
   },
@@ -3224,6 +6744,726 @@ const PREGUNTAS_ICFES = {
         justificacion: 'A usa el Present Perfect ("Have you ever visited?") para preguntar por una experiencia general. B responde con una referencia temporal específica ("in 2022"), lo que requiere el pasado simple (Simple Past), no el Present Perfect. "Went" (pasado simple de go) es correcto para la acción pasada con referencia temporal. "Was" es el pasado simple de "be", correcto para describir la experiencia. La opción A usa Present Perfect con referencia temporal específica (incorrecto en inglés estándar). La opción C usa presente. La opción D usa Past Perfect sin justificación.',
         competencia: 'uso-lengua',
         componente: 'gramatical',
+      },
+
+      // 16. Comprensión de lectura — inferencia (comprension-lectura / pragmatico)
+      {
+        id: 'eng-s11-p16',
+        enunciado: 'Read the following text and answer the question.\n\n"Every morning, Daniel puts on his uniform, picks up his notebook and walks to the building at the corner of his street. He sits in rows with many other people his age, listens carefully, and takes notes. At 3 p.m., he goes back home with homework to do."\n\nWhat can be inferred about Daniel?',
+        opciones: [
+          { letra: 'A', texto: 'Daniel works in a factory that starts very early.' },
+          { letra: 'B', texto: 'Daniel is a student who attends school every day.' },
+          { letra: 'C', texto: 'Daniel is a soldier who goes to military training.' },
+          { letra: 'D', texto: 'Daniel is a teacher who gives lessons to other people.' },
+        ],
+        clave: 'B',
+        justificacion: 'The description — wearing a uniform, carrying a notebook, sitting in rows with people his age, listening and taking notes, leaving at 3 p.m. with homework — describes the daily routine of a student at school. The phrase "many other people his age" and "homework" are the strongest clues. Option A is incorrect because factories do not involve notebooks or homework. Option C is possible (uniform) but military training does not involve notes and homework. Option D reverses the role: Daniel listens and takes notes, not the other person.',
+        competencia: 'comprension-lectura',
+        componente: 'pragmatico',
+      },
+
+      // 17. Uso de la lengua — oraciones en reported speech (uso-lengua / gramatical)
+      {
+        id: 'eng-s11-p17',
+        enunciado: 'Choose the option that correctly reports the following statement.\n\nDirect speech: "I will finish the project tomorrow," said Laura.',
+        opciones: [
+          { letra: 'A', texto: 'Laura said that she will finish the project tomorrow.' },
+          { letra: 'B', texto: 'Laura said that she would finish the project the next day.' },
+          { letra: 'C', texto: 'Laura says that she will finish the project tomorrow.' },
+          { letra: 'D', texto: 'Laura told that she would finish the project tomorrow.' },
+        ],
+        clave: 'B',
+        justificacion: 'In reported speech with a past reporting verb ("said"), the tense backshifts: "will" becomes "would", and time expressions change: "tomorrow" becomes "the next day". Option A keeps "will" and "tomorrow", which is incorrect with a past reporting verb. Option C uses the present tense "says", changing the original past context. Option D uses "told" without an indirect object, which is grammatically incorrect ("told" requires a person: "told her that...").',
+        competencia: 'uso-lengua',
+        componente: 'gramatical',
+      },
+
+      // 18. Comprensión de lectura — texto largo (comprension-lectura / lexical)
+      {
+        id: 'eng-s11-p18',
+        enunciado: 'Read the text and answer the question.\n\n"The Amazon rainforest, often called the \'lungs of the Earth\', produces about 20% of the world\'s oxygen and is home to over 10% of all species on the planet. However, deforestation rates have accelerated in recent years. Between 2020 and 2023, an area larger than Switzerland was cleared, mainly for cattle ranching and soy production. Scientists warn that if the forest loses 20–25% of its original cover, it may reach a \'tipping point\' from which recovery becomes impossible."\n\nAccording to the text, what is the main risk of continued deforestation?',
+        opciones: [
+          { letra: 'A', texto: 'That the Amazon will stop producing coffee and chocolate.' },
+          { letra: 'B', texto: 'That the forest could reach an irreversible point of collapse if a critical percentage of cover is lost.' },
+          { letra: 'C', texto: 'That Switzerland will lose its forests because of Amazon deforestation.' },
+          { letra: 'D', texto: 'That cattle ranching will become the world\'s most profitable industry.' },
+        ],
+        clave: 'B',
+        justificacion: 'The text explicitly states that scientists warn about a "tipping point" from which recovery becomes impossible if 20–25% of the forest cover is lost. This is the main risk described. Option A introduces products (coffee, chocolate) not mentioned. Option C misinterprets the geographic comparison ("an area larger than Switzerland" refers to size of cleared land, not location). Option D is not a risk described in the text.',
+        competencia: 'comprension-lectura',
+        componente: 'lexical',
+      },
+
+      // 19. Uso de la lengua — modales (uso-lengua / gramatical)
+      {
+        id: 'eng-s11-p19',
+        enunciado: 'Choose the option that best completes the sentence with the correct modal verb.\n\n"You ______ drink alcohol if you are going to drive. It is illegal and extremely dangerous."',
+        opciones: [
+          { letra: 'A', texto: '"should not"' },
+          { letra: 'B', texto: '"must not"' },
+          { letra: 'C', texto: '"do not have to"' },
+          { letra: 'D', texto: '"might not"' },
+        ],
+        clave: 'B',
+        justificacion: '"Must not" (mustn\'t) expresses a strong prohibition — something that is forbidden or absolutely not allowed. Drunk driving is illegal and dangerous, so "must not" is appropriate here. "Should not" (A) expresses a recommendation, which is too weak for a legal prohibition. "Do not have to" (C) expresses absence of obligation (you are free to choose), which is the wrong meaning. "Might not" (D) expresses possibility, which is also incorrect for this context.',
+        competencia: 'uso-lengua',
+        componente: 'gramatical',
+      },
+
+      // 20. Comprensión de lectura — vocabulario (comprension-lectura / lexical)
+      {
+        id: 'eng-s11-p20',
+        enunciado: 'Read the following sentence.\n\n"Despite the adverse weather conditions, the rescue team persevered and managed to find the missing hikers."\n\nWhat does the word "persevered" mean in this context?',
+        opciones: [
+          { letra: 'A', texto: 'Gave up and turned back.' },
+          { letra: 'B', texto: 'Continued making an effort despite difficulties.' },
+          { letra: 'C', texto: 'Complained about the difficult conditions.' },
+          { letra: 'D', texto: 'Moved very slowly because of the bad weather.' },
+        ],
+        clave: 'B',
+        justificacion: '"Persevere" means to continue doing something despite obstacles or difficulties, showing persistence and determination. The context confirms this meaning: the team faced "adverse weather conditions" but still "managed to find the missing hikers," implying continued effort. Option A (gave up) is the opposite. Options C and D describe possible reactions but do not capture the core meaning of persistence.',
+        competencia: 'comprension-lectura',
+        componente: 'lexical',
+      },
+
+      // 21. Uso de la lengua — preguntas de tag (uso-lengua / gramatical)
+      {
+        id: 'eng-s11-p21',
+        enunciado: 'Choose the correct tag question for the following sentence.\n\n"She has been living in Medellín for three years, ______?"',
+        opciones: [
+          { letra: 'A', texto: '"is she"' },
+          { letra: 'B', texto: '"doesn\'t she"' },
+          { letra: 'C', texto: '"hasn\'t she"' },
+          { letra: 'D', texto: '"has she"' },
+        ],
+        clave: 'C',
+        justificacion: 'Tag questions are formed using the auxiliary verb from the main clause, in the opposite polarity. The main clause uses Present Perfect ("has been living"), which is affirmative. The tag must be negative, using the same auxiliary: "hasn\'t she". Option A uses "is" from Present Continuous, not Present Perfect. Option B uses "doesn\'t" from Simple Present. Option D uses "has she", which is the same polarity (both affirmative), incorrect for a standard tag question.',
+        competencia: 'uso-lengua',
+        componente: 'gramatical',
+      },
+
+      // 22. Comprensión de lectura — idea principal (comprension-lectura / lexical)
+      {
+        id: 'eng-s11-p22',
+        enunciado: 'Read the following text and answer the question.\n\n"Exercise is not just good for the body; it is also one of the most effective tools for improving mental health. Studies show that regular physical activity reduces symptoms of depression and anxiety, improves sleep quality, and boosts self-esteem. Even 30 minutes of walking five times a week can make a significant difference. Yet, despite this evidence, fewer than 20% of adults in most countries meet the recommended weekly physical activity guidelines."\n\nWhat is the paradox described in the text?',
+        opciones: [
+          { letra: 'A', texto: 'That exercise is useful for the body but harmful to the mind.' },
+          { letra: 'B', texto: 'That walking is better for mental health than running.' },
+          { letra: 'C', texto: 'That despite strong evidence of the mental health benefits of exercise, most adults do not exercise enough.' },
+          { letra: 'D', texto: 'That 30 minutes of exercise per day is too much for most people.' },
+        ],
+        clave: 'C',
+        justificacion: 'A paradox is a situation where two facts seem to contradict each other. The text establishes: (1) exercise has strong, proven mental health benefits; (2) fewer than 20% of adults meet exercise guidelines. The gap between what is known and what people actually do is the paradox the text describes. Option A inverts the text\'s claim. Option B is a detail not present in the text. Option D misinterprets "30 minutes" as excessive when the text presents it as achievable.',
+        competencia: 'comprension-lectura',
+        componente: 'lexical',
+      },
+
+      // 23. Uso de la lengua — preposiciones (uso-lengua / gramatical)
+      {
+        id: 'eng-s11-p23',
+        enunciado: 'Choose the option that correctly completes the sentence.\n\n"She has been interested ______ marine biology ______ she was twelve years old."',
+        opciones: [
+          { letra: 'A', texto: '"in / since"' },
+          { letra: 'B', texto: '"about / for"' },
+          { letra: 'C', texto: '"for / since"' },
+          { letra: 'D', texto: '"in / for"' },
+        ],
+        clave: 'A',
+        justificacion: 'The fixed expression is "interested in" (not "interested about" or "interested for"). For the time reference, "since" is used with a specific point in time ("since she was twelve"), while "for" is used with a period of duration ("for ten years"). Option B uses wrong preposition "about" and wrong time preposition "for" with a specific moment. Option C uses "for" with a point in time, which is incorrect. Option D uses correct "in" but incorrect "for" with a specific starting point.',
+        competencia: 'uso-lengua',
+        componente: 'gramatical',
+      },
+
+      // 24. Comprensión de lectura — inferencia (comprension-lectura / pragmatico)
+      {
+        id: 'eng-s11-p24',
+        enunciado: 'Read the following conversation and answer the question.\n\nManager: "The report needs to be finished by Friday."\nEmployee: "I\'ll do my best, but I already have three deadlines this week."\nManager: "I understand. Let me know if you need any support."\n\nWhat can be inferred about the employee\'s situation?',
+        opciones: [
+          { letra: 'A', texto: 'The employee is refusing to work on the report.' },
+          { letra: 'B', texto: 'The employee is under pressure from multiple commitments and is communicating a potential challenge without directly refusing.' },
+          { letra: 'C', texto: 'The employee has already completed all three deadlines.' },
+          { letra: 'D', texto: 'The manager is angry with the employee for not finishing the report.' },
+        ],
+        clave: 'B',
+        justificacion: '"I\'ll do my best, but I already have three deadlines" is a polite and indirect way of expressing difficulty without flat refusal. The employee is communicating workload pressure — not refusing (A), not claiming to have finished other work (C). The manager\'s response ("Let me know if you need support") shows understanding, not anger (D). The inference is that the employee is in a high-pressure situation and is communicating it diplomatically.',
+        competencia: 'comprension-lectura',
+        componente: 'pragmatico',
+      },
+
+      // 25. Uso de la lengua — comparativos y superlativos (uso-lengua / gramatical)
+      {
+        id: 'eng-s11-p25',
+        enunciado: 'Choose the option that correctly completes the sentence.\n\n"This year\'s competition was ______ in the organization\'s history. More than 5,000 teams from 60 countries participated."',
+        opciones: [
+          { letra: 'A', texto: '"the larger"' },
+          { letra: 'B', texto: '"more large"' },
+          { letra: 'C', texto: '"the largest"' },
+          { letra: 'D', texto: '"larger than"' },
+        ],
+        clave: 'C',
+        justificacion: 'The sentence compares the competition to all previous ones ("in the organization\'s history"), requiring a superlative form. "Large" forms its superlative as "the largest" (monosyllabic adjective: add -est with the definite article). Option A uses "the larger," which is the comparative (used to compare two things, not all). Option B uses "more large," which is the analytical form incorrectly applied to a short adjective. Option D uses the comparative form without completing the comparison.',
+        competencia: 'uso-lengua',
+        componente: 'gramatical',
+      },
+
+      // 26. Comprensión de lectura — propósito del texto (comprension-lectura / pragmatico)
+      {
+        id: 'eng-s11-p26',
+        enunciado: 'Read the following text.\n\n"Are you tired of feeling stressed and overwhelmed? BrainCalm supplements contain a unique blend of natural herbs scientifically proven to reduce anxiety and improve focus. Join the thousands of satisfied customers who have transformed their lives. Order now and receive a 30% discount on your first purchase!"\n\nWhat is the main purpose of this text?',
+        opciones: [
+          { letra: 'A', texto: 'To provide scientific information about anxiety treatments.' },
+          { letra: 'B', texto: 'To persuade readers to buy a product by appealing to their emotions and using unverified claims.' },
+          { letra: 'C', texto: 'To warn readers about the risks of using natural supplements.' },
+          { letra: 'D', texto: 'To explain the chemistry of the herbs used in BrainCalm.' },
+        ],
+        clave: 'B',
+        justificacion: 'The text is an advertisement. Its purpose is persuasion: it uses a rhetorical question to identify with the reader\'s problem ("Are you tired..."), makes an appeal to authority without specifying sources ("scientifically proven"), uses social proof ("thousands of satisfied customers"), and creates urgency with a discount offer. The claim "scientifically proven" is not verified with any reference. Option A would require citations and methodology. Option C is the opposite purpose. Option D describes a scientific text, not an advertisement.',
+        competencia: 'comprension-lectura',
+        componente: 'pragmatico',
+      },
+
+      // 27. Uso de la lengua — conectores discursivos (uso-lengua / gramatical)
+      {
+        id: 'eng-s11-p27',
+        enunciado: 'Choose the connector that best completes the text.\n\n"Learning a new language requires time and consistent practice. ______, the benefits are remarkable: you can communicate with more people, access a wider range of literature and media, and even improve your cognitive abilities."',
+        opciones: [
+          { letra: 'A', texto: '"As a result"' },
+          { letra: 'B', texto: '"However"' },
+          { letra: 'C', texto: '"In contrast"' },
+          { letra: 'D', texto: '"In other words"' },
+        ],
+        clave: 'B',
+        justificacion: '"However" introduces a contrast or concession: the first sentence mentions the difficulty (time and practice), and the second introduces a contrasting positive consequence (the remarkable benefits). "However" signals that despite the effort required, the rewards are worth it. "As a result" (A) would indicate a consequence, but the benefits are not a direct result of the difficulty itself. "In contrast" (C) would compare two different situations, not apply here. "In other words" (D) introduces a restatement or clarification, not a contrast.',
+        competencia: 'uso-lengua',
+        componente: 'gramatical',
+      },
+
+      // 28. Comprensión de lectura — vocabulario (comprension-lectura / lexical)
+      {
+        id: 'eng-s11-p28',
+        enunciado: 'Read the following sentence.\n\n"The documentary offered a nuanced perspective on the conflict, acknowledging the legitimate concerns of all parties involved rather than portraying any single group as entirely villainous."\n\nWhat does "nuanced" mean in this context?',
+        opciones: [
+          { letra: 'A', texto: 'Simple and easy to understand for a general audience.' },
+          { letra: 'B', texto: 'Showing subtle differences and complexities rather than presenting things in a black-and-white way.' },
+          { letra: 'C', texto: 'Based on personal opinions and emotional reactions.' },
+          { letra: 'D', texto: 'Focused on one particular side of the story.' },
+        ],
+        clave: 'B',
+        justificacion: '"Nuanced" means showing fine distinctions and avoiding oversimplification. The context confirms this: the documentary acknowledged "legitimate concerns of all parties" and did not portray any group as "entirely villainous" — both indicators of complexity rather than black-and-white thinking. Option A (simple) is the opposite. Option C (personal opinions) describes subjectivity, not nuance. Option D (one-sided) contradicts "all parties involved."',
+        competencia: 'comprension-lectura',
+        componente: 'lexical',
+      },
+
+      // 29. Uso de la lengua — gerundio e infinitivo (uso-lengua / gramatical)
+      {
+        id: 'eng-s11-p29',
+        enunciado: 'Choose the option that correctly completes the sentence.\n\n"My doctor advised me ______ more vegetables and ______ processed food."',
+        opciones: [
+          { letra: 'A', texto: '"eating / avoiding"' },
+          { letra: 'B', texto: '"to eat / to avoid"' },
+          { letra: 'C', texto: '"to eat / avoiding"' },
+          { letra: 'D', texto: '"eating / to avoid"' },
+        ],
+        clave: 'B',
+        justificacion: 'The verb "advise" is followed by an object + infinitive with "to" (advise someone to do something). Both actions are part of the same advice, so both use the same structure: "advise me to eat... and to avoid...". Option A uses gerunds, which are incorrect after "advise + object". Options C and D mix gerund and infinitive inconsistently, which is grammatically incorrect in parallel structures.',
+        competencia: 'uso-lengua',
+        componente: 'gramatical',
+      },
+
+      // 30. Comprensión de lectura — estructura del texto (comprension-lectura / pragmatico)
+      {
+        id: 'eng-s11-p30',
+        enunciado: 'Read the following text and answer the question.\n\n"Pros and cons of working from home\n\nWorking from home has become increasingly common. On the positive side, employees save commuting time and can create more flexible schedules. Families benefit from parents being more present. On the negative side, the boundaries between work and personal life can blur, leading to longer working hours. Social isolation is also a concern for many remote workers."\n\nWhat is the organizational structure of this text?',
+        opciones: [
+          { letra: 'A', texto: 'A chronological sequence of events about the history of remote work.' },
+          { letra: 'B', texto: 'A cause-and-effect analysis of why people choose to work from home.' },
+          { letra: 'C', texto: 'A balanced presentation of advantages and disadvantages using signal phrases ("on the positive side", "on the negative side").' },
+          { letra: 'D', texto: 'A persuasive argument defending that everyone should work from home.' },
+        ],
+        clave: 'C',
+        justificacion: 'The text is organized using a pros-and-cons structure, signaled by the explicit phrases "on the positive side" and "on the negative side". It presents benefits first (flexibility, time saved, family presence) and then drawbacks (blurred boundaries, isolation) in a balanced way without advocating for either. Option A describes chronological order, absent here. Option B describes cause-effect analysis, which is different. Option D is incorrect: the text does not take a persuasive position.',
+        competencia: 'comprension-lectura',
+        componente: 'pragmatico',
+      },
+
+      // 31. Uso de la lengua — voz pasiva con modal (uso-lengua / gramatical)
+      {
+        id: 'eng-s11-p31',
+        enunciado: 'Choose the option that correctly rewrites the following sentence using a modal passive.\n\n"They must repair the bridge before winter."',
+        opciones: [
+          { letra: 'A', texto: '"The bridge must repaired before winter."' },
+          { letra: 'B', texto: '"The bridge must be repaired before winter."' },
+          { letra: 'C', texto: '"The bridge must have repaired before winter."' },
+          { letra: 'D', texto: '"The bridge is must repaired before winter."' },
+        ],
+        clave: 'B',
+        justificacion: 'Modal passive structure: modal + be + past participle. "The bridge must be repaired" follows this pattern correctly. Option A omits "be", making it grammatically incomplete. Option C uses "must have + past participle," which is the structure for deduction about the past (e.g., "She must have left"), not present obligation. Option D incorrectly places "is" before the modal, which is ungrammatical.',
+        competencia: 'uso-lengua',
+        componente: 'gramatical',
+      },
+
+      // 32. Comprensión de lectura — texto literario (comprension-lectura / lexical)
+      {
+        id: 'eng-s11-p32',
+        enunciado: 'Read the following poem excerpt and answer the question.\n\n"I carry your heart with me (I carry it in my heart)\nI am never without it (anywhere I go you go, my dear;\nand whatever is done by only me is your doing, my darling)"\n— E.E. Cummings\n\nWhat idea does the phrase "I carry your heart in my heart" convey?',
+        opciones: [
+          { letra: 'A', texto: 'That the speaker has undergone a heart transplant.' },
+          { letra: 'B', texto: 'That the speaker feels such a deep emotional connection with someone that the loved one is always present within them.' },
+          { letra: 'C', texto: 'That the speaker is physically carrying a gift from someone they love.' },
+          { letra: 'D', texto: 'That the speaker believes the person they love is invisible.' },
+        ],
+        clave: 'B',
+        justificacion: 'The phrase is a metaphor for profound emotional connection and inseparability. "Carrying someone\'s heart in your heart" means having that person so deeply integrated in your inner life that you are never apart, even physically. The rest of the poem reinforces this: "anywhere I go you go" and "whatever is done by only me is your doing" express complete emotional union. Options A, C, and D interpret the metaphor literally, which misses its poetic, figurative meaning.',
+        competencia: 'comprension-lectura',
+        componente: 'lexical',
+      },
+
+      // 33. Uso de la lengua — verbos frasales (uso-lengua / gramatical)
+      {
+        id: 'eng-s11-p33',
+        enunciado: 'Read the following sentences and choose the one where the phrasal verb "look up" is used correctly in context.\n\n',
+        opciones: [
+          { letra: 'A', texto: '"I\'m going to look up the ladder to check if it\'s safe."' },
+          { letra: 'B', texto: '"The economy is starting to look up after two difficult years."' },
+          { letra: 'C', texto: '"She looked up her friend at the party by standing on her toes."' },
+          { letra: 'D', texto: '"He looked up the heavy box from the floor."' },
+        ],
+        clave: 'B',
+        justificacion: '"Look up" as a phrasal verb has several meanings: (1) to search for information; (2) to improve (used for situations: "things are looking up"). In option B, "the economy is starting to look up" correctly uses the phrasal verb meaning "to improve." Option A uses "look up" in its literal directional sense (physically looking upward), not as a phrasal verb with idiomatic meaning. Options C and D use "looked up" with meanings that are not standard phrasal verb uses.',
+        competencia: 'uso-lengua',
+        componente: 'gramatical',
+      },
+
+      // 34. Comprensión de lectura — vocabulario (comprension-lectura / lexical)
+      {
+        id: 'eng-s11-p34',
+        enunciado: 'Read the following sentence.\n\n"The new policy was met with widespread skepticism from the scientific community, who questioned the validity of the data used to support it."\n\nWhat does "skepticism" mean in this context?',
+        opciones: [
+          { letra: 'A', texto: 'Strong support and enthusiasm.' },
+          { letra: 'B', texto: 'Doubt and critical questioning of the claims made.' },
+          { letra: 'C', texto: 'Complete indifference and lack of interest.' },
+          { letra: 'D', texto: 'Admiration for the complexity of the policy.' },
+        ],
+        clave: 'B',
+        justificacion: '"Skepticism" means doubt or a questioning attitude toward claims, especially those lacking sufficient evidence. The context confirms this: scientists "questioned the validity of the data," which is an act of skeptical inquiry. Option A (strong support) is the opposite. Option C (indifference) describes lack of interest, not active questioning. Option D (admiration) also contradicts the meaning, as the scientists are questioning, not admiring.',
+        competencia: 'comprension-lectura',
+        componente: 'lexical',
+      },
+
+      // 35. Uso de la lengua — used to / be used to / get used to (uso-lengua / gramatical)
+      {
+        id: 'eng-s11-p35',
+        enunciado: 'Choose the option that correctly completes the sentence.\n\n"When she moved to Canada, she found it difficult ______ the cold winters, but after a few years she ______ them."',
+        opciones: [
+          { letra: 'A', texto: '"to get used to / used to love"' },
+          { letra: 'B', texto: '"to get used to / got used to"' },
+          { letra: 'C', texto: '"used to getting / had used to"' },
+          { letra: 'D', texto: '"getting used to / was used to loving"' },
+        ],
+        clave: 'B',
+        justificacion: '"Get used to + noun/gerund" means to become accustomed to something (a process). "Found it difficult to get used to" = she struggled to adapt. "Got used to them" = she eventually adapted (past simple of "get used to"). Option A introduces "used to love," which describes a past habit, not adaptation. Option C uses incorrect constructions ("had used to" does not exist). Option D changes the meaning: "was used to loving" means she was already accustomed, which contradicts "after a few years."',
+        competencia: 'uso-lengua',
+        componente: 'gramatical',
+      },
+
+      // 36. Comprensión de lectura — texto de opinión (comprension-lectura / pragmatico)
+      {
+        id: 'eng-s11-p36',
+        enunciado: 'Read the following text and answer the question.\n\n"Some argue that video games are purely a waste of time and promote violence. However, this view is too simplistic. Research has shown that strategy and puzzle games can improve problem-solving skills and spatial reasoning. Multiplayer games develop teamwork and communication. Of course, like any activity, excessive gaming can have negative effects; moderation and parental guidance are key."\n\nWhat is the author\'s main argument?',
+        opciones: [
+          { letra: 'A', texto: 'That all video games are beneficial and should be encouraged without limits.' },
+          { letra: 'B', texto: 'That video games are harmful and should be banned for young people.' },
+          { letra: 'C', texto: 'That the view of video games as purely negative is overly simplistic; they can have real benefits when used in moderation.' },
+          { letra: 'D', texto: 'That parents should choose video games for their children without the children\'s input.' },
+        ],
+        clave: 'C',
+        justificacion: 'The author challenges the simplistic view that games are "purely a waste of time and promote violence." The argument is balanced: acknowledges potential benefits (problem-solving, teamwork) while recognizing that excessive gaming can be negative. The conclusion calls for "moderation and parental guidance," not total restriction or total freedom. Option A ignores the caveat about excessive gaming. Option B is the opposite of the author\'s position. Option D is not suggested in the text.',
+        competencia: 'comprension-lectura',
+        componente: 'pragmatico',
+      },
+
+      // 37. Uso de la lengua — discurso indirecto con preguntas (uso-lengua / gramatical)
+      {
+        id: 'eng-s11-p37',
+        enunciado: 'Choose the option that correctly reports the following question.\n\nDirect speech: "Do you know where the nearest hospital is?" the tourist asked the police officer.',
+        opciones: [
+          { letra: 'A', texto: 'The tourist asked the police officer if he knew where the nearest hospital was.' },
+          { letra: 'B', texto: 'The tourist asked the police officer where is the nearest hospital.' },
+          { letra: 'C', texto: 'The tourist asked the police officer that does he know where the hospital is.' },
+          { letra: 'D', texto: 'The tourist asked to the police officer if he knows where the nearest hospital is.' },
+        ],
+        clave: 'A',
+        justificacion: 'When reporting yes/no questions in indirect speech, "if" or "whether" is used, and the word order changes to statement order (subject + verb). Tenses backshift: "Do you know" becomes "if he knew"; "is" becomes "was". Option A follows all these rules correctly. Option B keeps question word order after "where," which is incorrect in indirect speech. Option C uses "that" for a yes/no question and keeps question word order. Option D adds incorrect "to" after "asked" and keeps present tense.',
+        competencia: 'uso-lengua',
+        componente: 'gramatical',
+      },
+
+      // 38. Comprensión de lectura — vocabulario en contexto (comprension-lectura / lexical)
+      {
+        id: 'eng-s11-p38',
+        enunciado: 'Read the following sentence.\n\n"The startup\'s meteoric rise attracted the attention of investors from around the world."\n\nWhat does "meteoric rise" mean in this context?',
+        opciones: [
+          { letra: 'A', texto: 'A slow and steady increase over many years.' },
+          { letra: 'B', texto: 'An extremely fast and impressive growth or success.' },
+          { letra: 'C', texto: 'A rise related to the study of meteorology.' },
+          { letra: 'D', texto: 'A decline followed by a sudden recovery.' },
+        ],
+        clave: 'B',
+        justificacion: '"Meteoric rise" is an idiom meaning a very rapid and spectacular rise to success, comparing it to the speed and brightness of a meteor. The context confirms this: the growth was impressive enough to attract global investor attention. Option A describes the opposite (slow). Option C is a literal misinterpretation (confusing "meteoric" with "meteorological"). Option D describes a recovery pattern not implied by the phrase.',
+        competencia: 'comprension-lectura',
+        componente: 'lexical',
+      },
+
+      // 39. Uso de la lengua — adjetivos compuestos (uso-lengua / gramatical)
+      {
+        id: 'eng-s11-p39',
+        enunciado: 'Choose the option that correctly completes the sentence.\n\n"This is a ______ program designed for students who want to develop leadership skills."',
+        opciones: [
+          { letra: 'A', texto: '"two-years"' },
+          { letra: 'B', texto: '"two year"' },
+          { letra: 'C', texto: '"two-year"' },
+          { letra: 'D', texto: '"two years\'"' },
+        ],
+        clave: 'C',
+        justificacion: 'When a noun phrase is used as a compound adjective before a noun, numbers are written with a hyphen and the noun remains singular: "a two-year program" (not "two-years"). Option A adds a hyphen but incorrectly pluralizes "years" in the compound adjective. Option B lacks the hyphen required for compound adjectives. Option D adds an unnecessary apostrophe, creating a possessive form that does not apply here.',
+        competencia: 'uso-lengua',
+        componente: 'gramatical',
+      },
+
+      // 40. Comprensión de lectura — inferencia (comprension-lectura / pragmatico)
+      {
+        id: 'eng-s11-p40',
+        enunciado: 'Read the following text and answer the question.\n\n"The last tiger was spotted in the region twenty years ago. Since then, despite several conservation efforts and the creation of protected areas, no verified sighting has been recorded. Local hunters report that prey animals have returned in numbers, suggesting the habitat could theoretically support a tiger population."\n\nWhat can be inferred from the text?',
+        opciones: [
+          { letra: 'A', texto: 'Tigers are still present in the region but are hiding from cameras.' },
+          { letra: 'B', texto: 'The species is extinct globally because it has not been seen for twenty years.' },
+          { letra: 'C', texto: 'The tiger may be locally extinct in this region, although the habitat could potentially support the species again.' },
+          { letra: 'D', texto: 'Conservation efforts in the region have been completely successful.' },
+        ],
+        clave: 'C',
+        justificacion: 'The text states: no verified sighting in 20 years (suggesting local extinction), conservation efforts have not resulted in tiger sightings (limited success), but prey has returned (habitat is potentially viable). The reasonable inference is local extinction with a theoretically suitable habitat. Option A is possible speculation but not supported by evidence. Option B makes a global claim not justified by local data. Option D is incorrect: no confirmed sightings despite conservation efforts suggests limited success.',
+        competencia: 'comprension-lectura',
+        componente: 'pragmatico',
+      },
+
+      // 41. Uso de la lengua — oraciones de relativo (uso-lengua / gramatical)
+      {
+        id: 'eng-s11-p41',
+        enunciado: 'Choose the option that correctly combines the two sentences into one using a relative clause.\n\nSentence 1: "The scientist won the Nobel Prize."\nSentence 2: "Her discovery changed modern medicine."',
+        opciones: [
+          { letra: 'A', texto: '"The scientist who her discovery changed modern medicine won the Nobel Prize."' },
+          { letra: 'B', texto: '"The scientist whose discovery changed modern medicine won the Nobel Prize."' },
+          { letra: 'C', texto: '"The scientist which discovery changed modern medicine won the Nobel Prize."' },
+          { letra: 'D', texto: '"The scientist that her discovery changed modern medicine won the Nobel Prize."' },
+        ],
+        clave: 'B',
+        justificacion: 'The two sentences are connected through possession: the scientist\'s discovery. The correct relative pronoun for possession with people is "whose": "the scientist whose discovery changed modern medicine." Option A uses "who" but keeps the redundant possessive "her." Option C uses "which" for a person, incorrect (use "who/whose" for people). Option D uses "that" but also keeps the redundant "her," making the sentence grammatically incorrect.',
+        competencia: 'uso-lengua',
+        componente: 'gramatical',
+      },
+
+      // 42. Comprensión de lectura — texto complejo (comprension-lectura / lexical)
+      {
+        id: 'eng-s11-p42',
+        enunciado: 'Read the following text and answer the question.\n\n"Water scarcity is no longer a problem limited to arid regions. By 2050, it is estimated that two-thirds of the world\'s population could be living in water-stressed areas. Climate change is altering precipitation patterns, glaciers that supply drinking water to millions are retreating, and growing populations place ever-greater demands on limited freshwater resources. Yet water consumption in high-income countries remains ten times higher per capita than in low-income countries."\n\nAccording to the text, what is particularly problematic about global water consumption patterns?',
+        opciones: [
+          { letra: 'A', texto: 'That people in low-income countries waste the most water.' },
+          { letra: 'B', texto: 'That there is a deep inequality: the countries that consume the most water per person are not the ones facing the greatest scarcity.' },
+          { letra: 'C', texto: 'That glaciers are the only source of freshwater for humanity.' },
+          { letra: 'D', texto: 'That water scarcity will only affect Africa and Asia by 2050.' },
+        ],
+        clave: 'B',
+        justificacion: 'The text explicitly states that per capita water consumption in high-income countries is ten times higher than in low-income countries. The paradox is that high-income countries consume the most while low-income countries — many of which are in water-stressed regions — consume the least. This inequality in consumption patterns is "particularly problematic." Option A inverts the claim. Option C says glaciers are "a" source, not "the only" source. Option D contradicts the claim that it will affect "two-thirds of the world\'s population" broadly.',
+        competencia: 'comprension-lectura',
+        componente: 'lexical',
+      },
+
+      // 43. Uso de la lengua — oraciones condicionales tipo 3 (uso-lengua / gramatical)
+      {
+        id: 'eng-s11-p43',
+        enunciado: 'Choose the option that correctly completes the third conditional sentence.\n\n"If the firefighters ______ faster, they ______ the building."',
+        opciones: [
+          { letra: 'A', texto: '"arrived / could save"' },
+          { letra: 'B', texto: '"had arrived / could have saved"' },
+          { letra: 'C', texto: '"would arrive / saved"' },
+          { letra: 'D', texto: '"arrive / will save"' },
+        ],
+        clave: 'B',
+        justificacion: 'The third conditional (hypothetical past) uses: If + past perfect, would/could/might + have + past participle. It refers to an imaginary situation in the past that did not happen. "If the firefighters had arrived faster, they could have saved the building" implies they did not arrive in time and the building was not saved. Option A uses simple past + "could save" (second conditional mixed with incorrect main clause). Option C uses "would arrive" in the if-clause, which is incorrect (no "would" in conditional clauses). Option D uses present and future, describing a real condition.',
+        competencia: 'uso-lengua',
+        componente: 'gramatical',
+      },
+
+      // 44. Comprensión de lectura — vocabulario (comprension-lectura / lexical)
+      {
+        id: 'eng-s11-p44',
+        enunciado: 'Read the following sentence.\n\n"After decades of conflict, the two communities reached a landmark agreement that was praised by international observers as a model for peaceful coexistence."\n\nWhat does "landmark" mean in this context?',
+        opciones: [
+          { letra: 'A', texto: 'Related to the geography of the land where the agreement was signed.' },
+          { letra: 'B', texto: 'Historically significant and representing an important turning point.' },
+          { letra: 'C', texto: 'A small and unimportant event in the history of the conflict.' },
+          { letra: 'D', texto: 'A secret agreement known only to the parties involved.' },
+        ],
+        clave: 'B',
+        justificacion: '"Landmark" as an adjective means historically significant, marking a turning point or major achievement. A "landmark agreement" is one that sets an important precedent or represents a major milestone. The context confirms this: the agreement came "after decades of conflict" and was praised internationally as "a model." Option A interprets "landmark" literally (geography). Option C is the opposite (unimportant). Option D introduces secrecy, which is not implied.',
+        competencia: 'comprension-lectura',
+        componente: 'lexical',
+      },
+
+      // 45. Uso de la lengua — expresiones de acuerdo y desacuerdo (uso-lengua / pragmatico)
+      {
+        id: 'eng-s11-p45',
+        enunciado: 'Read the following dialogue and choose the most appropriate response.\n\nA: "I think social media does more harm than good. It\'s making people more isolated and anxious."\nB: "______"',
+        opciones: [
+          { letra: 'A', texto: '"You\'re absolutely right. I totally agree with everything you said."' },
+          { letra: 'B', texto: '"That\'s an interesting point, but I partially disagree. Social media can also connect people who would otherwise be isolated, like those living in remote areas or with limited mobility."' },
+          { letra: 'C', texto: '"I don\'t know what you\'re talking about."' },
+          { letra: 'D', texto: '"You shouldn\'t have such opinions. Social media is always positive."' },
+        ],
+        clave: 'B',
+        justificacion: 'Option B demonstrates sophisticated pragmatic competence: it acknowledges the speaker\'s point ("that\'s an interesting point"), expresses partial disagreement politely ("I partially disagree"), and offers a specific counterargument (social media connecting isolated people). This is the most appropriate response in an academic or formal discussion context because it is respectful, nuanced, and substantive. Option A shows agreement without adding any perspective. Option C is dismissive and uncooperative. Option D is condescending and uses an absolute claim ("always positive"), which is as oversimplified as the statement being criticized.',
+        competencia: 'uso-lengua',
+        componente: 'pragmatico',
+      },
+
+      // 46. Comprensión de lectura — texto narrativo (comprension-lectura / lexical)
+      {
+        id: 'eng-s11-p46',
+        enunciado: 'Read the following text and answer the question.\n\n"Elena had spent fifteen years as a nurse, but nothing had prepared her for the night shift on the pediatric ward after the earthquake. There were not enough beds, not enough hands, and not enough of anything. She moved from child to child with what she had: skill, experience, and the kind of calm that only comes from having already seen the worst. By morning, all twelve children in her care were stable."\n\nWhat quality of Elena is most emphasized in the text?',
+        opciones: [
+          { letra: 'A', texto: 'Her physical strength and ability to carry heavy equipment.' },
+          { letra: 'B', texto: 'Her professional competence and ability to remain calm and effective under extreme pressure.' },
+          { letra: 'C', texto: 'Her ability to get more resources from the hospital management.' },
+          { letra: 'D', texto: 'Her emotional fragility in the face of a difficult situation.' },
+        ],
+        clave: 'B',
+        justificacion: 'The text emphasizes Elena\'s professional qualities under crisis: fifteen years of experience, "skill, experience, and the kind of calm that only comes from having already seen the worst." Despite insufficient resources ("not enough of anything"), she worked with what she had and all twelve children were stable by morning. This describes competence under pressure, not physical strength (A), resource management (C), or fragility (D), which contradicts the described calm.',
+        competencia: 'comprension-lectura',
+        componente: 'lexical',
+      },
+
+      // 47. Uso de la lengua — phrasal verbs con significado figurado (uso-lengua / gramatical)
+      {
+        id: 'eng-s11-p47',
+        enunciado: 'Choose the sentence in which the phrasal verb "break down" is used with its figurative meaning.',
+        opciones: [
+          { letra: 'A', texto: '"The mechanic said the car would break down if we didn\'t change the oil."' },
+          { letra: 'B', texto: '"She broke down in tears when she heard the news about her father."' },
+          { letra: 'C', texto: '"The workers broke down the old factory wall with hammers."' },
+          { letra: 'D', texto: '"The refrigerator broke down last night and all the food was ruined."' },
+        ],
+        clave: 'B',
+        justificacion: '"Break down" has several meanings. Its literal meanings: (1) a machine stops working (A and D); (2) to demolish physically (C). Its figurative meaning: to lose emotional control, to start crying or become overwhelmed (B). "She broke down in tears" uses "break down" to mean she lost emotional composure — this is the figurative, non-literal use. Options A, C, and D use literal meanings: mechanical failure and physical destruction.',
+        competencia: 'uso-lengua',
+        componente: 'gramatical',
+      },
+
+      // 48. Comprensión de lectura — texto argumentativo (comprension-lectura / pragmatico)
+      {
+        id: 'eng-s11-p48',
+        enunciado: 'Read the following text and answer the question.\n\n"Opponents of mandatory school uniforms argue that they restrict students\' freedom of self-expression. This argument, while understandable, overlooks the evidence. Schools that have introduced uniforms report reductions in bullying related to socioeconomic status, as students from less affluent families are no longer singled out for wearing cheaper clothing. Moreover, uniforms reduce the pressure on families to spend large amounts on fashionable clothes. The right to expression must be balanced against the right to a safe and equitable learning environment."\n\nWhat is the author\'s strategy for responding to the opposing argument?',
+        opciones: [
+          { letra: 'A', texto: 'The author ignores the opposing argument completely.' },
+          { letra: 'B', texto: 'The author acknowledges the opposing argument but counters it with evidence about reduced bullying and economic benefits, concluding that rights must be balanced.' },
+          { letra: 'C', texto: 'The author agrees that uniforms restrict freedom of expression and proposes alternatives.' },
+          { letra: 'D', texto: 'The author attacks the people who oppose uniforms rather than addressing their argument.' },
+        ],
+        clave: 'B',
+        justificacion: 'The author uses a concession-refutation strategy: first acknowledges the opposing view ("while understandable"), then presents counterevidence (reduced bullying, economic benefits) and a concluding principle (balance of rights). This is a rhetorically sophisticated approach that strengthens the argument by engaging with the opposition rather than dismissing it. Option A is incorrect: the author explicitly addresses the opposing view. Option C misrepresents the author\'s position (the author disagrees with the freedom argument). Option D describes an ad hominem attack, absent from the text.',
+        competencia: 'comprension-lectura',
+        componente: 'pragmatico',
+      },
+
+      // 49. Uso de la lengua — gerundio vs. infinitivo (contexto semántico) (uso-lengua / gramatical)
+      {
+        id: 'eng-s11-p49',
+        enunciado: 'Choose the option that correctly shows the meaning difference between the two sentences.\n\n(1) "She stopped to check her phone."\n(2) "She stopped checking her phone."',
+        opciones: [
+          { letra: 'A', texto: 'Both sentences mean the same: she no longer uses her phone.' },
+          { letra: 'B', texto: '(1) means she paused what she was doing in order to check her phone; (2) means she quit the habit of checking her phone.' },
+          { letra: 'C', texto: '(1) means she quit the habit; (2) means she paused another activity.' },
+          { letra: 'D', texto: 'Both sentences describe past actions that happened at the same time.' },
+        ],
+        clave: 'B',
+        justificacion: 'This is a classic distinction in English grammar: "stop + infinitive" means to stop another activity in order to do something new ("she stopped [walking] to check her phone" = she paused to look at her phone). "Stop + gerund" means to stop doing that same activity ("she stopped checking her phone" = she quit the habit of checking it). These sentences have opposite meanings. Option A ignores the difference. Option C reverses the meanings. Option D is incorrect: the sentences describe different situations.',
+        competencia: 'uso-lengua',
+        componente: 'gramatical',
+      },
+
+      // 50. Comprensión de lectura — lectura crítica de cifras (comprension-lectura / lexical)
+      {
+        id: 'eng-s11-p50',
+        enunciado: 'Read the following text and answer the question.\n\n"A new study claims that people who eat breakfast daily are 40% more likely to succeed in their careers than those who skip it. The study was funded by a major cereal manufacturer and was conducted over two weeks with 200 participants."\n\nWhy should readers approach this study with caution?',
+        opciones: [
+          { letra: 'A', texto: 'Because eating breakfast has been proven to have no health benefits.' },
+          { letra: 'B', texto: 'Because the study has significant limitations: a very short duration (two weeks), a small sample size (200 people), and a potential conflict of interest since it was funded by a company that profits from the result.' },
+          { letra: 'C', texto: 'Because 40% is not a high enough percentage to be significant.' },
+          { letra: 'D', texto: 'Because all studies about food are automatically unreliable.' },
+        ],
+        clave: 'B',
+        justificacion: 'Critical reading of research requires evaluating methodological quality and potential bias. This study has three notable weaknesses: (1) two weeks is too short to measure career success; (2) 200 participants is a small sample for drawing broad conclusions; (3) funding from a cereal manufacturer creates a conflict of interest — they benefit financially from positive results about breakfast eating. These are standard criteria for evaluating scientific credibility. Option A makes a factual claim that contradicts existing research. Option C misrepresents statistical significance. Option D is an overgeneralization.',
+        competencia: 'comprension-lectura',
+        componente: 'lexical',
+      },
+
+      // 51. Uso de la lengua — inversión para énfasis (uso-lengua / gramatical)
+      {
+        id: 'eng-s11-p51',
+        enunciado: 'Choose the option that correctly uses inversion for emphasis.\n\n"Not only ______, but they also donated clothing and medicine."',
+        opciones: [
+          { letra: 'A', texto: '"they provided food"' },
+          { letra: 'B', texto: '"they did provide food"' },
+          { letra: 'C', texto: '"did they provide food"' },
+          { letra: 'D', texto: '"provided they food"' },
+        ],
+        clave: 'C',
+        justificacion: 'When "not only" begins a sentence or clause for emphasis, subject-auxiliary inversion is required: auxiliary verb + subject + main verb. "Not only did they provide food" follows the inversion rule. Option A uses normal word order without inversion, which is incorrect after "not only" at the beginning. Option B adds "did" but keeps the original word order (no inversion). Option D incorrectly places the main verb before the subject without the auxiliary.',
+        competencia: 'uso-lengua',
+        componente: 'gramatical',
+      },
+
+      // 52. Comprensión de lectura — texto de ciencias (comprension-lectura / lexical)
+      {
+        id: 'eng-s11-p52',
+        enunciado: 'Read the following text and answer the question.\n\n"Antibiotic resistance is one of the greatest threats to global health. Bacteria evolve and develop mechanisms to survive drugs that once killed them. Overuse of antibiotics in human medicine and agriculture accelerates this process. The World Health Organization estimates that by 2050, antibiotic-resistant infections could cause more deaths annually than cancer does today."\n\nAccording to the text, what is the primary cause of accelerating antibiotic resistance?',
+        opciones: [
+          { letra: 'A', texto: 'The natural aging process of bacteria over time.' },
+          { letra: 'B', texto: 'The overuse of antibiotics in both human healthcare and agricultural practices.' },
+          { letra: 'C', texto: 'The lack of investment in new antibiotics by pharmaceutical companies.' },
+          { letra: 'D', texto: 'The spread of antibiotic-resistant bacteria through international travel.' },
+        ],
+        clave: 'B',
+        justificacion: 'The text explicitly states: "Overuse of antibiotics in human medicine and agriculture accelerates this process." This is the primary cause identified in the text. Option A is technically true (evolution is natural) but the text specifically identifies overuse as the accelerating factor. Options C and D are not mentioned in the text. The question asks what the text says, not what is generally known about antibiotic resistance.',
+        competencia: 'comprension-lectura',
+        componente: 'lexical',
+      },
+
+      // 53. Uso de la lengua — artículos (uso-lengua / gramatical)
+      {
+        id: 'eng-s11-p53',
+        enunciado: 'Choose the option that correctly completes the sentence.\n\n"______ Amazon River is ______ longest river in ______ South America."',
+        opciones: [
+          { letra: 'A', texto: '"The / the / —"' },
+          { letra: 'B', texto: '"A / a / a"' },
+          { letra: 'C', texto: '"— / the / —"' },
+          { letra: 'D', texto: '"The / a / the"' },
+        ],
+        clave: 'A',
+        justificacion: 'Article rules: (1) "The Amazon River" — names of rivers always use "the" (the Nile, the Thames); (2) "the longest" — superlatives always use "the"; (3) "in South America" — no article before continent names used as locations. Option A ("The / the / —") follows all three rules. Option B uses "a/a/a," incorrect for names, superlatives, and continents. Option C omits the first article (rivers need "the"). Option D uses incorrect "the" before South America and "a" for the superlative.',
+        competencia: 'uso-lengua',
+        componente: 'gramatical',
+      },
+
+      // 54. Comprensión de lectura — texto publicitario vs. texto informativo (comprension-lectura / pragmatico)
+      {
+        id: 'eng-s11-p54',
+        enunciado: 'Read the two texts about the same product and answer the question.\n\nText A (advertisement): "GreenLeaf is the most advanced, eco-friendly water bottle on the market. Trusted by thousands, it keeps your water cold for 24 hours!"\n\nText B (review website): "GreenLeaf bottles performed well in temperature tests, maintaining cold water for an average of 18–22 hours. Build quality is good but the lid can occasionally leak. Price point is high compared to competitors with similar performance."\n\nWhich text provides more useful information for a consumer making a purchasing decision?',
+        opciones: [
+          { letra: 'A', texto: 'Text A, because it uses stronger and more confident language.' },
+          { letra: 'B', texto: 'Text B, because it provides specific, verifiable data and acknowledges both strengths and limitations.' },
+          { letra: 'C', texto: 'Text A, because it mentions that thousands of people trust the product.' },
+          { letra: 'D', texto: 'Both texts are equally useful because they describe the same product.' },
+        ],
+        clave: 'B',
+        justificacion: 'Text B provides more useful information for a consumer because: (1) it gives specific performance data ("18–22 hours" vs. "24 hours" claim); (2) it identifies a specific flaw ("lid can occasionally leak"); (3) it provides price comparison. Text A uses unverified superlatives ("most advanced"), social proof without data ("trusted by thousands"), and makes a performance claim (24 hours) that Text B suggests is slightly exaggerated. Strong, confident language (A) is a persuasion technique, not evidence of usefulness. Social proof (C) without data is not verifiable. The texts are not equally useful (D): one presents balanced evidence, the other uses marketing language.',
+        competencia: 'comprension-lectura',
+        componente: 'pragmatico',
+      },
+
+      // 55. Uso de la lengua — futuro continuo y futuro perfecto (uso-lengua / gramatical)
+      {
+        id: 'eng-s11-p55',
+        enunciado: 'Choose the option that correctly completes the sentence.\n\n"By the time the meeting starts at 9 a.m., the team ______ all the documents for over an hour."',
+        opciones: [
+          { letra: 'A', texto: '"will prepare"' },
+          { letra: 'B', texto: '"will have been preparing"' },
+          { letra: 'C', texto: '"is preparing"' },
+          { letra: 'D', texto: '"prepares"' },
+        ],
+        clave: 'B',
+        justificacion: '"By the time" + present tense (starts) signals future perfect or future perfect continuous. Since the sentence emphasizes the duration of an ongoing activity ("for over an hour") before a future deadline, Future Perfect Continuous is the most precise form: "will have been preparing" = they started before the meeting and will be in the middle of the action when it starts. Option A (Future Simple) does not express duration or the ongoing nature. Option C (Present Continuous) describes a current action. Option D uses the simple present, which would describe a habitual action.',
+        competencia: 'uso-lengua',
+        componente: 'gramatical',
+      },
+
+      // 56. Comprensión de lectura — vocabulario avanzado (comprension-lectura / lexical)
+      {
+        id: 'eng-s11-p56',
+        enunciado: 'Read the following sentence.\n\n"The senator\'s inflammatory rhetoric during the campaign exacerbated tensions between the two communities and made reconciliation significantly more difficult."\n\nWhat does "exacerbated" mean in this context?',
+        opciones: [
+          { letra: 'A', texto: 'Reduced and calmed down.' },
+          { letra: 'B', texto: 'Made worse or more severe.' },
+          { letra: 'C', texto: 'Explained clearly to the public.' },
+          { letra: 'D', texto: 'Temporarily solved.' },
+        ],
+        clave: 'B',
+        justificacion: '"Exacerbate" means to make a problem, condition, or situation worse. The context confirms this: the senator\'s inflammatory rhetoric "made reconciliation significantly more difficult," implying that tensions were already present and were intensified. Option A (reduced) is the opposite. Option C (explained) introduces a neutral meaning unrelated to making things worse. Option D (temporarily solved) also contradicts the meaning.',
+        competencia: 'comprension-lectura',
+        componente: 'lexical',
+      },
+
+      // 57. Uso de la lengua — oraciones de deseo (wish) (uso-lengua / gramatical)
+      {
+        id: 'eng-s11-p57',
+        enunciado: 'Choose the option that correctly completes the sentence.\n\n"He wishes he ______ more free time to spend with his family."',
+        opciones: [
+          { letra: 'A', texto: '"has"' },
+          { letra: 'B', texto: '"will have"' },
+          { letra: 'C', texto: '"had"' },
+          { letra: 'D', texto: '"would have had"' },
+        ],
+        clave: 'C',
+        justificacion: '"Wish + past simple" is used to express a desire for a present situation to be different. "He wishes he had more free time" = he doesn\'t have enough free time now, and he desires the situation were different. Option A uses the present simple, which would describe a fact, not a wish. Option B uses "will have," used for future wishes (a less common structure). Option D uses "would have had," which refers to past regrets, not current desires.',
+        competencia: 'uso-lengua',
+        componente: 'gramatical',
+      },
+
+      // 58. Comprensión de lectura — inferencia (comprension-lectura / pragmatico)
+      {
+        id: 'eng-s11-p58',
+        enunciado: 'Read the following conversation and answer the question.\n\nA: "I heard you applied for the director position. How did the interview go?"\nB: "Well… they were very thorough. They asked about my five-year plan, my management style, salary expectations… it was a lot."\nA: "And? Do you think you got it?"\nB: "Let\'s just say I\'m not getting my hopes up."\n\nWhat can be inferred about B\'s response?',
+        opciones: [
+          { letra: 'A', texto: 'B is very confident that they got the job.' },
+          { letra: 'B', texto: 'B thinks the interview went well and they will probably be hired.' },
+          { letra: 'C', texto: 'B does not think the interview went well and is managing expectations by avoiding false hope.' },
+          { letra: 'D', texto: 'B is refusing to discuss the interview results.' },
+        ],
+        clave: 'C',
+        justificacion: '"I\'m not getting my hopes up" is an idiomatic expression meaning the speaker is deliberately avoiding optimism to protect themselves from disappointment — it implies they don\'t expect a positive outcome. Combined with the hesitant tone ("Well…" and "it was a lot"), the inference is that B does not believe the interview went well. Option A and B contradict the expression. Option D misinterprets: B is discussing the interview indirectly, not refusing to engage.',
+        competencia: 'comprension-lectura',
+        componente: 'pragmatico',
+      },
+
+      // 59. Uso de la lengua — correlative conjunctions (uso-lengua / gramatical)
+      {
+        id: 'eng-s11-p59',
+        enunciado: 'Choose the option that correctly completes the sentence using correlative conjunctions.\n\n"The new transportation policy will benefit ______ daily commuters ______ long-distance travelers."',
+        opciones: [
+          { letra: 'A', texto: '"either / nor"' },
+          { letra: 'B', texto: '"neither / or"' },
+          { letra: 'C', texto: '"both / and"' },
+          { letra: 'D', texto: '"not only / but"' },
+        ],
+        clave: 'C',
+        justificacion: '"Both... and..." is a correlative conjunction used to include two elements positively: "both daily commuters and long-distance travelers." The sentence indicates the policy benefits both groups. Option A uses "either... nor," which is incorrect (either goes with "or": "either... or"). Option B uses "neither... or," also incorrect (neither goes with "nor"). Option D uses "not only... but," which is possible but requires "also": "not only... but also." Without "also," the structure is incomplete.',
+        competencia: 'uso-lengua',
+        componente: 'gramatical',
+      },
+
+      // 60. Comprensión de lectura — lectura crítica global (comprension-lectura / lexical)
+      {
+        id: 'eng-s11-p60',
+        enunciado: 'Read the following text and answer the question.\n\n"In 1928, Alexander Fleming noticed that a mold called Penicillium had contaminated one of his bacterial cultures — and killed the bacteria around it. Rather than discarding the \'ruined\' experiment, Fleming recognized the significance of what he was seeing. His curiosity and willingness to deviate from expectations led to the discovery of penicillin, an antibiotic that has since saved hundreds of millions of lives.\n\nScience does not always advance through planned experiments. Sometimes, the most transformative discoveries emerge from accidents — but only when a prepared mind is watching."\n\nWhat is the central message of the text?',
+        opciones: [
+          { letra: 'A', texto: 'That scientists should not plan their experiments carefully because accidents produce better results.' },
+          { letra: 'B', texto: 'That accidental discoveries in science only matter if they happen in a laboratory.' },
+          { letra: 'C', texto: 'That important scientific discoveries can arise from unexpected events, but only when the scientist has the knowledge and curiosity to recognize their significance.' },
+          { letra: 'D', texto: 'That Alexander Fleming was careless and contaminated his experiment by accident.' },
+        ],
+        clave: 'C',
+        justificacion: 'The text\'s central message is captured in the final phrase: "accidents — but only when a prepared mind is watching." The discovery of penicillin happened by accident (contamination), but it led to a breakthrough because Fleming had the preparation, knowledge, and curiosity to recognize and pursue it instead of discarding the experiment. The key insight is the combination of chance and preparation. Option A misinterprets the message: the text does not argue against planning. Option B limits the principle to laboratories, not implied. Option D describes only the accident without capturing the significance of Fleming\'s response.',
+        competencia: 'comprension-lectura',
+        componente: 'lexical',
       },
     ],
   },

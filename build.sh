@@ -17,7 +17,7 @@ CSS=$(cat src/ui/styles.css)
 
 # Leer todos los JS de datos
 DATA_JS=""
-for f in src/data/ebc-matematicas.js src/data/ebc-lenguaje.js src/data/ebc-naturales.js src/data/ebc-sociales.js src/data/ebc-ingles.js src/data/dba.js src/data/planes-matematicas.js src/data/planes-lenguaje.js src/data/planes-naturales.js src/data/planes-sociales.js src/data/planes-ingles.js src/data/progresion-vertical.js src/data/icfes-matematicas.js src/data/icfes-lectura-critica.js src/data/icfes-naturales.js src/data/icfes-sociales.js src/data/icfes-ingles.js src/data/preguntas-icfes.js; do
+for f in src/data/i18n.js src/data/ebc-matematicas.js src/data/ebc-lenguaje.js src/data/ebc-naturales.js src/data/ebc-sociales.js src/data/ebc-ingles.js src/data/dba.js src/data/planes-matematicas.js src/data/planes-lenguaje.js src/data/planes-naturales.js src/data/planes-sociales.js src/data/planes-ingles.js src/data/progresion-vertical.js src/data/icfes-matematicas.js src/data/icfes-lectura-critica.js src/data/icfes-naturales.js src/data/icfes-sociales.js src/data/icfes-ingles.js src/data/preguntas-icfes.js; do
   DATA_JS+="$(cat "$f")"$'\n'
 done
 
@@ -61,6 +61,7 @@ cat >> dist/articulador-curricular.html << 'HTMLEOF'
   </style>
 </head>
 <body data-area="matematicas">
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
 
   <div class="app-layout">
     <header class="app-header">
@@ -77,7 +78,7 @@ cat >> dist/articulador-curricular.html << 'HTMLEOF'
         <button class="theme-toggle" id="theme-toggle" data-action="toggle-theme" title="Cambiar tema" aria-label="Cambiar tema">◐</button>
       </div>
     </header>
-    <aside class="app-sidebar" id="sidebar"><nav id="sidebar-nav"></nav></aside>
+    <aside class="app-sidebar" id="sidebar"><nav id="sidebar-nav" role="navigation" aria-label="Navegación principal"></nav></aside>
     <div class="sidebar-backdrop" data-action="close-sidebar"></div>
     <main class="app-main" id="main-content"></main>
   </div>

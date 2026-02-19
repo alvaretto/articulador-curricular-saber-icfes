@@ -38,6 +38,7 @@ const App = {
   },
 
   init() {
+    Analytics.registrarSesion();
     this.restoreState();
     this.bindEvents();
     this.applyTheme();
@@ -134,6 +135,7 @@ const App = {
       this.state.vista = 'home';
     }
 
+    Analytics.registrarVista(this.state.vista, this.state.area || this.state.grado || '');
     this.saveState();
     this.render();
   },
@@ -179,20 +181,34 @@ const App = {
           this.state.iaPanelOpen = !this.state.iaPanelOpen;
           this.updateIAPanel();
           break;
-        case 'export-pdf': exportarPDF(); break;
-        case 'export-json':
+        case 'export-pdf': Analytics.registrarAccion('export-pdf'); exportarPDF(); break;
+        case 'export-json': {
+          Analytics.registrarAccion('export-json');
           const data = prepararDatosExportacion({ tipo: this.state.vista, area: this.state.area, grupo: this.state.grupo, grado: this.state.grado, periodo: this.state.periodo });
           if (data) exportarJSON(data);
           break;
-        case 'export-institucional': exportarPlanInstitucional(this.state.grado, this.state.periodo); break;
+        }
+        case 'export-institucional': Analytics.registrarAccion('export-institucional'); exportarPlanInstitucional(this.state.grado, this.state.periodo); break;
         case 'open-config': this.navigate('#/config'); break;
         case 'ia-action': this.handleIAAction(val); break;
         case 'ia-gemini': this.handleIAGemini(val); break;
         case 'start-simulacro': {
           const areaEl = document.getElementById('sim-select-area');
           const pruebaEl = document.getElementById('sim-select-prueba');
+          const tiempoEl = document.getElementById('simulacro-tiempo');
           if (areaEl && pruebaEl) {
+            this.state.simulacroTiempoConfig = tiempoEl ? parseInt(tiempoEl.value, 10) : 240;
             this.navigate(`#/simulacro/${areaEl.value}/${pruebaEl.value}`);
+          }
+          break;
+        }
+        case 'start-simulacro-card': {
+          const tiempoEl = document.getElementById('simulacro-tiempo');
+          this.state.simulacroTiempoConfig = tiempoEl ? parseInt(tiempoEl.value, 10) : 240;
+          const areaCard = target.dataset.area;
+          const pruebaCard = target.dataset.prueba;
+          if (areaCard && pruebaCard) {
+            this.navigate(`#/simulacro/${areaCard}/${pruebaCard}`);
           }
           break;
         }
@@ -242,7 +258,25 @@ const App = {
           }
           break;
         }
+        case 'clear-analytics':
+          if (confirm('Limpiar todas las estadísticas de uso. Esta acción no se puede deshacer.')) {
+            Analytics.limpiar();
+            this.render();
+            this.showToast('Estadísticas borradas');
+          }
+          break;
       }
+    });
+
+    // Keyboard navigation: Enter/Space on non-button elements with data-action
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      const target = e.target.closest('[data-action]');
+      if (!target) return;
+      const tag = target.tagName.toLowerCase();
+      if (tag === 'button' || tag === 'a' || tag === 'input' || tag === 'select') return;
+      e.preventDefault();
+      target.click();
     });
 
     // Search input
@@ -522,35 +556,35 @@ const App = {
           </div>
 
           <div class="flex gap-2 mt-4" style="flex-wrap:wrap">
-            ${['8','9','10','11'].map(g => `
+            ${['6','7','8','9','10','11'].map(g => `
               <button class="btn btn-secondary btn-sm" data-action="navigate" data-value="#/plan/${g}/1">
                 Plan Matemáticas ${g}°
               </button>
             `).join('')}
           </div>
           <div class="flex gap-2 mt-2" style="flex-wrap:wrap">
-            ${['8','9','10','11'].map(g => `
+            ${['6','7','8','9','10','11'].map(g => `
               <button class="btn btn-secondary btn-sm" data-action="navigate" data-value="#/plan-lenguaje/${g}/1">
                 Plan Lenguaje ${g}°
               </button>
             `).join('')}
           </div>
           <div class="flex gap-2 mt-2" style="flex-wrap:wrap">
-            ${['8','9','10','11'].map(g => `
+            ${['6','7','8','9','10','11'].map(g => `
               <button class="btn btn-secondary btn-sm" data-action="navigate" data-value="#/plan-naturales/${g}/1">
                 Plan Naturales ${g}°
               </button>
             `).join('')}
           </div>
           <div class="flex gap-2 mt-2" style="flex-wrap:wrap">
-            ${['8','9','10','11'].map(g => `
+            ${['6','7','8','9','10','11'].map(g => `
               <button class="btn btn-secondary btn-sm" data-action="navigate" data-value="#/plan-sociales/${g}/1">
                 Plan Sociales ${g}°
               </button>
             `).join('')}
           </div>
           <div class="flex gap-2 mt-2" style="flex-wrap:wrap">
-            ${['8','9','10','11'].map(g => `
+            ${['6','7','8','9','10','11'].map(g => `
               <button class="btn btn-secondary btn-sm" data-action="navigate" data-value="#/plan-ingles/${g}/1">
                 Plan Inglés ${g}°
               </button>
@@ -999,7 +1033,7 @@ const App = {
         <div class="empty-state">
           <div class="empty-state-icon">📋</div>
           <div class="empty-state-title">Plan no disponible</div>
-          <p class="empty-state-text">Los planes de periodo detallados están disponibles para ${areaNombre} grados 8° a 11°.</p>
+          <p class="empty-state-text">Los planes de periodo detallados están disponibles para ${areaNombre} grados 6° a 11°.</p>
           <button class="btn btn-primary mt-4" data-action="navigate" data-value="#/">Volver al inicio</button>
         </div>
       `;
@@ -1046,7 +1080,7 @@ const App = {
           <p class="text-sm text-secondary">${planGrado.objetivo}</p>
         </div>
         <div class="flex gap-2">
-          <button class="btn btn-secondary btn-sm" data-action="export-pdf">PDF</button>
+          <button class="btn-print" data-action="export-pdf">🖨 Imprimir / PDF</button>
           <button class="btn btn-secondary btn-sm" data-action="export-json">JSON</button>
           <button class="btn btn-primary btn-sm" data-action="export-institucional">Formato Institucional</button>
         </div>
@@ -1436,6 +1470,30 @@ const App = {
           </div>
         </div>
       </div>
+
+      ${(() => {
+        const resumen = Analytics.getResumen();
+        const topVistasHtml = resumen.topVistas.length
+          ? resumen.topVistas.map(([k, v]) => `<li class="text-sm text-secondary">${k} <span class="badge badge-muted">${v}</span></li>`).join('')
+          : '<li class="text-sm text-muted">Sin datos aún</li>';
+        const topAccionesHtml = resumen.topAcciones.length
+          ? resumen.topAcciones.map(([k, v]) => `<li class="text-sm text-secondary">${k} <span class="badge badge-muted">${v}</span></li>`).join('')
+          : '<li class="text-sm text-muted">Sin datos aún</li>';
+        return `
+          <div class="card mt-4">
+            <div class="card-header"><span class="card-title">Estadísticas de Uso</span></div>
+            <div class="card-body">
+              <p class="text-sm text-secondary">Sesiones: <strong>${resumen.sesiones}</strong></p>
+              <p class="text-sm text-secondary">Última sesión: <strong>${resumen.ultimaSesion || 'N/A'}</strong></p>
+              <h4 class="text-sm font-bold mt-3 mb-1">Secciones más visitadas</h4>
+              <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:var(--sp-1)">${topVistasHtml}</ul>
+              <h4 class="text-sm font-bold mt-3 mb-1">Acciones más frecuentes</h4>
+              <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:var(--sp-1)">${topAccionesHtml}</ul>
+              <button class="btn btn-ghost btn-sm mt-3" data-action="clear-analytics">Limpiar estadísticas</button>
+            </div>
+          </div>
+        `;
+      })()}
     `;
   },
 
@@ -1558,7 +1616,7 @@ const App = {
 
       <div class="sidebar-label">Planes de Periodo — Matemáticas</div>
       <ul class="sidebar-nav">
-        ${['8','9','10','11'].map(g => `
+        ${['6','7','8','9','10','11'].map(g => `
           <li class="sidebar-item ${this.state.grado === g && this.state.area === 'matematicas' && this.state.vista === 'plan' ? 'active' : ''}" data-action="navigate" data-value="#/plan/${g}/1">
             <span class="sidebar-item-icon">📋</span> Matemáticas ${g}°
           </li>
@@ -1567,7 +1625,7 @@ const App = {
 
       <div class="sidebar-label">Planes de Periodo — Lenguaje</div>
       <ul class="sidebar-nav">
-        ${['8','9','10','11'].map(g => `
+        ${['6','7','8','9','10','11'].map(g => `
           <li class="sidebar-item ${this.state.grado === g && this.state.area === 'lenguaje' && this.state.vista === 'plan' ? 'active' : ''}" data-action="navigate" data-value="#/plan-lenguaje/${g}/1">
             <span class="sidebar-item-icon">📖</span> Lenguaje ${g}°
           </li>
@@ -1576,7 +1634,7 @@ const App = {
 
       <div class="sidebar-label">Planes de Periodo — C. Naturales</div>
       <ul class="sidebar-nav">
-        ${['8','9','10','11'].map(g => `
+        ${['6','7','8','9','10','11'].map(g => `
           <li class="sidebar-item ${this.state.grado === g && this.state.area === 'naturales' && this.state.vista === 'plan' ? 'active' : ''}" data-action="navigate" data-value="#/plan-naturales/${g}/1">
             <span class="sidebar-item-icon">🔬</span> Naturales ${g}°
           </li>
@@ -1585,7 +1643,7 @@ const App = {
 
       <div class="sidebar-label">Planes de Periodo — C. Sociales</div>
       <ul class="sidebar-nav">
-        ${['8','9','10','11'].map(g => `
+        ${['6','7','8','9','10','11'].map(g => `
           <li class="sidebar-item ${this.state.grado === g && this.state.area === 'sociales' && this.state.vista === 'plan' ? 'active' : ''}" data-action="navigate" data-value="#/plan-sociales/${g}/1">
             <span class="sidebar-item-icon">🏛</span> Sociales ${g}°
           </li>
@@ -1594,7 +1652,7 @@ const App = {
 
       <div class="sidebar-label">Planes de Periodo — Inglés</div>
       <ul class="sidebar-nav">
-        ${['8','9','10','11'].map(g => `
+        ${['6','7','8','9','10','11'].map(g => `
           <li class="sidebar-item ${this.state.grado === g && this.state.area === 'ingles' && this.state.vista === 'plan' ? 'active' : ''}" data-action="navigate" data-value="#/plan-ingles/${g}/1">
             <span class="sidebar-item-icon">🌐</span> Inglés ${g}°
           </li>
@@ -1662,8 +1720,17 @@ const App = {
       ? this._shuffle(PREGUNTAS_ICFES[area][pruebaId])
       : [];
 
-    const minutosPorPregunta = 2;
-    const tiempoLimite = preguntas.length * minutosPorPregunta * 60; // en segundos
+    // Tiempo limite: usar el configurado por el usuario (en minutos) o calcular automaticamente
+    const tiempoConfigMinutos = this.state.simulacroTiempoConfig;
+    let tiempoLimite;
+    if (tiempoConfigMinutos && tiempoConfigMinutos > 0) {
+      tiempoLimite = tiempoConfigMinutos * 60; // convertir minutos a segundos
+    } else if (tiempoConfigMinutos === 0) {
+      tiempoLimite = 0; // sin limite: mostrar tiempo transcurrido
+    } else {
+      const minutosPorPregunta = 2;
+      tiempoLimite = preguntas.length * minutosPorPregunta * 60;
+    }
 
     this.state.simulacro = {
       area,
@@ -1691,19 +1758,31 @@ const App = {
       if (!this.state.simulacro || this.state.simulacro.finalizado) return;
 
       const elapsed = Math.floor((Date.now() - this.state.simulacro.tiempoInicio) / 1000);
-      const restante = Math.max(0, this.state.simulacro.tiempoLimite - elapsed);
+      const sinLimite = this.state.simulacro.tiempoLimite === 0;
+      const restante = sinLimite ? 0 : Math.max(0, this.state.simulacro.tiempoLimite - elapsed);
       this.state.simulacro.tiempoRestante = restante;
 
       // Actualizar display del timer
       const timerEl = document.getElementById('sim-timer');
       if (timerEl) {
-        const mm = String(Math.floor(restante / 60)).padStart(2, '0');
-        const ss = String(restante % 60).padStart(2, '0');
-        timerEl.textContent = `${mm}:${ss}`;
-        timerEl.classList.toggle('urgente', restante < 60);
+        if (sinLimite) {
+          // Modo sin limite: mostrar tiempo transcurrido
+          const hh = String(Math.floor(elapsed / 3600)).padStart(2, '0');
+          const mm = String(Math.floor((elapsed % 3600) / 60)).padStart(2, '0');
+          const ss = String(elapsed % 60).padStart(2, '0');
+          timerEl.textContent = `${hh}:${mm}:${ss}`;
+          timerEl.classList.remove('warning', 'urgente');
+        } else {
+          const hh = String(Math.floor(restante / 3600)).padStart(2, '0');
+          const mm = String(Math.floor((restante % 3600) / 60)).padStart(2, '0');
+          const ss = String(restante % 60).padStart(2, '0');
+          timerEl.textContent = `${hh}:${mm}:${ss}`;
+          timerEl.classList.toggle('warning', restante > 60 && restante <= 300);
+          timerEl.classList.toggle('urgente', restante <= 60);
+        }
       }
 
-      if (restante <= 0) {
+      if (!sinLimite && restante <= 0) {
         this.finalizarSimulacro();
       }
     }, 1000);
@@ -1777,8 +1856,9 @@ const App = {
                   <span class="badge badge-muted">~${minutos} min</span>
                 </div>
                 <button class="btn btn-primary w-full mt-4"
-                        data-action="navigate"
-                        data-value="#/simulacro/${area.id}/${prueba.id}">
+                        data-action="start-simulacro-card"
+                        data-area="${area.id}"
+                        data-prueba="${prueba.id}">
                   Iniciar Simulacro
                 </button>
               ` : `
@@ -1791,12 +1871,25 @@ const App = {
       })
     ).join('');
 
+    const tiempoGuardado = this.state.simulacroTiempoConfig != null ? this.state.simulacroTiempoConfig : 240;
+
     return `
       <h1 class="section-title">Simulacro ICFES</h1>
       <p class="section-description">
         Practica con preguntas tipo Saber en condiciones de examen. Las preguntas se presentan en orden aleatorio con temporizador.
         Al finalizar, recibiras tu puntaje, porcentaje de acierto y retroalimentacion por pregunta.
       </p>
+
+      <div class="simulacro-config-bar">
+        <label class="simulacro-config-label">Tiempo limite</label>
+        <select class="simulacro-config-select" id="simulacro-tiempo">
+          <option value="0" ${tiempoGuardado === 0 ? 'selected' : ''}>Sin limite</option>
+          <option value="30" ${tiempoGuardado === 30 ? 'selected' : ''}>30 minutos</option>
+          <option value="60" ${tiempoGuardado === 60 ? 'selected' : ''}>1 hora</option>
+          <option value="120" ${tiempoGuardado === 120 ? 'selected' : ''}>2 horas</option>
+          <option value="240" ${tiempoGuardado === 240 ? 'selected' : ''}>4 horas (Saber 11)</option>
+        </select>
+      </div>
 
       <div class="simulacro-grid">
         ${cards}
@@ -1818,13 +1911,27 @@ const App = {
       `;
     }
 
-    const { preguntas, actual, tiempoRestante, respuestas, pruebaId, area } = sim;
+    const { preguntas, actual, tiempoRestante, tiempoLimite, tiempoInicio, respuestas, pruebaId, area } = sim;
     const pregunta = preguntas[actual];
     const totalPreguntas = preguntas.length;
     const progPct = Math.round((actual / totalPreguntas) * 100);
 
-    const mm = String(Math.floor(tiempoRestante / 60)).padStart(2, '0');
-    const ss = String(tiempoRestante % 60).padStart(2, '0');
+    const sinLimite = tiempoLimite === 0;
+    let timerTexto, timerClase;
+    if (sinLimite) {
+      const elapsed = Math.floor((Date.now() - tiempoInicio) / 1000);
+      const hh = String(Math.floor(elapsed / 3600)).padStart(2, '0');
+      const mm = String(Math.floor((elapsed % 3600) / 60)).padStart(2, '0');
+      const ss = String(elapsed % 60).padStart(2, '0');
+      timerTexto = `${hh}:${mm}:${ss}`;
+      timerClase = '';
+    } else {
+      const hh = String(Math.floor(tiempoRestante / 3600)).padStart(2, '0');
+      const mm = String(Math.floor((tiempoRestante % 3600) / 60)).padStart(2, '0');
+      const ss = String(tiempoRestante % 60).padStart(2, '0');
+      timerTexto = `${hh}:${mm}:${ss}`;
+      timerClase = tiempoRestante <= 60 ? 'urgente' : tiempoRestante <= 300 ? 'warning' : '';
+    }
     const esUltima = actual + 1 >= totalPreguntas;
     const respActual = respuestas[actual];
 
@@ -1840,9 +1947,7 @@ const App = {
           <span class="simulacro-num">Pregunta ${actual + 1} de ${totalPreguntas}</span>
         </div>
         <div class="simulacro-header-controls">
-          <div class="simulacro-timer ${tiempoRestante < 60 ? 'urgente' : ''}" id="sim-timer">
-            ${mm}:${ss}
-          </div>
+          <div class="simulacro-timer ${timerClase}" id="sim-timer">${timerTexto}</div>
           <button class="btn btn-ghost btn-sm" data-action="simulacro-abandonar">Abandonar</button>
         </div>
       </div>
@@ -1922,9 +2027,11 @@ const App = {
     // Tiempo usado
     const tiempoUsado = sim.tiempoFin
       ? Math.floor((sim.tiempoFin - sim.tiempoInicio) / 1000)
-      : sim.tiempoLimite - (sim.tiempoRestante || 0);
-    const mmUsado = String(Math.floor(tiempoUsado / 60)).padStart(2, '0');
+      : (sim.tiempoLimite > 0 ? sim.tiempoLimite - (sim.tiempoRestante || 0) : Math.floor((Date.now() - sim.tiempoInicio) / 1000));
+    const hhUsado = String(Math.floor(tiempoUsado / 3600)).padStart(2, '0');
+    const mmUsado = String(Math.floor((tiempoUsado % 3600) / 60)).padStart(2, '0');
     const ssUsado = String(tiempoUsado % 60).padStart(2, '0');
+    const tiempoUsadoTexto = parseInt(hhUsado) > 0 ? `${hhUsado}:${mmUsado}:${ssUsado}` : `${mmUsado}:${ssUsado}`;
 
     const areaLabels = { matematicas: 'Matematicas', lenguaje: 'Lectura Critica', naturales: 'Ciencias Naturales', sociales: 'Sociales y Ciudadanas', ingles: 'Inglés' };
     const pruebaLabels = { 'saber-9': 'Saber 9°', 'saber-11': 'Saber 11°' };
@@ -1951,7 +2058,7 @@ const App = {
               <div class="simulacro-score" style="color:${scoreColor}">${correctas}/${total}</div>
               <div class="simulacro-score-pct" style="color:${scoreColor}">${porcentaje}% de acierto</div>
               <div class="simulacro-score-meta text-muted text-sm">
-                Tiempo usado: ${mmUsado}:${ssUsado} &nbsp;·&nbsp; Respondidas: ${respondidas}/${total}
+                Tiempo usado: ${tiempoUsadoTexto} &nbsp;·&nbsp; Respondidas: ${respondidas}/${total}
               </div>
             </div>
           </div>

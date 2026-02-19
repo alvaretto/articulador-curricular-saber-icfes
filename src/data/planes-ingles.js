@@ -1,11 +1,12 @@
 /**
- * Planes de aula de Inglés - Grados 8° a 11°
+ * Planes de aula de Inglés - Grados 6° a 11°
  * Estructura: 4 periodos x 10 semanas x 3 horas/semana = 120 horas/año
  * Basado en Estándares Básicos de Competencias en Lenguas Extranjeras: Inglés (MEN - Colombia)
  * Marco de referencia: Marco Común Europeo de Referencia (MCER/CEFR)
  * Programa Nacional de Bilingüismo - Colombia
  *
  * Grupos EBC:
+ *   6° y 7° → Grupo 6-7 (Nivel A1 — Básico)
  *   8° y 9° → Grupo 8-9 (Nivel B1.1 — Pre-intermedio 1)
  *   10° y 11° → Grupo 10-11 (Nivel B1.2 — Pre-intermedio 2)
  *
@@ -14,6 +15,824 @@
  */
 
 const PLANES_INGLES = {
+
+  // ============================================================
+  // GRADO 6
+  // ============================================================
+  '6': {
+    grado: '6°',
+    intensidadHoraria: 3,
+    totalSemanas: 40,
+    totalHorasAnuales: 120,
+    nivelCEFR: 'A1',
+    grupoEBC: '6-7',
+    pruebaSaber: 'saber-11',
+    objetivo: 'Introducir al estudiante en el aprendizaje del inglés como lengua extranjera, desarrollando habilidades básicas de escucha, lectura, escritura y producción oral en el nivel A- del MCER, a partir de contextos cotidianos como la identidad personal, las rutinas, la alimentación y los lugares del entorno',
+
+    periodos: {
+
+      // ----------------------------------------------------------
+      // GRADO 6 - PERIODO 1
+      // ----------------------------------------------------------
+      1: {
+        semanas: 10,
+        horasSemana: 3,
+        horasTotales: 30,
+
+        estandares: [
+          'Entiendo palabras y expresiones muy básicas relacionadas con mi entorno inmediato cuando se habla despacio y con claridad.',
+          'Comprendo textos muy cortos y sencillos sobre información personal básica.',
+          'Escribo frases y oraciones sencillas sobre mí mismo y las personas que conozco.',
+          'Me presento y presento a otros usando frases preparadas y expresiones memorizadas.',
+          'Respondo preguntas básicas sobre mi nombre, edad, origen y preferencias.'
+        ],
+
+        dba: 'Saluda, se presenta y da información personal básica (nombre, edad, nacionalidad, gustos) usando el verbo to be en sus formas afirmativa, negativa e interrogativa.',
+
+        ejesTematicos: [
+          'Greetings and farewells: formal and informal',
+          'Personal information: name, age, nationality, address',
+          'Verb to be: affirmative, negative and questions',
+          'Subject pronouns and possessive adjectives',
+          'Reading: short identification and personal profile texts'
+        ],
+
+        tiposPensamiento: ['Escucha', 'Lectura', 'Escritura', 'Monólogo', 'Conversación'],
+
+        preguntaProblema: '¿Cómo me presento y doy información básica sobre mí mismo en inglés de manera clara y apropiada?',
+
+        diagnostico: 'La mayoría de los estudiantes llegan sin conocimientos previos formales de inglés; algunos reconocen saludos básicos (hello, bye) y números del contexto de medios digitales y entretenimiento.',
+
+        competenciasICFES: {
+          comunicativa: 'Comprende y produce frases muy sencillas sobre información personal básica usando el verbo to be en contextos de presentación e identificación.',
+          pragmatica: 'Reconoce y usa fórmulas de saludo, despedida y presentación adecuadas al contexto formal e informal.',
+          linguistica: 'Usa correctamente el verbo to be en sus tres formas (afirmativa, negativa e interrogativa) con todos los pronombres personales.'
+        },
+
+        matrizReferencia: {
+          componente: 'Gramatical / Lexical',
+          competencia: 'Uso de la lengua en contexto',
+          afirmaciones: [
+            'Usa el verbo to be correctamente para dar información personal en oraciones afirmativas, negativas e interrogativas.',
+            'Reconoce vocabulario básico de identificación personal en textos cortos y sencillos.'
+          ]
+        },
+
+        aprendizajesICFES: ['ing-s11-01', 'ing-s11-09'],
+
+        nivelEsperado: 'A-',
+
+        evidenciasAprendizaje: [
+          'Completa una ficha de presentación personal con nombre, edad, nacionalidad y gustos básicos.',
+          'Formula y responde preguntas usando el verbo to be con los pronombres correctos.',
+          'Realiza una presentación oral breve (nombre, edad, ciudad) ante el grupo.',
+          'Lee tarjetas de presentación e identifica la información personal solicitada.',
+          'Diferencia saludos formales e informales y los usa en situaciones simuladas.'
+        ],
+
+        estrategiasMetodologicas: [
+          'Tarjetas de identidad: cada estudiante elabora su ID card en inglés con foto y datos personales.',
+          'Juego de roles: presentaciones en parejas usando diálogos estructurados.',
+          'Canción introductoria: "Hello, my name is..." para practicar presentaciones de forma lúdica.',
+          'Diagnóstico inicial lúdico: bingo de vocabulario básico para identificar saberes previos.',
+          'Lectura compartida: fichas de personajes famosos jóvenes para identificar información personal.'
+        ],
+
+        materialesEducativos: [
+          'Texto escolar de Inglés 6° (editorial SM, Richmond o Pearson)',
+          'Flashcards de pronombres personales y formas del verbo to be',
+          'Guías elaboradas por el docente con diálogos modelos de presentación',
+          'Videos cortos de YouTube: saludos y presentaciones en inglés para niños',
+          'Diccionario bilingüe ilustrado inglés-español'
+        ],
+
+        criteriosEvaluacion: {
+          porcentajes: { saber: 30, hacer: 50, ser: 20 },
+          saber: [
+            'Reconoce las formas del verbo to be con todos los pronombres personales.',
+            'Identifica vocabulario básico de presentación e información personal.',
+            'Diferencia saludos formales e informales en inglés.'
+          ],
+          hacer: [
+            'Completa oraciones con la forma correcta del verbo to be.',
+            'Produce frases escritas de presentación personal con precisión gramatical básica.',
+            'Realiza una presentación oral breve usando expresiones memorizadas.',
+            'Lee textos muy cortos de identificación personal y extrae datos específicos.'
+          ],
+          ser: [
+            'Participa con disposición y confianza en las actividades orales de presentación.',
+            'Muestra respeto hacia las producciones orales y escritas de sus compañeros.',
+            'Demuestra interés y curiosidad por el aprendizaje del inglés.'
+          ]
+        },
+
+        competenciaCiudadana: 'Reconoce la importancia de saber presentarse en inglés como habilidad para comunicarse con personas de diferentes culturas, valorando la diversidad lingüística y cultural del mundo.'
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 6 - PERIODO 2
+      // ----------------------------------------------------------
+      2: {
+        semanas: 10,
+        horasSemana: 3,
+        horasTotales: 30,
+
+        estandares: [
+          'Comprendo frases y expresiones relacionadas con áreas de experiencia inmediata cuando se pronuncian de manera clara y pausada.',
+          'Entiendo instrucciones sencillas y rutinas de clase explicadas en inglés.',
+          'Escribo frases y oraciones cortas sobre actividades cotidianas con conectores básicos.',
+          'Describo verbalmente mi rutina diaria usando el presente simple con corrección básica.',
+          'Interactúo en conversaciones sencillas sobre hábitos y rutinas cotidianas.'
+        ],
+
+        dba: 'Describe rutinas y hábitos cotidianos propios y de otras personas usando el presente simple con adverbios de frecuencia (always, usually, sometimes, never) con precisión gramatical básica.',
+
+        ejesTematicos: [
+          'Present Simple: affirmative, negative and questions',
+          'Third person singular: he/she/it + -s/-es',
+          'Frequency adverbs: always, usually, often, sometimes, never',
+          'Daily routines vocabulary: morning, afternoon, evening activities',
+          'Writing: short descriptive paragraphs about daily life'
+        ],
+
+        tiposPensamiento: ['Escucha', 'Lectura', 'Escritura', 'Monólogo', 'Conversación'],
+
+        preguntaProblema: '¿Cómo describo mi rutina diaria y los hábitos de las personas de mi entorno en inglés de forma clara y organizada?',
+
+        diagnostico: 'El 65% de los estudiantes omite la -s/-es en la tercera persona singular del presente simple y no ubica correctamente los adverbios de frecuencia en la oración.',
+
+        competenciasICFES: {
+          comunicativa: 'Comprende y produce textos escritos sencillos sobre rutinas y hábitos cotidianos usando el presente simple con adverbios de frecuencia.',
+          pragmatica: 'Organiza la información sobre rutinas en una secuencia lógica usando conectores de tiempo (first, then, after that, finally) en párrafos descriptivos.',
+          linguistica: 'Aplica las reglas del presente simple incluyendo la tercera persona singular (-s/-es) y forma correctamente las oraciones negativas (do not / does not) e interrogativas (do/does).'
+        },
+
+        matrizReferencia: {
+          componente: 'Gramatical / Lexical',
+          competencia: 'Uso de la lengua en contexto',
+          afirmaciones: [
+            'Usa el presente simple con corrección básica para describir hábitos y rutinas incluyendo la tercera persona singular.',
+            'Ubica los adverbios de frecuencia en la posición correcta dentro de la oración.'
+          ]
+        },
+
+        aprendizajesICFES: ['ing-s11-04', 'ing-s11-09'],
+
+        nivelEsperado: 'A-',
+
+        evidenciasAprendizaje: [
+          'Produce un párrafo corto describiendo su rutina diaria con al menos cinco oraciones en presente simple.',
+          'Usa adverbios de frecuencia en la posición correcta dentro de las oraciones.',
+          'Transforma oraciones afirmativas a negativas e interrogativas en presente simple.',
+          'Describe oralmente la rutina de un compañero o familiar usando la tercera persona correctamente.',
+          'Lee un texto breve sobre la rutina de un personaje e identifica los hábitos descritos.'
+        ],
+
+        estrategiasMetodologicas: [
+          'Línea de tiempo de la rutina diaria: los estudiantes dibujan y etiquetan en inglés su día.',
+          'Juego "Find someone who...": encuesta de hábitos con preguntas en presente simple.',
+          'Escritura guiada: párrafo descriptivo de rutina con plantilla de apoyo.',
+          'Análisis inductivo: los estudiantes descubren la regla de la tercera persona a partir de ejemplos.',
+          'Video de rutinas: ver un corto animado y completar un cuadro de actividades en presente simple.'
+        ],
+
+        materialesEducativos: [
+          'Texto escolar de Inglés 6° (editorial SM, Richmond o Pearson)',
+          'Flashcards de vocabulario de rutinas diarias y adverbios de frecuencia',
+          'Guías de escritura guiada elaboradas por el docente',
+          'Videos cortos animados sobre rutinas diarias en inglés',
+          'Diccionario bilingüe ilustrado inglés-español'
+        ],
+
+        criteriosEvaluacion: {
+          porcentajes: { saber: 30, hacer: 50, ser: 20 },
+          saber: [
+            'Explica la regla de la tercera persona singular del presente simple con ejemplos.',
+            'Identifica el adverbio de frecuencia adecuado para expresar distintas costumbres.',
+            'Reconoce vocabulario de actividades cotidianas en textos orales y escritos.'
+          ],
+          hacer: [
+            'Produce un párrafo descriptivo sobre su rutina diaria con precisión gramatical básica.',
+            'Usa los auxiliares do/does correctamente en oraciones negativas e interrogativas.',
+            'Describe oralmente la rutina de otra persona usando la tercera persona singular.',
+            'Lee textos breves sobre rutinas e identifica información específica.'
+          ],
+          ser: [
+            'Muestra constancia y dedicación en la producción de sus escritos en inglés.',
+            'Participa activamente en las actividades de interacción oral de la clase.',
+            'Entrega sus producciones escritas en los tiempos acordados con el docente.'
+          ]
+        },
+
+        competenciaCiudadana: 'Reflexiona sobre sus propios hábitos y rutinas al compararlos con los de estudiantes de otras culturas angloparlantes, desarrollando conciencia sobre estilos de vida diversos y saludables.'
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 6 - PERIODO 3
+      // ----------------------------------------------------------
+      3: {
+        semanas: 10,
+        horasSemana: 3,
+        horasTotales: 30,
+
+        estandares: [
+          'Comprendo textos cortos sobre temas cercanos a mi experiencia cuando están escritos en lenguaje sencillo.',
+          'Entiendo el vocabulario relacionado con alimentos, cantidades y compras en contextos cotidianos.',
+          'Produzco listas, notas y textos cortos usando vocabulario de alimentación y compras.',
+          'Expreso preferencias alimentarias y hablo sobre lo que hay en un lugar usando there is / there are.',
+          'Interactúo en situaciones sencillas de compra y venta usando fórmulas básicas de cortesía.'
+        ],
+
+        dba: 'Describe alimentos, cantidades y situaciones de compra cotidiana usando sustantivos contables e incontables, there is / there are y expresiones de cantidad (some, any, a lot of, a few, a little).',
+
+        ejesTematicos: [
+          'Food vocabulary: fruits, vegetables, drinks, meals',
+          'Countable and uncountable nouns',
+          'There is / There are: affirmative, negative and questions',
+          'Quantifiers: some, any, a lot of, a few, a little, much, many',
+          'Reading: menus, shopping lists and simple food-related texts'
+        ],
+
+        tiposPensamiento: ['Escucha', 'Lectura', 'Escritura', 'Monólogo', 'Conversación'],
+
+        preguntaProblema: '¿Cómo describo los alimentos de mi entorno y participo en situaciones de compra básicas usando el inglés?',
+
+        diagnostico: 'El 70% de los estudiantes no diferencia sustantivos contables de incontables y usa incorrectamente some/any; la mayoría desconoce el vocabulario de alimentos en inglés.',
+
+        competenciasICFES: {
+          comunicativa: 'Comprende y produce textos cortos sobre alimentos y compras usando there is/are, sustantivos contables e incontables y cuantificadores en contextos cotidianos.',
+          pragmatica: 'Reconoce y usa fórmulas básicas de compra y venta (How much is it? I would like...) y de descripción de cantidades en situaciones comunicativas simuladas.',
+          linguistica: 'Aplica correctamente la distinción entre sustantivos contables e incontables para seleccionar el cuantificador apropiado (some/any, much/many, a few/a little) según el contexto.'
+        },
+
+        matrizReferencia: {
+          componente: 'Gramatical / Lexical',
+          competencia: 'Uso de la lengua en contexto',
+          afirmaciones: [
+            'Selecciona el cuantificador correcto (some/any, much/many, a few/a little) según el tipo de sustantivo y el contexto oracional.',
+            'Usa there is / there are correctamente para describir la existencia de alimentos u objetos en un lugar.'
+          ]
+        },
+
+        aprendizajesICFES: ['ing-s11-01', 'ing-s11-04', 'ing-s11-09'],
+
+        nivelEsperado: 'A-',
+
+        evidenciasAprendizaje: [
+          'Clasifica una lista de alimentos en contables e incontables con precisión.',
+          'Escribe un texto corto describiendo los alimentos que hay en su casa usando there is / there are.',
+          'Usa some y any correctamente en oraciones afirmativas, negativas e interrogativas.',
+          'Lee un menú sencillo de restaurante e identifica los platos disponibles y sus precios.',
+          'Participa en un juego de roles de compra en una tienda usando fórmulas básicas.'
+        ],
+
+        estrategiasMetodologicas: [
+          'Proyecto "My ideal menu": diseñar un menú de restaurante en inglés con ilustraciones y precios.',
+          'Juego "Guess the food": describir alimentos usando there is/are y los compañeros adivinar.',
+          'Lectura de menús reales adaptados: identificar platos, precios e ingredientes.',
+          'Encuesta de hábitos alimentarios: preguntas con do you eat...? / Is there any...?',
+          'Video de cocina infantil en inglés: tomar nota de los ingredientes mencionados.'
+        ],
+
+        materialesEducativos: [
+          'Texto escolar de Inglés 6° (editorial SM, Richmond o Pearson)',
+          'Flashcards de vocabulario de alimentos y cuantificadores',
+          'Menús de restaurantes adaptados al nivel',
+          'Videos cortos de cocina o programas infantiles en inglés',
+          'Guías de trabajo sobre sustantivos contables e incontables'
+        ],
+
+        criteriosEvaluacion: {
+          porcentajes: { saber: 30, hacer: 50, ser: 20 },
+          saber: [
+            'Distingue entre sustantivos contables e incontables con ejemplos de alimentos.',
+            'Reconoce el cuantificador apropiado para cada tipo de sustantivo.',
+            'Identifica vocabulario de alimentos y compras en textos orales y escritos.'
+          ],
+          hacer: [
+            'Usa there is / there are correctamente en descripciones orales y escritas.',
+            'Selecciona some o any según la oración sea afirmativa, negativa o interrogativa.',
+            'Diseña un menú de restaurante sencillo en inglés con vocabulario apropiado.',
+            'Participa en un diálogo de compra usando fórmulas básicas de cortesía.'
+          ],
+          ser: [
+            'Muestra curiosidad por el vocabulario de alimentos de otras culturas.',
+            'Participa con entusiasmo en las actividades lúdicas de clase.',
+            'Respeta las preferencias alimentarias y culturales de sus compañeros.'
+          ]
+        },
+
+        competenciaCiudadana: 'Reflexiona sobre la diversidad gastronómica de los países de habla inglesa, valorando las diferencias culturales en los hábitos alimentarios y reconociendo la importancia de una alimentación saludable.'
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 6 - PERIODO 4
+      // ----------------------------------------------------------
+      4: {
+        semanas: 10,
+        horasSemana: 3,
+        horasTotales: 30,
+
+        estandares: [
+          'Comprendo textos muy cortos con vocabulario relacionado con lugares de la ciudad y su función.',
+          'Entiendo instrucciones sencillas de orientación espacial cuando se apoyan con gestos o imágenes.',
+          'Escribo descripciones breves de lugares usando preposiciones de lugar con precisión básica.',
+          'Describo la ubicación de lugares en mi ciudad y doy indicaciones sencillas para llegar a ellos.',
+          'Interactúo en conversaciones breves para pedir y dar indicaciones en inglés.'
+        ],
+
+        dba: 'Describe la ubicación de lugares en su entorno urbano y da indicaciones básicas para llegar a ellos usando preposiciones de lugar (next to, opposite, between, in front of) e imperativos de dirección (turn left/right, go straight).',
+
+        ejesTematicos: [
+          'Places in town: school, hospital, park, bank, market, library, supermarket',
+          'Prepositions of place: next to, opposite, between, behind, in front of, on the corner of',
+          'Giving directions: turn left/right, go straight on, take the first/second street',
+          'Imperatives for directions: Go, Turn, Take, Cross',
+          'Writing: simple descriptions of a neighborhood or town map'
+        ],
+
+        tiposPensamiento: ['Escucha', 'Lectura', 'Escritura', 'Monólogo', 'Conversación'],
+
+        preguntaProblema: '¿Cómo describo los lugares de mi ciudad y doy indicaciones para llegar a ellos en inglés de manera clara?',
+
+        diagnostico: 'El 68% de los estudiantes confunde preposiciones de lugar con preposiciones de tiempo y tiene dificultades para orientarse en un mapa usando únicamente el inglés.',
+
+        competenciasICFES: {
+          comunicativa: 'Comprende y produce textos cortos que describen la ubicación de lugares en la ciudad y dan indicaciones básicas usando preposiciones de lugar e imperativos de dirección.',
+          pragmatica: 'Usa fórmulas apropiadas para pedir y dar indicaciones (Excuse me, where is the...? / Go straight and turn left) en situaciones comunicativas simuladas.',
+          linguistica: 'Usa correctamente las preposiciones de lugar y los imperativos de dirección para describir la posición de lugares y guiar a otros en un mapa.'
+        },
+
+        matrizReferencia: {
+          componente: 'Gramatical / Lexical',
+          competencia: 'Uso de la lengua en contexto',
+          afirmaciones: [
+            'Selecciona la preposición de lugar correcta (next to, opposite, between, in front of) para describir la ubicación de un lugar.',
+            'Usa imperativos de dirección (turn, go, take, cross) para dar indicaciones básicas en un mapa.'
+          ]
+        },
+
+        aprendizajesICFES: ['ing-s11-04', 'ing-s11-09'],
+
+        nivelEsperado: 'A-',
+
+        evidenciasAprendizaje: [
+          'Describe la ubicación de cinco lugares en un mapa usando preposiciones de lugar correctamente.',
+          'Sigue indicaciones orales sencillas y traza la ruta en un mapa.',
+          'Escribe un párrafo corto describiendo cómo llegar desde su colegio a un lugar de su barrio.',
+          'Participa en un juego de roles pidiendo y dando indicaciones con cortesía.',
+          'Lee una descripción sencilla de un vecindario e identifica la ubicación de los lugares mencionados.'
+        ],
+
+        estrategiasMetodologicas: [
+          'Proyecto "My town map": diseñar e ilustrar un mapa imaginario de una ciudad con lugares en inglés.',
+          'Juego de roles: un estudiante tiene los ojos vendados y sigue indicaciones de un compañero.',
+          'Dictado de mapa: el docente da indicaciones orales y los estudiantes marcan la ruta.',
+          'Escritura guiada: párrafo describiendo cómo llegar a un lugar desde el colegio.',
+          'Lectura de mapas: identificar lugares y rutas en planos simplificados de ciudades reales.'
+        ],
+
+        materialesEducativos: [
+          'Texto escolar de Inglés 6° (editorial SM, Richmond o Pearson)',
+          'Flashcards de lugares en la ciudad y preposiciones de lugar',
+          'Mapas simplificados de ciudades para actividades de orientación',
+          'Videos cortos de Google Maps o Street View de ciudades angloparlantes',
+          'Guías de trabajo elaboradas por el docente sobre preposiciones y direcciones'
+        ],
+
+        criteriosEvaluacion: {
+          porcentajes: { saber: 30, hacer: 50, ser: 20 },
+          saber: [
+            'Reconoce el vocabulario de lugares de la ciudad en inglés.',
+            'Identifica las preposiciones de lugar y las diferencia de las preposiciones de tiempo.',
+            'Comprende indicaciones de dirección dadas en inglés con apoyo visual.'
+          ],
+          hacer: [
+            'Describe la ubicación de lugares usando preposiciones de lugar con precisión.',
+            'Da indicaciones orales para llegar a un destino en un mapa con fluidez básica.',
+            'Escribe un párrafo corto describiendo cómo llegar a un lugar con conectores básicos.',
+            'Lee un texto descriptivo de un vecindario e identifica la ubicación de los lugares.'
+          ],
+          ser: [
+            'Valora el inglés como herramienta práctica para orientarse y comunicarse en el mundo.',
+            'Colabora con sus compañeros durante las actividades de juego de roles.',
+            'Muestra autonomía y esfuerzo en la construcción de su proyecto del mapa de la ciudad.'
+          ]
+        },
+
+        competenciaCiudadana: 'Reconoce la importancia de saber orientarse y comunicarse en inglés en contextos urbanos, desarrollando habilidades de colaboración y convivencia al interactuar respetuosamente con sus compañeros en situaciones simuladas.'
+      }
+    }
+  },
+
+  // ============================================================
+  // GRADO 7
+  // ============================================================
+  '7': {
+    grado: '7°',
+    intensidadHoraria: 3,
+    totalSemanas: 40,
+    totalHorasAnuales: 120,
+    nivelCEFR: 'A1',
+    grupoEBC: '6-7',
+    pruebaSaber: 'saber-11',
+    objetivo: 'Consolidar y ampliar las habilidades comunicativas en inglés desarrolladas en sexto grado, avanzando hacia el nivel A2 del MCER mediante el trabajo con el pasado simple, los comparativos y superlativos, el futuro y los verbos modales en contextos cotidianos de mayor complejidad',
+
+    periodos: {
+
+      // ----------------------------------------------------------
+      // GRADO 7 - PERIODO 1
+      // ----------------------------------------------------------
+      1: {
+        semanas: 10,
+        horasSemana: 3,
+        horasTotales: 30,
+
+        estandares: [
+          'Comprendo textos cortos y sencillos sobre personas famosas, eventos históricos y hechos del pasado.',
+          'Identifico información específica en narraciones sobre eventos pasados escritas en lenguaje simple.',
+          'Narro eventos y experiencias del pasado usando el pasado simple con verbos regulares e irregulares comunes.',
+          'Hablo sobre mi vida y la vida de personas conocidas usando el pasado simple.',
+          'Interactúo en conversaciones breves sobre eventos pasados usando el pasado simple con corrección básica.'
+        ],
+
+        dba: 'Narra hechos y eventos de la vida de personas conocidas o personajes históricos usando el pasado simple con verbos regulares e irregulares, conectores temporales (first, then, later, finally) y expresiones de tiempo pasado (yesterday, last week, in + year).',
+
+        ejesTematicos: [
+          'Past Simple: regular verbs (-ed endings and spelling rules)',
+          'Past Simple: common irregular verbs (was/were, had, went, came, saw, etc.)',
+          'Past Simple: negative (did not) and questions (Did...?)',
+          'Biographies and life events: birth, school, achievements, death',
+          'Reading: simple biographies of famous people'
+        ],
+
+        tiposPensamiento: ['Escucha', 'Lectura', 'Escritura', 'Monólogo', 'Conversación'],
+
+        preguntaProblema: '¿Cómo narro eventos y momentos importantes de la vida de una persona en inglés usando el pasado simple?',
+
+        diagnostico: 'El 72% de los estudiantes no memoriza los verbos irregulares más comunes y agrega -ed a todos los verbos en pasado; el 60% no usa did para formar preguntas y negaciones.',
+
+        competenciasICFES: {
+          comunicativa: 'Comprende y produce textos biográficos sencillos sobre eventos de la vida de personas reales o ficticias usando el pasado simple con verbos regulares e irregulares.',
+          pragmatica: 'Organiza la información biográfica en orden cronológico usando conectores temporales (first, then, later, after that, finally) en textos escritos y producciones orales.',
+          linguistica: 'Usa correctamente el pasado simple en sus formas afirmativa (verbos regulares e irregulares), negativa (did not) e interrogativa (Did + subject + verb?) con los cambios ortográficos necesarios.'
+        },
+
+        matrizReferencia: {
+          componente: 'Gramatical / Lexical',
+          competencia: 'Uso de la lengua en contexto',
+          afirmaciones: [
+            'Usa el pasado simple con verbos regulares e irregulares comunes para narrar eventos biográficos.',
+            'Organiza eventos en una línea de tiempo usando conectores temporales y expresiones de tiempo pasado.'
+          ]
+        },
+
+        aprendizajesICFES: ['ing-s11-04', 'ing-s11-07', 'ing-s11-09'],
+
+        nivelEsperado: 'A1',
+
+        evidenciasAprendizaje: [
+          'Escribe una biografía corta (cinco oraciones mínimo) sobre una persona conocida usando pasado simple.',
+          'Transforma oraciones afirmativas en pasado a su forma negativa e interrogativa con corrección.',
+          'Narra oralmente tres eventos importantes de su propia vida usando el pasado simple.',
+          'Lee una biografía sencilla e identifica los eventos principales en orden cronológico.',
+          'Completa una línea de tiempo biográfica a partir de un texto leído.'
+        ],
+
+        estrategiasMetodologicas: [
+          'Línea de tiempo biográfica: los estudiantes crean la línea de tiempo de un personaje famoso.',
+          'Proyecto biográfico: investigar y presentar la vida de un personaje a elección propia.',
+          'Juego de memoria de verbos irregulares: pares de infinitivo y pasado.',
+          'Lectura compartida: biografías adaptadas de personajes conocidos con preguntas de comprensión.',
+          'Entrevista en parejas: un estudiante entrevista al otro sobre su pasado usando Did you...?'
+        ],
+
+        materialesEducativos: [
+          'Texto escolar de Inglés 7° (editorial SM, Richmond o Pearson)',
+          'Lista de los 50 verbos irregulares más frecuentes con tarjetas de memoria',
+          'Biografías adaptadas al nivel A1 de personajes históricos y contemporáneos',
+          'Videos biográficos cortos con subtítulos en inglés',
+          'Guías de trabajo elaboradas por el docente sobre el pasado simple'
+        ],
+
+        criteriosEvaluacion: {
+          porcentajes: { saber: 30, hacer: 50, ser: 20 },
+          saber: [
+            'Reconoce los verbos irregulares más comunes en su forma de pasado simple.',
+            'Explica las reglas de ortografía del pasado regular (-ed: doubled consonant, -ied).',
+            'Identifica conectores temporales para organizar narraciones cronológicamente.'
+          ],
+          hacer: [
+            'Produce una biografía escrita breve usando el pasado simple con precisión básica.',
+            'Forma correctamente las oraciones negativas e interrogativas en pasado simple.',
+            'Narra eventos de su propia vida usando el pasado simple con fluidez básica.',
+            'Lee una biografía sencilla e identifica los eventos principales.'
+          ],
+          ser: [
+            'Demuestra perseverancia en el aprendizaje de los verbos irregulares del inglés.',
+            'Valora la historia de vida de personas de diferentes culturas con respeto.',
+            'Participa con entusiasmo en las actividades de presentación oral de biografías.'
+          ]
+        },
+
+        competenciaCiudadana: 'Conoce la vida y aportes de personajes históricos y contemporáneos de países de habla inglesa, desarrollando respeto por la diversidad cultural y valorando las contribuciones individuales al patrimonio de la humanidad.'
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 7 - PERIODO 2
+      // ----------------------------------------------------------
+      2: {
+        semanas: 10,
+        horasSemana: 3,
+        horasTotales: 30,
+
+        estandares: [
+          'Comprendo descripciones detalladas de personas, lugares y objetos en textos cortos y de vocabulario familiar.',
+          'Identifico el punto de comparación en textos descriptivos sencillos sobre personas y lugares.',
+          'Produzco textos descriptivos cortos que comparan personas, lugares y objetos usando comparativos y superlativos.',
+          'Describo y comparo personas y lugares de mi entorno en inglés con fluidez básica.',
+          'Participo en conversaciones breves comparando características de personas y cosas.'
+        ],
+
+        dba: 'Compara personas, lugares y objetos usando correctamente los comparativos (taller than, more interesting than) y los superlativos (the tallest, the most interesting) con adjetivos de una y varias sílabas.',
+
+        ejesTematicos: [
+          'Comparatives: adjective + -er + than (short adjectives)',
+          'Comparatives: more + adjective + than (long adjectives)',
+          'Superlatives: the + adjective + -est / the most + adjective',
+          'Irregular comparatives: good/better/best, bad/worse/worst',
+          'Writing: descriptive and comparative paragraphs about people and places'
+        ],
+
+        tiposPensamiento: ['Escucha', 'Lectura', 'Escritura', 'Monólogo', 'Conversación'],
+
+        preguntaProblema: '¿Cómo comparo las características de personas y lugares en inglés usando comparativos y superlativos de forma correcta?',
+
+        diagnostico: 'El 68% de los estudiantes aplica la regla del comparativo corto (-er) a todos los adjetivos sin distinguir los largos (more + adj); el 55% olvida el artículo the en los superlativos.',
+
+        competenciasICFES: {
+          comunicativa: 'Comprende y produce textos descriptivos cortos que comparan personas, lugares y objetos usando comparativos y superlativos con precisión gramatical básica.',
+          pragmatica: 'Identifica y usa adjetivos evaluativos y de descripción física en textos comparativos para expresar opiniones y preferencias sobre personas y lugares.',
+          linguistica: 'Aplica correctamente las reglas de formación de comparativos y superlativos con adjetivos cortos (-er/-est) y largos (more/the most), incluyendo los irregulares (good/better/best, bad/worse/worst).'
+        },
+
+        matrizReferencia: {
+          componente: 'Gramatical / Lexical',
+          competencia: 'Uso de la lengua en contexto',
+          afirmaciones: [
+            'Selecciona la forma comparativa o superlativa correcta según el número de sílabas del adjetivo.',
+            'Usa comparativos y superlativos para describir diferencias entre personas, lugares u objetos en textos escritos.'
+          ]
+        },
+
+        aprendizajesICFES: ['ing-s11-04', 'ing-s11-09'],
+
+        nivelEsperado: 'A1',
+
+        evidenciasAprendizaje: [
+          'Escribe un párrafo comparativo sobre dos lugares o dos personas conocidas.',
+          'Forma comparativos y superlativos correctamente con una lista de adjetivos variados.',
+          'Describe oralmente las diferencias entre dos imágenes usando comparativos.',
+          'Lee un texto descriptivo comparativo e identifica el adjetivo y su forma usada.',
+          'Usa los comparativos irregulares (good/better/best, bad/worse/worst) con corrección.'
+        ],
+
+        estrategiasMetodologicas: [
+          'Proyecto "My country vs. an English-speaking country": comparar Colombia con un país angloparlante.',
+          'Juego de tarjetas: comparar superhéroes, animales o deportistas usando comparativos.',
+          'Escritura guiada: párrafo comparativo con plantilla de apoyo y banco de adjetivos.',
+          'Debate oral: "Which is better, living in the city or in the country?" con comparativos.',
+          'Análisis de anuncios publicitarios: identificar superlativos usados en marketing.'
+        ],
+
+        materialesEducativos: [
+          'Texto escolar de Inglés 7° (editorial SM, Richmond o Pearson)',
+          'Flashcards de adjetivos descriptivos con sus formas comparativa y superlativa',
+          'Imágenes de personas y lugares para actividades de comparación oral',
+          'Anuncios publicitarios en inglés con superlativos para análisis',
+          'Guías de trabajo elaboradas por el docente sobre comparativos y superlativos'
+        ],
+
+        criteriosEvaluacion: {
+          porcentajes: { saber: 30, hacer: 50, ser: 20 },
+          saber: [
+            'Explica la regla de formación de comparativos y superlativos para adjetivos cortos y largos.',
+            'Reconoce los comparativos y superlativos irregulares más comunes.',
+            'Identifica adjetivos descriptivos de personas y lugares en textos orales y escritos.'
+          ],
+          hacer: [
+            'Produce un párrafo comparativo con precisión gramatical básica.',
+            'Usa comparativos y superlativos correctamente en producción oral espontánea.',
+            'Transforma oraciones usando el comparativo y el superlativo del mismo adjetivo.',
+            'Lee textos descriptivos y reconoce las estructuras comparativas usadas.'
+          ],
+          ser: [
+            'Acepta con respeto las diferencias y similitudes entre personas y culturas.',
+            'Participa con confianza en las actividades de comparación y debate oral.',
+            'Muestra creatividad y esfuerzo en la producción de su párrafo comparativo.'
+          ]
+        },
+
+        competenciaCiudadana: 'Desarrolla la capacidad de comparar y valorar diferencias entre personas, lugares y culturas sin emitir juicios de valor negativos, promoviendo el respeto a la diversidad y la no discriminación.'
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 7 - PERIODO 3
+      // ----------------------------------------------------------
+      3: {
+        semanas: 10,
+        horasSemana: 3,
+        horasTotales: 30,
+
+        estandares: [
+          'Comprendo textos cortos sobre planes, predicciones y eventos futuros escritos en lenguaje sencillo.',
+          'Entiendo la diferencia de uso entre will y going to en textos y conversaciones breves.',
+          'Produzco textos cortos sobre planes personales y predicciones usando will y going to con corrección básica.',
+          'Hablo sobre mis planes futuros y hago predicciones sencillas sobre el mundo que me rodea.',
+          'Interactúo en conversaciones breves sobre planes y proyectos futuros.'
+        ],
+
+        dba: 'Expresa planes personales (going to), predicciones basadas en evidencias (going to) y decisiones espontáneas o predicciones generales (will) usando el futuro en inglés en textos orales y escritos breves.',
+
+        ejesTematicos: [
+          'Future with will: spontaneous decisions, predictions, promises',
+          'Future with going to: plans, intentions, predictions based on evidence',
+          'Future time expressions: tomorrow, next week/month/year, in the future, soon',
+          'Short answers with will and going to',
+          'Reading: texts about plans, predictions and future events'
+        ],
+
+        tiposPensamiento: ['Escucha', 'Lectura', 'Escritura', 'Monólogo', 'Conversación'],
+
+        preguntaProblema: '¿Cómo expreso mis planes para el futuro y hago predicciones sobre el mundo usando will y going to en inglés?',
+
+        diagnostico: 'El 74% de los estudiantes usa will para todos los casos de futuro sin distinguir cuándo usar going to; el 61% no forma correctamente las oraciones negativas con will (will not / won\'t).',
+
+        competenciasICFES: {
+          comunicativa: 'Comprende y produce textos breves sobre planes personales y predicciones usando will y going to en contextos comunicativos cotidianos con corrección básica.',
+          pragmatica: 'Diferencia el uso comunicativo de will (decisiones espontáneas, promesas, predicciones generales) y going to (planes e intenciones previas, predicciones con evidencia) según el contexto.',
+          linguistica: 'Forma correctamente las estructuras de will (will + base verb, will not/won\'t) y going to (am/is/are + going to + base verb) en sus formas afirmativa, negativa e interrogativa.'
+        },
+
+        matrizReferencia: {
+          componente: 'Gramatical / Pragmático',
+          competencia: 'Uso de la lengua en contexto',
+          afirmaciones: [
+            'Selecciona will o going to según la intención comunicativa (plan previo vs. decisión espontánea o predicción).',
+            'Usa expresiones temporales de futuro (tomorrow, next..., in the future) para contextualizar planes y predicciones.'
+          ]
+        },
+
+        aprendizajesICFES: ['ing-s11-04', 'ing-s11-07', 'ing-s11-09'],
+
+        nivelEsperado: 'A1',
+
+        evidenciasAprendizaje: [
+          'Escribe un texto corto sobre sus planes para las próximas vacaciones usando going to.',
+          'Hace predicciones sobre el futuro del planeta usando will con expresiones temporales.',
+          'Diferencia el uso de will y going to en situaciones comunicativas presentadas en clase.',
+          'Lee un texto sobre predicciones de futuro e identifica las estructuras usadas.',
+          'Participa en un diálogo sobre planes del fin de semana usando going to correctamente.'
+        ],
+
+        estrategiasMetodologicas: [
+          'Proyecto "My future": cada estudiante elabora un afiche con sus planes de vida usando going to.',
+          'Predicciones sobre el futuro: discutir en grupos usando will sobre temas como tecnología y medio ambiente.',
+          'Análisis de contexto: situaciones donde los estudiantes deciden si usar will o going to.',
+          'Escritura guiada: párrafo de planes para las próximas vacaciones con plantilla.',
+          'Lectura de textos de predicciones científicas adaptados al nivel y debate posterior.'
+        ],
+
+        materialesEducativos: [
+          'Texto escolar de Inglés 7° (editorial SM, Richmond o Pearson)',
+          'Tarjetas de situaciones para practicar will vs. going to',
+          'Artículos cortos sobre predicciones del futuro adaptados al nivel A1-A2',
+          'Videos cortos de predicciones del futuro con lenguaje sencillo',
+          'Guías de trabajo elaboradas por el docente sobre will y going to'
+        ],
+
+        criteriosEvaluacion: {
+          porcentajes: { saber: 30, hacer: 50, ser: 20 },
+          saber: [
+            'Explica la diferencia de uso entre will y going to con ejemplos propios.',
+            'Reconoce expresiones temporales de futuro y las usa en contexto.',
+            'Identifica la estructura correcta de will y going to en sus tres formas.'
+          ],
+          hacer: [
+            'Produce un texto escrito sobre planes futuros usando going to con corrección.',
+            'Hace predicciones usando will en conversaciones y escritos breves.',
+            'Diferencia el uso de will y going to en situaciones comunicativas concretas.',
+            'Lee textos sobre planes y predicciones e identifica las estructuras de futuro usadas.'
+          ],
+          ser: [
+            'Reflexiona sobre sus planes y metas personales al producir textos en inglés.',
+            'Muestra respeto hacia los planes y sueños futuros de sus compañeros.',
+            'Demuestra interés por el mundo y el futuro al participar en debates sobre predicciones.'
+          ]
+        },
+
+        competenciaCiudadana: 'Reflexiona sobre su proyecto de vida y el futuro de su comunidad, desarrollando pensamiento prospectivo y responsabilidad al pensar en las consecuencias de las decisiones presentes sobre el futuro colectivo.'
+      },
+
+      // ----------------------------------------------------------
+      // GRADO 7 - PERIODO 4
+      // ----------------------------------------------------------
+      4: {
+        semanas: 10,
+        horasSemana: 3,
+        horasTotales: 30,
+
+        estandares: [
+          'Comprendo textos cortos sobre reglas, obligaciones, consejos y posibilidades escritos en inglés sencillo.',
+          'Identifico el significado de los verbos modales can, must y should en textos de normas y recomendaciones.',
+          'Produzco textos cortos sobre reglas de juego, normas escolares y consejos usando los modales correctos.',
+          'Doy y recibo consejos, expreso habilidades y explico reglas básicas usando can, must y should.',
+          'Interactúo en situaciones comunicativas donde expreso posibilidad, obligación y consejo en inglés.'
+        ],
+
+        dba: 'Usa los verbos modales can (habilidad/posibilidad), must (obligación) y should (consejo/recomendación) para expresar reglas, dar consejos y hablar sobre habilidades en textos orales y escritos breves.',
+
+        ejesTematicos: [
+          'Modal verb can: ability and possibility (can/cannot/can\'t)',
+          'Modal verb must: obligation and prohibition (must/must not/mustn\'t)',
+          'Modal verb should: advice and recommendation (should/should not/shouldn\'t)',
+          'Rules and signs: school rules, traffic signs, game rules',
+          'Writing: rules and advice texts (posters, lists, recommendation paragraphs)'
+        ],
+
+        tiposPensamiento: ['Escucha', 'Lectura', 'Escritura', 'Monólogo', 'Conversación'],
+
+        preguntaProblema: '¿Cómo expreso habilidades, obligaciones y consejos en inglés usando los verbos modales can, must y should?',
+
+        diagnostico: 'El 70% de los estudiantes no distingue el significado de must y should y los usa indistintamente; el 65% añade incorrectamente -s a los verbos modales en la tercera persona.',
+
+        competenciasICFES: {
+          comunicativa: 'Comprende y produce textos breves sobre reglas, consejos y habilidades usando can, must y should en contextos comunicativos cotidianos como el colegio, el hogar y los juegos.',
+          pragmatica: 'Diferencia el valor pragmático de can (capacidad), must (obligación fuerte) y should (recomendación) para seleccionar el modal apropiado según la situación comunicativa.',
+          linguistica: 'Usa los verbos modales can, must y should con la estructura correcta (modal + base verb, sin to) en sus formas afirmativa, negativa e interrogativa, sin añadir -s en la tercera persona.'
+        },
+
+        matrizReferencia: {
+          componente: 'Gramatical / Pragmático',
+          competencia: 'Uso de la lengua en contexto',
+          afirmaciones: [
+            'Selecciona el verbo modal adecuado (can, must, should) según el valor comunicativo requerido (habilidad, obligación o consejo).',
+            'Usa los verbos modales sin marca de tercera persona singular y con la base verbal correcta en textos escritos y orales.'
+          ]
+        },
+
+        aprendizajesICFES: ['ing-s11-04', 'ing-s11-07', 'ing-s11-09'],
+
+        nivelEsperado: 'A1',
+
+        evidenciasAprendizaje: [
+          'Produce un cartel de normas del salón de clase en inglés usando must y must not.',
+          'Escribe cinco consejos de salud usando should y should not.',
+          'Describe cinco habilidades propias y de sus compañeros usando can y cannot.',
+          'Lee un texto de reglas de un juego o deporte e identifica los modales usados.',
+          'Diferencia must y should en situaciones comunicativas concretas presentadas en clase.'
+        ],
+
+        estrategiasMetodologicas: [
+          'Proyecto "Our classroom rules": crear un cartel de normas del salón usando must/must not.',
+          'Consultorio de consejos: juego de roles donde un estudiante da consejos a otro usando should.',
+          'Encuesta de habilidades: "What can you do?" — encuesta oral con can/cannot.',
+          'Análisis de señales de tráfico y letreros públicos: identificar el modal implícito.',
+          'Lectura de reglas de juegos de mesa en inglés: identificar y clasificar los modales.'
+        ],
+
+        materialesEducativos: [
+          'Texto escolar de Inglés 7° (editorial SM, Richmond o Pearson)',
+          'Tarjetas de situaciones para practicar can, must y should',
+          'Señales de tráfico y letreros públicos en inglés para análisis',
+          'Reglas de juegos de mesa en inglés adaptadas al nivel',
+          'Guías de trabajo elaboradas por el docente sobre verbos modales'
+        ],
+
+        criteriosEvaluacion: {
+          porcentajes: { saber: 30, hacer: 50, ser: 20 },
+          saber: [
+            'Explica el significado de can, must y should con ejemplos propios.',
+            'Reconoce que los verbos modales no llevan -s en la tercera persona singular.',
+            'Diferencia el nivel de obligación entre must (fuerte) y should (recomendación).'
+          ],
+          hacer: [
+            'Produce un texto de normas o consejos usando must/must not y should/should not correctamente.',
+            'Describe habilidades usando can y cannot con precisión gramatical.',
+            'Selecciona el modal correcto en situaciones comunicativas variadas.',
+            'Lee textos con modales e identifica su función comunicativa (obligación, consejo, habilidad).'
+          ],
+          ser: [
+            'Reflexiona sobre la importancia de seguir normas para la convivencia escolar.',
+            'Muestra disposición para dar y recibir consejos constructivos en inglés.',
+            'Valora sus propias habilidades y las de sus compañeros con una actitud positiva.'
+          ]
+        },
+
+        competenciaCiudadana: 'Comprende la importancia de las normas y los consejos para la convivencia en la escuela y la sociedad, desarrollando actitudes de responsabilidad, respeto a las reglas y solidaridad al orientar a sus compañeros con consejos constructivos.'
+      }
+    }
+  },
 
   // ============================================================
   // GRADO 8

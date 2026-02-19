@@ -12,6 +12,8 @@
 </head>
 <body data-area="matematicas">
 
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+
   <div class="app-layout">
 
     <!-- HEADER -->
@@ -32,14 +34,14 @@
 
     <!-- SIDEBAR -->
     <aside class="app-sidebar" id="sidebar">
-      <nav id="sidebar-nav"></nav>
+      <nav id="sidebar-nav" role="navigation" aria-label="Navegación principal"></nav>
     </aside>
 
     <!-- SIDEBAR BACKDROP (mobile) -->
     <div class="sidebar-backdrop" data-action="close-sidebar"></div>
 
     <!-- MAIN CONTENT -->
-    <main class="app-main" id="main-content">
+    <main class="app-main" id="main-content" role="main">
       <!-- Rendered by App.render() -->
     </main>
 
@@ -64,6 +66,9 @@
   <script src="src/data/icfes-sociales.js"></script>
   <script src="src/data/icfes-ingles.js"></script>
   <script src="src/data/preguntas-icfes.js"></script>
+
+  <!-- I18N -->
+  <script src="src/data/i18n.js"></script>
 
   <!-- ENGINE -->
   <script src="src/engine/filtros.js"></script>
